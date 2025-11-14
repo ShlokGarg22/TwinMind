@@ -33,11 +33,20 @@ class LocalModelService:
                 response = await client.get(f"{OLLAMA_URL}/api/tags")
                 
                 if response.status_code != 200:
-                    return ["llama3", "mistral", "phi3"]  # Fallback
+                    # Return common models as fallback
+                    return ["llama3", "llama3.1", "llama2", "mistral", "phi3", "codellama", "gemma"]
                 
                 data = response.json()
                 models = data.get("models", [])
-                return [m.get("name") for m in models]
+                model_names = [m.get("name") for m in models if m.get("name")]
                 
-        except Exception:
-            return ["llama3", "mistral", "phi3"]  # Fallback
+                # If no models found, return fallback list
+                if not model_names:
+                    return ["llama3", "llama3.1", "llama2", "mistral", "phi3", "codellama", "gemma"]
+                
+                return model_names
+                
+        except Exception as e:
+            print(f"Error fetching local models: {e}")
+            # Return common models as fallback
+            return ["llama3", "llama3.1", "llama2", "mistral", "phi3", "codellama", "gemma"]

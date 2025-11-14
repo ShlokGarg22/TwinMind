@@ -1,5 +1,6 @@
 import json
 import os
+import uuid
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional
@@ -82,3 +83,85 @@ class MemoryService:
                 all_history.extend(day_history)
 
         return all_history[:limit]
+
+    async def create_session(self, title: str = "New Chat") -> str:
+        """Create a new chat session and return its ID"""
+        session_id = str(uuid.uuid4())
+        sessions_path = USER_DATA_PATH / "sessions"
+        sessions_path.mkdir(exist_ok=True)
+        
+        session_data = {
+            "id": session_id,
+            "title": title,
+            "created_at": datetime.now().isoformat(),
+            "updated_at": datetime.now().isoformat(),
+            "messages": []
+        }
+        
+        session_file = sessions_path / f"{session_id}.json"
+        with open(session_file, "w", encoding="utf-8") as f:
+            json.dump(session_data, f, indent=2, ensure_ascii=False)
+        
+        return session_id
+
+    async def save_session(self, session_id: str, messages: List[dict], title: Optional[str] = None):
+        """Save chat session with messages"""
+        sessions_path = USER_DATA_PATH / "sessions"
+        session_file = sessions_path / f"{session_id}.json"
+        
+        if not session_file.exists():
+            raise Exception("Session not found")
+        
+        with open(session_file, "r", encoding="utf-8") as f:
+            session_data = json.load(f)
+        
+        session_data["messages"] = messages
+        session_data["updated_at"] = datetime.now().isoformat()
+        
+        if title:
+            session_data["title"] = title
+        
+        with open(session_file, "w", encoding="utf-8") as f:
+            json.dump(session_data, f, indent=2, ensure_ascii=False)
+
+    async def load_session(self, session_id: str) -> dict:
+        """Load a chat session by ID"""
+        sessions_path = USER_DATA_PATH / "sessions"
+        session_file = sessions_path / f"{session_id}.json"
+        
+        if not session_file.exists():
+            raise Exception("Session not found")
+        
+        with open(session_file, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    async def list_sessions(self) -> List[dict]:
+        """List all chat sessions"""
+        sessions_path = USER_DATA_PATH / "sessions"
+        
+        if not sessions_path.exists():
+            return []
+        
+        sessions = []
+        for session_file in sessions_path.glob("*.json"):
+            with open(session_file, "r", encoding="utf-8") as f:
+                session_data = json.load(f)
+                sessions.append({
+                    "id": session_data["id"],
+                    "title": session_data["title"],
+                    "created_at": session_data["created_at"],
+                    "updated_at": session_data["updated_at"],
+                    "message_count": len(session_data.get("messages", []))
+                })
+        
+        # Sort by updated_at descending
+        sessions.sort(key=lambda x: x["updated_at"], reverse=True)
+        return sessions
+
+    async def delete_session(self, session_id: str):
+        """Delete a chat session"""
+        sessions_path = USER_DATA_PATH / "sessions"
+        session_file = sessions_path / f"{session_id}.json"
+        
+        if session_file.exists():
+            session_file.unlink()

@@ -1,20 +1,39 @@
 import httpx
 import os
+from typing import Dict, List
 
 
 class CloudModelService:
+    def get_available_models(self) -> Dict[str, List[str]]:
+        """Return available cloud models organized by provider"""
+        models = {}
+        
+        # Always show all cloud models, regardless of API key status
+        # Users can configure keys later
+        models["openai"] = ["gpt-4", "gpt-3.5-turbo", "gpt-4-turbo"]
+        models["gemini"] = ["gemini-pro", "gemini-1.5-pro"]
+        models["anthropic"] = ["claude-3-opus", "claude-3-sonnet", "claude-3-haiku"]
+        
+        return models
+
     async def generate(self, prompt: str, model: str = "openai") -> str:
         if model == "openai" or model.startswith("gpt"):
-            return await self.call_openai(prompt)
+            return await self.call_openai(prompt, model)
         elif model == "gemini" or model.startswith("gemini"):
-            return await self.call_gemini(prompt)
+            return await self.call_gemini(prompt, model)
+        elif model == "anthropic" or model.startswith("claude"):
+            return await self.call_anthropic(prompt, model)
         raise Exception("Unsupported cloud model")
 
-    async def call_openai(self, prompt: str) -> str:
+    async def call_openai(self, prompt: str, model: str = "gpt-3.5-turbo") -> str:
         api_key = os.getenv("OPENAI_API_KEY")
         
         if not api_key or api_key == "your_openai_key_here":
             raise Exception("OpenAI API key not configured")
+
+        # Extract model name if it's just the provider
+        if model == "openai":
+            model = "gpt-3.5-turbo"
 
         async with httpx.AsyncClient(timeout=60.0) as client:
             response = await client.post(
@@ -24,7 +43,7 @@ class CloudModelService:
                     "Authorization": f"Bearer {api_key}"
                 },
                 json={
-                    "model": "gpt-3.5-turbo",
+                    "model": model,
                     "messages": [{"role": "user", "content": prompt}]
                 }
             )
@@ -36,15 +55,19 @@ class CloudModelService:
             data = response.json()
             return data["choices"][0]["message"]["content"]
 
-    async def call_gemini(self, prompt: str) -> str:
+    async def call_gemini(self, prompt: str, model: str = "gemini-pro") -> str:
         api_key = os.getenv("GEMINI_API_KEY")
         
         if not api_key or api_key == "your_gemini_key_here":
             raise Exception("Gemini API key not configured")
 
+        # Extract model name if it's just the provider
+        if model == "gemini":
+            model = "gemini-pro"
+
         async with httpx.AsyncClient(timeout=60.0) as client:
             response = await client.post(
-                f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={api_key}",
+                f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}",
                 headers={"Content-Type": "application/json"},
                 json={
                     "contents": [{"parts": [{"text": prompt}]}]
@@ -57,3 +80,38 @@ class CloudModelService:
 
             data = response.json()
             return data["candidates"][0]["content"]["parts"][0]["text"]
+
+    async def call_anthropic(self, prompt: str, model: str = "claude-3-sonnet") -> str:
+        api_key = os.getenv("ANTHROPIC_API_KEY")
+        
+        if not api_key or api_key == "your_anthropic_key_here":
+            raise Exception("Anthropic API key not configured")
+
+        # Extract model name if it's just the provider
+        if model == "anthropic":
+            model = "claude-3-sonnet-20240229"
+        elif not model.endswith("-20240229"):
+            model = f"{model}-20240229"
+
+        async with httpx.AsyncClient(timeout=60.0) as client:
+            response = await client.post(
+                "https://api.anthropic.com/v1/messages",
+                headers={
+                    "Content-Type": "application/json",
+                    "x-api-key": api_key,
+                    "anthropic-version": "2023-06-01"
+                },
+                json={
+                    "model": model,
+                    "max_tokens": 4096,
+                    "messages": [{"role": "user", "content": prompt}]
+                }
+            )
+
+            if response.status_code != 200:
+                error_data = response.json()
+                raise Exception(error_data.get("error", {}).get("message", "Anthropic API error"))
+
+            data = response.json()
+            return data["content"][0]["text"]
+
