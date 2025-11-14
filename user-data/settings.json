@@ -1,0 +1,22 @@
+{
+  "default_model": "local",
+  "local_models": {
+    "default": "llama3",
+    "available": ["llama3", "mistral", "phi3", "deepseek"]
+  },
+  "cloud_models": {
+    "openai": {
+      "model": "gpt-3.5-turbo",
+      "api_key": ""
+    },
+    "gemini": {
+      "model": "gemini-pro",
+      "api_key": ""
+    }
+  },
+  "memory": {
+    "inject_profile": true,
+    "inject_writing_samples": false,
+    "max_history": 50
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "User",
+  "preferences": {
+    "writing_style": "Clear and concise",
+    "tone": "Professional yet friendly",
+    "expertise": ["Software Development", "AI/ML"]
+  },
+  "context": "I'm building an AI assistant with local and cloud models"
+}
