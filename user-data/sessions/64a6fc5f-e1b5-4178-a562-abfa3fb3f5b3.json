@@ -1,0 +1,14 @@
+{
+  "id": "64a6fc5f-e1b5-4178-a562-abfa3fb3f5b3",
+  "title": "C Program String Operations",
+  "created_at": "2025-11-28T16:38:01.593551",
+  "updated_at": "2025-11-28T16:38:01.593551",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a C program using functions to accept two strings from the console and\r\nperform the following operations (without using built-in functions):\r\n(a) Compare the strings: equal/not equal\r\n(b) Find the longer string.\r\n(c) Concatenate the two strings.\r\n(d) Find occurrence of substring in the main string\r",
+      "timestamp": 1739978926.905709
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

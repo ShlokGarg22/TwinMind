@@ -1,0 +1,19 @@
+{
+  "id": "ba82bd4d-2a2f-479d-a7b5-c4e9e738ad46",
+  "title": "Nether to Overworld Conversion",
+  "created_at": "2025-11-28T16:38:00.790996",
+  "updated_at": "2025-11-28T16:38:00.790996",
+  "messages": [
+    {
+      "role": "user",
+      "content": "(x=155 z=-277 nether cordinates in overworld)",
+      "timestamp": 1746114083.547511
+    },
+    {
+      "role": "assistant",
+      "content": "To convert Nether coordinates to Overworld coordinates in Minecraft, multiply the x and z coordinates by 8:\n\n- **Overworld X = 155 \u00d7 8 = 1240**  \n- **Overworld Z = -277 \u00d7 8 = -2216**\n\nSo the corresponding **Overworld coordinates** are:\n\n**(x = 1240, z = -2216)**\n\nWant help building a portal or calculating the reverse (Overworld to Nether)?",
+      "timestamp": 1746114083.603939
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

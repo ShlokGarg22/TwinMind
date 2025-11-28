@@ -1,0 +1,19 @@
+{
+  "id": "eed4c6ac-1b18-4e5a-9345-72afd8a50655",
+  "title": "Graph types comparison",
+  "created_at": "2025-11-28T16:37:55.475107",
+  "updated_at": "2025-11-28T16:37:55.475107",
+  "messages": [
+    {
+      "role": "user",
+      "content": "explain this ",
+      "timestamp": 1763799206.021
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the table explained in the simplest, most direct way so you **never confuse graph types again**:\n\n---\n\n# **GRAPH TERMINOLOGY \u2014 SIMPLE EXPLANATION**\n\nThe table compares **different types of graphs** based on three things:\n\n1. **What kind of edges they use**  \n2. **Whether multiple edges between the same two vertices are allowed**  \n3. **Whether loops (edge from a vertex to itself) are allowed**\n\nLet\u2019s break each type:\n\n---\n\n## **1. Simple Graph**\n- **Edges:** Undirected  \n- **Multiple Edges:** \u274c No  \n- **Loops:** \u274c No  \n\n\ud83d\udc49 A clean graph.  \nEach pair of vertices has **at most one edge**, and no vertex can connect to itself.\n\n---\n\n## **2. Multigraph**\n- **Edges:** Undirected  \n- **Multiple Edges:** \u2714 Yes  \n- **Loops:** \u274c No  \n\n\ud83d\udc49 Multiple connections allowed between same two vertices.  \nNo vertex can connect to itself.\n\nExample: Two cities with several parallel roads.\n\n---\n\n## **3. Pseudograph**\n- **Edges:** Undirected  \n- **Multiple Edges:** \u2714 Yes  \n- **Loops:** \u2714 Yes  \n\n\ud83d\udc49 Most flexible undirected type.  \nYou can have:\n- parallel edges  \n- loops  \n\nNothing is restricted.\n\n---\n\n## **4. Simple Directed Graph (Digraph)**\n- **Edges:** Directed (arrows)  \n- **Multiple Edges:** \u274c No  \n- **Loops:** \u274c No  \n\n\ud83d\udc49 A directed version of a simple graph.  \nNo multiple arrows and no loops.\n\n---\n\n## **5. Directed Multigraph**\n- **Edges:** Directed  \n- **Multiple Edges:** \u2714 Yes  \n- **Loops:** \u2714 Yes  \n\n\ud83d\udc49 You can have many arrows between the same vertices AND loops.\n\n---\n\n## **6. Mixed Graph**\n- **Edges:** Both **Directed** and **Undirected**  \n- **Multiple Edges:** \u2714 Yes  \n- **Loops:** \u2714 Yes  \n\n\ud83d\udc49 A combination of everything.  \nEdges can be arrows or normal lines, and you can have loops and parallel edges.\n\n---\n\n# **Quick Memory Trick**\n\n| Type | Clean or Messy? |\n|------|-----------------|\n| **Simple graph** | Cleanest (nothing extra) |\n| **Multigraph** | Parallel edges allowed |\n| **Pseudograph** | Parallel edges + loops |\n| **Simple digraph** | Like simple graph but arrows |\n| **Directed multigraph** | Arrows + multiplicity + loops |\n| **Mixed graph** | All types of edges allowed |\n\n---\n\nIf you want, I can also make **examples with diagrams**, or **summary notes for exam revision**.",
+      "timestamp": 1763799210.753268
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

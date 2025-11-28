@@ -1,0 +1,19 @@
+{
+  "id": "550d75fa-df04-45a9-acb9-d8c9c329cd93",
+  "title": "Complete code provided",
+  "created_at": "2025-11-28T16:37:58.582292",
+  "updated_at": "2025-11-28T16:37:58.582292",
+  "messages": [
+    {
+      "role": "user",
+      "content": "give the comlete code",
+      "timestamp": 1755807282.614
+    },
+    {
+      "role": "assistant",
+      "content": "Got it \ud83d\udc4d  \nFrom your screenshot, the code is incomplete and cut off. I\u2019ll reconstruct the **complete React component** `ResumeCard.tsx` for you. Here\u2019s a clean, production-ready version:\n\n```tsx\nimport { Link } from \"react-router-dom\";\n\ntype Resume = {\n  id: string;\n  companyName: string;\n  role?: string;\n  duration?: string;\n};\n\ninterface ResumeCardProps {\n  resume: Resume;\n}\n\nconst ResumeCard: React.FC<ResumeCardProps> = ({ resume }) => {\n  return (\n    <Link\n      to={`/resume/${resume.id}`}\n      className=\"resume-card animate-in fade-in duration-300 shadow-md hover:shadow-lg rounded-xl p-4 transition-all\"\n    >\n      <div className=\"flex flex-col gap-2\">\n        <h2 className=\"text-black font-bold text-lg break-words\">\n          {resume.companyName}\n        </h2>\n        {resume.role && (\n          <p className=\"text-gray-600 text-sm\">{resume.role}</p>\n        )}\n        {resume.duration && (\n          <p className=\"text-gray-500 text-xs\">{resume.duration}</p>\n        )}\n      </div>\n    </Link>\n  );\n};\n\nexport default ResumeCard;\n```\n\n### \ud83d\udd11 Key Points:\n- \u2705 `Resume` type ensures type-safety (id, companyName, optional role & duration).\n- \u2705 Uses **Tailwind classes** for styling (hover, animation, responsive text).\n- \u2705 Added **role** and **duration** fields so the card looks richer, but you can remove them if unnecessary.\n- \u2705 Fully typed `ResumeCardProps`.\n\n---\n\n\ud83d\udc49 Do you want me to also create a **ResumeList.tsx** file that maps through multiple `ResumeCard`s (like rendering a grid of resumes), or just this single card component is enough?",
+      "timestamp": 1755807274.496816
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

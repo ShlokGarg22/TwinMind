@@ -1,0 +1,19 @@
+{
+  "id": "04d27cd6-df02-457c-a676-3a17598aceae",
+  "title": "Simple Agenda Creation",
+  "created_at": "2025-11-28T16:38:00.405561",
+  "updated_at": "2025-11-28T16:38:00.405561",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give a simple agande according to this format",
+      "timestamp": 1747969581.792849
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a simple agenda filled in according to the format from your image:\n\n---\n\n**Sample Agenda**\n\n**Tech Solutions Pvt. Ltd.**  \n123 Business Park, New Delhi \u2013 110001  \n\n**Date:** 24th May 2025  \n\n**AGENDA**  \nAgenda for the **Monthly** Meeting of **Project Development Team** to be held at **10:00** am on **Saturday, 24th May 2025** at **Conference Room B**.\n\n| Sr. No | Agenda Item               | Time/Duration |\n|--------|---------------------------|----------------|\n| 7.01   | Project Progress Review   | 5:00 mins      |\n| 7.02   | Roadmap Planning          | 10:00 mins     |\n| 7.08   | Budget Allocation Update  | 15:00 mins     |\n\n**Sign**  \n**Ravi Sharma**  \n**Secretary**\n\n---\n\nLet me know if you'd like a Word or PDF version of this.",
+      "timestamp": 1747969581.841562
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

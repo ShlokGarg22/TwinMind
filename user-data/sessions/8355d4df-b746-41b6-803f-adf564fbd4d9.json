@@ -1,0 +1,29 @@
+{
+  "id": "8355d4df-b746-41b6-803f-adf564fbd4d9",
+  "title": "Check Git Global Config",
+  "created_at": "2025-11-28T16:38:00.947711",
+  "updated_at": "2025-11-28T16:38:00.947711",
+  "messages": [
+    {
+      "role": "user",
+      "content": "how to check whether we have set global username and email inusing git",
+      "timestamp": 1745055910.15
+    },
+    {
+      "role": "assistant",
+      "content": "To check whether you've set the **global Git username and email**, you can use the following commands in your terminal:\n\n### \ud83d\udd0d Check Global Git Username\n```bash\ngit config --global user.name\n```\n\n### \ud83d\udd0d Check Global Git Email\n```bash\ngit config --global user.email\n```\n\nThese commands will output the globally set values (if any). If nothing is returned, it means they haven't been set yet.\n\n---\n\n### \u2705 To check **all global config settings** at once:\n```bash\ngit config --global --list\n```\n\nThis shows everything you\u2019ve configured globally\u2014username, email, editor, etc.\n\n---\n\n### \ud83d\udee0\ufe0f To set them (if not set yet):\n```bash\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your.email@example.com\"\n```\n\nLet me know if you want to check local repo settings too (which override global ones).",
+      "timestamp": 1745055894.625858
+    },
+    {
+      "role": "user",
+      "content": "tell a simple python game without pygame\nimport python",
+      "timestamp": 1745056536.956
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a **super simple text-based Python game** \u2014 a **number guessing game** \u2014 that doesn't require `pygame` or any extra libraries. Just plain Python.\n\n---\n\n### \ud83c\udfae **Number Guessing Game**\n```python\nimport random\n\ndef play_game():\n    number_to_guess = random.randint(1, 100)\n    guess = None\n    attempts = 0\n\n    print(\"Welcome to the Number Guessing Game!\")\n    print(\"I'm thinking of a number between 1 and 100.\")\n\n    while guess != number_to_guess:\n        try:\n            guess = int(input(\"Enter your guess: \"))\n            attempts += 1\n            if guess < number_to_guess:\n                print(\"Too low! Try again.\")\n            elif guess > number_to_guess:\n                print(\"Too high! Try again.\")\n            else:\n                print(f\"\ud83c\udf89 Correct! You guessed it in {attempts} tries.\")\n        except ValueError:\n            print(\"Please enter a valid number.\")\n\nif __name__ == \"__main__\":\n    play_game()\n```\n\n---\n\n### \ud83d\udca1 How it works:\n- The computer picks a random number.\n- You keep guessing until you get it right.\n- It tells you if your guess is too high or too low.\n- It counts your attempts.\n\n---\n\nWant a slightly more advanced version (like with difficulty levels or a timer), or a completely different type of game (like text adventure, tic-tac-toe, etc)?",
+      "timestamp": 1745056521.487855
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

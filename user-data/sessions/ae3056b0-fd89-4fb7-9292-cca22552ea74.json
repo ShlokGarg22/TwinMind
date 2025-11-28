@@ -1,0 +1,29 @@
+{
+  "id": "ae3056b0-fd89-4fb7-9292-cca22552ea74",
+  "title": "Snapshots explained simply",
+  "created_at": "2025-11-28T16:37:58.562839",
+  "updated_at": "2025-11-28T16:37:58.562839",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what are snaphots like gpt-4-0613? explain in simple words",
+      "timestamp": 1755891718.375
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, let\u2019s break it down super simple:  \n\nWhen you see names like **gpt-4-0613**, the last part (**0613**) is just a **snapshot date**.  \n\n- **GPT-4** \u2192 means it\u2019s a GPT-4 model.  \n- **0613** \u2192 means this snapshot (or version) was taken on **June 13th** (06 = June, 13 = 13th day).  \n\nThink of it like saving a **checkpoint** in a video game:  \n- OpenAI \u201cfreezes\u201d the model at that point in time so it doesn\u2019t keep changing.  \n- This way, developers and users know exactly which version they\u2019re using.  \n\n\ud83d\udccc Example:  \n- **gpt-4-0613** = GPT-4 model saved on June 13, 2023.  \n- **gpt-4-0314** = GPT-4 saved on March 14, 2023.  \n\nSo, \u201csnapshots\u201d are just **fixed versions of the model**, like a stable copy you can rely on.  \n\n\ud83d\udc49 Do you want me to also explain why OpenAI makes snapshots instead of letting the model update live all the time?",
+      "timestamp": 1755891708.560411
+    },
+    {
+      "role": "user",
+      "content": "what are these snapsots",
+      "timestamp": 1755891743.838
+    },
+    {
+      "role": "assistant",
+      "content": "Good question \u2014 let\u2019s go one layer deeper.  \n\n### **What are snapshots (like gpt-4-0613)?**\nThey are **frozen versions of a model** that OpenAI keeps for stability and consistency.  \n\n- Imagine GPT is being improved and tweaked all the time behind the scenes.  \n- If you were using it for a project, and the model suddenly changed its behavior tomorrow, your code or app might break.  \n- To prevent that, OpenAI makes **snapshots** \u2014 fixed versions of the model at a specific date.  \n\nSo when you see something like **gpt-4-0613**:  \n- It\u2019s literally saying \u201cthis is GPT-4 as it was on **June 13, 2023**.\u201d  \n- No matter how much GPT-4 evolves later, that snapshot will **always behave the same way**.  \n\n### **Why snapshots matter**  \n- **Consistency** \u2192 Apps built on that version won\u2019t suddenly get different answers.  \n- **Reproducibility** \u2192 If someone says \u201cI used gpt-4-0613 for my research,\u201d anyone else can rerun it and get the same behavior.  \n- **Safety net** \u2192 If a newer model has a bug or regression, people can still fall back to the old snapshot.  \n\nThink of it like:  \n- **Live GPT** = always improving, but unpredictable.  \n- **Snapshot GPT** = a saved \u201cphotograph\u201d of the model on a certain day, guaranteed not to change.  \n\n---\n\nDo you want me to also explain the difference between **snapshot models** (like `gpt-4-0613`) and **\u201calias\u201d models** (like just `gpt-4`)?",
+      "timestamp": 1755891732.734826
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

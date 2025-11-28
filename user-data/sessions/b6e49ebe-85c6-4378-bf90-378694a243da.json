@@ -1,0 +1,19 @@
+{
+  "id": "b6e49ebe-85c6-4378-bf90-378694a243da",
+  "title": "Course selling app guide",
+  "created_at": "2025-11-28T16:38:00.034756",
+  "updated_at": "2025-11-28T16:38:00.034756",
+  "messages": [
+    {
+      "role": "user",
+      "content": "get the text from the image\n",
+      "timestamp": 1749276394.958
+    },
+    {
+      "role": "assistant",
+      "content": "Here is the text extracted from the image:\n\n```\n## Create a course selling app\n\n- Initialize a new Node.js project\n- Add Express, jsonwebtoken to it as a dependency\n- Create index.js\n- Add route skeleton for user login, signup, purchase a course, see course\n- Add routes for admin login, admin signup, create a course, delete a course, add course content.\n- Add middlewares for user and admin auth\n- Add a database (mongodb), use dotenv to store the database connection string\n- Define the schema for User, Admin, Course, Purchase\n- Complete the routes for user login, signup, purchase a course, see course (Extra points \u2013 Use express routing to better structure your routes)\n- Create the frontend\n```",
+      "timestamp": 1749276381.535746
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "bef1c421-694f-44ae-b932-d4a1dac40700",
+  "title": "Best Git GitHub Tutorials",
+  "created_at": "2025-11-28T16:38:01.869127",
+  "updated_at": "2025-11-28T16:38:01.869127",
+  "messages": [
+    {
+      "role": "user",
+      "content": "bestyoutube video to learn git and github",
+      "timestamp": 1737748543.602447
+    },
+    {
+      "role": "assistant",
+      "content": "\u200b\ue200i\ue202turn0image0\ue202turn0image1\ue202turn0image3\ue202turn0image6\ue201\ue203To effectively learn Git and GitHub, here are some highly recommended YouTube tutorials:\ue204\ue206\n\n1. **Git and GitHub for Beginners - Crash Course**: \ue203This comprehensive tutorial by freeCodeCamp.org covers the fundamentals of Git and GitHub, including installation, basic commands, and workflow.\ue204 \ue200cite\ue202turn0search1\ue201\ue206\n\n2. **Git Tutorial for Beginners: Learn Git in 1 Hour**: \ue203Presented by Programming with Mosh, this video provides a concise yet thorough introduction to Git, making it suitable for those who prefer a quick overview.\ue204 \ue200cite\ue202turn0search4\ue201\ue206\n\n3. **Learn Git \u2013 Full Course for Beginners**: \ue203Offered by Hitesh Choudhary, this course delves into both Git and GitHub, providing practical examples to help solidify your understanding.\ue204 \ue200cite\ue202turn0search0\ue201\ue206\n\n\ue203These tutorials are well-regarded for their clarity and depth, making them excellent starting points for mastering Git and GitHub.\ue204\ue206 ",
+      "timestamp": 1737748552.373038
+    },
+    {
+      "role": "user",
+      "content": "do qwe need to do something different to take cscode in git if taken vim by default",
+      "timestamp": 1737748870.492548
+    },
+    {
+      "role": "assistant",
+      "content": "If you set `vim` as your default editor for Git (e.g., for commit messages or merge conflicts), but you want to use a different editor like `VS Code` for certain tasks, you don\u2019t have to undo the default configuration. You can simply override it on a per-command basis or update your default editor configuration if you always want to use VS Code. Here's how you can handle this:\n\n---\n\n### **1. Temporarily Override the Editor (For a Single Commit/Task)**\nIf you want to use VS Code for a specific task (e.g., editing a commit message), you can override the editor on the fly:\n\n```bash\nGIT_EDITOR=\"code --wait\" git commit\n```\n\nThis will open the commit message in VS Code for that instance only.\n\n---\n\n### **2. Change the Default Git Editor to VS Code**\nIf you'd like to permanently switch to using VS Code as your default editor for Git, you can update your Git configuration:\n\n1. Run the following command:\n   ```bash\n   git config --global core.editor \"code --wait\"\n   ```\n\n   - `--wait` ensures that Git waits for you to finish editing in VS Code before continuing.\n\n2. To verify the change, run:\n   ```bash\n   git config --global core.editor\n   ```\n\n   It should output:\n   ```\n   code --wait\n   ```\n\n---\n\n### **3. Check the Current Editor Configuration**\nIf you're unsure of your current default editor, check with:\n\n```bash\ngit config --global core.editor\n```\n\nIf it's set to `vim`, you'll see `vim` in the output.\n\n---\n\n### **4. Additional Notes for Using VS Code with Git**\n- Ensure that `code` (the VS Code command line tool) is in your system's PATH. If not, you can enable it via the Command Palette in VS Code:\n  1. Open VS Code.\n  2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS).\n  3. Search for \"Shell Command: Install 'code' command in PATH\" and click it.\n\nNow, you can enjoy the flexibility of using either `vim` or `VS Code` as needed!",
+      "timestamp": 1737748882.1165
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "d5637a96-17ff-48fa-8346-72bdb9a64187",
+  "title": "VCC and GND pins",
+  "created_at": "2025-11-28T16:37:56.602310",
+  "updated_at": "2025-11-28T16:37:56.602310",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How many vcc gnd pins in Arduino uno",
+      "timestamp": 1762425741.536721
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, straight to it \ud83d\udc47  \n\nOn an **Arduino Uno (ATmega328P)** board, the **VCC (5V/3.3V)** and **GND** pins are distributed like this:\n\n---\n\n### \u26a1 **VCC / Power Pins:**\n- **5V** \u2192 **1 pin** (main 5-volt output)\n- **3.3V** \u2192 **1 pin** (from the onboard voltage regulator)\n- **VIN** \u2192 **1 pin** (used to supply voltage to the board when not using USB, typically 7\u201312V input)\n\n\ud83d\udfe2 **Total Power Output Pins (VCC types)** = **3 pins**  \n(5V + 3.3V + VIN)\n\n---\n\n### \u26ab **GND Pins:**\n- **3 GND pins** in total:\n  - 2 near the **Power header section**\n  - 1 near the **digital pin area (close to pin 13)**\n\n---\n\n\u2705 **Summary:**\n| Type | Number | Notes |\n|------|---------|-------|\n| 5V | 1 | Main regulated output |\n| 3.3V | 1 | Low-voltage regulated output |\n| VIN | 1 | For input voltage (7\u201312V) |\n| GND | 3 | Common ground |\n\n---\n\n\ud83d\udca1 **Extra tip:**  \n- All GND pins are internally connected (you can use any one or more).\n- Don\u2019t mix VIN and 5V lines unless you *know what you\u2019re doing*\u2014it can fry the board.\n\nWould you like me to show a labeled pin diagram of Arduino Uno next? It\u2019ll make this visual and crystal clear.",
+      "timestamp": 1762425741.651614
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

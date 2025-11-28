@@ -1,0 +1,19 @@
+{
+  "id": "5b86c704-9260-453d-976c-f81ba6feb3ff",
+  "title": "PowerShell Script Execution Policy",
+  "created_at": "2025-11-28T16:38:01.547800",
+  "updated_at": "2025-11-28T16:38:01.547800",
+  "messages": [
+    {
+      "role": "user",
+      "content": "running scripts is disabled on this system",
+      "timestamp": 1740290204.139783
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you're trying to run a script (e.g., PowerShell, Python, or another scripting language) and you're getting an error related to execution policies. If you're on Windows and trying to run a PowerShell script, you might be facing an execution policy restriction.\n\n### **Solution for PowerShell**\nTry running PowerShell as an administrator and changing the execution policy:\n\n1. **Open PowerShell as Administrator**  \n   - Press `Win + X` and select **Windows Terminal (Admin)** or **PowerShell (Admin)**.\n\n2. **Check Current Execution Policy**  \n   Run:\n   ```powershell\n   Get-ExecutionPolicy\n   ```\n   If it returns `Restricted`, that's why scripts are disabled.\n\n3. **Change Execution Policy**  \n   Set it to allow running scripts:\n   ```powershell\n   Set-ExecutionPolicy RemoteSigned -Scope CurrentUser\n   ```\n   or, if needed:\n   ```powershell\n   Set-ExecutionPolicy Unrestricted -Scope CurrentUser\n   ```\n   - `RemoteSigned`: Allows local scripts to run but requires signed scripts from the internet.  \n   - `Unrestricted`: Allows all scripts to run.\n\n4. **Confirm Change**  \n   If prompted, type `Y` and press Enter.\n\n5. **Try Running Your Script Again**  \n\nIf you're dealing with a different scripting language, let me know which one, and I\u2019ll help troubleshoot!",
+      "timestamp": 1740290212.493536
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

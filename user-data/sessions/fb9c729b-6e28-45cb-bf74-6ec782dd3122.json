@@ -1,0 +1,19 @@
+{
+  "id": "fb9c729b-6e28-45cb-bf74-6ec782dd3122",
+  "title": "Merge sort in C",
+  "created_at": "2025-11-28T16:37:58.912726",
+  "updated_at": "2025-11-28T16:37:58.912726",
+  "messages": [
+    {
+      "role": "user",
+      "content": "simple merge sort code in c",
+      "timestamp": 1754335926.971
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a **simple and clean implementation of Merge Sort in C** without dynamic memory allocation, easy to understand for beginners:\n\n```c\n#include <stdio.h>\n\n// Function to merge two halves\nvoid merge(int arr[], int left, int mid, int right) {\n    int i, j, k;\n    int n1 = mid - left + 1;  // Size of left half\n    int n2 = right - mid;     // Size of right half\n\n    // Temp arrays\n    int L[n1], R[n2];\n\n    // Copy data to temp arrays L[] and R[]\n    for (i = 0; i < n1; i++)\n        L[i] = arr[left + i];\n    for (j = 0; j < n2; j++)\n        R[j] = arr[mid + 1 + j];\n\n    // Merge the temp arrays back into arr[]\n    i = 0;  // Initial index of L[]\n    j = 0;  // Initial index of R[]\n    k = left; // Initial index of merged array\n\n    while (i < n1 && j < n2) {\n        if (L[i] <= R[j])\n            arr[k++] = L[i++];\n        else\n            arr[k++] = R[j++];\n    }\n\n    // Copy remaining elements of L[] if any\n    while (i < n1)\n        arr[k++] = L[i++];\n\n    // Copy remaining elements of R[] if any\n    while (j < n2)\n        arr[k++] = R[j++];\n}\n\n// Recursive Merge Sort function\nvoid mergeSort(int arr[], int left, int right) {\n    if (left < right) {\n        int mid = (left + right) / 2;\n\n        // Sort first and second halves\n        mergeSort(arr, left, mid);\n        mergeSort(arr, mid + 1, right);\n\n        // Merge the sorted halves\n        merge(arr, left, mid, right);\n    }\n}\n\n// Helper function to print the array\nvoid printArray(int arr[], int size) {\n    for (int i = 0; i < size; i++)\n        printf(\"%d \", arr[i]);\n    printf(\"\\n\");\n}\n\n// Driver code\nint main() {\n    int arr[] = {5, 2, 9, 1, 6, 3};\n    int size = sizeof(arr) / sizeof(arr[0]);\n\n    printf(\"Original array:\\n\");\n    printArray(arr, size);\n\n    mergeSort(arr, 0, size - 1);\n\n    printf(\"Sorted array:\\n\");\n    printArray(arr, size);\n\n    return 0;\n}\n```\n\n---\n\n### \ud83e\udde0 How to Understand It\n\n1. **Divide** the array into two halves recursively.\n2. **Conquer** each half by sorting them.\n3. **Combine** by merging sorted halves.\n\nThis implementation uses temporary arrays to hold left and right parts. It avoids pointers and memory allocation to keep it **simple and readable**.\n\n---\n\nWant a **dry run** or explanation step-by-step with a sample array?",
+      "timestamp": 1754335907.863066
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "1cb955d9-3716-411d-af59-8a479ff47a6c",
+  "title": "Meeting Minutes Sample",
+  "created_at": "2025-11-28T16:38:00.429145",
+  "updated_at": "2025-11-28T16:38:00.429145",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give a sample minutes in this format",
+      "timestamp": 1747947828.085826
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a sample filled-in version of the minutes in the format from your image:\n\n---\n\n**Minutes**  \n\n**TechNova Solutions Pvt. Ltd.**  \nPlot No. 12, Tech Park Road, Bangalore \u2013 560001  \n**MINUTES**  \n\nMinutes for the **7th** Meeting of **Project Phoenix Review Committee** to be held at **11:00 am** on **Monday, 12th May 2025 at Conference Room B**.  \n\n**Present:**  \n1. Mr. Rohan Mehra, Project Manager  \n2. Ms. Nisha Verma, Software Lead  \n3. Mr. Arjun Rao, QA Head  \n\n**Absent:**  \n1. Mr. Kunal Sharma, UI/UX Designer  \n\n| No. of Minutes | Subject                        | Details of Minutes                                                                                                                                  |\n|----------------|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|\n| 7.01           | Progress Review                | The team reviewed the sprint progress. 80% of the planned modules have been completed and passed initial testing.                                  |\n| 7.02           | Design Changes                 | Suggested design revisions for the dashboard UI were discussed and tentatively approved, pending input from the UI/UX Designer.                    |\n| 7.03           | Next Sprint Planning           | The next sprint will focus on integration testing and finalizing the report generation module. The sprint timeline is set for 14 days starting 14th May. |\n\n&nbsp;  \n&nbsp;  \n&nbsp;  \n&nbsp;  \n&nbsp;  \n&nbsp;  \n\n&nbsp;  \n&nbsp;  \n&nbsp;  \n\n&nbsp;  \n&nbsp;  \n&nbsp;  \n\n&nbsp;  \n&nbsp;  \n&nbsp;  \n\n&nbsp;  \n&nbsp;  \n&nbsp;  \n\nSign  \nRohan Mehra  \nSecretary  \n\n---\n\nLet me know if you want a downloadable version in Word or PDF format.",
+      "timestamp": 1747947828.147312
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

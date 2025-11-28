@@ -1,0 +1,19 @@
+{
+  "id": "b8d86b45-4874-4cff-b670-16af3c04b5ac",
+  "title": "LangChain YouTube tutorials",
+  "created_at": "2025-11-28T16:37:57.718293",
+  "updated_at": "2025-11-28T16:37:57.718293",
+  "messages": [
+    {
+      "role": "user",
+      "content": "est tutorial for langchain in yt",
+      "timestamp": 1758576607.234
+    },
+    {
+      "role": "assistant",
+      "content": "Here are some of the best YouTube tutorials & resources for learning **LangChain** \u2014 straight-up, no fluff. Let me know what language (Python/JS) you\u2019re using so I can pick ones more suited to you.\n\n---\n\n## \ud83c\udfaf Top YouTube Tutorials\n\n\ue200video\ue202LangChain Master Class For Beginners 2024 [+20 Examples ...\ue202turn0search0\ue201\n\nHere are some good ones:\n\n| Tutorial | What\u2019s good about it / who it\u2019s for |\n|---|--------------------------------------|\n| *LangChain Master Class For Beginners 2024 [+20 Examples \u2026]* \ue200cite\ue202turn0search0\ue201 | Deep, lots of examples. Good for building solid foundations. |\n| *LangChain Crash Course For Beginners | LangChain Tutorial* \ue200cite\ue202turn0search2\ue201 | Quick, gives you the basics fast. If you want to start writing stuff ASAP. |\n| *Learn LangChain in 7 Easy Steps - Full Interactive Beginner \u2026* \ue200cite\ue202turn0search5\ue201 | Walks through the framework\u2019s key components step-by-step. Very usable. |\n| *LangChain Mastery in 2025 | Full 5 Hour Course \u2026* \ue200cite\ue202turn0search3\ue201 | Long-form, very thorough. Good if you want to go deeper and understand more advanced parts. |\n| *Complete Langchain Course For Generative AI In 3 Hours* \ue200cite\ue202turn0search9\ue201 | Mid-range time, covers a lot of ground. Good if you don\u2019t want to spend too many hours. |\n\n---\n\n## \u2699\ufe0f Other Resources & Which to Use When\n\n- The **official LangChain docs** page has a curated list of YouTube videos (some with 40,000+ views) that are good. \ue200cite\ue202turn0search8\ue201  \n- Official channel + tutorials are updated, so you avoid outdated stuff. \ue200cite\ue202turn0search8\ue202turn0search1\ue201  \n- A playlist aggregating a bunch of crash-courses + advanced content is also helpful. \ue200cite\ue202turn0search7\ue201\n\n---\n\nIf you like, I can fetch **India-friendly / Hindi-or-Marathi** tutorials (if available) so it's easier. Do you want that?",
+      "timestamp": 1758576611.119823
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

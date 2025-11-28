@@ -1,0 +1,19 @@
+{
+  "id": "ce01a076-5efe-40a7-98b6-792b5d321a62",
+  "title": "Zener Diode Breakdown Comparison",
+  "created_at": "2025-11-28T16:38:02.353064",
+  "updated_at": "2025-11-28T16:38:02.353064",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Explain me zener diode in simple terms and give a tabular difference between avalance breakown\n and zener breakdown ",
+      "timestamp": 1729638660.668064
+    },
+    {
+      "role": "assistant",
+      "content": "A **Zener diode** is a special type of diode that allows current to flow not only in the forward direction (like a normal diode) but also in the reverse direction when the voltage exceeds a certain value called the **Zener breakdown voltage**. This feature makes it useful in voltage regulation. When the reverse voltage reaches a certain value (the Zener voltage), the diode maintains a stable voltage across it, even if the current changes.\n\n### Difference between Avalanche Breakdown and Zener Breakdown\n\n| Aspect                   | Zener Breakdown                               | Avalanche Breakdown                           |\n|--------------------------|-----------------------------------------------|-----------------------------------------------|\n| **Mechanism**             | Direct rupture of covalent bonds due to a strong electric field. | Caused by the collision of accelerated carriers (electrons/holes) with atoms, generating more charge carriers. |\n| **Doping**                | Heavily doped                                  | Lightly doped                                  |\n| **Breakdown Voltage**     | Occurs at lower voltages, typically less than 6V | Occurs at higher voltages, generally above 6V |\n| **Depletion Region Width**| Narrow depletion region                       | Wide depletion region                         |\n| **Temperature Coefficient** | Negative (breakdown voltage decreases with increasing temperature) | Positive (breakdown voltage increases with increasing temperature) |\n| **Usage**                 | Primarily used in Zener diodes for voltage regulation | Rarely used for specific high-voltage applications |\n| **Current**               | Sharp increase in current                     | Gradual increase in current                    |\n\nZener breakdown dominates at low voltages (less than 6V) and avalanche breakdown occurs at higher voltages\u30105\u2020source\u3011.",
+      "timestamp": 1729638672.986845
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

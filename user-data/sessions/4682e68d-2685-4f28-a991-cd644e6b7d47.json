@@ -1,0 +1,19 @@
+{
+  "id": "4682e68d-2685-4f28-a991-cd644e6b7d47",
+  "title": "Explain Dijkstra's algorithm",
+  "created_at": "2025-11-28T16:37:55.037944",
+  "updated_at": "2025-11-28T16:37:55.037944",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Explain in simple words the algo",
+      "timestamp": 1764290565.727873
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the **simplest** explanation of the algorithm shown in your image (Dijkstra\u2019s Algorithm):\n\n---\n\n### **Dijkstra\u2019s Algorithm \u2014 Simple Words**\n\nGoal:  \nFind the **shortest path** from **one starting node** to **every other node** in a weighted graph (cost given).\n\n---\n\n### **Step-by-Step Logic**\n\n1. **Start from the source node**  \n   Distance to itself = 0\n\n2. **Mark all other nodes as very far**  \n   (Infinity / very large number)\n\n3. **Pick the unvisited node having the smallest distance**  \n   \u2192 Call this node **U**\n\n4. **Visit U**  \n   Mark it as visited \u2192 We got the shortest path to U\n\n5. **Update distances of its neighbors**  \n   For each neighbor **W** of U:  \n   ```\n   New distance = dist[U] + cost(U \u2192 W)\n   If new distance < existing dist[W]\n       update dist[W]\n   ```\n\n6. **Repeat**  \n   Until all nodes are visited.\n\n---\n\n### **End Result**\n\nThe **dist[ ]** array will contain:  \nShortest distance from the source to **all vertices**.\n\n---\n\n### **One-liner summary**\n\n> Repeatedly pick the nearest unvisited node \u2192 lock its distance \u2192 update its neighbors.\n\n---\n\nIf you want, I can also give the **smallest exam-friendly code** and example table.",
+      "timestamp": 1764290575.480304
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

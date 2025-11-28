@@ -1,0 +1,19 @@
+{
+  "id": "d7ee1ffb-8008-4d4d-92bb-043366eaa706",
+  "title": "Check Axios CDN Load",
+  "created_at": "2025-11-28T16:38:01.405867",
+  "updated_at": "2025-11-28T16:38:01.405867",
+  "messages": [
+    {
+      "role": "user",
+      "content": "how to check if axios has come using <script src=\"https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js\"></script> or not ",
+      "timestamp": 1741241870.867
+    },
+    {
+      "role": "assistant",
+      "content": "To check if Axios has been successfully loaded from the CDN, open your browser's developer console and run:\n\n```js\nconsole.log(typeof axios);\n```\n\n### Expected Outputs:\n- If Axios is loaded correctly, it should print: `\"function\"` (since `axios` is a function).\n- If Axios is **not** loaded, it will print: `\"undefined\"`.\n\n### Alternative Check:\nYou can also run:\n```js\nif (window.axios) {\n    console.log(\"Axios is loaded!\");\n} else {\n    console.log(\"Axios is NOT loaded!\");\n}\n```\n\nIf it prints `\"Axios is NOT loaded!\"`, there might be issues with:\n1. Internet connection.\n2. CDN being blocked.\n3. The `<script>` tag not being placed correctly (ensure it's inside `<head>` or before `</body>`).",
+      "timestamp": 1741241872.076042
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

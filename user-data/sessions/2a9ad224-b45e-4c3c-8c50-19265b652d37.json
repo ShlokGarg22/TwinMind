@@ -1,0 +1,39 @@
+{
+  "id": "2a9ad224-b45e-4c3c-8c50-19265b652d37",
+  "title": "Python case conversion",
+  "created_at": "2025-11-28T16:37:55.325526",
+  "updated_at": "2025-11-28T16:37:55.325526",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Code in Python for Uppercase and Lowercase, but you can't use any inbuilt function here, like use some SKI code that would.",
+      "timestamp": 1764060238.272618
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the clean, no-nonsense explanation and code.\n\nYou want:\n\n**\u2714 Convert lowercase \u2192 uppercase  \n\u2714 Convert uppercase \u2192 lowercase  \n\u2714 WITHOUT using any built-in functions like `.upper()`, `.lower()`, `ord()`, `chr()`**\n\nSo we do it the **raw way**:  \nUse **ASCII** and do the conversion manually using **pre-built lookup tables** (this avoids using `ord()` and `chr()` but still gives correct results).\n\n---\n\n# \u2705 **Python Code (No inbuilt case functions, no ord(), no chr()):**\n\n```python\n# Manual ASCII tables\nlowercase = \"abcdefghijklmnopqrstuvwxyz\"\nuppercase = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n\ndef to_upper(s):\n    result = \"\"\n    for ch in s:\n        found = False\n        # Check if character is lowercase\n        for i in range(26):\n            if ch == lowercase[i]:\n                result += uppercase[i]\n                found = True\n                break\n        if not found:\n            result += ch     # leave unchanged\n    return result\n\n\ndef to_lower(s):\n    result = \"\"\n    for ch in s:\n        found = False\n        # Check if character is uppercase\n        for i in range(26):\n            if ch == uppercase[i]:\n                result += lowercase[i]\n                found = True\n                break\n        if not found:\n            result += ch\n    return result\n\n\n# Test\ntext = \"HeLLo WorLD 123!\"\n\nprint(\"Uppercase:\", to_upper(text))\nprint(\"Lowercase:\", to_lower(text))\n```\n\n---\n\n# \u2705 **How it works (straight explanation)**\n\n### **1. You manually define the alphabets**\n```\nlowercase = \"abcdefghijklmnopqrstuvwxyz\"\nuppercase = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n```\n\n### **2. For each character in the string:**\n- If it exists in lowercase \u2192 replace with corresponding uppercase  \n- If it exists in uppercase \u2192 replace with corresponding lowercase  \n- Else leave it as-is (digits, symbols, etc.)\n\n### **3. No built-ins used**\n- No `.upper()`\n- No `.lower()`\n- No `ord()`, `chr()`\n- No ASCII arithmetic\n\nJust pure manual",
+      "timestamp": 1764060238.430106
+    },
+    {
+      "role": "user",
+      "content": "Like you give me the basic code like I give you a character and you I give you something and you have to tell it whether it is uppercase or lowercase",
+      "timestamp": 1764060278.097104
+    },
+    {
+      "role": "assistant",
+      "content": "Got you.  \nYou want the **most basic** program:\n\n\ud83d\udc49 Input **one character**  \n\ud83d\udc49 Output **UPPERCASE / LOWERCASE / NOT A LETTER**  \n\ud83d\udc49 **No inbuilt functions** (`isupper()`, `islower()`, `ord()`, `chr()`, etc.)\n\nHere\u2019s the clean, simple code.\n\n---\n\n# \u2705 **Python Code (No inbuilt functions)**\n\n```python\nlowercase = \"abcdefghijklmnopqrstuvwxyz\"\nuppercase = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n\nch = input(\"Enter a character: \")\n\nfound = False\n\n# check lowercase\nfor i in range(26):\n    if ch == lowercase[i]:\n        print(\"Lowercase letter\")\n        found = True\n        break\n\n# check uppercase\nif not found:\n    for i in range(26):\n        if ch == uppercase[i]:\n            print(\"Uppercase letter\")\n            found = True\n            break\n\n# not found in either list\nif not found:\n    print(\"Not a letter\")\n```\n\n---\n\n# \u2705 **How it works (simple explanation)**\n\n- We manually wrote two strings:  \n  `\"abcdefghijklmnopqrstuvwxyz\"`  \n  `\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"`\n\n- We compare your input character with each position.\n\n- If it matches lowercase \u2192 print **Lowercase**  \n- If it matches uppercase \u2192 print **Uppercase**  \n- Otherwise \u2192 **Not a letter**\n\n---\n\nIf you want, I can also make:\n\n\u2714 A shorter version  \n\u2714 A version using ASCII arithmetic  \n\u2714 A version using only loops and no strings  \n\u2714 A version without arrays  \n\nJust tell me.",
+      "timestamp": 1764060278.577587
+    },
+    {
+      "role": "user",
+      "content": "Swapnteo number without 3 variable ",
+      "timestamp": 1764060306.625408
+    },
+    {
+      "role": "assistant",
+      "content": "Here are **the cleanest and most commonly accepted ways** to swap two numbers **without using a 3rd variable**.  \nNo sugar-coating \u2014 these are the only real methods that matter.\n\n---\n\n# \u2705 **Method 1: Using Arithmetic (Addition\u2013Subtraction)**  \n**Safest, simplest.**\n\n```python\na = int(input(\"Enter a: \"))\nb = int(input(\"Enter b: \"))\n\na = a + b\nb = a - b\na = a - b\n\nprint(\"After swap: a =\", a, \" b =\", b)\n```\n\n---\n\n# \u2705 **Method 2: Using Multiplication\u2013Division**  \n(Works only if numbers \u2260 0)\n\n```python\na = int(input(\"Enter a: \"))\nb = int(input(\"Enter b: \"))\n\na = a * b\nb = a // b\na = a // b\n\nprint(\"After swap: a =\", a, \" b =\", b)\n```\n\n---\n\n# \u2705 **Method 3: Using XOR (Bitwise swap)**  \n(The cleanest mathematically)\n\n```python\na = int(input(\"Enter a: \"))\nb = int(input(\"Enter b: \"))\n\na = a ^ b\nb = a ^ b\na = a ^ b\n\nprint(\"After swap: a =\", a, \" b =\", b)\n```\n\n---\n\n# \u2714 Straight Explanation (No BS)\n\n- **Add\u2013Subtract:**  \n  Store the total, then subtract to recover the other number.\n\n- **XOR:**  \n  Bitwise trick that swaps values without touching memory.\n\n- **Mult\u2013Div:**  \n  Similar to add\u2013subtract but risky if numbers are 0.\n\n---\n\nIf you want, I can give you:\n\n\u2714 The easiest one-liner swap (Python built-in)  \n\u2714 A version without using operators  \n\u2714 A beginner-friendly visual explanation  \n\nJust say the word.",
+      "timestamp": 1764060308.768791
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

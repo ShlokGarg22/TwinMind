@@ -1,0 +1,19 @@
+{
+  "id": "e0709a60-857c-4edb-8cfe-a062a0cf80c1",
+  "title": "Regression Explanation Search",
+  "created_at": "2025-11-28T16:38:00.269370",
+  "updated_at": "2025-11-28T16:38:00.269370",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Which pdf have regression being explained ",
+      "timestamp": 1748326782.012529
+    },
+    {
+      "role": "assistant",
+      "content": "The topic of **regression** does **not** appear to be explicitly covered in any of the PDFs you uploaded. Here's a quick breakdown of the contents:\n\n- **Study material-Unit-1-A.pdf**: Covers types of data, frequency distribution, histogram, frequency polygon, and ogive curve.\n- **Study material-Unit-1-B.pdf**: Covers measures of central tendency \u2014 mean, median, and mode \u2014 with examples.\n- **study material-unit-1-C.pdf**: Focuses on dispersion \u2014 range, quartile deviation, mean deviation, standard deviation, variance, and coefficient of variation.\n- **study Material- Unit-1- D.pdf**: Deals with skewness, moments, and kurtosis.\n- **Study Material- Unit -2- A.pdf**: Covers **Spearman's Rank Correlation Coefficient**, but **not regression**.\n- **more topics on graphs.pdf**: Contains examples of bar diagrams, pie charts, cumulative frequency curves \u2014 graphical methods, not regression analysis.\n\n**Regression analysis** \u2014 like **linear regression, least squares method, or regression coefficients** \u2014 is **not included** in these PDFs.\n\nIf you're looking for regression explanations, I recommend checking your Unit 2 or Unit 3 statistics materials, or I can provide a clean introduction and examples directly if needed. Let me know.",
+      "timestamp": 1748326782.149088
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "026bf619-b51e-4e73-a4a3-b58aceb3f0fd",
+  "title": "Proof by contradiction",
+  "created_at": "2025-11-28T16:37:58.166137",
+  "updated_at": "2025-11-28T16:37:58.166137",
+  "messages": [
+    {
+      "role": "user",
+      "content": "If a,b belong to integer asqaure-4b is not equal to 2 prove it ",
+      "timestamp": 1757300044.807164
+    },
+    {
+      "role": "assistant",
+      "content": "# Proof (short and direct)\n\nAssume \\(a,b\\in\\mathbb{Z}\\). Suppose for contradiction that\n\\[\na^2-4b=2.\n\\]\nRearrange to get\n\\[\n4b=a^2-2,\n\\]\nso \\(a^2-2\\) must be divisible by \\(4\\). That means\n\\[\na^2\\equiv 2\\pmod{4}.\n\\]\n\nBut an integer square modulo \\(4\\) can only be \\(0\\) or \\(1\\):\n- If \\(a\\) is even, \\(a=2k\\Rightarrow a^2=4k^2\\equiv0\\pmod4\\).\n- If \\(a\\) is odd, \\(a=2k+1\\Rightarrow a^2=4k(k+1)+1\\equiv1\\pmod4\\).\n\nSo \\(a^2\\) cannot be congruent to \\(2\\pmod4\\). This contradicts \\(a^2\\equiv2\\pmod4\\). Therefore no integers \\(a,b\\) satisfy \\(a^2-4b=2\\).\n\nQED.",
+      "timestamp": 1757300045.5401
+    },
+    {
+      "role": "user",
+      "content": "Any trick?",
+      "timestamp": 1757300104.650054
+    },
+    {
+      "role": "assistant",
+      "content": "Short trick: look modulo \\(4\\).\n\nIf \\(a\\) is even then \\(a^2\\equiv0\\pmod4\\), so \\(a^2-4b\\equiv0\\pmod4\\) \u2014 it can\u2019t equal \\(2\\).\nIf \\(a\\) is odd then \\(a^2\\equiv1\\pmod4\\), so \\(a^2-4b\\equiv1\\pmod4\\) \u2014 again it can\u2019t be \\(2\\).\n\nTherefore \\(a^2-4b=2\\) has no integer solutions.\n\nOne-line version you can memorize: \u201can integer square is \\(0\\) or \\(1\\) mod \\(4\\), never \\(2\\).\u201d  \n\nExtra: same trick rules out any equation \\(a^2-4b\\equiv2\\pmod4\\); more generally, any congruence demanding a square be congruent to \\(2\\pmod4\\) is impossible.",
+      "timestamp": 1757300105.226443
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

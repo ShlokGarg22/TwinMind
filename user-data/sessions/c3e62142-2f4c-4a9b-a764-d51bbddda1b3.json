@@ -1,0 +1,39 @@
+{
+  "id": "c3e62142-2f4c-4a9b-a764-d51bbddda1b3",
+  "title": "Project list summary",
+  "created_at": "2025-11-28T16:37:56.083946",
+  "updated_at": "2025-11-28T16:37:56.083946",
+  "messages": [
+    {
+      "role": "user",
+      "content": "help me ctagraoxe all prohect with projeec tname and 1 line\nhttps://github.com/ShlokGarg22?tab=repositories",
+      "timestamp": 1762723887.414
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. Here\u2019s your repos, grouped and trimmed to one-liners.\n\n# AI / ML / Data\n- **MoviePop** \u2014 AI movie recommender using Gemini embeddings + Supabase. \ue200cite\ue202turn14view0\ue201  \n- **Search_Engine** \u2014 3-layer mini search engine (Go crawler, Python TF-IDF, Node API/UI). \ue200cite\ue202turn13view0\ue201  \n- **AI_Story_Generator** \u2014 Web app scaffold for AI-generated illustrated stories. \ue200cite\ue202turn18view0\ue201  \n- **Resume_Analyzer** \u2014 JS app to score or parse resumes (starter). \ue200cite\ue202turn21view0\ue201  \n- **handson-ml2 (fork)** \u2014 ML/Deep-Learning notebooks from *Hands-On ML*. \ue200cite\ue202turn21view0\ue201\n\n# Computer Vision / Media\n- **Eye_Control_Cursor** \u2014 Control the mouse cursor via eye tracking in Python. \ue200cite\ue202turn6view0\ue201  \n- **camera_filter** \u2014 Live camera effects: moustache/glasses + anime ONNX stylizers. \ue200cite\ue202turn10view0\ue201  \n- **Vedio_Generator** \u2014 Pipeline to script, voice-over, and compose videos (WIP). \ue200cite\ue202turn11view0\ue201  \n- **python_image** \u2014 Small Python image-processing utilities. \ue200cite\ue202turn21view0\ue201\n\n# Audio\n- **noise_reducer_mic** \u2014 Real-time AI noise-cancelling virtual microphone (RNNoise-style). \ue200cite\ue202turn9view0\ue201\n\n# Full-Stack / Apps\n- **CodeCohort** \u2014 Collab coding/project tool with GitHub OAuth, realtime updates. \ue200cite\ue202turn15view0\ue201  \n- **CodeCohort_backened** \u2014 Backend-only split of CodeCohort (Express/Mongo). \ue200cite\ue202turn16view0\ue201  \n- **CodeCohortFrontend** \u2014 Front-end for CodeCohort (React/Tailwind). \ue200cite\ue202turn21view0\ue201  \n- **SecondBrain** \u2014 Personal \u201csave/share links\u201d system (React+TS / Express+TS). \ue200cite\ue202turn19view0\ue201  \n- **Course_Selling_App** \u2014 Basic course marketplace boilerplate. \ue200cite\ue202turn21view0\ue201  \n- **chat_application** \u2014 Real-time chat starter (JS). \ue200cite\ue202turn21view0\ue201  \n- **todo_python** \u2014 CLI/mini to-do app in Python. \ue200cite\ue202turn21view0\ue201  \n- **Basic_React_Frontend** \u2014 Minimal React front-end template. \ue200cite\ue202turn21view0\ue201\n\n# Systems / IoT\n- **ESP_32-_Projects** \u2014 ESP32 Arduino sketches and experiments. \ue200cite\ue202turn7view0\ue201\n\n# Web / Clones / Utilities\n- **Vercel-Clone** \u2014 TypeScript clone of Vercel deploy flow. \ue200cite\ue202turn21view0\ue201  \n- **vercel_clone (fork)** \u2014 Simpler Vercel clone that deploys from a repo URL. \ue200cite\ue202turn21view0\ue201  \n- **PollyGot** \u2014 Polyglot/translation-style web app starter. \ue200cite\ue202turn21view0\ue201  \n- **CUET_WEBSITE** \u2014 CUET exam info site (JS). \ue200cite\ue202turn21view0\ue201  \n- **cuet** \u2014 CUET utilities/resources (JS). \ue200cite\ue202turn21view0\ue201  \n- **transfer** \u2014 Simple file/data transfer helper. \ue200cite\ue202turn21view0\ue201  \n- **CBC-3Rounds** \u2014 Coding challenge/quiz rounds site. \ue200cite\ue202turn21view0\ue201  \n- **ShlokGarg22** \u2014 Profile repo (GitHub profile config). \ue200cite\ue202turn21view0\ue201  \n- **SOEN (fork)** \u2014 Software engineering course repo fork. \ue200cite\ue202turn21view0\ue201  \n- **FOSS-Recruitment-2025 (fork)** \u2014 FOSS recruitment drive materials. \ue200cite\ue202turn21view0\ue201  \n- **Bajaj_Project (fork)** \u2014 BAJAJ JSON/REST coding task solution. \ue200cite\ue202turn21view0\ue201\n\n# In Progress / Ambiguous\n- **Code_Cohort** \u2014 Alt/stub repo for CodeCohort docs/setup. \ue200cite\ue202turn20view0\ue201\n\nIf you want, I can turn this into a neat README \u201cProjects\u201d table with badges and links.",
+      "timestamp": 1762724003.333713
+    },
+    {
+      "role": "user",
+      "content": "accordinfg to you tell the best project  , \nOptional: Share a project you\u2019re proud of and why  \n\nte;l best abs",
+      "timestamp": 1762724977.342
+    },
+    {
+      "role": "assistant",
+      "content": "Based on your repos \u2014 both **technical depth** and **creative direction** \u2014 here\u2019s a breakdown of your **best** and **most standout project**, plus how to present it if asked (\u201cproject you\u2019re proud of and why\u201d).  \n\n---\n\n### \ud83c\udfc6 **Best Project (Overall): `Search_Engine` (Eureka)**\n**Why it stands out:**  \nIt\u2019s not just another CRUD app \u2014 it\u2019s a **multi-language, multi-layer AI search architecture**, which shows genuine system design thinking. You built:\n- A **Go-based data collector** (fast crawling and indexing).  \n- A **Python processor** (TF-IDF / NLP-level processing).  \n- A **Node.js frontend + API** (application + user layer).  \n- Redis + MongoDB for caching and persistence.\n\nThat\u2019s **cross-language orchestration**, **backend engineering**, **data pipeline design**, and **AI/ML integration** \u2014 all in one project.  \nThis kind of architectural project is something even professionals highlight in resumes.\n\n\u2705 *Showcases:* System architecture, AI integration, multi-tech coordination, scalability thinking.\n\n---\n\n### \ud83d\udca1 **Runner-ups**\n- **MoviePop** \u2192 Smart use of Gemini embeddings; practical, modern AI recommendation system.  \n  *Why it matters:* It proves you understand embedding models, context-based ranking, and full-stack delivery.\n\n- **Eye_Control_Cursor** \u2192 Shows innovation in **human-computer interaction** using computer vision; real-world usability.  \n  *Why it matters:* It\u2019s tangible, demo-friendly, and memorable.\n\n- **CodeCohort** \u2192 Team collaboration + GitHub OAuth + real-time systems = strong product engineering project.  \n  *Why it matters:* Shows you can build scalable web apps and handle authentication, data flow, and UI cleanly.\n\n---\n\n### \ud83d\udde3\ufe0f **If asked \u201cWhich project are you most proud of and why?\u201d**\nYou can answer like this \ud83d\udc47\n\n> \u201cI\u2019m most proud of my project **Eureka**, a three-layer AI-driven search engine I built from scratch.  \n> It uses Go for data collection, Python for NLP-based indexing, and Node.js for the user-facing layer.  \n> The reason I\u2019m proud of it is that it taught me how to design scalable, cross-language systems \u2014 not just write code, but architect how data flows from crawler to query. It\u2019s where I really understood what *end-to-end engineering* means.\u201d\n\n---\n\nIf you want, I can write you a **perfect short LinkedIn paragraph or resume bullet** for this project \u2014 ready to paste.  \nWant me to do that next?",
+      "timestamp": 1762724977.06421
+    },
+    {
+      "role": "user",
+      "content": "2 lines for search engine only",
+      "timestamp": 1762724997.329
+    },
+    {
+      "role": "assistant",
+      "content": "**Eureka (Search Engine)** \u2014 Built a 3-layer AI-driven search engine with Go-based web crawling, Python NLP processing, and Node.js application layer.  \nDesigned for context-aware, scalable information retrieval using Redis and MongoDB.",
+      "timestamp": 1762724996.919262
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

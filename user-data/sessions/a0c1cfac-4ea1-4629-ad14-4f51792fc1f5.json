@@ -1,0 +1,679 @@
+{
+  "id": "a0c1cfac-4ea1-4629-ad14-4f51792fc1f5",
+  "title": "Hedera Token Service usage",
+  "created_at": "2025-11-28T16:37:59.107794",
+  "updated_at": "2025-11-28T16:37:59.107794",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Using the Hedera Token Service without prior Solidity or smart contract programming capabilities is NOT possible.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753386512.8
+    },
+    {
+      "role": "assistant",
+      "content": "**False**\n\nYou **can** use the **Hedera Token Service (HTS)** **without prior Solidity or smart contract programming experience**. HTS provides **native tokenization support** through **Hedera's SDKs and APIs** \u2014 meaning you can create, manage, and transfer tokens **without writing smart contracts**.\n\nFor example:\n- You can use the **JavaScript, Java, or Go SDKs** to create fungible or non-fungible tokens.\n- No need to write or deploy Solidity code.\n\nSo, the correct answer is:  \n\u2705 **False**",
+      "timestamp": 1753386509.1356
+    },
+    {
+      "role": "user",
+      "content": "This service is \"used for smart contract storage only\"\r\n\r\nReview Later\r\nHedera File Service\r\nHedera Token Service\r\nHedera Smart Contract Storage Service",
+      "timestamp": 1753386541.766
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\u2705 **Hedera Smart Contract Storage Service**\n\n### Explanation:\n- **Hedera Smart Contract Storage Service** is **used for smart contract storage only**. It provides key-value storage for smart contracts deployed on Hedera.\n- **Hedera File Service** is used to store **files**, such as application code, configuration files, or bytecode for contracts \u2014 not limited to smart contract storage.\n- **Hedera Token Service** is for creating and managing tokens, not for storage.\n\nSo:  \n\ud83d\udfe2 **Correct** \u2192 **Hedera Smart Contract Storage Service**",
+      "timestamp": 1753386538.822168
+    },
+    {
+      "role": "user",
+      "content": "HTS is an acronym for ______________\r\n\r\nReview Later\r\nHedera Token Service\r\nHedera Timestamp Service\r\nHedera Transfer Service\r\nHedera Transaction Service",
+      "timestamp": 1753386559.791
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\u2705 **Hedera Token Service**\n\n### Explanation:\n**HTS** stands for **Hedera Token Service**, which allows developers to:\n\n- Create fungible and non-fungible tokens (NFTs)\n- Manage token supply, permissions, KYC, and more\n- Perform token transfers without needing smart contracts\n\nThe other options are incorrect:\n- \u274c **Hedera Timestamp Service** \u2013 doesn't exist.\n- \u274c **Hedera Transfer Service** \u2013 not an official service.\n- \u274c **Hedera Transaction Service** \u2013 generic, not a real Hedera service.\n\n\u2705 **Answer:** **Hedera Token Service**",
+      "timestamp": 1753386557.027223
+    },
+    {
+      "role": "user",
+      "content": "\r\nWhich of these are NOT characteristics of Consensus Nodes?\r\n\r\nReview Later\r\nPublish and subscribe capabilities\r\nCan submit HAPI (Hedera API) transactions to the Hedera network\r\nRequires HBAR cryptocurrency payment for transactions & queries\r\nMaintains a history of some or all of the Hedera network state and ledger of transactions",
+      "timestamp": 1753386583.478
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\u2705 **Publish and subscribe capabilities**\n\n### Explanation:\n\nConsensus Nodes **do not** have **publish and subscribe capabilities** \u2014 that\u2019s a messaging pattern, not a function of consensus nodes in Hedera.\n\nHere's a breakdown:\n\n| Option | Is it a characteristic of Consensus Nodes? | Why |\n|--------|---------------------------------------------|-----|\n| \u2705 **Publish and subscribe capabilities** | \u274c **NOT** a characteristic | That's messaging pattern logic, not Hedera consensus node behavior |\n| \u2705 **Can submit HAPI transactions** | \u2714\ufe0f Yes | Nodes submit transactions using the Hedera API |\n| \u2705 **Requires HBAR payment** | \u2714\ufe0f Yes | Transactions and queries on Hedera require HBAR for fees |\n| \u2705 **Maintains history of network state** | \u2714\ufe0f Yes | Nodes store parts of the ledger or state info |\n\n### \u2705 Final Answer: **Publish and subscribe capabilities**",
+      "timestamp": 1753386580.961444
+    },
+    {
+      "role": "user",
+      "content": "You can use _______ to look up transaction history and filter by account, balance, transaction, topic, token, NFT, smart contract, and more.\r\n\r\nReview Later\r\nHedera Consensus Node Rest API\r\nHedera Mirror Node Rest API\r\nConsensus Node",
+      "timestamp": 1753386633.691
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\u2705 **Hedera Mirror Node REST API**\n\n### Explanation:\n- **Hedera Mirror Node REST API** is specifically designed to **query historical data**.\n- It allows you to **look up**:\n  - Transaction history  \n  - Account balances  \n  - Token and NFT transfers  \n  - Smart contract results  \n  - Topics and messages  \n  - And more...\n\n### The other options:\n- \u274c **Hedera Consensus Node REST API** \u2013 does not exist; consensus nodes handle live transaction consensus, not historical queries.\n- \u274c **Consensus Node** \u2013 does not directly support public querying; it's part of the consensus mechanism.\n\n### \u2705 Final Answer: **Hedera Mirror Node REST API**",
+      "timestamp": 1753386631.471054
+    },
+    {
+      "role": "user",
+      "content": "This network processes dApp transactions without real costs.\r\n\r\nReview Later\r\nTestnet\r\nMainnet\r\nLocal Network\r\nPreviewnet",
+      "timestamp": 1753386662.719
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\u2705 **Testnet**\n\n### Explanation:\n\n- **Testnet** is a public Hedera network used for **testing decentralized applications (dApps)**.\n- It allows developers to **simulate real transactions** using **free test HBAR** (obtained from a faucet), so **there are no real-world costs**.\n\n### Why the others are incorrect:\n- \u274c **Mainnet** \u2013 processes real transactions and **requires real HBAR**, so it **incurs actual costs**.\n- \u274c **Local Network** \u2013 used for private, isolated development, but **not connected to Hedera\u2019s public infrastructure**.\n- \u274c **Previewnet** \u2013 used to test **upcoming Hedera features**, but may not be as stable or supported for long-term testing.\n\n### \u2705 Final Answer: **Testnet**",
+      "timestamp": 1753386660.539992
+    },
+    {
+      "role": "user",
+      "content": "he Hedera Smart Contract Service can be used to build DeFi and oracles.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753386680.212
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **True**\n\n### Explanation:\nThe **Hedera Smart Contract Service** allows developers to build and deploy **Solidity-based smart contracts** on the Hedera network.\n\nThis enables the creation of:\n\n- **DeFi (Decentralized Finance)** applications like DEXs, lending platforms, staking protocols, etc.\n- **Oracles**, which are services that bring off-chain data (like price feeds or weather data) into smart contracts.\n\nSo yes \u2014 **Hedera Smart Contract Service can be used to build both DeFi and oracles**.\n\n### \u2705 Final Answer: **True**",
+      "timestamp": 1753386677.392981
+    },
+    {
+      "role": "user",
+      "content": "\"Accounts / data are likely to be lost when the network codebase is upgraded\" can be used to describe which network?\r\n\r\nReview Later\r\nLocal Network\r\nTestnet\r\nPreviewnet\r\nMainnet",
+      "timestamp": 1753386697.915
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\u2705 **Previewnet**\n\n### Explanation:\n- **Previewnet** is a **pre-release** version of the Hedera network used to test **new features and updates** **before** they are pushed to Testnet or Mainnet.\n- Because it's experimental:\n  - **Data and accounts may be wiped**\n  - **Not stable**\n  - **Used by Hedera developers to validate code changes**\n\n### Other options:\n- \u274c **Local Network** \u2013 Isolated and under your control; you decide what\u2019s lost.\n- \u274c **Testnet** \u2013 More stable; data loss is rare, though not guaranteed long-term.\n- \u274c **Mainnet** \u2013 Production-grade; accounts and data are **persisted and secure**.\n\n### \u2705 Final Answer: **Previewnet**",
+      "timestamp": 1753386696.743873
+    },
+    {
+      "role": "user",
+      "content": "In the context of token management, why would you set a KYC key?\r\n\r\nReview Later\r\nTo \"Know your Customer\" and gather further details about them.\r\nTo enable anonymous ownership of the token\r\nTo designate the token as a nontransferable asset through \"Knotting Your Collateral\"\r\nTo allow unrestricted token transfers without any owner verification.",
+      "timestamp": 1753386765.894
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **To \"Know your Customer\" and gather further details about them.**\n\n### Explanation:\n\nIn **token management on Hedera**, a **KYC key** (Know Your Customer key) is used to:\n\n- Enforce **regulatory compliance**.\n- Ensure that **only verified accounts** can hold or transfer the token.\n- Allow the **token issuer to approve or revoke** a user\u2019s ability to receive or use tokens based on KYC status.\n\nThis is especially important for **security tokens** or tokens tied to **regulated assets**, where verifying identity is necessary.\n\n---\n\n### Why other options are wrong:\n- \u274c **Enable anonymous ownership** \u2013 KYC does the opposite.\n- \u274c **Knotting Your Collateral** \u2013 Not a real term in Hedera or crypto.\n- \u274c **Unrestricted transfers** \u2013 KYC enforces **restrictions**, not removes them.\n\n### \u2705 Final Answer: **To \"Know your Customer\" and gather further details about them.**",
+      "timestamp": 1753386765.588578
+    },
+    {
+      "role": "user",
+      "content": "Serial numbers on NFTs are used to differentiate individual NFTs within the same token ID.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753386797.564
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **True**\n\n### Explanation:\n\nIn Hedera and many blockchain platforms, **NFTs (Non-Fungible Tokens)** created under the **same token ID** represent unique assets. To differentiate them:\n\n- Each NFT is assigned a **unique serial number**.\n- These **serial numbers** help identify **individual NFTs** within the same collection or token ID.\n\nThis is essential because:\n- The **token ID** defines the overall NFT collection.\n- The **serial number** distinguishes **each unique item** in that collection.\n\n---\n\n### \u2705 Final Answer: **True**",
+      "timestamp": 1753386794.779705
+    },
+    {
+      "role": "user",
+      "content": "The treasury account ID is set\r\n\r\nReview Later\r\nTo receive the initial supply or newly minted NFTs\r\nTo maintain token transaction history\r\nTo serve as a backup account in case of token loss\r\nTo manage the token's smart contract code",
+      "timestamp": 1753386817.808
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **To receive the initial supply or newly minted NFTs**\n\n---\n\n### Explanation:\n\nIn the **Hedera Token Service (HTS)**, the **treasury account** is the account that:\n\n- **Receives the initial supply** of tokens (fungible or NFTs) when a token is created.\n- **Receives newly minted tokens**, if minting is allowed.\n- Acts as the **central account** responsible for holding and distributing tokens.\n\n---\n\n### Why the other options are incorrect:\n\n- \u274c **To maintain token transaction history** \u2013 That's the job of **Mirror Nodes**, not the treasury account.\n- \u274c **To serve as a backup account** \u2013 Hedera doesn\u2019t use treasury accounts as backups.\n- \u274c **To manage the token's smart contract code** \u2013 That\u2019s handled by the **Smart Contract Service**, not the treasury account.\n\n---\n\n### \u2705 Final Answer: **To receive the initial supply or newly minted NFTs**",
+      "timestamp": 1753386816.341944
+    },
+    {
+      "role": "user",
+      "content": "Select the correct code snippet to associate an account to a token.\r\n\r\nReview Later\r\nconst transaction = await new TokenAssociateTranscation()\r\n    .setAccountId(accountIdToAssociate)\r\n    .setTokenIds([tokenId])\r\n    .freezeWith(client);\r\nconst signTx = await transaction.sign(accountIdToAssociatePrivateKey);\r\nconst txResponse = await signTx.execute(client);\r\nconst transaction = await new TokenAssociateTranscation()\r\n    .setAccountId(accountIdToAssociate)\r\n    .setTokenIds([tokenId])\r\n    .freezeWith(client);\r\nconst txResponse = await transaction.execute(client);\r\nconst signTx = await transaction.sign(accountIdToAssociatePrivateKey);\r\nconst transaction = await new TokenAssociateTranscation()\r\n    .setAccountId(accountIdToAssociate)\r\n    .setTokenIds([tokenId]);\r\nconst signTx = await transaction.sign(accountIdToAssociatePrivateKey);\r\nconst txResponse = await signTx.execute(client);\r\nconst transaction = await new TokenAssociateTranscation()\r\n    .setAccountId(accountIdToAssociate)\r\n    .setTokenIds([tokenId])\r\n    .freezeWith(client);\r\nconst signTx = await transaction.associateWithPrivateKey(accountIdToAssociatePrivateKey); \r\nconst txResponse = await signTx.execute(client);",
+      "timestamp": 1753386839.703
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct code snippet:**\n\n```javascript\nconst transaction = await new TokenAssociateTransaction()\n    .setAccountId(accountIdToAssociate)\n    .setTokenIds([tokenId])\n    .freezeWith(client);\nconst signTx = await transaction.sign(accountIdToAssociatePrivateKey);\nconst txResponse = await signTx.execute(client);\n```\n\n---\n\n### \u2705 Explanation:\n\n- \u2705 **`TokenAssociateTransaction`** is the correct constructor (note spelling \u2014 not `Transcation`).\n- \u2705 **`.setAccountId()`** sets the account that wants to associate with the token.\n- \u2705 **`.setTokenIds([tokenId])`** defines which tokens to associate.\n- \u2705 **`.freezeWith(client)`** prepares the transaction to be signed.\n- \u2705 **`.sign(accountPrivateKey)`** signs it with the account\u2019s private key.\n- \u2705 **`.execute(client)`** submits the signed transaction.\n\n---\n\n### \u274c Incorrect or invalid versions:\n- \u274c **`TokenAssociateTranscation`** \u2192 typo (should be `Transaction`)\n- \u274c `associateWithPrivateKey(...)` \u2192 not a valid method\n- \u274c Executing before signing or freezing \u2192 breaks the Hedera transaction flow\n\n---\n\n### \u2705 Final Answer:  \n```javascript\nconst transaction = await new TokenAssociateTransaction()\n    .setAccountId(accountIdToAssociate)\n    .setTokenIds([tokenId])\n    .freezeWith(client);\nconst signTx = await transaction.sign(accountIdToAssociatePrivateKey);\nconst txResponse = await signTx.execute(client);\n```",
+      "timestamp": 1753386836.124997
+    },
+    {
+      "role": "user",
+      "content": "TOKEN_NOT_ASSOCIATED_TO_ACCOUNT is a possible error message when transferring a token to another user.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753386945.274
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **True**\n\n---\n\n### Explanation:\n\nThe error **`TOKEN_NOT_ASSOCIATED_TO_ACCOUNT`** occurs when:\n\n- You try to **transfer a token** (fungible or NFT) to an account that **has not associated itself** with that token **via a `TokenAssociateTransaction`**.\n- In Hedera, accounts must **opt-in** to tokens for **security and spam prevention**.\n\n---\n\n### Example Scenario:\n1. Token `0.0.1234` exists.\n2. You try to send it to account `0.0.5678`.\n3. But account `0.0.5678` **hasn\u2019t associated** with that token.\n4. \ud83d\udd25 You get: **`TOKEN_NOT_ASSOCIATED_TO_ACCOUNT`**\n\n---\n\n### \u2705 Final Answer: **True**",
+      "timestamp": 1753386941.877671
+    },
+    {
+      "role": "user",
+      "content": "In the context of NFTs, it is NOT necessary to mint NFTs after generating a token ID.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753386966.054
+    },
+    {
+      "role": "assistant",
+      "content": "\u274c **False**\n\n---\n\n### Explanation:\n\nIn the context of **NFTs on Hedera**, **minting is absolutely necessary after generating a token ID**.\n\nHere's how it works:\n\n1. **Creating the token ID**:\n   - When you create an NFT token using `TokenCreateTransaction`, you get a **token ID**.\n   - At this point, **no actual NFTs exist yet**.\n\n2. **Minting NFTs**:\n   - You must use `TokenMintTransaction` to **mint individual NFTs** under that token ID.\n   - Each minted NFT will get a **unique serial number**.\n\n---\n\n### Therefore:\n- Without minting, the token ID exists but **has no NFTs under it**.\n- You **must mint** to create usable NFTs.\n\n---\n\n### \u2705 Final Answer: **False**  \n(Minting **is** necessary after generating a token ID for NFTs.)",
+      "timestamp": 1753386962.651669
+    },
+    {
+      "role": "user",
+      "content": "This class is used to create a token.\r\n\r\nReview Later\r\nTokenMintTransaction\r\nTokenSetTransaction\r\nTokenCreateTransaction\r\nCreateTokenTransaction",
+      "timestamp": 1753386982.677
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **TokenCreateTransaction**\n\n---\n\n### Explanation:\n\nTo **create a token** (fungible or non-fungible) on **Hedera**, you use:\n\n```javascript\nnew TokenCreateTransaction()\n```\n\nThis class allows you to:\n- Define the token type (fungible/NFT)\n- Set the name, symbol, decimals, initial supply\n- Assign admin, KYC, freeze, supply keys, etc.\n\n---\n\n### Why the others are incorrect:\n\n- \u274c **TokenMintTransaction** \u2013 Used to **mint additional tokens** after creation.\n- \u274c **TokenSetTransaction** \u2013 \u274c Not a valid class in Hedera SDK.\n- \u274c **CreateTokenTransaction** \u2013 \u274c Invalid class name (wrong naming convention).\n\n---\n\n### \u2705 Final Answer: **TokenCreateTransaction**",
+      "timestamp": 1753386979.838997
+    },
+    {
+      "role": "user",
+      "content": "When creating fungible tokens, the initial supply is set\r\n\r\nReview Later\r\nTo determine the amount of tokens initially put into circulation.\r\nTo determine the maximum possible supply for the token.\r\nTo allocate tokens to the Treasury Account.\r\nTo restrict the token supply to a fixed value.",
+      "timestamp": 1753387000.736
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **To determine the amount of tokens initially put into circulation.**\n\n---\n\n### Explanation:\n\nWhen creating **fungible tokens** using the **Hedera Token Service**, the **`initialSupply`** field is:\n\n- Used to define **how many tokens are immediately minted** and **put into circulation** at creation time.\n- These tokens are **automatically sent to the treasury account**.\n\n---\n\n### Why the other options are incorrect:\n\n- \u274c **To determine the maximum possible supply**  \n  \u2192 That\u2019s controlled by the **`maxSupply`** or **supplyKey** (if minting is enabled).\n\n- \u274c **To allocate tokens to the Treasury Account**  \n  \u2192 While the **initial supply is sent to the treasury**, the purpose of `initialSupply` is **not** just allocation \u2014 it's to **set how many tokens are created at start**.\n\n- \u274c **To restrict the token supply to a fixed value**  \n  \u2192 That\u2019s done by **not setting a supply key** (i.e., disabling minting/burning).\n\n---\n\n### \u2705 Final Answer: **To determine the amount of tokens initially put into circulation.**",
+      "timestamp": 1753386997.743692
+    },
+    {
+      "role": "user",
+      "content": "To mint tokens and increase the supply, it is unnecessary to set the supply key.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387023.081
+    },
+    {
+      "role": "assistant",
+      "content": "\u274c **False**\n\n---\n\n### Explanation:\n\nTo **mint tokens** (increase the supply **after creation**) in Hedera, it is **absolutely necessary** to set a **`supplyKey`** when creating the token.\n\n#### Without a `supplyKey`:\n- You **cannot** mint or burn tokens.\n- The token supply becomes **fixed** at whatever was set in `initialSupply`.\n\n---\n\n### Summary:\n| Action                  | Requires `supplyKey`? |\n|-------------------------|------------------------|\n| Minting tokens          | \u2705 **Yes**             |\n| Burning tokens          | \u2705 **Yes**             |\n| Fixed supply only       | \u274c No supplyKey needed |\n\n---\n\n### \u2705 Final Answer: **False**  \n(Because setting a `supplyKey` **is necessary** to mint tokens.)",
+      "timestamp": 1753387020.405143
+    },
+    {
+      "role": "user",
+      "content": "TokenType.NFT is the correct token type for creating an NFT.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387041.285
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **True**\n\n---\n\n### Explanation:\n\nWhen creating a **non-fungible token (NFT)** using the **Hedera Token Service**, you must specify the token type as:\n\n```javascript\nTokenType.NFT\n```\n\nThis tells the network that:\n- Each token instance will be **unique**.\n- The token will support **serial numbers**.\n- It can store **metadata** per NFT.\n\n---\n\n### Other option:\n- **`TokenType.FUNGIBLE_COMMON`** \u2192 used for fungible tokens (not NFTs).\n\n---\n\n### \u2705 Final Answer: **True**",
+      "timestamp": 1753387038.966357
+    },
+    {
+      "role": "user",
+      "content": "A royalty fee on an NFT is charged and sent to the royalty collector each time NFT ownership is transferred.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387060.702
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **True**\n\n---\n\n### Explanation:\n\nIn **Hedera Token Service (HTS)**, a **royalty fee** can be attached to an **NFT** using **custom fee settings**. Here's how it works:\n\n- Every time the **NFT is transferred** (i.e., ownership changes),\n- A **royalty fee** (typically a percentage of the sale price) is **charged** to the buyer,\n- And that amount is **automatically sent** to the **royalty fee collector**.\n\nThis is useful for:\n- Artists\n- Creators\n- Platforms that want to earn a **percentage on secondary sales** of NFTs\n\n---\n\n### \u2705 Final Answer: **True**",
+      "timestamp": 1753387057.746122
+    },
+    {
+      "role": "user",
+      "content": "Please select the methods that are NOT required when creating a token using the Hedera Token Service.\r\n\r\nReview Later\r\nsetTokenSymbol(symbol)\r\nsetTokenName(name)\r\nsetAdminKey(key)\r\nsetTokenType(TokenType)",
+      "timestamp": 1753387077.068
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **`setAdminKey(key)`**\n\n---\n\n### Explanation:\n\nWhen creating a token using the **Hedera Token Service (HTS)**, **some fields are optional**, while others are required.\n\nLet\u2019s break down the options:\n\n| Method | Required? | Explanation |\n|--------|-----------|-------------|\n| `setTokenSymbol(symbol)` | \u2705 **Yes** | Required to define the token\u2019s short code (like \u201cUSD\u201d, \u201cNFT1\u201d) |\n| `setTokenName(name)` | \u2705 **Yes** | Required to define the human-readable name of the token |\n| `setTokenType(TokenType)` | \u2705 **Yes** | Required to specify if the token is `FUNGIBLE_COMMON` or `NFT` |\n| `setAdminKey(key)` | \u274c **Not Required** | Optional \u2014 only needed if you want admin-level control (e.g., update, delete) |\n\nIf you don\u2019t set an `adminKey`, the token becomes **immutable** after creation (no updates allowed).\n\n---\n\n### \u2705 Final Answer: **`setAdminKey(key)`**",
+      "timestamp": 1753387074.446802
+    },
+    {
+      "role": "user",
+      "content": "When creating a supply key, it is best practice to save it to a file so you can later change the supply of your tokens.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387122.785
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **True**\n\n---\n\n### Explanation:\n\nWhen you create a **supply key** while setting up a token in the **Hedera Token Service (HTS)**, that key:\n\n- **Grants authority** to mint or burn tokens after creation.\n- Is **critical** for managing the **token supply**.\n- Without it, you **cannot modify the supply** later.\n\n### Why save it to a file?\n- It\u2019s a **best practice** to store sensitive keys (like supply keys) **securely and persistently**.\n- Losing the supply key means **you permanently lose the ability** to mint or burn tokens \u2014 **even if you're the creator**.\n\n---\n\n### \u2705 Final Answer: **True**  \n(Saving the supply key securely is essential for future supply control.)",
+      "timestamp": 1753387120.023845
+    },
+    {
+      "role": "user",
+      "content": "What role does MetaData play in NFTs?\r\n\r\nReview Later\r\nIt holds the geographical location of the NFT & who owns it.\r\nIt serves as the authentication key for NFT ownership.\r\nIt is the data that is being tokenized onto the NFT.\r\nIt holds the description of the NFT.",
+      "timestamp": 1753387142.21
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **It holds the description of the NFT.**\n\n---\n\n### Explanation:\n\nIn the context of **NFTs (Non-Fungible Tokens)**, **`metadata`** refers to the **descriptive information** about the NFT, such as:\n\n- Title or name  \n- Description  \n- Image URL or media reference  \n- Attributes (e.g., rarity, traits, stats)  \n- External links or creator info\n\nIt helps identify and give context to **what the NFT represents**, especially in art, music, collectibles, and gaming.\n\n---\n\n### Why the other options are incorrect:\n\n- \u274c **Geographical location & owner** \u2192 Ownership is tracked on-chain, not in metadata.\n- \u274c **Authentication key** \u2192 Metadata isn\u2019t used for authentication; cryptographic signatures and the ledger handle that.\n- \u274c **Data being tokenized** \u2192 The actual asset isn\u2019t always stored on-chain; metadata links to or describes it.\n\n---\n\n### \u2705 Final Answer: **It holds the description of the NFT.**",
+      "timestamp": 1753387139.553611
+    },
+    {
+      "role": "user",
+      "content": "An Associate transaction ______________\r\n\r\nReview Later\r\nautomates the process of token creation in the Hedera network.\r\nallows a user to receive a new fungible or new nonfungible token\r\nenables sending tokens directly to a user without any prior action.",
+      "timestamp": 1753387162.416
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **allows a user to receive a new fungible or new nonfungible token**\n\n---\n\n### Explanation:\n\nIn **Hedera**, before a user (account) can **receive tokens** \u2014 whether **fungible** or **non-fungible (NFTs)** \u2014 they must first **explicitly associate** themselves with the token using a:\n\n```javascript\nTokenAssociateTransaction\n```\n\nThis opt-in model:\n- **Prevents spam** and unauthorized token deposits.\n- Is **required once per token**, per account.\n\n---\n\n### Why the other options are incorrect:\n\n- \u274c **automates token creation** \u2192 That\u2019s done via `TokenCreateTransaction`, not associate.\n- \u274c **enables sending tokens directly without prior action** \u2192 Wrong \u2014 **association is the prior action required** before transfers.\n\n---\n\n### \u2705 Final Answer: **allows a user to receive a new fungible or new nonfungible token**",
+      "timestamp": 1753387159.722606
+    },
+    {
+      "role": "user",
+      "content": "\r\nInteracting with the testnet mirror nodes to pull local transaction data is a characterstic of working with a local network.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387183.451
+    },
+    {
+      "role": "assistant",
+      "content": "\u274c **False**\n\n---\n\n### Explanation:\n\n**Mirror nodes** (including **testnet mirror nodes**) are part of **Hedera\u2019s public infrastructure**, and they are **not part of a local network**.\n\n### Key Points:\n- A **local network** is a private, developer-run setup of Hedera services.\n- It does **not interact with Hedera's public testnet**, mainnet, or their **mirror nodes**.\n- **Testnet mirror nodes** are used to **query transaction history and account state** for the **testnet**, not for local development.\n\n---\n\n### \u2705 Final Answer: **False**  \n(Interacting with **testnet mirror nodes** is **not** a characteristic of working with a **local network**.)",
+      "timestamp": 1753387180.163439
+    },
+    {
+      "role": "user",
+      "content": "Select the correct method to configure your local network client\r\n\r\nReview Later\r\nclient.forTestnet().setOperator(accountId, privateKey);\r\nclient.forPreviewnet().setOperator(accountId, privateKey);\r\nclient.forNetwork(node).setMirrorNetwork(mirrorNodeIpAndPort)",
+      "timestamp": 1753387213.763
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **`client.forNetwork(node).setMirrorNetwork(mirrorNodeIpAndPort)`**\n\n---\n\n### Explanation:\n\nWhen working with a **local network** in Hedera, you need to manually specify:\n\n- The **network nodes** (IP address + port of your local node)\n- The **mirror node**, if you're running one locally\n\n### This is done using:\n\n```javascript\nclient = Client.forNetwork({ \"127.0.0.1:50211\": \"0.0.3\" })\n    .setMirrorNetwork([\"127.0.0.1:5600\"]);\n```\n\n- **`forNetwork()`** \u2192 connects to your **local Hedera node**.\n- **`setMirrorNetwork()`** \u2192 sets up a connection to your **local mirror node**, if needed.\n\n---\n\n### Why the others are incorrect:\n\n- \u274c `client.forTestnet()` \u2192 for public **testnet**, not local dev.\n- \u274c `client.forPreviewnet()` \u2192 for **previewnet**, not local dev.\n\n---\n\n### \u2705 Final Answer: **`client.forNetwork(node).setMirrorNetwork(mirrorNodeIpAndPort)`**",
+      "timestamp": 1753387210.988698
+    },
+    {
+      "role": "user",
+      "content": "Mainnet is the only Hedera network you can submit transactions and queries to using the SDK.\r\n\r\nReview Later\r\nFalse, one can also use previewnet\r\nFalse, one can also use testnet.\r\nTrue\r\nFalse, one can also use previewnet and testnet.",
+      "timestamp": 1753387238.182
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **False, one can also use previewnet and testnet.**\n\n---\n\n### Explanation:\n\nThe **Hedera SDK** allows you to submit transactions and queries to **multiple networks**, not just mainnet:\n\n1. \u2705 **Mainnet** \u2013 Production environment with real HBAR and live apps  \n2. \u2705 **Testnet** \u2013 Public test environment with free test HBAR  \n3. \u2705 **Previewnet** \u2013 Used for testing upcoming features before public release  \n\nThese can be accessed using:\n```javascript\nClient.forMainnet()\nClient.forTestnet()\nClient.forPreviewnet()\n```\n\n---\n\n### \u2705 Final Answer:  \n**False, one can also use previewnet and testnet.**",
+      "timestamp": 1753387234.75188
+    },
+    {
+      "role": "user",
+      "content": "Spot the error in the code: const sendHbar = await new TransferTransaction() .addHbarTransfer(myAccountId, Hbar.fromTinybars(-75)) //Sending account .addHbarTransfer(newAccountId, Hbar.fromTinybars(72)) //Receiving account .execute(client)\r\n\r\nReview Later\r\nThe net value of the transfer should be zero, ensuring that the total HBAR sent by the sender matches the total received by the recipient.\r\nThe Hbar.fromTinybars(-75) value is invalid due to the negative sig\r\nIn order to transfer Hbar you must use TransferHbarTransaction()\r\nThe addHbarTransfer method should take the receiving account as the first argument, then the sending account.",
+      "timestamp": 1753387256.76
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**The net value of the transfer should be zero, ensuring that the total HBAR sent by the sender matches the total received by the recipient.**\n\n---\n\n### Explanation:\n\nIn **Hedera's `TransferTransaction`**, the **sum of all HBAR transfers must equal exactly zero**. This ensures the **ledger stays balanced**.\n\n#### In your code:\n\n```javascript\nconst sendHbar = await new TransferTransaction()\n    .addHbarTransfer(myAccountId, Hbar.fromTinybars(-75)) // Sending account\n    .addHbarTransfer(newAccountId, Hbar.fromTinybars(72))  // Receiving account\n    .execute(client)\n```\n\n- You're **sending 75 tinybars**, but only **receiving 72 tinybars**.\n- Net total = **-3 tinybars** \u2014 \u274c **invalid**.\n- This will trigger a **\"TRANSACTION_REQUIRES_ZERO_SUM\"** error.\n\n---\n\n### Why the other options are incorrect:\n\n- \u274c **`Hbar.fromTinybars(-75)` is valid** \u2192 Negative values indicate deduction from an account.\n- \u274c **There is no `TransferHbarTransaction()`** \u2192 The correct class is `TransferTransaction`.\n- \u274c **Order of `addHbarTransfer()` arguments** is correct \u2192 First is account, second is amount.\n\n---\n\n### \u2705 Final Answer:  \n**The net value of the transfer should be zero, ensuring that the total HBAR sent by the sender matches the total received by the recipient.**",
+      "timestamp": 1753387253.982048
+    },
+    {
+      "role": "user",
+      "content": "___________ is used by the SDK to create accounts\r\n\r\nReview Later\r\nAccountUpdateTransaction\r\nAccountCreateTransaction\r\nAccountNewTransaction\r\nAccountBuildTransaction",
+      "timestamp": 1753387278.849
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **AccountCreateTransaction**\n\n---\n\n### Explanation:\n\nIn the **Hedera SDK**, the class used to **create a new account** is:\n\n```javascript\nnew AccountCreateTransaction()\n```\n\nThis transaction allows you to:\n- Set an initial balance (in HBAR)\n- Provide a public key\n- Optionally set auto-renew periods, memo, etc.\n\n---\n\n### Why the others are incorrect:\n\n- \u274c **AccountUpdateTransaction** \u2192 used to **modify** existing accounts (e.g., change keys or memo).\n- \u274c **AccountNewTransaction** \u2192 \u274c not a valid class in the SDK.\n- \u274c **AccountBuildTransaction** \u2192 \u274c invalid class name, not in Hedera SDK.\n\n---\n\n### \u2705 Final Answer: **AccountCreateTransaction**",
+      "timestamp": 1753387275.917772
+    },
+    {
+      "role": "user",
+      "content": "A client may NOT send the same transaction to multiple nodes via the Hedera SDK.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387309.488
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **False**\n\n---\n\n### Explanation:\n\nA client **can** send the **same transaction to multiple nodes** using the **Hedera SDK**. This is useful in situations like:\n\n- Ensuring **faster confirmation** in case one node is slow or unresponsive.\n- Improving **reliability** by broadcasting the transaction to multiple nodes.\n\nThe SDK provides ways to:\n- **Set node account IDs manually**\n- Or let the SDK **automatically select** nodes for execution\n\nHowever, once a transaction is **signed and frozen**, it can be sent to **multiple nodes**, provided the network and `TransactionId` remain valid.\n\n---\n\n### \u2705 Final Answer: **False**  \n(A client **can** send the same transaction to multiple nodes.)",
+      "timestamp": 1753387306.747927
+    },
+    {
+      "role": "user",
+      "content": "In order to allow another account or contract to transfer HBAR out of your account, you must grant that account or contract an allowance.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387324.392
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **True**\n\n---\n\n### Explanation:\n\nTo let another **account or smart contract** **spend HBAR on your behalf**, you must explicitly **grant it an allowance** using:\n\n```javascript\nAccountAllowanceApproveTransaction\n```\n\nThis is part of **Hedera\u2019s allowance system**, which works similarly to `approve()` and `transferFrom()` in Ethereum.\n\n### Example use case:\n- You allow a **smart contract** to withdraw up to 100 HBAR from your account.\n- That contract can then transfer HBAR using `transferFrom()`-style logic without needing your signature every time.\n\n---\n\n### \u2705 Final Answer: **True**  \n(You must grant an **allowance** to let others transfer HBAR from your account.)",
+      "timestamp": 1753387321.577174
+    },
+    {
+      "role": "user",
+      "content": "What is the purpose of the provided code block: const { Client, PrivateKey, AccountCreateTransaction, AccountBalanceQuery, Hbar, TransferTransaction } = require(\"@hashgraph/sdk\");\r\nrequire('dotenv').config();\r\n\r\nasync function codeBlock() {\r\n\r\n\r\nconst myAccountId = process.env.MY_ACCOUNT_ID;\r\nconst myPrivateKey = process.env.MY_PRIVATE_KEY;\r\n\r\nif (!myAccountId || !myPrivateKey) {\r\nthrow new Error(\"Environment variables MY_ACCOUNT_ID and MY_PRIVATE_KEY must be present\");\r\n}\r\nconst client = Client.forTestnet();\r\n\r\nclient.setOperator(myAccountId, myPrivateKey);\r\n}\r\ncodeBlock();\r\n\r\nReview Later\r\nThe code sets up environment variables and creates a testnet client with your account as the operator account.\r\nThe code is setting up an HTTP server for handling incoming requests.\r\nThe code generates random private keys for account creation.\r\nThe code imports modules for handline Hedera transactions.\r",
+      "timestamp": 1753387353.377
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **The code sets up environment variables and creates a testnet client with your account as the operator account.**\n\n---\n\n### \u2705 Explanation:\n\nLet\u2019s break it down:\n\n#### \u2714\ufe0f What the code does:\n1. **Imports Hedera SDK classes**:\n   ```js\n   const { Client, PrivateKey, ... } = require(\"@hashgraph/sdk\");\n   ```\n2. **Loads environment variables** from a `.env` file:\n   ```js\n   require('dotenv').config();\n   ```\n3. **Fetches account ID and private key** from environment:\n   ```js\n   const myAccountId = process.env.MY_ACCOUNT_ID;\n   const myPrivateKey = process.env.MY_PRIVATE_KEY;\n   ```\n4. **Creates a testnet client and sets the operator**:\n   ```js\n   const client = Client.forTestnet();\n   client.setOperator(myAccountId, myPrivateKey);\n   ```\n\nThis sets up a Hedera **Testnet client**, using the provided credentials to **authenticate all subsequent transactions** sent by this client.\n\n---\n\n### \u274c Why the other options are incorrect:\n\n- \u274c **HTTP server** \u2013 No server setup or express/http code exists.\n- \u274c **Random key generation** \u2013 No key is generated in this code block.\n- \u274c **Handling transactions** \u2013 It *prepares* the client for transactions, but doesn\u2019t handle any yet.\n\n---\n\n### \u2705 Final Answer:  \n**The code sets up environment variables and creates a testnet client with your account as the operator account.**",
+      "timestamp": 1753387350.574748
+    },
+    {
+      "role": "user",
+      "content": "`ownerAccountId` is used to\r\n\r\nReview Later\r\nindicate the account that holds the HBARS to be transferred\r\nspecify the account that will receive the transferred HBARs\r\nidentify the owner account ID that is authorizing the allowance\r\ndefine the maximum amount of HBARs that can be transferred.",
+      "timestamp": 1753387375.806
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:** **identify the owner account ID that is authorizing the allowance**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nIn the context of **HBAR allowances** in the Hedera SDK:\n\n- `ownerAccountId` refers to the **account that owns the HBARs** and is **giving permission (an allowance)** to another account or contract to spend a limited amount of HBARs on its behalf.\n\n---\n\n### Example use case:\n```js\nnew AccountAllowanceApproveTransaction()\n  .approveHbarAllowance(ownerAccountId, spenderAccountId, Hbar.from(10));\n```\n\nHere:\n- `ownerAccountId` = Account **authorizing the allowance**\n- `spenderAccountId` = Account **allowed to spend** up to 10 HBAR from the owner's balance\n\n---\n\n### \u274c Why other options are wrong:\n- **\"indicate the account that holds the HBARS to be transferred\"** \u2013 too vague, doesn\u2019t capture the *authorization* part.\n- **\"specify the account that will receive...\"** \u2013 that would be `spenderAccountId`, not `ownerAccountId`.\n- **\"define the max amount...\"** \u2013 that's defined by the **Hbar.from(...)** value, not by `ownerAccountId`.\n\n---\n\n### \u2705 Final Answer:  \n**identify the owner account ID that is authorizing the allowance**",
+      "timestamp": 1753387372.698977
+    },
+    {
+      "role": "user",
+      "content": "hoose the correct code snippet that correctly generates a private-public key pair of type ED25519.\r\n\r\nReview Later\r\nconst newAccountPrivateKey = PrivateKey.generateRSA();\r\nconst newAccountPublicKey = newAccountPrivateKey.getRSAPublicKey();\r\nconst newAccountPrivateKey = PrivateKey.generateED25519();\r\nconst newAccountPublicKey = newAccountPrivateKey.publicKey;\r\nconst newAccountPrivateKey = PrivateKey.generateED25519();\r\nconst newAccountPublicKey = newAccountPrivateKey;\r\nconst newAccountPrivateKey = new PrivateKey('myHardcodedPrivateKey');\r\nconst newAccountPublicKey = new PublicKey('myHardcodedPublicKey');\r",
+      "timestamp": 1753387403.117
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**`const newAccountPrivateKey = PrivateKey.generateED25519();`**  \n**`const newAccountPublicKey = newAccountPrivateKey.publicKey;`**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nTo generate a **key pair of type ED25519** using the Hedera JavaScript SDK, you use:\n\n```js\nconst newAccountPrivateKey = PrivateKey.generateED25519();\nconst newAccountPublicKey = newAccountPrivateKey.publicKey;\n```\n\nThis uses Hedera\u2019s built-in method to:\n- **Generate** a new private key (ED25519).\n- **Derive** the matching public key from the private key.\n\n---\n\n### \u274c Why the others are wrong:\n\n- `PrivateKey.generateRSA()`  \n  \u2192 \u274c RSA is not supported for account keys in Hedera. Only ED25519 is valid.\n\n- `newAccountPublicKey = newAccountPrivateKey;`  \n  \u2192 \u274c This assigns the private key as the public key, which is incorrect and insecure.\n\n- `new PrivateKey('myHardcodedPrivateKey')`  \n  \u2192 \u274c Hardcoding keys is insecure and also not generating a new key.\n\n---\n\n### \u2705 Final Answer:\n**`const newAccountPrivateKey = PrivateKey.generateED25519();`**  \n**`const newAccountPublicKey = newAccountPrivateKey.publicKey;`**",
+      "timestamp": 1753387399.855707
+    },
+    {
+      "role": "user",
+      "content": "Select the correct code to submit a message to a Hedera Consensus Service (HCS) topic using Hashconnect\r\n\r\nReview Later\r\nconst topicMessageTx = await new TopicMessageSubmitTransaction()\r\n    .setTopicId(newTopicId)\r\n    .setMessage(\"hello, HCS!\")\r\n    .freezeWith(client);\r\n\r\nconst topicMessageSubmit = await topicMessageTx.executeWithSigner(signer);\r\nconst topicMessageTx = await new TopicMessageSubmitTransaction()\r\n    .setTopicId(newTopicId)\r\n    .setMessage(\"hello, HCS!\")\r\n    .freezeWithSigner(signer);\r\n\r\nconst topicMessageSubmit = await topicMessageTx.executeWithSigner(signer);\r\nconst topicMessageTx = await new TopicMessageSubmitTransaction()\r\n    .setTopicId(newTopicId)\r\n    .setString(\"hello, HCS!\")\r\n    .freezeWithSigner(signer);\r\n\r\nconst topicMessageSubmit = await topicMessageTx.executeWithSigner(signer);\r\nconst topicMessageTx = await new TopicMessageSubmitTransaction()\r\n    .setTopicNumber(newTopicId)\r\n    .setText(\"hello, HCS!\")\r\n    .freezeWithSigner(signer);\r\n\r\nconst topicMessageSubmit = await topicMessageTx.executeWithSigner(signer);\r\n\r\ntell correct option",
+      "timestamp": 1753387489.338
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n```js\nconst topicMessageTx = await new TopicMessageSubmitTransaction()\n    .setTopicId(newTopicId)\n    .setMessage(\"hello, HCS!\")\n    .freezeWithSigner(signer);\n\nconst topicMessageSubmit = await topicMessageTx.executeWithSigner(signer);\n```\n\n---\n\n### \u2705 Explanation:\n\nThis is the **correct way to submit a message to a Hedera Consensus Service (HCS) topic using HashConnect**:\n\n- `setTopicId(newTopicId)` \u2192 Assigns the topic where the message will be submitted.\n- `setMessage(\"hello, HCS!\")` \u2192 Sets the message content (as a string or buffer).\n- `freezeWithSigner(signer)` \u2192 Prepares the transaction for signing.\n- `executeWithSigner(signer)` \u2192 Submits the transaction using the wallet signer.\n\n---\n\n### \u274c Why the other options are wrong:\n\n1. **Option with `freezeWith(client)`**  \n   \u2192 \u274c `executeWithSigner` must be used after `freezeWithSigner`, not `freezeWith(client)` in HashConnect context.\n\n2. **Option with `setString(\"hello, HCS!\")`**  \n   \u2192 \u274c `setString` is **not** a valid method. You must use `.setMessage(...)`.\n\n3. **Option with `setTopicNumber` and `setText`**  \n   \u2192 \u274c `setTopicNumber` and `setText` are **not valid methods** in the SDK.\n\n---\n\n### \u2705 Final Answer:\n```js\nconst topicMessageTx = await new TopicMessageSubmitTransaction()\n    .setTopicId(newTopicId)\n    .setMessage(\"hello, HCS!\")\n    .freezeWithSigner(signer);\n\nconst topicMessageSubmit = await topicMessageTx.executeWithSigner(signer);\n```",
+      "timestamp": 1753387489.505543
+    },
+    {
+      "role": "user",
+      "content": "The purpose of using the `executeWithSigner` method in Hashconnect is to invoke the wallet and ask the user to sign the transaction.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387590.57
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer: True**\n\n---\n\n### \u2705 Explanation:\n\nIn **HashConnect**, the `executeWithSigner()` method:\n\n- **Triggers the connected wallet** (like HashPack)  \n- **Prompts the user to sign** the frozen transaction  \n- **Sends the signed transaction** to the Hedera network  \n\nThis is the core method that **delegates signing and submission** of the transaction **to the user's wallet**.\n\n---\n\n### \ud83d\udca1 Example:\n```js\nconst tx = await new TransferTransaction()\n  .addHbarTransfer(sender, Hbar.fromTinybars(-1000))\n  .addHbarTransfer(receiver, Hbar.fromTinybars(1000))\n  .freezeWithSigner(signer);\n\nconst response = await tx.executeWithSigner(signer); // wallet opens and user signs\n```\n\n---\n\nSo yes,  \n\u2705 **`executeWithSigner()` is used to invoke the wallet and ask the user to sign.**\n\n**Answer: `True`**",
+      "timestamp": 1753387587.863168
+    },
+    {
+      "role": "user",
+      "content": "Which line of code initializes Hashconnect with the given `appMetadata`?\r\n\r\nReview Later\r\nconst initData = hashconnect.initialize(appMetadata);\r\nconst initData = await hashconnect.init(appMetadata);\r\nconst initData = await hashconnect.initData(appMetadata);\r\nconst initData = hashconnect.setup(appMetadata);",
+      "timestamp": 1753387610.768
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**`const initData = await hashconnect.init(appMetadata);`**\n\n---\n\n### \u2705 Explanation:\n\nTo **initialize HashConnect** with your app metadata (such as name, description, icon), you use the **`init()`** method.\n\nThis method:\n\n- Initializes the HashConnect instance  \n- Takes in your `appMetadata` object  \n- Returns `initData`, which contains things like pairing string and topic  \n\nIt\u2019s **asynchronous**, so it must be awaited.\n\n---\n\n### \u2705 Example:\n\n```js\nconst appMetadata = {\n  name: \"My DApp\",\n  description: \"A decentralized application using HashConnect\",\n  icon: \"https://myapp.com/icon.png\"\n};\n\nconst initData = await hashconnect.init(appMetadata);\n```\n\n---\n\n### \u274c Incorrect Options:\n- `initialize()` \u2192 \u274c Not a HashConnect method  \n- `initData()` \u2192 \u274c Doesn\u2019t exist  \n- `setup()` \u2192 \u274c Not a real method  \n\n---\n\n**\u2705 Final Answer: `const initData = await hashconnect.init(appMetadata);`**",
+      "timestamp": 1753387607.387945
+    },
+    {
+      "role": "user",
+      "content": "Choose the correct code to retrieve the topic ID after executing a topic create transaction.\r\n\r\nReview Later\r\nconst createTopicTransactionResponse = await new TopicCreateTransaction().execute(client);\r\nconst newTopicId = createTopicTransactionResponse.getTopicId();\r\nconst createTopicTransactionResponse = await new TopicCreateTransaction().execute(client);\r\nconst newTopicId = createTopicTransactionResponse.topicId\r\nconst createTopicTransactionResponse = await new TopicCreateTransaction().execute(client);\r\nconst createTopicReceipt = await createTopicTransactionResponse.getReceipt(client);\r\nconst newTopicId = createTopicTransactionResponse.topicId;\r\nconst createTopicTransactionResponse = await new TopicCreateTransaction().execute(client);\r\nconst createTopicReceipt = await createTopicTransactionResponse.getReceipt(client);\r\nconst newTopicId = createTopicReceipt.getTopicId();",
+      "timestamp": 1753387680.714
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**```js\nconst createTopicTransactionResponse = await new TopicCreateTransaction().execute(client);\nconst createTopicReceipt = await createTopicTransactionResponse.getReceipt(client);\nconst newTopicId = createTopicReceipt.getTopicId();\n```**\n\n---\n\n### \u2705 Explanation:\n\nTo **retrieve the topic ID after creating a topic** on the **Hedera Consensus Service (HCS)**, you must:\n\n1. **Execute the transaction** to create the topic.\n2. **Get the receipt** of the transaction.\n3. **Extract the topic ID** from the receipt using `.getTopicId()`.\n\n---\n\n### \ud83e\udde0 Breakdown:\n```js\nconst createTopicTransactionResponse = await new TopicCreateTransaction().execute(client);\n```\n- Sends the topic creation transaction.\n\n```js\nconst createTopicReceipt = await createTopicTransactionResponse.getReceipt(client);\n```\n- Waits for the transaction to be confirmed and returns the receipt.\n\n```js\nconst newTopicId = createTopicReceipt.getTopicId();\n```\n- Extracts the new topic ID from the receipt.\n\n---\n\n### \u274c Why the others are wrong:\n- `createTopicTransactionResponse.getTopicId()` \u2192 \u274c `getTopicId()` is not available directly on the response.\n- `createTopicTransactionResponse.topicId` \u2192 \u274c `topicId` is not directly available on the response object.\n- `createTopicReceipt = ... getReceipt(...)` + `createTopicTransactionResponse.topicId` \u2192 \u274c extracting from the wrong object.\n\n---\n\n**\u2705 Final Answer:**\n\n```js\nconst createTopicTransactionResponse = await new TopicCreateTransaction().execute(client);\nconst createTopicReceipt = await createTopicTransactionResponse.getReceipt(client);\nconst newTopicId = createTopicReceipt.getTopicId();\n```",
+      "timestamp": 1753387678.022945
+    },
+    {
+      "role": "user",
+      "content": "\r\nThe ______ and ________ are part of the Hedera Transaction fee.\r\n\r\nReview Later\r\nNetwork Fee\r\nInclusion Fee\r\nForking fee\r\nService Fee",
+      "timestamp": 1753387723.269
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**Network Fee** and **Service Fee**\n\n---\n\n### \ud83e\udde0 Explanation:\n\nIn **Hedera**, the total **transaction fee** is composed of three components:\n\n1. **Network Fee** \u2013 pays for the **network resources** used to process and reach consensus on the transaction.\n2. **Service Fee** \u2013 pays for **services used**, like creating a topic, token transfer, file storage, etc.\n3. **Node Fee** \u2013 pays the **individual node** that submitted the transaction.\n\n> Since \"Node Fee\" is not in the options, the two correct components among the given choices are:\n\u2705 **Network Fee** and \u2705 **Service Fee**\n\n---\n\n### \u274c Incorrect Options:\n- **Inclusion Fee** \u2013 Not a concept in Hedera (used in Ethereum, not applicable here).\n- **Forking Fee** \u2013 Hedera is non-forkable due to Hashgraph consensus, so this is invalid.\n\n---\n\n### \u2705 Final Answer:\n**Network Fee** and **Service Fee**",
+      "timestamp": 1753387719.905859
+    },
+    {
+      "role": "user",
+      "content": "Which of these is NOT a type of Hedera Improvement Proposal (HIP)?\r\n\r\nReview Later\r\nInformational\r\nProcess\r\nNetworking\r\nCore\r\nStandards Track",
+      "timestamp": 1753387738.29
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:** **Networking**\n\n---\n\n### \ud83e\udde0 Explanation:\n\nHedera Improvement Proposals (HIPs) follow a structure similar to Ethereum's EIPs or Bitcoin's BIPs. The **types of HIPs** include:\n\n1. **Standards Track HIPs** \u2013 Propose changes to network protocol, APIs, or core behavior.\n2. **Core HIPs** \u2013 Concern things like consensus and network rules that need broad agreement.\n3. **Process HIPs** \u2013 Suggest changes to development or decision-making processes.\n4. **Informational HIPs** \u2013 Provide general guidelines or information without proposing a change.\n\n---\n\n### \u274c Not a valid HIP type:\n- **Networking** \u2013 This is **not** a recognized HIP category. It might refer to network-layer changes, but those fall under **Core** or **Standards Track** types.\n\n---\n\n### \u2705 Final Answer:\n**Networking**",
+      "timestamp": 1753387736.614977
+    },
+    {
+      "role": "user",
+      "content": "If a transaction is submitted to the network in the time window specified by the valid start time + the valid duration then the transaction will be rejected.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387774.12
+    },
+    {
+      "role": "assistant",
+      "content": "\u274c **Correct Answer:** **False**\n\n---\n\n### \ud83e\udde0 Explanation:\n\nIn Hedera, every transaction includes:\n\n- **Valid Start Time** \u2013 The timestamp when the transaction becomes valid.\n- **Valid Duration** \u2013 The window of time (typically 2 minutes) during which the transaction remains valid.\n\n---\n\n### \u2705 If a transaction is submitted **within** that time window:\nIt will be **accepted** (assuming all other criteria like signatures and balances are valid).\n\n### \u274c If it's submitted **outside** that window:\nThen **it will be rejected**.\n\n---\n\n### \u2705 Final Answer: **False**\n\nIf it's submitted **within** the valid time window, it will **not be rejected** \u2014 it will be accepted.",
+      "timestamp": 1753387771.383462
+    },
+    {
+      "role": "user",
+      "content": "If the schedule doesn\u2019t receive sufficient signatures within 30 minutes, it\u2019s deleted\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387791.097
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer: False**\n\n---\n\n### \ud83e\udde0 Explanation:\n\nIn Hedera, **scheduled transactions** allow a transaction to be pre-authorized by multiple parties before being executed. These signatures can be gathered over time.\n\n\ud83d\udd12 **Expiration Timing**:\n- A **Scheduled Transaction** is **not deleted after 30 minutes**.\n- Instead, **it remains pending** until:\n  - All required signatures are collected, OR\n  - It reaches its **expiration time**, which is typically **30 days**, not 30 minutes.\n\n---\n\n### \u2705 Final Answer: **False**\n\n> A scheduled transaction does **not** get deleted after 30 minutes \u2014 it may stay pending for up to **30 days**.",
+      "timestamp": 1753387787.867702
+    },
+    {
+      "role": "user",
+      "content": "A transaction submitted to a Hedera network must include ALL EXCEPT\r\n\r\nReview Later\r\nTransaction ID\r\nTransaction Detail\r\nKeys\r\nSignatures",
+      "timestamp": 1753387828.605
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer: Keys**\n\n---\n\n### \ud83e\udde0 Explanation:\n\nA transaction submitted to the Hedera network must include:\n\n1. **Transaction ID** \u2013 A unique ID (usually derived from the payer\u2019s account and timestamp).\n2. **Transaction Detail** \u2013 The actual operation (e.g., transfer, token creation).\n3. **Signatures** \u2013 Needed to authorize and verify the transaction.\n\n---\n\n### \u274c **Keys** (Incorrect/Not Required Directly in Submission)\n\n- **Keys** (such as public/private keys) are used to **generate signatures**, but **they are not directly included in the transaction payload**.\n- The **network doesn\u2019t need to see your private key**, only the **valid signature** made using it.\n\n---\n\n### \u2705 Final Answer: **Keys**  \nThis is the one **NOT** directly required in the transaction submission.",
+      "timestamp": 1753387825.799617
+    },
+    {
+      "role": "user",
+      "content": "This method of confirmation exposes information in the least detail.\r\n\r\nReview Later\r\nReceipts\r\nRecords\r\nState proofs",
+      "timestamp": 1753387874.249
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer: Receipts**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nLet\u2019s break down the three:\n\n1. **Receipts**  \n   - \u2705 **Least detailed**\n   - Confirms whether a transaction was **successful or not**.\n   - Contains minimal info (like status, new entity ID if applicable).\n   - **Used for basic confirmation**.\n   \n2. **Records**  \n   - Contains **much more detail**, including:\n     - Transfers\n     - Transaction fee\n     - Logs\n     - Contract results (if applicable)\n\n3. **State Proofs**  \n   - Provide **cryptographic evidence** that data (like a receipt or record) exists on the ledger.\n   - **Most detailed and secure** for verification.\n\n---\n\n### \u2705 Final Answer: **Receipts**  \nReceipts expose the **least amount of detail** \u2014 just enough to confirm the result of a transaction.",
+      "timestamp": 1753387871.787059
+    },
+    {
+      "role": "user",
+      "content": "It is important to target only one node for submitting transactions.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387891.771
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer: True**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nIn **Hedera**, it's important to **target only one node** when submitting a transaction. Here's why:\n\n- Transactions are **submitted to a single node**, which is then responsible for:\n  - Passing it to the **gossip network**.\n  - Ensuring it reaches consensus.\n\n- If you target **multiple nodes**, it can result in:\n  - **Duplicate transactions**.\n  - Possible **rejection**.\n  - **Unpredictable behavior** due to nonce or transaction ID conflicts.\n\n---\n\n### \u2705 Final Answer: **True**  \nTo ensure consistency and avoid duplication, always target a **single node** when submitting transactions.",
+      "timestamp": 1753387889.123873
+    },
+    {
+      "role": "user",
+      "content": "A signature is required to submit a transaction.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753387965.199
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer: True**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nIn the **Hedera** network, every transaction must be **cryptographically signed** to:\n\n- Prove **ownership** and **authorization**.\n- Ensure the transaction came from a **valid account**.\n- Maintain **security and integrity** on the network.\n\n> \ud83d\udd10 Without a valid signature, the transaction will be **rejected** by the network.\n\n---\n\n### \u2705 Final Answer: **True**  \nA **signature is always required** to submit a transaction on Hedera.",
+      "timestamp": 1753387962.410781
+    },
+    {
+      "role": "user",
+      "content": "This key is used to decrypt a message on the network\r\n\r\nReview Later\r\nPrivate Key\r\nEncryption key\r\nPublic Key\r\nDecryption key",
+      "timestamp": 1753388009.198
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer: Private Key**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nIn **asymmetric cryptography**, used in networks like **Hedera**, two keys are involved:\n\n- **Public Key**: Used to **encrypt** the message.\n- **Private Key**: Used to **decrypt** the message.\n\nSo, when someone sends an encrypted message, only the **owner of the corresponding private key** can decrypt it.\n\n---\n\n### \u2705 Final Answer: **Private Key**  \nIt's the **private key** that decrypts the message on the network.",
+      "timestamp": 1753388005.901983
+    },
+    {
+      "role": "user",
+      "content": "Please choose ALL characteristics that contribute to the utility of HBAR?\r\n\r\nReview Later\r\nNone of these answers\r\nTransaction Fees\r\nIncentivizing Security (Staking Rewards)\r\nNetwork Security via Staking",
+      "timestamp": 1753388036.905
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answers:**\n\n- **Transaction Fees**  \n- **Incentivizing Security (Staking Rewards)**  \n- **Network Security via Staking**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nHBAR is the native cryptocurrency of the **Hedera network**, and its utility comes from several core functions:\n\n1. **Transaction Fees**:  \n   HBAR is used to **pay for network services** like smart contract execution, file storage, and token transfers.\n\n2. **Incentivizing Security (Staking Rewards)**:  \n   HBAR is used to **reward participants** who stake their HBAR to validate transactions and maintain consensus.\n\n3. **Network Security via Staking**:  \n   Staking HBAR contributes to the **security and integrity** of the Hedera proof-of-stake network by making it costly to perform malicious attacks.\n\n---\n\n### \u274c \"None of these answers\" is **incorrect** \u2014 all listed options except that one are valid.\n\n### \u2705 Final Answer:  \n- **Transaction Fees**  \n- **Incentivizing Security (Staking Rewards)**  \n- **Network Security via Staking**",
+      "timestamp": 1753388033.45206
+    },
+    {
+      "role": "user",
+      "content": "The scheduleCreate method requires a memo and payerAccountIdD\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753388060.595
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:** **True**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nThe `scheduleCreate` method in Hedera is used to create a **scheduled transaction** \u2014 a transaction that will only execute once all required signatures are collected.\n\nTo create a scheduled transaction, you **must** provide:\n\n- **A memo** (optional but typically used for identification)\n- **A `payerAccountId`** \u2013 this is **mandatory**, as it defines who will pay the transaction fee once all signatures are gathered and the transaction executes.\n\nSo while the memo is not strictly mandatory in all SDKs, in practical use (especially in UI-based wallets or frameworks), both `memo` and `payerAccountId` are generally required for complete and traceable scheduled transactions.\n\n---\n\n### \u2705 Final Answer: **True**",
+      "timestamp": 1753388057.998829
+    },
+    {
+      "role": "user",
+      "content": "\r\nHashio is a hosted instance of the JSON-RPC Relay project & is hosted by Swirlds Labs.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753388114.29
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Answer: True**\n\n---\n\n### \ud83d\udd0d Explanation\n\n**Hashio** is a **community-hosted, public JSON-RPC endpoint** for Hedera, and it is indeed **hosted by Swirlds Labs**. It's built on the **open-source Hedera JSON-RPC Relay project** (also known as *Hiero JSON-RPC Relay*) \ue200cite\ue202turn0search3\ue202turn0search6\ue201.\n\n---\n\n### \u2705 Final Answer  \n**True** \u2014 Hashio is a hosted instance of the JSON\u2011RPC Relay project and is hosted by Swirlds Labs.",
+      "timestamp": 1753388114.467629
+    },
+    {
+      "role": "user",
+      "content": "Hashio helps developers transition from Ethereum to Hedera by\r\n\r\nReview Later\r\nDiscouraging the use of familiar tools and libraries from Ethereum.\r\nTeaching developers how to write smart contracts.\r\nProviding a new programming language for smart contracts.\r\nAllowing smart contract developers to use tools like ethers.js and MetaMask.",
+      "timestamp": 1753388191.029
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**Allowing smart contract developers to use tools like ethers.js and MetaMask.**\n\n---\n\n### \ud83d\udd0d Explanation:\n\n**Hashio** provides a **JSON-RPC interface** that mimics Ethereum\u2019s interface, which means:\n\n- Developers can use **Ethereum-native tools** like **MetaMask**, **ethers.js**, **Web3.js**, **Hardhat**, etc.\n- It **bridges the gap** between the Ethereum ecosystem and Hedera by making the **developer experience nearly identical**.\n- This significantly **lowers the barrier** for Ethereum developers to deploy and interact with smart contracts on **Hedera**.\n\n---\n\n### \u274c Incorrect Options:\n- **Discouraging use of Ethereum tools** \u2192 False, it *encourages* their use.\n- **Teaching developers** \u2192 That\u2019s educational, not Hashio\u2019s job.\n- **New programming language** \u2192 Hedera supports Solidity, same as Ethereum.\n\n---\n\n### \u2705 Final Answer:  \n**Allowing smart contract developers to use tools like ethers.js and MetaMask.**",
+      "timestamp": 1753388189.772169
+    },
+    {
+      "role": "user",
+      "content": "Only the ABI and smart contract bytecode are needed to create a contract instance using ethers.js in the contractDeployFcn()\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753388271.002
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:** False\n\n---\n\n### \ud83d\udd0d Explanation:\n\nTo create a **contract instance** using **ethers.js** in a function like `contractDeployFcn()`, you need more than just:\n\n- **ABI** (Application Binary Interface)\n- **Bytecode**\n\nYou also need:\n\n- **A signer or provider** \u2014 to interact with the blockchain (send transactions, call methods)\n- **Contract address** (for interacting with an already deployed contract; not needed if you're deploying fresh)\n\n---\n\n### Typical usage for deployment:\n```js\nconst factory = new ethers.ContractFactory(abi, bytecode, signer);\nconst contract = await factory.deploy(...constructorArgs);\n```\n\n- Here, the **signer** is mandatory to send deployment transactions.\n- ABI + bytecode alone don\u2019t suffice.\n\n---\n\n### \u2705 Final Answer:  \n**False** \u2014 ABI and bytecode are necessary but **not sufficient alone** to create and deploy a contract instance with ethers.js.",
+      "timestamp": 1753388270.154948
+    },
+    {
+      "role": "user",
+      "content": "Use this code to deploy a smart contract using ethers.js & wait for the receipt\r\n\r\nReview Later\r\nconst myContract = new ContractFactory(abi,bytecode);\r\nconst contractDeployTx = await myContract.deploy({gasLimit: 40000000});\r\nconst contractDeployRx = await contractDeployTx.deployTransaction.wait();\r\nconst myContract = new ContractFactory(abi,bytecode,signer);\r\nconst contractDeployTx = await myContract.deploy({gasLimit: 40000000});\r\nconst contractDeployRx = await contractDeployTx.deployTransaction.wait();\r\nconst myContract = new ContractFactory(abi,bytecode,signer);\r\nconst contractDeployTx = await myContract.deploy({gasLimit: 40000000});\r\nconst contractDeployRx = await contractDeployTx.execute.wait();\r\nconst myContract = new ContractFactory(abi,bytecode);\r\nconst contractDeployTx = await myContract.deploy({gasLimit: 40000000});\r\nconst contractDeployRx = await contractDeployTx.deployTransaction.getReceipt();",
+      "timestamp": 1753388293.563
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**\n\n```js\nconst myContract = new ContractFactory(abi, bytecode, signer);\nconst contractDeployTx = await myContract.deploy({ gasLimit: 40000000 });\nconst contractDeployRx = await contractDeployTx.deployTransaction.wait();\n```\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- You **must provide a signer** when creating the `ContractFactory` to deploy a contract.\n- After calling `deploy()`, the **transaction object** has a property `deployTransaction`.\n- To wait for the deployment to be mined and get the receipt, use `.wait()` on `deployTransaction`.\n- `.execute.wait()` and `.getReceipt()` are **not valid methods** in this context.\n\n---\n\n### Why other options are wrong:\n\n- Missing signer in `ContractFactory` \u2192 deployment won't work.\n- Using `.execute.wait()` \u2192 no such method.\n- Using `.getReceipt()` \u2192 not available on `deployTransaction`.\n\n---\n\n### \u2705 Final answer snippet:\n\n```js\nconst myContract = new ContractFactory(abi, bytecode, signer);\nconst contractDeployTx = await myContract.deploy({ gasLimit: 40000000 });\nconst contractDeployRx = await contractDeployTx.deployTransaction.wait();\n```",
+      "timestamp": 1753388290.354807
+    },
+    {
+      "role": "user",
+      "content": "Ethers.js is a Javascript library for Ethereum development, but it is not able to be used on Hedera.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753388344.795
+    },
+    {
+      "role": "assistant",
+      "content": "\u274c **Correct Answer:** False\n\n---\n\n### \ud83d\udd0d Explanation:\n\nWhile **ethers.js** was originally designed for **Ethereum**, it **can be used with Hedera**, especially for interacting with Hedera\u2019s **EVM-compatible smart contracts**.\n\n- Hedera supports the **Ethereum Virtual Machine (EVM)**.\n- Through projects like **Hashio** (Hedera JSON-RPC Relay), developers can use **ethers.js** to interact with Hedera smart contracts almost identically to Ethereum.\n- This compatibility helps developers transition smoothly between Ethereum and Hedera.\n\n---\n\n### \u2705 Final Answer:  \n**False** \u2014 ethers.js **can** be used on Hedera for EVM smart contract development.",
+      "timestamp": 1753388342.425215
+    },
+    {
+      "role": "user",
+      "content": "Use this code to execute the contract function increment when working with the MetaMask wallet.\r\n\r\nReview Later\r\nconst myContract = new ethers.Contract(contractAddress, abi, bytecode);\r\nconst incrementTx = await myContract.increment({gasLimit:100000});\r\nconst incrementRx = await incrementTx.wait();\r\nconst myContract = new ethers.Contract(contractAddress, abi, signer);\r\nconst incrementTx = await myContract.increment({gasLimit:100000});\r\nconst incrementRx = await incrementTx.wait();\r\nconst myContract = new ethers.Contract(contractAddress, abi, signer);\r\nconst incrementTx = await myContract.increment({gasLimit:100000});\r\nconst incrementRx = await incrementTx.getReceipt();\r\nconst myContractTx = new ContractExecuteTransaction()\r\n     .setContractId(contractAddress)\r\n     .setGas(100000)\r\n     .setFunction(\"increment\");\r\nconst incrementTx = await myContractTx.execute(client);\r\nconst incrementRx = await incrementTx.getReceipt(client);",
+      "timestamp": 1753388366.352
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**\n\n```js\nconst myContract = new ethers.Contract(contractAddress, abi, signer);\nconst incrementTx = await myContract.increment({ gasLimit: 100000 });\nconst incrementRx = await incrementTx.wait();\n```\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- When working with **MetaMask**, you need to create a contract instance with a **signer** (connected wallet).\n- Call the **contract function** (`increment`) with gas limit specified.\n- Use `.wait()` on the transaction response to wait for the transaction to be mined and confirmed.\n- `.getReceipt()` is **not** a valid method on the transaction response in ethers.js.\n- Passing **bytecode** to `ethers.Contract` constructor is incorrect (only address, ABI, and signer/provider are needed).\n- The last option uses Hedera SDK code, **not ethers.js**.\n\n---\n\n### \u2705 Final Answer snippet:\n\n```js\nconst myContract = new ethers.Contract(contractAddress, abi, signer);\nconst incrementTx = await myContract.increment({ gasLimit: 100000 });\nconst incrementRx = await incrementTx.wait();\n```",
+      "timestamp": 1753388364.198633
+    },
+    {
+      "role": "user",
+      "content": "Please select the library that is used to help create/interact with EVM transactions on MetaMask?\r\n\r\nReview Later\r\nTruffle\r\nHashgraph sdk\r\nWeb3js\r\nEthers.js",
+      "timestamp": 1753388409.037
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**Ethers.js**\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- **Ethers.js** is a popular JavaScript library used to create and interact with **Ethereum-compatible (EVM) transactions** and smart contracts.\n- It integrates smoothly with **MetaMask** for signing and sending transactions.\n- While **Web3.js** also does similar tasks, **Ethers.js** is generally preferred for its cleaner API and better documentation.\n- **Truffle** is a development framework, not a direct transaction library.\n- **Hashgraph SDK** is for Hedera-specific transactions, not EVM/MetaMask.\n\n---\n\n### \u2705 Final Answer:  \n**Ethers.js**",
+      "timestamp": 1753388406.597136
+    },
+    {
+      "role": "user",
+      "content": "The ABI does not contain information on callable smart contract functions.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753388426.14
+    },
+    {
+      "role": "assistant",
+      "content": "\u274c **Correct Answer:** False\n\n---\n\n### \ud83d\udd0d Explanation:\n\nThe **ABI (Application Binary Interface)** is a **JSON description** of a smart contract's:\n\n- **Callable functions** (names, inputs, outputs)\n- **Events**\n- **Data types**\n\nIt **does contain detailed information on all callable functions** of the contract, which is essential for interacting with the contract programmatically.\n\n---\n\n### \u2705 Final Answer:  \n**False** \u2014 The ABI **does** contain information on callable smart contract functions.",
+      "timestamp": 1753388423.437491
+    },
+    {
+      "role": "user",
+      "content": "This code is used to associate an HTS token with a MetaMask account\r\n\r\nReview Later\r\nconst transaction = await new TokenAssociateTranscation()\r\n    .setAccountId(accountIdToAssociate)\r\n    .setTokenIds([tokenId])\r\n    .freezeWithSigner(signer);\r\nconst signTx = await transaction.sign(signer);\r\nconst txResponse = await signTx.execute(client);\r\nconst transaction = await new TokenAssociateTranscation()\r\n    .setAccountId(accountIdToAssociate)\r\n    .setTokenIds([tokenId])\r\n    .freezeWith(client);\r\nconst signTx = await transaction.sign(accountIdToAssociatePrivateKey);\r\nconst txResponse = await signTx.execute(client);\r\nconst myContract = new ethers.Contract(tokenAddress, abi, signer);\r\nconst associateTx = await myContract.associate({gasLimit: 100000});",
+      "timestamp": 1753388457.85
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**\n\n```js\nconst transaction = await new TokenAssociateTransaction()\n    .setAccountId(accountIdToAssociate)\n    .setTokenIds([tokenId])\n    .freezeWithSigner(signer);\nconst signTx = await transaction.sign(signer);\nconst txResponse = await signTx.execute(client);\n```\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- The **correct method** to associate an HTS token with an account (including a MetaMask wallet connected via HashConnect) uses the Hedera SDK's `TokenAssociateTransaction`.\n- The transaction is **frozen with the signer** (the MetaMask wallet signer) and then signed and executed.\n- The last option uses ethers.js and calls `.associate()` on a contract, which is **not applicable for HTS token association**.\n- The second option has a typo (`TokenAssociateTranscation` instead of `TokenAssociateTransaction`) and uses `.freezeWith(client)` instead of `.freezeWithSigner(signer)` needed for MetaMask interaction.\n\n---\n\n### \u2705 Final Answer Snippet:\n\n```js\nconst transaction = await new TokenAssociateTransaction()\n    .setAccountId(accountIdToAssociate)\n    .setTokenIds([tokenId])\n    .freezeWithSigner(signer);\nconst signTx = await transaction.sign(signer);\nconst txResponse = await signTx.execute(client);\n```\n\n---\n\nIf you want me to, I can correct the typo and format the full code properly!",
+      "timestamp": 1753388455.274191
+    },
+    {
+      "role": "user",
+      "content": "In the context of Topics in HCS, the submit key is used to __________\r\n\r\nReview Later\r\nExecute the transaction to submit a message.\r\nEnforce the size limit of a message.\r\nDetermine the order in which messages are processed.\r\nControl access to message submission.",
+      "timestamp": 1753388504.382
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**Control access to message submission.**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nIn Hedera Consensus Service (HCS):\n\n- The **submit key** is a **permission control mechanism**.\n- It **restricts who can submit messages** to the topic.\n- Only entities holding the submit key can submit messages to that topic.\n\n---\n\n### Why others are incorrect:\n\n- **Execute the transaction to submit a message** \u2192 This is the role of the client submitting the transaction, not the key itself.\n- **Enforce the size limit of a message** \u2192 Message size limits are protocol-defined, not controlled by the submit key.\n- **Determine the order in which messages are processed** \u2192 Message ordering is managed by the consensus algorithm, not keys.\n\n---\n\n### \u2705 Final Answer:  \n**Control access to message submission.**",
+      "timestamp": 1753388502.107394
+    },
+    {
+      "role": "user",
+      "content": "Use this method to set the time to start subscribing to a topic's messages.\r\n\r\nReview Later\r\ninitiateSubscription()\r\nconfigureStartTime()\r\nsetSubscriptionTime()\r\nsetStartTime()",
+      "timestamp": 1753388529.687
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**setStartTime()**\n\n---\n\n### \ud83d\udd0d Explanation:\n\nIn Hedera Consensus Service (HCS), when subscribing to a topic\u2019s messages, you use the **`setStartTime()`** method on the subscription or query object to specify the time from which you want to start receiving messages.\n\n---\n\n### Why others are incorrect:\n\n- **initiateSubscription()** \u2014 Not a standard SDK method.\n- **configureStartTime()** \u2014 No such method exists.\n- **setSubscriptionTime()** \u2014 Not a valid SDK method.\n\n---\n\n### \u2705 Final Answer:  \n**setStartTime()**",
+      "timestamp": 1753388526.968297
+    },
+    {
+      "role": "user",
+      "content": "This class creates a topic in the Hedera Consensus Service (HCS).\r\n\r\nReview Later\r\nTopicNewTransaction\r\nTopicStartTransaction\r\nTopicCreateTransaction\r\nTopicTransaction",
+      "timestamp": 1753388569.591
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**TopicCreateTransaction**\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- To **create a topic** on the Hedera Consensus Service (HCS), the SDK provides the class **`TopicCreateTransaction`**.\n- This transaction sets up a new consensus topic for submitting and subscribing to messages.\n\n---\n\n### Why others are incorrect:\n\n- **TopicNewTransaction** \u2014 Not a valid class.\n- **TopicStartTransaction** \u2014 No such class; starting a topic is not a separate transaction.\n- **TopicTransaction** \u2014 Too generic, not a valid SDK class.\n\n---\n\n### \u2705 Final Answer:  \n**TopicCreateTransaction**",
+      "timestamp": 1753388566.530934
+    },
+    {
+      "role": "user",
+      "content": "Even though the data is public, in the context of HCS, the topic's access is referred to as private as there is a restriction on controlling who can submit messages to it.\r\n\r\nReview Later\r\nTrue\r\nFalse",
+      "timestamp": 1753388602.273
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer: True**\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- In **Hedera Consensus Service (HCS)**, topic data is **publicly visible** on the network.\n- However, **access control** can be applied via the **submit key**, which **restricts who can submit messages** to the topic.\n- This makes the topic **\u201cprivate\u201d in terms of who can write to it**, even though the messages themselves are public.\n\n---\n\n### \u2705 Final Answer:  \n**True** \u2014 Topic access can be controlled (write access), making it \"private\" despite public data visibility.",
+      "timestamp": 1753388600.118326
+    },
+    {
+      "role": "user",
+      "content": "\r\nThis class is used to execute a smart contract function (it will change state)\r\n\r\nReview Later\r\nContractExecuteTransaction()\r\nContractExecute()\r\nContractCreateTransaction()\r\nContractCallQuery()",
+      "timestamp": 1753388655.178
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**ContractExecuteTransaction()**\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- **`ContractExecuteTransaction`** is used to **execute a smart contract function that changes state** (a transaction that modifies contract storage or triggers state changes).\n- It sends a **transaction** that modifies the blockchain state and consumes gas.\n\n---\n\n### Why others are incorrect:\n\n- **ContractExecute()** \u2014 Not a valid SDK class.\n- **ContractCreateTransaction()** \u2014 Used to **deploy** a new smart contract, not to call a function.\n- **ContractCallQuery()** \u2014 Used to **call read-only (view) functions** that do not change state.\n\n---\n\n### \u2705 Final Answer:  \n**ContractExecuteTransaction()**",
+      "timestamp": 1753388652.245441
+    },
+    {
+      "role": "user",
+      "content": "Create a smart contract instance on the Hedera network with this class\r\n\r\n\r\nReview Later\r\nContractCreateTransaction()\r\nFileCreateTranscation()\r\nContractCreateInstance()",
+      "timestamp": 1753388701.69
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**ContractCreateTransaction()**\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- To **create (deploy) a smart contract instance** on the Hedera network, you use the **`ContractCreateTransaction()`** class.\n- This transaction uploads the contract bytecode and deploys the contract to the network.\n\n---\n\n### Why others are incorrect:\n\n- **FileCreateTranscation()** \u2014 (typo: should be Transaction) is for creating files on Hedera File Service, not contracts.\n- **ContractCreateInstance()** \u2014 Not a valid SDK class.\n\n---\n\n### \u2705 Final Answer:  \n**ContractCreateTransaction()**",
+      "timestamp": 1753388698.543751
+    },
+    {
+      "role": "user",
+      "content": "This code snippet calls a function of a smart contract (it does not change state)\r\n\r\nReview Later\r\nconst contractQuery = await new ContractCallQuery()\r\n    .setPrice(10000)\r\n    .setContractId(newConractId)\r\n    .setFunction(\"get_message\")\r\n    .setQueryPayment(new Hbar(2));\r\n\r\nconst response = await contractQuery.execute(client);\r\nconst message = response.getMessage(0);\r\nconst contractQuery = await new ContractCallQuery()\r\n    .setGas(10000)\r\n    .setContractId(newConractId)\r\n    .setFunction(\"get_message\")\r\n    .setQueryPayment(new Hbar(2));\r\n\r\n\r\nconst message = response.getString(0);\r\nconst contractQuery = await new ContractCallQuery()\r\n    .setGas(10000)\r\n    .setContractId(newConractId)\r\n    .setFunction(\"get_message\")\r\n    .setQueryPayment(new Hbar(2));\r\n\r\nconst response = await contractQuery.execute(client);\r\nconst message = response.getString(0);\r\nconst contractQuery = await new ContractCallQuery()\r\n    .setGas(10000)\r\n    .setFileId(bytecodeFileId)\r\n    .setFunction(\"get_message\")\r\n    .setQueryPayment(new Hbar(2));\r\n\r\nconst response = await contractQuery.execute(client);\r\nconst message = response.getString(0);\r",
+      "timestamp": 1753388738.063
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**\n\n```js\nconst contractQuery = await new ContractCallQuery()\n    .setGas(10000)\n    .setContractId(newContractId)\n    .setFunction(\"get_message\")\n    .setQueryPayment(new Hbar(2));\n\nconst response = await contractQuery.execute(client);\nconst message = response.getString(0);\n```\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- For **calling a read-only smart contract function** (one that **does not change state**), you use **`ContractCallQuery`**.\n- You must specify:\n  - **Gas limit** (`setGas`) \u2014 even for queries.\n  - The **contract ID** (`setContractId`) \u2014 NOT file ID.\n  - The **function name** and any parameters (`setFunction`).\n  - **Query payment** (`setQueryPayment`) to pay for the query.\n- After execution, you retrieve the return values using `response.getString(0)` or similar methods depending on return type.\n- Using `setPrice()` or `setFileId()` is incorrect here.\n- Also note the typo in `newConractId` \u2014 should be `newContractId`.\n\n---\n\n### \u2705 Final Answer snippet:\n\n```js\nconst contractQuery = await new ContractCallQuery()\n    .setGas(10000)\n    .setContractId(newContractId)\n    .setFunction(\"get_message\")\n    .setQueryPayment(new Hbar(2));\n\nconst response = await contractQuery.execute(client);\nconst message = response.getString(0);\n```",
+      "timestamp": 1753388735.983827
+    },
+    {
+      "role": "user",
+      "content": "The class used to create a new NFT token using a Smart Contract on Hedera.\r\n\r\nReview Later\r\nContractCallQuery()\r\nFileCreateTransaction()\r\nContractExecuteTransaction()\r\nContractUpdateTransaction()",
+      "timestamp": 1753388801.399
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**ContractExecuteTransaction()**\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- To **create a new NFT token via a smart contract** on Hedera, you use **`ContractExecuteTransaction()`** to call the contract function that performs the token creation.\n- This is because **creating or minting tokens involves changing the state**, which requires a transaction execution.\n\n---\n\n### Why others are incorrect:\n\n- **ContractCallQuery()** \u2014 For **read-only** calls that do not change state.\n- **FileCreateTransaction()** \u2014 For uploading files to Hedera File Service, not for token creation.\n- **ContractUpdateTransaction()** \u2014 Used to update contract properties, not to execute functions.\n\n---\n\n### \u2705 Final Answer:  \n**ContractExecuteTransaction()**",
+      "timestamp": 1753388798.446885
+    },
+    {
+      "role": "user",
+      "content": "After calling .getRecord() on the executed createTokenTx, call ______________ to get the result returned by calling the createNFT smart contract function.\r\n\r\nReview Later\r\ngetReceipt()\r\nContractCallQuery()\r\ncontractFunctionResult.getAddress(0)",
+      "timestamp": 1753388826.676
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**  \n**contractFunctionResult.getAddress(0)**\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- After calling `.getRecord()` on the executed transaction (`createTokenTx`), you get a **transaction record**.\n- This record includes the **`contractFunctionResult`**, which contains the return values from the smart contract function.\n- To get the **result returned by the `createNFT` function** (typically an address or token ID), you use:\n  \n  ```js\n  contractFunctionResult.getAddress(0)\n  ```\n- `.getReceipt()` returns the transaction receipt but **does not return function results**.\n- `ContractCallQuery()` is used to **call a contract method as a query**, not for retrieving results after execution.\n\n---\n\n### \u2705 Final Answer:  \n**contractFunctionResult.getAddress(0)**",
+      "timestamp": 1753388824.592773
+    },
+    {
+      "role": "user",
+      "content": "Select the correct code snippet that creates a smart contract instance on Hedera and gets the contract id.\r\n\r\nReview Later\r\nconst contractTx = new ContractCreateTransaction()\r\n    .setBytecodeFileId(bytecodeFileId)\r\n    .setGas(100000)\r\n    .setConstructorParameters(new ContractFunctionParameters().addString(\"Hello from Hedera!\"));\r\n\r\nconst transactionResponse = await contractTx.execute(client);\r\nconst txReceipt = await transactionResponse.getReceipt(client);\r\nconst newContractId = txReceipt.Id; \r\nconst contractTx = new ContractCreateTransaction()\r\n    .setBytecodeFileId(bytecodeFileId)\r\n    .setGas(100000)\r\n    .setConstructorParameters(new ContractFunctionParameters().addString(\"Hello from Hedera!\"));\r\n\r\nconst transactionResponse = await contractTx.execute(client);\r\nconst newContractId = transactionResponse.contractId\r\nconst contractTx = new ContractCreateInstance()\r\n    .setGas(100000)\r\n    .setConstructorParameters(new ContractFunctionParameters().addString(\"Hello from Hedera!\"));\r\n\r\nconst transactionResponse = await contractTx.execute(client);\r\nconst txReceipt = await transactionResponse.getReceipt(client);\r\nconst newContractId = txReceipt.contractId; \r\nconst contractTx = new ContractCreateTransaction()\r\n    .setBytecodeFileId(bytecodeFileId)\r\n    .setGas(100000)\r\n    .setConstructorParameters(new ContractFunctionParameters().addString(\"Hello from Hedera!\"));\r\n\r\nconst transactionResponse = await contractTx.execute(client);\r\nconst txReceipt = await transactionResponse.getReceipt(client);\r\nconst newContractId = txReceipt.contractId; ",
+      "timestamp": 1753388858.425
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct Answer:**\n\n```js\nconst contractTx = new ContractCreateTransaction()\n    .setBytecodeFileId(bytecodeFileId)\n    .setGas(100000)\n    .setConstructorParameters(new ContractFunctionParameters().addString(\"Hello from Hedera!\"));\n\nconst transactionResponse = await contractTx.execute(client);\nconst txReceipt = await transactionResponse.getReceipt(client);\nconst newContractId = txReceipt.contractId;\n```\n\n---\n\n### \ud83d\udd0d Explanation:\n\n- **`ContractCreateTransaction()`** is the correct class to create a smart contract instance.\n- You must **set the bytecode file ID**, **gas limit**, and optionally **constructor parameters**.\n- After executing the transaction, you must **get the receipt** to retrieve the **`contractId`**.\n- The property to access the new contract ID from the receipt is **`contractId`**, not `Id`.\n- `ContractCreateInstance()` is not a valid class.\n- `transactionResponse.contractId` is undefined until you fetch the receipt.\n\n---\n\n### \u2705 Final Answer snippet:\n\n```js\nconst contractTx = new ContractCreateTransaction()\n    .setBytecodeFileId(bytecodeFileId)\n    .setGas(100000)\n    .setConstructorParameters(new ContractFunctionParameters().addString(\"Hello from Hedera!\"));\n\nconst transactionResponse = await contractTx.execute(client);\nconst txReceipt = await transactionResponse.getReceipt(client);\nconst newContractId = txReceipt.contractId;\n```",
+      "timestamp": 1753388855.965245
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

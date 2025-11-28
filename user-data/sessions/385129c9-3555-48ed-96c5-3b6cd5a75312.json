@@ -1,0 +1,19 @@
+{
+  "id": "385129c9-3555-48ed-96c5-3b6cd5a75312",
+  "title": "Laurent Series and Residues",
+  "created_at": "2025-11-28T16:38:00.998996",
+  "updated_at": "2025-11-28T16:38:00.998996",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Help me understand this in simplest way as tomorrow is my exam ",
+      "timestamp": 1744920717.967122
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, let\u2019s break this down into the simplest possible way so you can get the main ideas fast and clearly for your exam.\n\n---\n\n### **1. Laurent Series & Poles**\n\n- If a function **f(z)** has a **singularity** at a point \\( z = z_0 \\), it means something goes wrong (like division by 0).\n  \n- You can write **f(z)** as a **Laurent series** around \\( z = z_0 \\):  \n  \\[\n  f(z) = \\sum a_n (z - z_0)^n\n  \\]  \n  which includes both positive and negative powers of \\( (z - z_0) \\).  \n  The terms with **negative powers** are important here.\n\n- A **pole** is a type of singularity. For example, \\( f(z) = \\frac{1}{z} \\) has a **pole at \\( z = 0 \\)**.\n\n---\n\n### **2. Residue (using Laurent series)**\n\n- The **residue** of a function at a pole is the coefficient of \\( \\frac{1}{z - z_0} \\) in the Laurent series.\n\n- Shortcut formula:  \n  \\[\n  \\text{Residue} = a_{-1} = \\frac{1}{2\\pi i} \\oint_C f(z) \\, dz\n  \\]  \n  where **C** is a small circle (closed curve) around \\( z_0 \\).\n\n---\n\n### **3. Calculating Residue Quickly**\n\n#### Case 1: **Simple pole** (just \\( \\frac{1}{z - z_0} \\), not squared or more)\n\n\\[\n\\text{Res}_{z=z_0} f(z) = \\lim_{z \\to z_0} (z - z_0) f(z)\n\\]\n\n#### Case 2: **Pole of order m** (like \\( \\frac{1}{(z - z_0)^m} \\), m > 1)\n\n\\[\n\\text{Res}_{z=z_0} f(z) = \\frac{1}{(m-1)!} \\lim_{z \\to z_0} \\frac{d^{m-1}}{dz^{m-1}} \\left[(z - z_0)^m f(z)\\right]\n\\]\n\n---\n\n### **4. Cauchy's Residue Theorem**\n\nIf a function has **multiple poles** inside a closed contour \\( C \\), the integral over that contour is:\n\n\\[\n\\oint_C f(z)dz = 2\\pi i \\times (\\text{sum of residues at those poles})\n\\]\n\n---\n\n### **5. Example Problem (from slide)**\n\n\\[\n\\oint_C \\frac{e^z}{(z+1)^4 (z - 1)} dz = ?\n\\]\n\n**Step-by-step idea**:\n\n- Identify **poles**:  \n  \\( z = -1 \\) (pole of order 4),  \n  \\( z = 1 \\) (simple pole)\n\n- Find **residue** at each pole (use formulas above)\n\n- Add the residues\n\n- Multiply by \\( 2\\pi i \\)\n\n---\n\nLet me know if you want me to solve the problem at the bottom in full detail \u2014 I can walk you through it step-by-step.",
+      "timestamp": 1744920718.022293
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

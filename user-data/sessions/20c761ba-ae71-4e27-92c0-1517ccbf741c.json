@@ -1,0 +1,29 @@
+{
+  "id": "20c761ba-ae71-4e27-92c0-1517ccbf741c",
+  "title": "Bubble sort time complexity",
+  "created_at": "2025-11-28T16:37:55.048087",
+  "updated_at": "2025-11-28T16:37:55.048087",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Bubble sort time complet ",
+      "timestamp": 1764274043.306568
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the **straightforward** answer you need for exams:\n\n---\n\n### **Bubble Sort Time Complexity**\n\n| Case | Explanation | Time Complexity |\n|------|-------------|----------------|\n| **Best Case** | Array already sorted \u2192 just one pass, no swaps | **O(n)** |\n| **Average Case** | Random order \u2192 many comparisons & some swaps | **O(n\u00b2)** |\n| **Worst Case** | Reverse sorted \u2192 max comparisons & swaps | **O(n\u00b2)** |\n\n---\n\n### **Space Complexity**\n- Uses only a few extra variables \u2192 **O(1)** (constant space)\n\n---\n\n### Short reason (if asked)\n> Bubble sort compares each pair repeatedly. That gives n passes and (n \u2212 1) comparisons per pass \u2192 **n \u00d7 (n \u2212 1) \u2248 n\u00b2**.\n\n---\n\nIf you want, I\u2019ll give the shortest optimized code with comments too.",
+      "timestamp": 1764274043.472376
+    },
+    {
+      "role": "user",
+      "content": "Like I want for normal bubble not optimized",
+      "timestamp": 1764274075.944894
+    },
+    {
+      "role": "assistant",
+      "content": "Got it \u2014 **normal (non-optimized) bubble sort** only. No \u201cstop-early\u201d check.\n\n---\n\n### **Time Complexity \u2014 Normal Bubble Sort**\n\n| Case | Why | Complexity |\n|------|-----|------------|\n| **Best Case** | Even if already sorted, it still does all passes and all comparisons | **O(n\u00b2)** |\n| **Average Case** | Random data \u2192 full passes, many swaps | **O(n\u00b2)** |\n| **Worst Case** | Reverse sorted \u2192 maximum comparisons + swaps | **O(n\u00b2)** |\n\n---\n\n### **Space Complexity**\n- Only temporary variable for swapping \u2192 **O(1)**\n\n---\n\n### **Short Explanation (one-liner for exam)**  \n> Normal bubble sort always performs n passes and (n\u22121) comparisons in each pass \u2192 (n \u00d7 n) \u2192 **O(n\u00b2)** in all cases.\n\n---\n\nIf you want, I can give a very short exam-friendly code snippet too.",
+      "timestamp": 1764274077.323241
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

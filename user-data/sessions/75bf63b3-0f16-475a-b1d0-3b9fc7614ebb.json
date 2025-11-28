@@ -1,0 +1,59 @@
+{
+  "id": "75bf63b3-0f16-475a-b1d0-3b9fc7614ebb",
+  "title": "Green Jobs and Sustainability",
+  "created_at": "2025-11-28T16:38:01.141978",
+  "updated_at": "2025-11-28T16:38:01.141978",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tell ans",
+      "timestamp": 1744202275.134975
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:\n\n**\"All the options listed here\"**\n\nExplanation:  \nFrom the passage:\n- **Tackle environmental challenges**: Yes, it mentions tackling pollution, deforestation, biodiversity loss, etc.\n- **Reduce unemployment**: Yes, it mentions that 20% of India\u2019s workforce is in green jobs and is expected to grow.\n- **Promote alternative means of farming**: Yes, organic farming and sustainable agriculture are mentioned.\n\nSo, the most complete answer is: **All the options listed here.**\n\nIf you need, I can explain why in more depth too!",
+      "timestamp": 1744202275.179752
+    },
+    {
+      "role": "user",
+      "content": "Tell ans",
+      "timestamp": 1744202386.69816
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:\n\n**Green Skill Development Programme**\n\nExplanation:  \nIn the passage, it clearly mentions:  \n> *\"...initiatives like the Green Skill Development Programme, focusing on environmental conservation, renewable energy, and climate resilience.\"*\n\nSo, this is directly mentioned and is the correct option.",
+      "timestamp": 1744202386.747428
+    },
+    {
+      "role": "user",
+      "content": "Tell ans",
+      "timestamp": 1744202409.675835
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:\n\n**Aligning curriculum and vocational studies with green economy**\n\nExplanation:  \nThe passage clearly states:  \n> *\"However, aligning academic curricula and vocational training with the green economy remains a challenge.\"*\n\nSo this matches exactly with the first option.",
+      "timestamp": 1744202409.723139
+    },
+    {
+      "role": "user",
+      "content": "Tell ans",
+      "timestamp": 1744202432.380323
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:\n\n**All options listed here**\n\nExplanation:  \nThe passage mentions skills related to:\n- **Renewable energy** (solar, wind, etc.)\n- **Green architecture** (under sustainable solutions)\n- **Environmental monitoring and research** (tracking climate change, biodiversity loss, etc.)\n\nSince all these are part of green skills, the right answer is **\u201cAll options listed here.\u201d**",
+      "timestamp": 1744202432.428428
+    },
+    {
+      "role": "user",
+      "content": "Tell ans",
+      "timestamp": 1744202463.97845
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:\n\n**All the options listed here**\n\nExplanation:  \nThe passage clearly mentions:\n- **Banning single-use plastics** (under the Plastic Waste Management Amendment Rules 2021),\n- **Increasing the thickness of plastic carry bags** (plastic bag thickness regulations in 2022),\n- **Strengthening waste management policies** (effective waste management and recycling are needed).\n\nSince all are included, the correct choice is **\u201cAll the options listed here.\u201d**",
+      "timestamp": 1744202464.013628
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

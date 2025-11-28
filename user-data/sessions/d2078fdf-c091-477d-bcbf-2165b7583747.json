@@ -1,0 +1,19 @@
+{
+  "id": "d2078fdf-c091-477d-bcbf-2165b7583747",
+  "title": "Cron Job Explained",
+  "created_at": "2025-11-28T16:37:59.604342",
+  "updated_at": "2025-11-28T16:37:59.604342",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Whatvis cron job in simple words",
+      "timestamp": 1751555634.171792
+    },
+    {
+      "role": "assistant",
+      "content": "A **cron job** is a way to **automatically run a task or command at a specific time or repeatedly** on a Linux-based system.\n\n### Simple example:\n- Like setting an **alarm** to run something.\n- Example: \"Run this script every day at 5 PM\" or \"Clear logs every Sunday.\"\n\n### Real-world example:\nLet\u2019s say you have a backup script. You don\u2019t want to run it manually every night. A **cron job** can do it for you at **2 AM daily**.\n\n---\n\n### In short:\n> A cron job is an automated task scheduler in Linux that runs commands or scripts at set times.\n\nLet me know if you want help writing one.",
+      "timestamp": 1751555634.388214
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

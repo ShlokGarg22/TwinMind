@@ -1,0 +1,19 @@
+{
+  "id": "ca80b904-e6d0-4ea8-916b-824044d32c9f",
+  "title": "Fixing Promise Logic",
+  "created_at": "2025-11-28T16:38:01.461442",
+  "updated_at": "2025-11-28T16:38:01.461442",
+  "messages": [
+    {
+      "role": "user",
+      "content": "const fakerequest = (url) => {\r\n  new Promise((resolve, reject) => {\r\n    const rand = Math.random();\r\n    setTimeout(() => {\r\n        if(rand<0.7){\r\n      resolve();}\r\n      reject('errorssss')\r\n    \r\n    }, 10);\r\n  });\r\n};\r\n\r\nfakerequest('/dogs/1')\r\n    .then(() =>{\r\n        console.log(\"done with request\")\r\n\r\n    })\r\n    .catch((err) => {\r\n        console.log(\"oh no\",err)\r\n    })\r",
+      "timestamp": 1741022923.296
+    },
+    {
+      "role": "assistant",
+      "content": "Your `fakerequest` function has an issue: the `Promise` is created but never returned. Because of this, `.then()` and `.catch()` have nothing to work with. \n\n### **Fixed Code**\n```javascript\nconst fakerequest = (url) => {\n  return new Promise((resolve, reject) => {  // Added return statement\n    const rand = Math.random();\n    setTimeout(() => {\n      if (rand < 0.7) {\n        resolve();\n      } else { // Ensure rejection is inside an else block\n        reject('errorssss');\n      }\n    }, 10);\n  });\n};\n\nfakerequest('/dogs/1')\n    .then(() => {\n        console.log(\"done with request\");\n    })\n    .catch((err) => {\n        console.log(\"oh no\", err);\n    });\n```\n\n### **Fixes Applied**\n1. **Return the Promise**: Without `return`, the function executes the promise but doesn't give it back to be used by `.then()` and `.catch()`.\n2. **Fix Rejection Logic**: The `reject('errorssss')` was placed outside the `if` block, meaning it always executed after `resolve()`, which is incorrect. Wrapped it in `else`.\n\nNow, it should work correctly, resolving 70% of the time and rejecting 30% of the time. \ud83d\ude80",
+      "timestamp": 1741022922.98224
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

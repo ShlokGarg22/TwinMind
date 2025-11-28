@@ -1,0 +1,19 @@
+{
+  "id": "cc4bb7bc-d999-4b4e-93d3-31ca9cd497e3",
+  "title": "Call by Reference C",
+  "created_at": "2025-11-28T16:38:01.676632",
+  "updated_at": "2025-11-28T16:38:01.676632",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Value by reference in c programming ",
+      "timestamp": 1738817105.263799
+    },
+    {
+      "role": "assistant",
+      "content": "In C programming, **\"call by reference\"** (or **\"pass by reference\"**) means passing the **address** of a variable to a function so that the function can modify the original variable. This is done using **pointers**.  \n\n### **Example of Call by Reference**\n```c\n#include <stdio.h>\n\n// Function using call by reference\nvoid swap(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nint main() {\n    int a = 10, b = 20;\n    printf(\"Before swapping: a = %d, b = %d\\n\", a, b);\n    \n    swap(&a, &b);  // Passing addresses of a and b\n    \n    printf(\"After swapping: a = %d, b = %d\\n\", a, b);\n    return 0;\n}\n```\n### **Explanation:**\n1. The function `swap()` takes two **pointers** (`int *x, int *y`) as arguments.\n2. The function accesses and modifies the actual values stored at those memory addresses.\n3. In `main()`, `&a` and `&b` (addresses of `a` and `b`) are passed to the function.\n4. Changes made inside the function affect the original variables.\n\n### **Advantages of Call by Reference:**\n- The function can modify the original variable.\n- Efficient for passing large structures or arrays.\n\n### **Call by Value vs. Call by Reference**\n| Feature          | Call by Value | Call by Reference |\n|-----------------|--------------|------------------|\n| **Passes**      | A copy of the variable | The actual memory address |\n| **Modifies Original Variable?** | No | Yes |\n| **Efficiency**  | Less efficient for large data | More efficient for large data |\n| **Uses**        | Simple data types (int, float, etc.) | Arrays, structures, large data |\n\nWould you like an example for arrays or structures using call by reference?",
+      "timestamp": 1738817118.972057
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

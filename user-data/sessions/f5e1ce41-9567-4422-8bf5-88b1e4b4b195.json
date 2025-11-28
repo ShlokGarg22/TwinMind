@@ -1,0 +1,19 @@
+{
+  "id": "f5e1ce41-9567-4422-8bf5-88b1e4b4b195",
+  "title": "Malloc vs Calloc",
+  "created_at": "2025-11-28T16:38:00.287674",
+  "updated_at": "2025-11-28T16:38:00.287674",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give its solution ",
+      "timestamp": 1748224678.044724
+    },
+    {
+      "role": "assistant",
+      "content": "Here's the solution for the question:\n\n**Q.6 a. Explain the difference between `malloc` and `calloc` functions for dynamic memory allocation. Discuss scenarios where each would be more appropriate to use.**\n\n### **Difference between `malloc()` and `calloc()`**\n\n| Feature                | `malloc()`                                | `calloc()`                                         |\n|------------------------|--------------------------------------------|----------------------------------------------------|\n| Stands for             | Memory Allocation                          | Contiguous Allocation                              |\n| Memory initialization  | Does **not** initialize memory (contains garbage values) | Initializes all bytes to **zero**                 |\n| Syntax                 | `void* malloc(size_t size);`               | `void* calloc(size_t num, size_t size);`          |\n| Parameters             | Takes a single argument (total bytes)      | Takes two arguments (number of blocks, size of each block) |\n| Speed                  | Slightly faster (no initialization)        | Slightly slower (due to zero initialization)       |\n\n---\n\n### **Scenarios Where Each Is Appropriate**\n\n- **Use `malloc()` when:**\n  - You need memory quickly and will initialize it manually.\n  - For example, when reading data into a buffer that will be overwritten anyway:\n    ```c\n    int* arr = (int*)malloc(10 * sizeof(int));\n    ```\n\n- **Use `calloc()` when:**\n  - You need memory initialized to zero by default.\n  - For example, allocating memory for an array where default zero values are required:\n    ```c\n    int* arr = (int*)calloc(10, sizeof(int));  // All elements initialized to 0\n    ```\n\n---\n\n### **Conclusion:**\n- Use `malloc()` for performance-sensitive tasks when you handle initialization yourself.\n- Use `calloc()` when you want safe, zero-initialized memory to avoid garbage values.",
+      "timestamp": 1748224678.146538
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

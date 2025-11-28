@@ -1,0 +1,29 @@
+{
+  "id": "2db5089e-e107-42cb-ac60-23739700bfdc",
+  "title": "Semiconductors and Biasing Concepts",
+  "created_at": "2025-11-28T16:38:00.951605",
+  "updated_at": "2025-11-28T16:38:00.951605",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ans it in 4-5 lines",
+      "timestamp": 1745045613.035624
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, here are the answers in 4\u20135 lines each:\n\n**Q1. What are semiconductors?**  \nSemiconductors are materials whose electrical conductivity lies between conductors and insulators. Examples include silicon and germanium. Their conductivity can be modified by adding impurities (doping) or changing temperature. They are the backbone of electronic devices like diodes and transistors.\n\n**Q2. Why resistance of semiconductors decreases with increasing temperature?**  \nAs temperature increases, more electrons gain enough energy to jump from the valence band to the conduction band. This increases the number of charge carriers (electrons and holes), reducing resistance. Unlike metals, semiconductors become better conductors at higher temperatures.\n\n**Q3. What is meant by forward and reverse biasing?**  \nForward biasing means connecting the positive terminal of a battery to the p-side and the negative to the n-side of a p-n junction, allowing current to flow. Reverse biasing is the opposite\u2014positive to n-side and negative to p-side\u2014preventing current flow. Biasing controls the operation of diodes.",
+      "timestamp": 1745045613.08696
+    },
+    {
+      "role": "user",
+      "content": "Why resuatnce increase in metals?",
+      "timestamp": 1745047088.396145
+    },
+    {
+      "role": "assistant",
+      "content": "In metals, resistance increases with temperature because atoms vibrate more as they get hotter. These vibrations cause more collisions between the free electrons (which carry current) and the atoms. More collisions mean electrons move less freely, increasing resistance. So, higher temperature \u2192 more atomic vibrations \u2192 higher resistance.",
+      "timestamp": 1745047088.432551
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,109 @@
+{
+  "id": "d7e69385-9a3a-4f15-b220-9fdd45dfb46d",
+  "title": "C++ decimal base conversion",
+  "created_at": "2025-11-28T16:37:57.308443",
+  "updated_at": "2025-11-28T16:37:57.308443",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Practical No-01\t\t\t\t\t\t\tDate:  14/10/2025\r\n\r\nTitle: Write a C++ program using functions to convert decimal to any base and vice versa.\r\n\r\nDescription:\r\nThe general form of a C++ function definition is as follows \u2212\r\nreturn_type function_name( parameter list )\r\n {\r\n    body of the function  \r\n }\r\n\r\nA C++ function definition consists of a function header and a function body. Here are all the parts of a function \u2013\r\n\r\n\u2022\tReturn Type \u2212 A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void.\r\n\u2022\tFunction Name \u2212 This is the actual name of the function. The function name and the parameter list together constitute the function signature.\r\n\u2022\tParameters \u2212 A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.\r\n\u2022\tFunction Body \u2212 The function body contains a collection of statements that define what the function does.\r\n\r\n\ngive the code withour commetn and not big lines of input question ant other",
+      "timestamp": 1760465503.987
+    },
+    {
+      "role": "assistant",
+      "content": "```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint toDecimal(int num, int base) {\n    int dec = 0, i = 0;\n    while (num > 0) {\n        int digit = num % 10;\n        dec += digit * pow(base, i);\n        num /= 10;\n        i++;\n    }\n    return dec;\n}\n\nstring fromDecimal(int num, int base) {\n    string res = \"\";\n    char digits[] = \"0123456789ABCDEF\";\n    while (num > 0) {\n        res = digits[num % base] + res;\n        num /= base;\n    }\n    return res;\n}\n\nint main() {\n    int choice, num, base;\n    cout << \"1. Decimal to Any Base\\n2. Any Base to Decimal\\nEnter choice: \";\n    cin >> choice;\n    if (choice == 1) {\n        cout << \"Enter decimal number: \";\n        cin >> num;\n        cout << \"Enter base: \";\n        cin >> base;\n        cout << \"Result: \" << fromDecimal(num, base);\n    } else if (choice == 2) {\n        cout << \"Enter number: \";\n        cin >> num;\n        cout << \"Enter base: \";\n        cin >> base;\n        cout << \"Result: \" << toDecimal(num, base);\n    } else cout << \"Invalid choice\";\n    return 0;\n}\n```",
+      "timestamp": 1760465498.742199
+    },
+    {
+      "role": "user",
+      "content": "all 8 trangormation maenu based",
+      "timestamp": 1760465542.803
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a **C++ menu-driven program** with **8 base conversion options** \u2014 handling conversions between **Decimal, Binary, Octal, and Hexadecimal** using **functions** and a **simple menu**:  \n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint binToDec(long long n) {\n    int dec = 0, i = 0;\n    while (n != 0) {\n        int r = n % 10;\n        dec += r * pow(2, i);\n        n /= 10;\n        i++;\n    }\n    return dec;\n}\n\nint octToDec(long long n) {\n    int dec = 0, i = 0;\n    while (n != 0) {\n        int r = n % 10;\n        dec += r * pow(8, i);\n        n /= 10;\n        i++;\n    }\n    return dec;\n}\n\nint hexToDec(string hex) {\n    int dec = 0, base = 1;\n    for (int i = hex.length() - 1; i >= 0; i--) {\n        if (hex[i] >= '0' && hex[i] <= '9')\n            dec += (hex[i] - 48) * base;\n        else if (hex[i] >= 'A' && hex[i] <= 'F')\n            dec += (hex[i] - 55) * base;\n        base *= 16;\n    }\n    return dec;\n}\n\nstring decToBin(int n) {\n    string res = \"\";\n    while (n > 0) {\n        res = char(n % 2 + '0') + res;\n        n /= 2;\n    }\n    return res == \"\" ? \"0\" : res;\n}\n\nstring decToOct(int n) {\n    string res = \"\";\n    while (n > 0) {\n        res = char(n % 8 + '0') + res;\n        n /= 8;\n    }\n    return res == \"\" ? \"0\" : res;\n}\n\nstring decToHex(int n) {\n    string res = \"\";\n    char hex[] = \"0123456789ABCDEF\";\n    while (n > 0) {\n        res = hex[n % 16] + res;\n        n /= 16;\n    }\n    return res == \"\" ? \"0\" : res;\n}\n\nint main() {\n    int choice;\n    cout << \"1. Decimal to Binary\\n2. Decimal to Octal\\n3. Decimal to Hexadecimal\\n\";\n    cout << \"4. Binary to Decimal\\n5. Octal to Decimal\\n6. Hexadecimal to Decimal\\n\";\n    cout << \"7. Binary to Octal\\n8. Binary to Hexadecimal\\nEnter choice: \";\n    cin >> choice;\n\n    if (choice == 1) {\n        int n; cout << \"Enter decimal: \"; cin >> n;\n        cout << decToBin(n);\n    } else if (choice == 2) {\n        int n; cout << \"Enter decimal: \"; cin >> n;\n        cout << decToOct(n);\n    } else if (choice == 3) {\n        int n; cout << \"Enter decimal: \"; cin >> n;\n        cout << decToHex(n);\n    } else if (choice == 4) {\n        long long n; cout << \"Enter binary: \"; cin >> n;\n        cout << binToDec(n);\n    } else if (choice == 5) {\n        long long n; cout << \"Enter octal: \"; cin >> n;\n        cout << octToDec(n);\n    } else if (choice == 6) {\n        string n; cout << \"Enter hexadecimal: \"; cin >> n;\n        cout << hexToDec(n);\n    } else if (choice == 7) {\n        long long n; cout << \"Enter binary: \"; cin >> n;\n        cout << decToOct(binToDec(n));\n    } else if (choice == 8) {\n        long long n; cout << \"Enter binary: \"; cin >> n;\n        cout << decToHex(binToDec(n));\n    } else cout << \"Invalid choice\";\n    return 0;\n}\n```\n\n\u2705 **Covers all 8 transformations:**\n1. Decimal \u2192 Binary  \n2. Decimal \u2192 Octal  \n3. Decimal \u2192 Hexadecimal  \n4. Binary \u2192 Decimal  \n5. Octal \u2192 Decimal  \n6. Hexadecimal \u2192 Decimal  \n7. Binary \u2192 Octal  \n8. Binary \u2192 Hexadecimal  \n\nNo unnecessary comments, minimal text, and easy to compile and run.",
+      "timestamp": 1760465538.468277
+    },
+    {
+      "role": "user",
+      "content": "dont follow camel case",
+      "timestamp": 1760465579.983
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the same **8-option base conversion program** \u2014 rewritten **without camelCase**, using **simple lowercase names** only:  \n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint bin_to_dec(long long n) {\n    int dec = 0, i = 0;\n    while (n != 0) {\n        int r = n % 10;\n        dec += r * pow(2, i);\n        n /= 10;\n        i++;\n    }\n    return dec;\n}\n\nint oct_to_dec(long long n) {\n    int dec = 0, i = 0;\n    while (n != 0) {\n        int r = n % 10;\n        dec += r * pow(8, i);\n        n /= 10;\n        i++;\n    }\n    return dec;\n}\n\nint hex_to_dec(string hex) {\n    int dec = 0, base = 1;\n    for (int i = hex.length() - 1; i >= 0; i--) {\n        if (hex[i] >= '0' && hex[i] <= '9')\n            dec += (hex[i] - 48) * base;\n        else if (hex[i] >= 'A' && hex[i] <= 'F')\n            dec += (hex[i] - 55) * base;\n        base *= 16;\n    }\n    return dec;\n}\n\nstring dec_to_bin(int n) {\n    string res = \"\";\n    while (n > 0) {\n        res = char(n % 2 + '0') + res;\n        n /= 2;\n    }\n    return res == \"\" ? \"0\" : res;\n}\n\nstring dec_to_oct(int n) {\n    string res = \"\";\n    while (n > 0) {\n        res = char(n % 8 + '0') + res;\n        n /= 8;\n    }\n    return res == \"\" ? \"0\" : res;\n}\n\nstring dec_to_hex(int n) {\n    string res = \"\";\n    char hex[] = \"0123456789ABCDEF\";\n    while (n > 0) {\n        res = hex[n % 16] + res;\n        n /= 16;\n    }\n    return res == \"\" ? \"0\" : res;\n}\n\nint main() {\n    int choice;\n    cout << \"1. Decimal to Binary\\n2. Decimal to Octal\\n3. Decimal to Hexadecimal\\n\";\n    cout << \"4. Binary to Decimal\\n5. Octal to Decimal\\n6. Hexadecimal to Decimal\\n\";\n    cout << \"7. Binary to Octal\\n8. Binary to Hexadecimal\\nEnter choice: \";\n    cin >> choice;\n\n    if (choice == 1) {\n        int n; cout << \"Enter decimal: \"; cin >> n;\n        cout << dec_to_bin(n);\n    } else if (choice == 2) {\n        int n; cout << \"Enter decimal: \"; cin >> n;\n        cout << dec_to_oct(n);\n    } else if (choice == 3) {\n        int n; cout << \"Enter decimal: \"; cin >> n;\n        cout << dec_to_hex(n);\n    } else if (choice == 4) {\n        long long n; cout << \"Enter binary: \"; cin >> n;\n        cout << bin_to_dec(n);\n    } else if (choice == 5) {\n        long long n; cout << \"Enter octal: \"; cin >> n;\n        cout << oct_to_dec(n);\n    } else if (choice == 6) {\n        string n; cout << \"Enter hexadecimal: \"; cin >> n;\n        cout << hex_to_dec(n);\n    } else if (choice == 7) {\n        long long n; cout << \"Enter binary: \"; cin >> n;\n        cout << dec_to_oct(bin_to_dec(n));\n    } else if (choice == 8) {\n        long long n; cout << \"Enter binary: \"; cin >> n;\n        cout << dec_to_hex(bin_to_dec(n));\n    } else cout << \"Invalid choice\";\n    return 0;\n}\n```  \n\n\u2192 Simple, consistent lowercase naming.  \n\u2192 No camelCase.  \n\u2192 All 8 conversions in one clean menu-driven program.",
+      "timestamp": 1760465574.859058
+    },
+    {
+      "role": "user",
+      "content": "1.\tWrite a program to convert degrees to Fahrenheit using functions. samwe way",
+      "timestamp": 1760466014.634
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clean, simple **C++ program** (no camel case, no extra text) to **convert Celsius to Fahrenheit** using a **function**:  \n\n```cpp\n#include <iostream>\nusing namespace std;\n\nfloat to_fahrenheit(float c) {\n    return (c * 9 / 5) + 32;\n}\n\nint main() {\n    float c;\n    cout << \"Enter temperature in Celsius: \";\n    cin >> c;\n    cout << \"Temperature in Fahrenheit: \" << to_fahrenheit(c);\n    return 0;\n}\n```\n\n\u2705 **Explanation (short):**\n- Function `to_fahrenheit` performs the conversion.  \n- Formula used: **F = (C \u00d7 9/5) + 32**.  \n- Input: Celsius temperature  \n- Output: Fahrenheit temperature",
+      "timestamp": 1760466009.494554
+    },
+    {
+      "role": "user",
+      "content": "4.\tWrite a function to calculate the GCD and LCM of the numbers entered. ",
+      "timestamp": 1760466113.141
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clean **C++ program** (no camel case, no extra text) to find **GCD and LCM** using **functions**:  \n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint gcd(int a, int b) {\n    while (b != 0) {\n        int t = b;\n        b = a % b;\n        a = t;\n    }\n    return a;\n}\n\nint lcm(int a, int b) {\n    return (a * b) / gcd(a, b);\n}\n\nint main() {\n    int a, b;\n    cout << \"Enter two numbers: \";\n    cin >> a >> b;\n    cout << \"GCD: \" << gcd(a, b) << endl;\n    cout << \"LCM: \" << lcm(a, b);\n    return 0;\n}\n```\n\n\u2705 **Formula used:**  \n- **GCD** (Greatest Common Divisor) \u2192 Euclidean algorithm  \n- **LCM** (Least Common Multiple) \u2192 `(a * b) / GCD`",
+      "timestamp": 1760466109.205242
+    },
+    {
+      "role": "user",
+      "content": "enter till a person enter negative number",
+      "timestamp": 1760466137.968
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the updated **C++ program** that keeps taking input until a **negative number** is entered, and calculates **GCD and LCM** for each valid pair:  \n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint gcd(int a, int b) {\n    while (b != 0) {\n        int t = b;\n        b = a % b;\n        a = t;\n    }\n    return a;\n}\n\nint lcm(int a, int b) {\n    return (a * b) / gcd(a, b);\n}\n\nint main() {\n    int a, b;\n    while (true) {\n        cout << \"Enter two numbers: \";\n        cin >> a >> b;\n        if (a < 0 || b < 0) break;\n        cout << \"GCD: \" << gcd(a, b) << endl;\n        cout << \"LCM: \" << lcm(a, b) << endl;\n    }\n    return 0;\n}\n```\n\n\u2705 **Behavior:**  \n- Program repeatedly asks for two numbers.  \n- Stops when **either number is negative**.  \n- Displays **GCD** and **LCM** for each valid pair.",
+      "timestamp": 1760466132.760518
+    },
+    {
+      "role": "user",
+      "content": "not like any number of number it can noy not only two numbers",
+      "timestamp": 1760466160.654
+    },
+    {
+      "role": "assistant",
+      "content": "Got it \u2014 you want the program to handle **any number of inputs** (not just two) and stop when a **negative number** is entered.  \nHere\u2019s the clean version (no camel case, minimal code):  \n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint gcd(int a, int b) {\n    while (b != 0) {\n        int t = b;\n        b = a % b;\n        a = t;\n    }\n    return a;\n}\n\nint lcm(int a, int b) {\n    return (a * b) / gcd(a, b);\n}\n\nint main() {\n    int n, g = 0, l = 1;\n    cout << \"Enter numbers (negative to stop): \";\n    while (true) {\n        cin >> n;\n        if (n < 0) break;\n        if (g == 0) g = n;\n        else g = gcd(g, n);\n        l = lcm(l, n);\n    }\n    cout << \"GCD: \" << g << endl;\n    cout << \"LCM: \" << l;\n    return 0;\n}\n```\n\n\u2705 **What it does:**  \n- You can enter **any number of positive integers**.  \n- It keeps updating **GCD and LCM** for all numbers entered.  \n- Input ends when a **negative number** is given.  \n- Prints final **GCD and LCM** of all inputs.",
+      "timestamp": 1760466155.401085
+    },
+    {
+      "role": "user",
+      "content": "3.\tWrite a program to calculate different statistics of the data entered like mean, median etc. using functions mean media and mode only",
+      "timestamp": 1760466262.624
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clean and simple **C++ program** (no camel case, no extra text) that calculates **mean**, **median**, and **mode** using **functions**:  \n\n```cpp\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nfloat find_mean(vector<int> v) {\n    float sum = 0;\n    for (int n : v) sum += n;\n    return sum / v.size();\n}\n\nfloat find_median(vector<int> v) {\n    sort(v.begin(), v.end());\n    int n = v.size();\n    if (n % 2 == 0)\n        return (v[n / 2 - 1] + v[n / 2]) / 2.0;\n    else\n        return v[n / 2];\n}\n\nint find_mode(vector<int> v) {\n    sort(v.begin(), v.end());\n    int mode = v[0], count = 1, max_count = 1;\n    for (int i = 1; i < v.size(); i++) {\n        if (v[i] == v[i - 1]) count++;\n        else count =",
+      "timestamp": 1760466257.400168
+    },
+    {
+      "role": "user",
+      "content": "dont use algo and vectoir",
+      "timestamp": 1760466273.698
+    },
+    {
+      "role": "assistant",
+      "content": "Alright \u2014 here\u2019s the **C++ program** to calculate **mean**, **median**, and **mode** using only **arrays** and **loops**, with **no vectors or algorithms**:  \n\n```cpp\n#include <iostream>\nusing namespace std;\n\nfloat find_mean(int a[], int n) {\n    float sum = 0;\n    for (int i = 0; i < n; i++)\n        sum += a[i];\n    return sum / n;\n}\n\nfloat find_median(int a[], int n) {\n    for (int i = 0; i < n - 1; i++)\n        for (int j = i + 1; j < n; j++)\n            if (a[i] > a[j]) {\n                int t = a[i];\n                a[i] = a[j];\n                a[j] = t;\n            }\n    if (n % 2 == 0)\n        return (a[n / 2 - 1] + a[n / 2]) / 2.0;\n    else\n        return a[n / 2];\n}\n\nint find_mode(int a[], int n) {\n    int mode = a[0], max_count = 0;\n    for (int i = 0; i < n; i++) {\n        int count = 0;\n        for (int j = 0; j < n; j++)\n            if (a[j] == a[i])\n                count++;\n        if (count > max_count) {\n            max_count = count;\n            mode = a[i];\n        }\n    }\n    return mode;\n}\n\nint main() {\n    int n;\n    cout << \"Enter number of elements: \";\n    cin >> n;\n    int a[100];\n    cout << \"Enter elements: \";\n    for (int i = 0; i < n; i++)\n        cin >> a[i];\n\n    cout << \"Mean: \" << find_mean(a, n) << endl;\n    cout << \"Median: \" << find_median(a, n) << endl;\n    cout << \"Mode: \" << find_mode(a, n);\n    return 0;\n}\n```\n\n\u2705 **Details:**  \n- Uses **arrays**, **loops**, and **basic logic** only.  \n- Calculates **mean**, **median**, and **mode** via three separate functions.  \n- Works for any small dataset (up to 100 numbers).",
+      "timestamp": 1760466268.461469
+    },
+    {
+      "role": "user",
+      "content": "simple code of mean and mdian on;y",
+      "timestamp": 1760466291.782
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a short and simple **C++ program** to calculate **mean** and **median** using **functions only** (no vectors or algorithms):  \n\n```cpp\n#include <iostream>\nusing namespace std;\n\nfloat find_mean(int a[], int n) {\n    float sum = 0;\n    for (int i = 0; i < n; i++)\n        sum += a[i];\n    return sum / n;\n}\n\nfloat find_median(int a[], int n) {\n    for (int i = 0; i < n - 1; i++)\n        for (int j = i + 1; j < n; j++)\n            if (a[i] > a[j]) {\n                int t = a[i];\n                a[i] = a[j];\n                a[j] = t;\n            }\n    if (n % 2 == 0)\n        return (a[n / 2 - 1] + a[n / 2]) / 2.0;\n    else\n        return a[n / 2];\n}\n\nint main() {\n    int n, a[100];\n    cout << \"Enter number of elements: \";\n    cin >> n;\n    cout << \"Enter elements: \";\n    for (int i = 0; i < n; i++)\n        cin >> a[i];\n\n    cout << \"Mean: \" << find_mean(a, n) << endl;\n    cout << \"Median: \" << find_median(a, n);\n    return 0;\n}\n```  \n\n\u2705 **Simple features:**  \n- Uses only loops and arrays.  \n- Calculates **mean** and **median** clearly.  \n- Short, easy to understand, and beginner-friendly.",
+      "timestamp": 1760466288.403422
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

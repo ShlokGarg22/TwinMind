@@ -1,0 +1,29 @@
+{
+  "id": "f8bc444d-756b-43da-93f9-d2aece084c97",
+  "title": "Residue Theorem Solutions",
+  "created_at": "2025-11-28T16:38:00.524863",
+  "updated_at": "2025-11-28T16:38:00.524863",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give full step by step solution ",
+      "timestamp": 1747112418.134992
+    },
+    {
+      "role": "assistant",
+      "content": "Let's solve both problems using **Cauchy's Residue Theorem**.\n\n---\n\n### **Problem 1**\n\nEvaluate:  \n\\[\n\\oint_C \\frac{z^3 e^{-z}}{(z - 1)^3} \\, dz,\\quad \\text{where } C: |z - 1| = \\frac{1}{2}\n\\]\n\n---\n\n#### Step 1: Analyze the integrand  \n\\[\nf(z) = \\frac{z^3 e^{-z}}{(z - 1)^3}\n\\]  \nPole at \\( z = 1 \\) of **order 3** (since denominator is \\( (z - 1)^3 \\)).\n\n---\n\n#### Step 2: Use generalized Cauchy's Integral Formula\n\nFor a pole of order \\( n \\),  \n\\[\n\\oint_C \\frac{f(z)}{(z - a)^n} \\, dz = \\frac{2\\pi i}{(n-1)!} f^{(n-1)}(a)\n\\]  \nHere, \\( f(z) = z^3 e^{-z} \\), \\( a = 1 \\), \\( n = 3 \\)\n\nWe need:\n\\[\n\\frac{2\\pi i}{2!} \\cdot f''(1)\n\\]\n\n---\n\n#### Step 3: Find derivatives of \\( f(z) = z^3 e^{-z} \\)\n\nUsing product rule:\n\n- First derivative:\n\\[\nf'(z) = 3z^2 e^{-z} - z^3 e^{-z} = e^{-z}(3z^2 - z^3)\n\\]\n\n- Second derivative:\n\\[\nf''(z) = \\frac{d}{dz} [e^{-z}(3z^2 - z^3)]\n= e^{-z}(-3z^2 + 6z - 3z^2) = e^{-z}(z^3 - 6z^2 + 6z)\n\\]\n\nNow evaluate at \\( z = 1 \\):\n\\[\nf''(1) = e^{-1}(1 - 6 + 6) = e^{-1}(1)\n\\]\n\n---\n\n#### Step 4: Final answer\n\n\\[\n\\oint_C \\frac{z^3 e^{-z}}{(z - 1)^3} \\, dz = \\frac{2\\pi i}{2} \\cdot \\frac{1}{e} = \\frac{\\pi i}{e}\n\\]\n\n---\n\n### **Problem 2**\n\nEvaluate:  \n\\[\n\\oint_C \\left( \\frac{e^z}{z^3} + \\frac{z^4}{(z + i)^4} \\right) dz,\\quad \\text{where } C: |z| = 2\n\\]\n\n---\n\n#### Step 1: Analyze the integrand  \nWe break it into two functions:\n\n- \\( f(z) = \\frac{e^z}{z^3} \\) \u2014 pole at \\( z = 0 \\), order 3  \n- \\( g(z) = \\frac{z^4}{(z + i)^4} \\) \u2014 pole at \\( z = -i \\), order 4  \n\nBoth poles lie inside \\( C \\) since \\( |0| = 0 < 2 \\) and \\( |-i| = 1 < 2 \\)\n\n---\n\n#### Step 2: Evaluate using generalized Cauchy\u2019s Integral Formula\n\n##### Part 1:  \n\\[\n\\oint_C \\frac{e^z}{z^3} \\, dz = \\frac{2\\pi i}{2!} f''(0)\n\\]  \nHere \\( f(z) = e^z \\Rightarrow f''(z) = e^z \\Rightarrow f''(0) = 1 \\)\n\nSo,\n\\[\n\\oint_C \\frac{e^z}{z^3} dz = \\pi i\n\\]\n\n---\n\n##### Part 2:  \n\\[\n\\oint_C \\frac{z^4}{(z + i)^4} dz = \\frac{2\\pi i}{3!} \\cdot h^{(3)}(-i), \\quad \\text{where } h(z) = z^4\n\\]\n\nWe need:\n\\[\nh^{(3)}(z) = \\frac{d^3}{dz^3} z^4 = 24z\n\\Rightarrow h^{(3)}(-i) = -24i\n\\]\n\nSo:\n\\[\n\\oint_C \\frac{z^4}{(z + i)^4} dz = \\frac{2\\pi i}{6} \\cdot (-24i) = -8\\pi\n\\]\n\n---\n\n#### Step 3: Add both parts\n\n\\[\n\\oint_C \\left( \\frac{e^z}{z^3} + \\frac{z^4}{(z + i)^4} \\right) dz = \\pi i + (-8\\pi) = \\pi i - 8\\pi\n\\]\n\n---\n\n### **Final Answers:**\n\n- **Problem 1**: \\( \\boxed{\\frac{\\pi i}{e}} \\)  \n- **Problem 2**: \\( \\boxed{\\pi i - 8\\pi} \\)\n\nLet me know if you want these converted into LaTeX or a PDF.",
+      "timestamp": 1747112418.190196
+    },
+    {
+      "role": "user",
+      "content": "Can you help me understand how -i is included ",
+      "timestamp": 1747112900.854579
+    },
+    {
+      "role": "assistant",
+      "content": "Great question. Let's break it down **clearly and precisely**:\n\n---\n\n### **Given:**\nThe contour is:  \n\\[\nC: |z| = 2\n\\]  \nThis means it's a **circle centered at the origin with radius 2** in the complex plane.\n\n---\n\n### **You\u2019re asking about:**  \n**Is the point \\( z = -i \\) inside this circle?**\n\n---\n\n### **Step-by-step check:**\n\nThe modulus (magnitude) of any complex number \\( z = x + iy \\) is:  \n\\[\n|z| = \\sqrt{x^2 + y^2}\n\\]\n\nFor \\( z = -i \\), this means:\n\\[\n|-i| = |0 - i| = \\sqrt{0^2 + (-1)^2} = \\sqrt{1} = 1\n\\]\n\n---\n\n### **Now compare:**\n\n- Radius of the contour = 2  \n- Distance of \\( -i \\) from origin = 1\n\nClearly:  \n\\[\n|-i| = 1 < 2\n\\Rightarrow \\boxed{-i \\text{ lies inside } C}\n\\]\n\n---\n\n### **Geometric View:**\n\nIn the complex plane:\n- Origin = center of the circle\n- \\( -i \\) lies one unit **down** on the imaginary axis\n- That\u2019s **inside** the circle of radius 2\n\n---\n\n### **Conclusion:**\n\nYes, **\\( z = -i \\) is included (i.e., inside the contour)** because its distance from the origin is less than 2.\n\nLet me know if you want a visual graph to help with this too.",
+      "timestamp": 1747112900.910026
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

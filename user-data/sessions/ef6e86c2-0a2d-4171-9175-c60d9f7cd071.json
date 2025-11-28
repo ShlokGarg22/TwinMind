@@ -1,0 +1,39 @@
+{
+  "id": "ef6e86c2-0a2d-4171-9175-c60d9f7cd071",
+  "title": "Binary search code complexity",
+  "created_at": "2025-11-28T16:37:55.060157",
+  "updated_at": "2025-11-28T16:37:55.060157",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Binary search both iterative reurc. Code + complexity ",
+      "timestamp": 1764271054.807053
+    },
+    {
+      "role": "assistant",
+      "content": "Here you go \u2014 clean, simple, exam-ready.\n\n---\n\n### \u2705 **Binary Search \u2013 Iterative Method**\n```c\nint binarySearchIter(int arr[], int n, int key) {\n    int low = 0, high = n - 1;\n\n    while (low <= high) {\n        int mid = (low + high) / 2;\n\n        if (arr[mid] == key)\n            return mid;\n        else if (arr[mid] < key)\n            low = mid + 1;\n        else\n            high = mid - 1;\n    }\n    return -1; // Not found\n}\n```\n\n---\n\n### \u2705 **Binary Search \u2013 Recursive Method**\n```c\nint binarySearchRec(int arr[], int low, int high, int key) {\n    if (low > high)\n        return -1;  // Not found\n\n    int mid = (low + high) / 2;\n\n    if (arr[mid] == key)\n        return mid;\n    else if (arr[mid] < key)\n        return binarySearchRec(arr, mid + 1, high, key);\n    else\n        return binarySearchRec(arr, low, mid - 1, key);\n}\n```\n\n---\n\n### \u23f1\ufe0f **Time Complexity**\n| Case | Complexity |\n|------|------------|\n| Best | **O(1)** (key at middle) |\n| Worst | **O(log n)** |\n| Average | **O(log n)** |\n\n---\n\n### \ud83d\udccc Space Complexity\n| Method | Space Complexity | Reason |\n|--------|-----------------|--------|\n| Iterative | **O(1)** | Only variables |\n| Recursive | **O(log n)** | Function call stack |\n\n---\n\nShort, neat, and perfect for answering in exams. If you want, I can also give a small main() to test both.",
+      "timestamp": 1764271054.925534
+    },
+    {
+      "role": "user",
+      "content": "Ful code ",
+      "timestamp": 1764271252.673493
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the **full working code** with both iterative and recursive binary search in one program \u2014 perfectly exam-ready.\n\n---\n\n### \u2705 Complete Binary Search Program (Iterative + Recursive)\n\n```c\n#include <stdio.h>\n\nint binarySearchIter(int arr[], int n, int key) {\n    int low = 0, high = n - 1;\n\n    while (low <= high) {\n        int mid = (low + high) / 2;\n\n        if (arr[mid] == key)\n            return mid;\n        else if (arr[mid] < key)\n            low = mid + 1;\n        else\n            high = mid - 1;\n    }\n    return -1;\n}\n\nint binarySearchRec(int arr[], int low, int high, int key) {\n    if (low > high)\n        return -1;\n\n    int mid = (low + high) / 2;\n\n    if (arr[mid] == key)\n        return mid;\n    else if (arr[mid] < key)\n        return binarySearchRec(arr, mid + 1, high, key);\n    else\n        return binarySearchRec(arr, low, mid - 1, key);\n}\n\nint main() {\n    int arr[50], n, key, pos;\n\n    printf(\"Enter number of elements: \");\n    scanf(\"%d\", &n);\n\n    printf(\"Enter %d sorted elements:\\n\", n);\n    for (int i = 0; i < n; i++)\n        scanf(\"%d\", &arr[i]);\n\n    printf(\"Enter element to search: \");\n    scanf(\"%d\", &key);\n\n    // Iterative Search\n    pos = binarySearchIter(arr, n, key);\n    if (pos != -1)\n        printf(\"Iterative: Found at index %d\\n\", pos);\n    else\n        printf(\"Iterative: Not found\\n\");\n\n    // Recursive Search\n    pos = binarySearchRec(arr, 0, n - 1, key);\n    if (pos != -1)\n        printf(\"Recursive: Found at index %d\\n\", pos);\n    else\n        printf(\"Recursive: Not found\\n\");\n\n    return 0;\n}\n```\n\n---\n\n### \u23f1\ufe0f Complexity (write this in exam)\n- Time: **O(log n)** (worst/avg), **O(1)** (best)\n- Space:\n  - Iterative: **O(1)**\n  - Recursive: **O(log n)** (stack)\n\n---\n\nIf you want, I can also give:\n\u2714 Output screenshot example  \n\u2714 Comments version  \n\u2714 Without input code (static array)  \n\nWhat do you want next?",
+      "timestamp": 1764271254.157047
+    },
+    {
+      "role": "user",
+      "content": "Time complexity also",
+      "timestamp": 1764271273.98125
+    },
+    {
+      "role": "assistant",
+      "content": "Straight answer \u2014 what you should write in exams:\n\n---\n\n### \u23f1\ufe0f **Binary Search \u2014 Time Complexity**\n\n| Case | Explanation | Complexity |\n|------|-------------|------------|\n| **Best Case** | Key is exactly at the middle position in the first comparison | **O(1)** |\n| **Worst Case** | Key found at last step after continuously halving array | **O(log n)** |\n| **Average Case** | Expected number of halves to locate element | **O(log n)** |\n\n---\n\n### \ud83d\udccc Why O(log n)?\nEach step reduces the search space by **half**:\n\nn \u2192 n/2 \u2192 n/4 \u2192 n/8 \u2192 ... \u2192 1  \nNumber of reductions = **log\u2082(n)**\n\nSo the time complexity = **O(log n)**\n\n---\n\n### \ud83d\udce6 Space Complexity\n| Method | Space | Reason |\n|--------|-------|--------|\n| Iterative | **O(1)** | Only few variables |\n| Recursive | **O(log n)** | Due to recursive stack frames |\n\n---\n\nThis plus your full code is more than enough to score full marks.",
+      "timestamp": 1764271274.528399
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

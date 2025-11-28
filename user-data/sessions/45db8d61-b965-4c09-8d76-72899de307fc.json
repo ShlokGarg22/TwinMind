@@ -1,0 +1,19 @@
+{
+  "id": "45db8d61-b965-4c09-8d76-72899de307fc",
+  "title": "Prolog variable rules",
+  "created_at": "2025-11-28T16:37:55.294627",
+  "updated_at": "2025-11-28T16:37:55.294627",
+  "messages": [
+    {
+      "role": "user",
+      "content": "teach em wtf it is",
+      "timestamp": 1764064776.486
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the straight, no-nonsense explanation of **what the hell that rule means**:\n\n---\n\n# \ud83d\udd25 What this means in Prolog (the real meaning)\n\nIn **Prolog**, **variables** must follow a strict naming rule:\n\n### \u2705 A Prolog variable MUST start with:\n- **an uppercase letter (A\u2013Z)**  \n  **OR**\n- **an underscore _**\n\n### After the first character, it can contain:\n- letters  \n- digits  \n- underscores  \n\nThat\u2019s it.\n\n---\n\n# \u2714 Why this rule exists?\nBecause **Prolog decides what is a variable vs. what is a constant** *only* by looking at the **first letter**.\n\n- **Uppercase or _ \u2192 Variable**\n- **Lowercase \u2192 Atom/constant/function name**\n\nThere is no special keyword like `int`, `var`, `string`.  \nProlog uses **capitalization** to know what type of token you meant.\n\n---\n\n# \u2714 Examples from your screenshot\n\n### These are VALID variables:\n- `_x` \u2192 starts with underscore \u2192 variable  \n- `Anna` \u2192 starts with uppercase \u2192 variable  \n- `Successor_State` \u2192 starts with uppercase \u2192 variable  \n\n### These would NOT be variables:\n- `anna` \u2192 lowercase \u2192 atom  \n- `successor_state` \u2192 lowercase \u2192 atom  \n- `x1` \u2192 lowercase \u2192 atom  \n\n---\n\n# \u2714 Why underscore is allowed?\nBecause Prolog lets you write variables like:\n- `_` \u2192 anonymous variable (ignore value)\n- `_temp`\n- `_Value`\n\nUnderscore means: \u201cthis is a variable, but maybe I don't care about its value\u201d.\n\n---\n\n# \u2714 Why uppercase matters?\nBecause Prolog has **no data types** the way Python/C++ do.\n\nSo:\n\n| Written as | Meaning |\n|-----------|---------|\n| `X` | variable |\n| `x` | atom (constant name) |\n| `Value1` | variable |\n| `value1` | atom |\n| `_id` | variable |\n| `id` | atom |\n\n---\n\n# \ud83e\udde0 One-sentence summary\n**A Prolog variable starts with UPPERCASE or `_` so Prolog can tell it's a variable, not a constant.**\n\n---\n\nIf you want, I can show examples with full Prolog code so you see how these variables behave.",
+      "timestamp": 1764064781.885415
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

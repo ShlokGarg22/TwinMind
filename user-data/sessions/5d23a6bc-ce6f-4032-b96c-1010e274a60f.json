@@ -1,0 +1,19 @@
+{
+  "id": "5d23a6bc-ce6f-4032-b96c-1010e274a60f",
+  "title": "Binary search tree C",
+  "created_at": "2025-11-28T16:37:56.825045",
+  "updated_at": "2025-11-28T16:37:56.825045",
+  "messages": [
+    {
+      "role": "user",
+      "content": "binary search cod in c",
+      "timestamp": 1762194670.306
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clean, simple **Binary Search** code in C \u2014 works for sorted arrays:  \n\n```c\n#include <stdio.h>\n\nint binarySearch(int arr[], int n, int key) {\n    int low = 0, high = n - 1, mid;\n\n    while (low <= high) {\n        mid = (low + high) / 2;\n\n        if (arr[mid] == key)\n            return mid; // found\n        else if (arr[mid] < key)\n            low = mid + 1; // go right\n        else\n            high = mid - 1; // go left\n    }\n\n    return -1; // not found\n}\n\nint main() {\n    int n, key, i;\n    printf(\"Enter number of elements: \");\n    scanf(\"%d\", &n);\n\n    int arr[n];\n    printf(\"Enter %d sorted elements:\\n\", n);\n    for (i = 0; i < n; i++)\n        scanf(\"%d\", &arr[i]);\n\n    printf(\"Enter element to search: \");\n    scanf(\"%d\", &key);\n\n    int result = binarySearch(arr, n, key);\n\n    if (result != -1)\n        printf(\"Element found at index %d\\n\", result);\n    else\n        printf(\"Element not found.\\n\");\n\n    return 0;\n}\n```\n\n\u2705 **Key points:**\n- Array **must be sorted** (ascending).  \n- Time complexity: **O(log n)**  \n- Works only for random access arrays (not linked lists).  \n\nWant me to give a **recursive version** too?",
+      "timestamp": 1762194683.79356
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

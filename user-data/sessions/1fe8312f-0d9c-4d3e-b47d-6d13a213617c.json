@@ -1,0 +1,29 @@
+{
+  "id": "1fe8312f-0d9c-4d3e-b47d-6d13a213617c",
+  "title": "String Occurrence Counting C",
+  "created_at": "2025-11-28T16:38:00.276434",
+  "updated_at": "2025-11-28T16:38:00.276434",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Occurence of string code logic ",
+      "timestamp": 1748231684.845881
+    },
+    {
+      "role": "assistant",
+      "content": "To count the **occurrence of a string** within another string in **C programming**, here\u2019s a simple **code logic** you can use:\n\n### Problem:\nCount how many times a substring appears in a given string.\n\n### Example:\n```c\nInput:  str = \"abababcabc\", sub = \"abc\"\nOutput: 2\n```\n\n### Code Logic in C:\n```c\n#include <stdio.h>\n#include <string.h>\n\nint countOccurrences(char *str, char *sub) {\n    int count = 0;\n    int len = strlen(sub);\n\n    char *ptr = str;\n\n    while ((ptr = strstr(ptr, sub)) != NULL) {\n        count++;\n        ptr += len;  // move pointer forward by length of substring\n    }\n\n    return count;\n}\n\nint main() {\n    char str[100], sub[100];\n\n    printf(\"Enter the main string: \");\n    fgets(str, sizeof(str), stdin);\n    str[strcspn(str, \"\\n\")] = '\\0';  // remove newline\n\n    printf(\"Enter the substring to search: \");\n    fgets(sub, sizeof(sub), stdin);\n    sub[strcspn(sub, \"\\n\")] = '\\0';  // remove newline\n\n    int result = countOccurrences(str, sub);\n    printf(\"The substring occurs %d times.\\n\", result);\n\n    return 0;\n}\n```\n\n### How it Works:\n- `strstr()` finds the first occurrence of the substring.\n- We loop through and shift the pointer forward by the length of the substring each time we find it.\n- This ensures **non-overlapping matches** are counted.\n\nIf you want to count **overlapping occurrences** (e.g., `aaa` in `aaaaa` should be counted 3 times), let me know \u2014 that needs a small tweak.",
+      "timestamp": 1748231684.916628
+    },
+    {
+      "role": "user",
+      "content": "Logic of the function ",
+      "timestamp": 1748231725.111944
+    },
+    {
+      "role": "assistant",
+      "content": "Here's the **logic breakdown** of the `countOccurrences` function from the C code:\n\n### Purpose:\nTo count how many **non-overlapping** times a substring (`sub`) appears in a string (`str`).\n\n---\n\n### Step-by-Step Logic:\n\n1. **Initialize counter**:\n   ```c\n   int count = 0;\n   ```\n   - Keeps track of how many times `sub` has been found in `str`.\n\n2. **Calculate length of the substring**:\n   ```c\n   int len = strlen(sub);\n   ```\n   - Used to move the pointer ahead after finding a match to avoid overlaps.\n\n3. **Pointer to traverse the main string**:\n   ```c\n   char *ptr = str;\n   ```\n\n4. **Search for substring using `strstr`**:\n   ```c\n   while ((ptr = strstr(ptr, sub)) != NULL)\n   ```\n   - `strstr(ptr, sub)` returns a pointer to the first occurrence of `sub` in `ptr`.\n   - If no match is found, it returns `NULL`, and the loop ends.\n\n5. **When a match is found**:\n   ```c\n   count++;\n   ptr += len;\n   ```\n   - Increase the count.\n   - Move the pointer forward by the **length of the substring** to avoid counting overlapping parts.\n\n6. **Return the count**:\n   ```c\n   return count;\n   ```\n\n---\n\n### Summary:\nThe function:\n- Scans the string from left to right.\n- Each time it finds a match, it moves forward past the match to prevent overlap.\n- It keeps going until there are no more matches left.\n\n---\n\n### Example:\nFor `str = \"abcabcabc\"` and `sub = \"abc\"`:\n- It finds `abc` at index 0 \u2192 count = 1\n- Then at index 3 \u2192 count = 2\n- Then at index 6 \u2192 count = 3\n- Ends after that \u2192 returns 3\n\nLet me know if you also want the logic for **overlapping occurrences** or need it in another language.",
+      "timestamp": 1748231725.158948
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, IconButton, Stack, TextField, Typography, Menu, MenuItem, Chip, Divider, ListItemIcon, ListItemText } from '@mui/material'
+import { Box, IconButton, Stack, TextField, Typography, Menu, MenuItem, Chip, Divider, ListItemIcon, ListItemText, CircularProgress } from '@mui/material'
 import { 
   AddRounded, 
   ChatBubbleOutlineRounded, 
@@ -12,7 +12,8 @@ import {
   SchoolOutlined,
   EmailOutlined,
   AnalyticsOutlined,
-  StopRounded
+  StopRounded,
+  CloudUploadRounded
 } from '@mui/icons-material'
 import { AnimatePresence, motion } from 'framer-motion'
 import './App.css'
@@ -56,6 +57,7 @@ function App() {
   const [templates, setTemplates] = useState([])
   const [currentSessionId, setCurrentSessionId] = useState(null)
   const [abortController, setAbortController] = useState(null)
+  const [isImporting, setIsImporting] = useState(false)
   const messagesEndRef = useRef(null)
 
   const menuOpen = Boolean(anchorEl)
@@ -371,6 +373,36 @@ function App() {
     return icons[category] || <LightbulbOutlined fontSize="small" />
   }
 
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0]
+    if (!file) return
+
+    setIsImporting(true)
+    const formData = new FormData()
+    formData.append('file', file)
+
+    try {
+      const response = await fetch(`${API_URL}/import/chatgpt`, {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (!response.ok) {
+        throw new Error('Import failed')
+      }
+
+      const result = await response.json()
+      await fetchSessions()
+      alert(`Successfully imported ${result.imported_count} sessions!`)
+    } catch (error) {
+      console.error('Import error:', error)
+      alert('Failed to import chat history')
+    } finally {
+      setIsImporting(false)
+      event.target.value = ''
+    }
+  }
+
   const getAvailableModels = () => {
     const models = []
     if (availableModels.local && availableModels.local.length > 0) {
@@ -492,6 +524,40 @@ function App() {
             ))
           )}
         </Stack>
+
+        <Box sx={{ p: 2, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+          <input
+            accept=".json"
+            style={{ display: 'none' }}
+            id="import-file-upload"
+            type="file"
+            onChange={handleFileUpload}
+            disabled={isImporting}
+          />
+          <label htmlFor="import-file-upload">
+            <IconButton
+              component="span"
+              disabled={isImporting}
+              sx={{
+                width: '100%',
+                justifyContent: 'flex-start',
+                borderRadius: '12px',
+                color: 'rgba(255,255,255,0.7)',
+                '&:hover': { bgcolor: 'rgba(255,255,255,0.05)', color: '#fff' },
+                transition: 'all 0.2s ease'
+              }}
+            >
+              {isImporting ? (
+                <CircularProgress size={20} sx={{ mr: 1, color: 'inherit' }} />
+              ) : (
+                <CloudUploadRounded sx={{ mr: 1 }} />
+              )}
+              <Typography variant="body2" fontWeight={500}>
+                {isImporting ? 'Importing...' : 'Import ChatGPT'}
+              </Typography>
+            </IconButton>
+          </label>
+        </Box>
       </Box>
 
       {/* Main Chat Area */}

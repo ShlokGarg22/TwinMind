@@ -1,0 +1,19 @@
+{
+  "id": "094f721b-05c6-4c9e-b600-25d959593847",
+  "title": "Prim's Algorithm explained",
+  "created_at": "2025-11-28T16:37:56.178765",
+  "updated_at": "2025-11-28T16:37:56.178765",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prims also simple lang",
+      "timestamp": 1762585794.431726
+    },
+    {
+      "role": "assistant",
+      "content": "Alright \u2014 here\u2019s **Prim\u2019s Algorithm** explained in **simple language** \ud83d\udc47  \n\n---\n\n### \ud83d\udd39 What is Prim\u2019s Algorithm?\nPrim\u2019s Algorithm is used to find the **Minimum Spanning Tree (MST)** of a **weighted, connected graph**.  \nThat means \u2014 it helps you connect all vertices with **minimum total edge weight** and **no cycles**.\n\n---\n\n### \ud83d\udd39 Simple Idea\nStart from **one vertex**,  \nthen **keep adding the smallest edge** that connects a **new vertex** to the growing tree.\n\n---\n\n### \ud83d\udd39 Step-by-Step (Simple Words)\n\n1. **Pick any starting node.**  \n2. **Look at all edges** coming out from nodes already in the tree.  \n3. **Choose the smallest edge** that connects to a **new node** (not yet in the tree).  \n4. **Add that node and edge** to your tree.  \n5. **Repeat** until all nodes are connected.\n\n---\n\n### \ud83d\udd39 Example\nLet\u2019s say we have 4 nodes: A, B, C, D  \nAnd edges with weights:\n```\nA-B = 1  \nA-C = 4  \nB-C = 2  \nB-D = 5  \nC-D = 3\n```\n\n**Start from A**:\n- A \u2192 B (1) \u2192 smallest \u2192 include B  \nNow tree = {A, B}\n\nNext edges to check:  \nA-C(4), B-C(2), B-D(5) \u2192 smallest = B-C(2)  \n\u2192 include C  \nTree = {A, B, C}\n\nNext edges: C-D(3), B-D(5) \u2192 smallest = C-D(3)  \n\u2192 include D  \nTree = {A, B, C, D}\n\n\u2705 **MST edges:** A-B (1), B-C (2), C-D (3)  \n\u2705 **Total weight = 6**\n\n---\n\n### \ud83d\udd39 Time Complexity\nIf using:\n- **Adjacency matrix + simple search:** O(V\u00b2)\n- **Priority queue (min-heap):** O(E log V)\n\n---\n\n### \ud83d\udd39 Key Points\n- Works only for **connected graphs**\n- **Greedy algorithm**\n- Similar to Kruskal\u2019s, but **grows from one vertex** instead of picking smallest edges globally.\n\n---\n\nWant me to show **Prim\u2019s code in C or Python (simple form)** next?",
+      "timestamp": 1762585794.535858
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

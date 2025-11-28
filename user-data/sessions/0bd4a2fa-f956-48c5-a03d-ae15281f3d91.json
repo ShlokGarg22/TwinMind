@@ -1,0 +1,19 @@
+{
+  "id": "0bd4a2fa-f956-48c5-a03d-ae15281f3d91",
+  "title": "Zombies and Turtle Eggs",
+  "created_at": "2025-11-28T16:38:00.942362",
+  "updated_at": "2025-11-28T16:38:00.942362",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Which eggs attract zombies in minecraft",
+      "timestamp": 1745065012.014529
+    },
+    {
+      "role": "assistant",
+      "content": "In **Minecraft**, **zombies are not attracted to any kind of spawn eggs**. However, here's the breakdown of how attraction works:\n\n### What Attracts Zombies\nZombies are **attracted to players and villagers**, not to eggs. Specifically:\n- **Villagers**: Zombies will seek out villagers and try to attack them.\n- **Players**: Zombies will chase players within a 40-block radius (Java Edition) or 35-block radius (Bedrock Edition).\n- **Turtle Eggs**: **Yes, zombies are attracted to turtle eggs** \u2014 they'll try to **stomp and destroy** them if they\u2019re within detection range. This makes turtle eggs a way to **bait or trap zombies**.\n\n### So in short:\n- **Turtle eggs** are the only kind of egg that zombies react to.\n- **Spawn eggs** (like zombie spawn eggs) are just for spawning mobs; they don\u2019t attract anything.\n\nLet me know if you want to make a zombie trap using turtle eggs.",
+      "timestamp": 1745065012.05442
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "4dc58acd-e8bf-41cb-a7c4-9834bfaee283",
+  "title": "Dijkstra algo pros cons",
+  "created_at": "2025-11-28T16:37:56.188605",
+  "updated_at": "2025-11-28T16:37:56.188605",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tell me about dijiktra simepl algo adv and disdv",
+      "timestamp": 1762581133.494826
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the **clear and fast** breakdown of **Dijkstra\u2019s Algorithm** \u2014 simple, full, and viva-ready \ud83d\udc47  \n\n---\n\n### \ud83d\udd39 **What is Dijkstra\u2019s Algorithm?**\nIt\u2019s a **shortest path algorithm** used to find the **minimum distance** from a **source node** to **all other nodes** in a **weighted graph** (with **non-negative edges**).\n\n---\n\n### \ud83d\udd39 **Basic Idea (Simple Explanation)**\nThink of it like finding the **cheapest route** from one city to every other city.\n\nSteps:\n1. Start from the **source node**.  \n2. Set its distance as **0** and all others as **infinity (\u221e)**.  \n3. Pick the **node with the smallest known distance** that hasn\u2019t been visited yet.  \n4. Update the distances of its **neighboring nodes** if a **shorter path** is found through it.  \n5. Mark the node as **visited** (it\u2019s finalized).  \n6. Repeat until all nodes are visited.\n\n---\n\n### \ud83d\udd39 **Example (Quick)**\nGraph edges:  \nA \u2192 B = 2, A \u2192 C = 5, B \u2192 C = 1\n\n**Start from A:**  \n- A = 0, B = 2, C = 5  \n- From B \u2192 C = 2 + 1 = 3 (better than 5)  \n\u2705 Shortest paths:  \nA\u2192B = 2, A\u2192C = 3  \n\n---\n\n### \ud83d\udd39 **Algorithm (in simple steps)**\n1. Initialize `dist[]` with \u221e, and `dist[source] = 0`.  \n2. Use a **priority queue** (min-heap) to pick the smallest distance node.  \n3. For each neighbor, if `dist[u] + weight(u,v) < dist[v]`, update it.  \n4. Continue until all nodes processed.\n\n---\n\n### \ud83d\udd39 **Advantages**\n\u2705 Finds **shortest path** efficiently for graphs with **non-negative weights**.  \n\u2705 Works well with **priority queue (O(V+E log V))** using min-heap.  \n\u2705 Used in **network routing**, **GPS navigation**, **map services**, etc.  \n\u2705 Deterministic \u2014 always gives the **same shortest paths**.\n\n---\n\n### \ud83d\udd39 **Disadvantages**\n\u274c Doesn\u2019t work with **negative edge weights** (it can give wrong results).  \n\u274c Becomes **slow** for very large graphs if not optimized.  \n\u274c Needs **more memory** to store visited nodes and distances.  \n\u274c Can\u2019t handle **dynamic graphs** easily (when edges change during runtime).\n\n---\n\n### \ud83d\udd39 **Applications**\n- Google Maps (finding fastest routes)  \n- Routing in computer networks (like OSPF protocol)  \n- Robotics and AI (pathfinding)  \n- Game development (NPC movement)\n\n---\n\nWould you like me to give the **C code** or **pseudo code** for Dijkstra\u2019s algorithm next (good for viva + coding rounds)?",
+      "timestamp": 1762581133.602552
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

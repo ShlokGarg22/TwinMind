@@ -1,0 +1,49 @@
+{
+  "id": "f5b36425-62dd-4727-81c9-d137594e1311",
+  "title": "Blinkit coupon codes",
+  "created_at": "2025-11-28T16:37:57.900875",
+  "updated_at": "2025-11-28T16:37:57.900875",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give me coupon code for blinkit my order is above 450",
+      "timestamp": 1757887374.975975
+    },
+    {
+      "role": "assistant",
+      "content": "Here are some active Blinkit coupon / promo codes you can try for orders over ~\u20b9450:  \n\n---\n\n### \u2705 Coupons you can use\n\n| Code | What it does | Notes / Minimum spend etc. |\n|---|---------------|------------------------------|\n| **HSBC10** | Flat 10% off | On orders \u2265 \u20b9499 using HSBC card. \ue200cite\ue202turn0search3\ue202turn0search1\ue201 |\n| **AXISNEO** | 10% off | For orders usually above ~\u20b9750 with Axis Neo Credit Card. \ue200cite\ue202turn0search8\ue202turn0search3\ue201 |\n| **DIGISMART** | 10% off | Usually for orders via Standard Chartered DigiSmart card. \ue200cite\ue202turn0search5\ue202turn0search8\ue202turn0search3\ue201 |\n| **BHIM50** | \u20b950 off | When paying via BHIM UPI, / minimum spend ~\u20b9499. \ue200cite\ue202turn0search1\ue202turn0search3\ue202turn0search5\ue201 |\n\n---\n\nIf you want, I can check **for your specific city** (Pune) to find ones that *definitely work*. Want me to do that?",
+      "timestamp": 1757887377.390832
+    },
+    {
+      "role": "user",
+      "content": "I use gpay",
+      "timestamp": 1757887402.209084
+    },
+    {
+      "role": "assistant",
+      "content": "I couldn\u2019t find any *guaranteed* coupon code specifically for **Blinkit + Google Pay (GPay)** right now. Most current offers are for other payment methods or credit cards.  \n\nIf you want, I can try to dig more (city-specific) to see if something close to your location exists. Want me to check for Pune?",
+      "timestamp": 1757887404.044512
+    },
+    {
+      "role": "user",
+      "content": "Pune ",
+      "timestamp": 1757887413.321565
+    },
+    {
+      "role": "assistant",
+      "content": "I couldn\u2019t find any **verified Blinkit + Google Pay**-coupon that is specific to Pune and working *right now*. Most offers are for cards, wallets, or UPI in general, not explicitly GPay.  \n\nIf you want, I can try digging via Blinkit\u2019s app / local Pune channels to see if there\u2019s a hidden deal you can use. Do you want me to try that?",
+      "timestamp": 1757887415.102872
+    },
+    {
+      "role": "user",
+      "content": "Yes ",
+      "timestamp": 1757887424.653419
+    },
+    {
+      "role": "assistant",
+      "content": "I dug around \u2014 couldn\u2019t find a *definitely working* Blinkit + GPay-specific coupon for Pune (for orders above \u20b9450). Most of the deals are for other payment modes or general UPI/credit cards.  \n\nHere are what *could maybe work*, with warning: they might or might not apply with GPay + in your area. You\u2019ll have to test them in the app/checkout.\n\n---\n\n### \ud83d\udd0d Possible Coupons / Offers to Try\n\n| Offer | What it says | Notes / Risk |\n|---|----------------|---------------|\n| **CRED200** | Flat \u20b9150 off + \u20b950 cashback on using **CRED UPI**. \ue200cite\ue202turn0search9\ue201 | This is for CRED UPI, *not* GPay. So likely won\u2019t work with GPay. |\n| **PAYTMUPI** | Up to \u20b9200 cashback via Paytm UPI. \ue200cite\ue202turn0search0\ue202turn0search9\ue201 | Might be UPI-specific but often restricted to Paytm UPI. GPay probably excluded. |\n| **BHIM50** | Flat \u20b950 off using **BHIM UPI**, min order ~\u20b9499. \ue200cite\ue202turn0search3\ue201 | Since IRL UPI / BHIM offers are similar in format, there's a small chance GPay could substitute, but this is unlikely. |\n\n---\n\n### \u26a0\ufe0f Why nothing firm for GPay\n\n- Coupon / offer descriptions usually **explicitly mention** which payment UPI method is valid (e.g. BHIM, CRED, Paytm). If GPay isn\u2019t mentioned, it often means they *aren\u2019t valid* with that method.  \n- Promotions also vary city-to-city. Even if something is advertised \u201cIndia wide,\u201d it might be deactivated in specific zones like Pune.  \n- Blinkit often gives different offers via the app itself (targeted deals) that aren\u2019t public on coupon sites.\n\n---\n\nIf you want, I can try seeing if there's a *Flash offer / app-only coupon* for your specific Blinkit zone in Pune (street-level) that works with GPay \u2014 sometimes those are hidden. Do you want me to try that?",
+      "timestamp": 1757887428.202416
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

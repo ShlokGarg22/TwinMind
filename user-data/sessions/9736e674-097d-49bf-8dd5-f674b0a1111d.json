@@ -1,0 +1,19 @@
+{
+  "id": "9736e674-097d-49bf-8dd5-f674b0a1111d",
+  "title": "Schr\u00f6dinger Equation Simplified",
+  "created_at": "2025-11-28T16:38:00.679017",
+  "updated_at": "2025-11-28T16:38:00.679017",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Make it simple to understand and learn it",
+      "timestamp": 1746421709.100725
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a **simple breakdown** of the Schr\u00f6dinger Wave Equations (as shown in your image):\n\n---\n\n### 1. **Time-Independent Schr\u00f6dinger Equation (1D)**\n\n**Equation:**\n\\[\n\\frac{d^2 \\psi(x)}{dx^2} + \\frac{2m}{\\hbar^2}(E - V)\\psi(x) = 0\n\\]\n\n- **\u03c8(x)**: wave function (describes the state of the particle)\n- **E**: total energy\n- **V(x)**: potential energy\n- **m**: mass of the particle\n- **\u0127** (h-bar): reduced Planck's constant\n\n**What it means:**\nThis equation is used when the system doesn't change with time. It gives the **allowed energy levels** and **wave functions** of a particle.\n\n- If **V(x) = 0** (free particle), the equation becomes simpler:\n  \\[\n  \\frac{d^2 \\psi(x)}{dx^2} + \\frac{2mE}{\\hbar^2} \\psi(x) = 0\n  \\]\n  \u2192 This describes a free, unbound particle.\n\n---\n\n### 2. **Time-Dependent Schr\u00f6dinger Equation (1D)**\n\n**Equation:**\n\\[\n- \\frac{\\hbar^2}{2m} \\frac{\\partial^2 \\psi(x,t)}{\\partial x^2} + V(x,t)\\psi(x,t) = i\\hbar \\frac{\\partial \\psi(x,t)}{\\partial t}\n\\]\n\n- **\u03c8(x,t)**: wave function that changes with both position and time\n- **i**: imaginary unit\n- **Other terms** are the same as above\n\n**What it means:**\nThis is the **full quantum equation**. It tells how the particle's wave function evolves over time.\n\n---\n\n### Simple Analogy:\n\n- **Time-Independent** \u2192 Like checking a snapshot (still image) of a system's energy states.\n- **Time-Dependent** \u2192 Like watching a video of how the particle behaves and evolves.\n\n---\n\nWant practice problems or examples to help remember this better?",
+      "timestamp": 1746421709.3613
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

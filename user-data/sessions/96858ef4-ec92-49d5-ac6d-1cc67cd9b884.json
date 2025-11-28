@@ -1,0 +1,19 @@
+{
+  "id": "96858ef4-ec92-49d5-ac6d-1cc67cd9b884",
+  "title": "Login page design prompt",
+  "created_at": "2025-11-28T16:37:57.156010",
+  "updated_at": "2025-11-28T16:37:57.156010",
+  "messages": [
+    {
+      "role": "user",
+      "content": "i want the login page to be made like that give prompt for ai remove githib login",
+      "timestamp": 1761766309.048
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a **clean AI prompt** you can use to generate a login page visually identical in style to the image you uploaded \u2014 but with **no GitHub login button** (only Google + email/password).  \n\n---\n\n**\ud83c\udfa8 Prompt for AI image/UI generator:**\n\n> Design a sleek, modern login page UI with a dark theme and gradient background similar to emerald green or dark teal.  \n> The layout should be split into two sections:\n> - **Left side:** A smooth gradient panel with a welcoming title like \u201cWelcome Back\u201d and small subtitle text such as \u201cAccess your account to continue.\u201d  \n>   Include a 3-step progress indicator (for example: 1\ufe0f\u20e3 Login, 2\ufe0f\u20e3 Setup Workspace, 3\ufe0f\u20e3 Setup Profile) with step one highlighted.  \n> - **Right side:** A minimalist login form with rounded input fields and a white accent \"Log In\" button.  \n>   Add **\u201cContinue with Google\u201d** button at the top, **no GitHub button**.  \n>   Below that, include email and password input fields (with placeholder text examples).  \n>   Below the button, add a small text link: \u201cDon\u2019t have an account? Sign up.\u201d  \n> \n> Use soft shadows, clean typography (like Inter or Poppins), and balanced white space.  \n> Make it responsive and professional \u2014 startup-level design quality.\n\n---\n\nWould you like me to generate the **React + Tailwind login page code** for this design next? I can make it match the image\u2019s layout and colors exactly.",
+      "timestamp": 1761766319.137779
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

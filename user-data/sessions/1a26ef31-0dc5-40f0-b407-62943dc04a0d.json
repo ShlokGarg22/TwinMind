@@ -1,0 +1,19 @@
+{
+  "id": "1a26ef31-0dc5-40f0-b407-62943dc04a0d",
+  "title": "GitHub Copilot Pro Access",
+  "created_at": "2025-11-28T16:37:59.457073",
+  "updated_at": "2025-11-28T16:37:59.457073",
+  "messages": [
+    {
+      "role": "user",
+      "content": "i have activates git hub educational plan but tell me how to access copilot pro free",
+      "timestamp": 1751912776.685
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the straight talk: once you're approved for the **GitHub Student Developer Pack**, you are **entitled to GitHub Copilot\u202fPro** at no cost for the duration of your student status. Here's how to make it happen:\n\n---\n\n## \u2705 Step-by-Step Guide to Activate Copilot Pro\n\n1. **Confirm you're verified**  \n   Typically, approval takes a few hours to a couple of days, depending on GitHub\u2019s review speed \ue200cite\ue202turn0search4\ue202turn0search5\ue201.\n\n2. **Add your school email (if you haven\u2019t)**  \n   A college or school-issued email (e.g., `.edu` or `.ac.in`) helps speed verification \ue200cite\ue202turn0search1\ue202turn0search4\ue201.\n\n3. **Claim Copilot Pro via the Pack page**  \n   Go to [education.github.com/pack](https://education.github.com/pack), scroll to **GitHub Copilot**, and click **\"Get access\"** or sign-up link \ue200cite\ue202turn0search0\ue202turn0search5\ue201.\n\n4. **Alternatively, use the Copilot site**  \n   Visit [copilot.github.com](https://copilot.github.com), click **\u201cStart for free\u201d**, and choose the Student Developer Pack option \ue200cite\ue202turn0search4\ue201.\n\n5. **Install and sign in within your IDE**  \n   Use Visual Studio Code (or another supported IDE), install the **GitHub Copilot** extension, sign in, and you should see **Pro-level features** unlocked \ue200cite\ue202turn0search4\ue202turn0search8\ue201.\n\n---\n\n## \ud83e\udd14 If you're stuck on \"Free\" despite approval\n\nGitHub users have reported cases like:\n\n> \u201cI\u2019m verified\u2026 but my Copilot dashboard still shows \u2018You are using Copilot for free\u2019, and clicking \u2018Upgrade to Pro\u2019 yields an error: \u2018Could not purchase\u2026 already has an active subscription for GitHub Copilot Pro.\u2019\u201d \ue200cite\ue202turn0search2\ue201\n\nThat\u2019s a support-level glitch\u2014your account is flagged as Pro, but the features aren't unlocked. Try the following:\n\n- Wait about 72\u202fhours after pack approval\u2014sometimes it takes that long.\n- Log out and back in, clear cookies/cache.\n- Use the Copilot site\u2019s student sign-up link explicitly.\n- If problems persist, **open a support ticket** via:\n  - https://support.github.com\n  - Choose: \u201cI am a verified student having trouble redeeming Global Campus offers\u201d \ue200cite\ue202turn0search2\ue201.\n\n---\n\n## \ud83e\uddfe TL;DR\n\n- \u2705 **Yes**, Copilot\u202fPro is free with a valid Student Developer Pack.\n- \u2699\ufe0f First, get verified \u2192 then claim via Pack page or Copilot site.\n- \ud83d\udd52 It might take a few days or require relogging.\n- \ud83d\udca5 If your dashboard still shows \u201cFree\u201d, you\u2019ll need to contact GitHub support.\n\n---\n\n**Final thoughts (no sugar-coating):**  \nYou\u2019ve done the hard part\u2014getting the student pack. Now it\u2019s just a matter of activating the Copilot offer. If the automatic paths don\u2019t work, it\u2019s a bug on GitHub\u2019s side, not yours. Filing a support ticket is the real fix. Show them you're verified and eligible\u2014demand activation. You've earned this; don't let a glitch block your AI assistant.\n\nLet me know if you want help crafting that support message or navigating the dashboard.",
+      "timestamp": 1751912774.157428
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

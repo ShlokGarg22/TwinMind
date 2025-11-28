@@ -1,0 +1,19 @@
+{
+  "id": "0f76288b-7c4a-4f6b-8097-82549485ef3a",
+  "title": "LED working principle summary",
+  "created_at": "2025-11-28T16:37:56.568422",
+  "updated_at": "2025-11-28T16:37:56.568422",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Led working princla.color and more in summary way",
+      "timestamp": 1762453604.316
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a **summary on LED (Light Emitting Diode):**\n\n---\n\n### \ud83d\udca1 **Working Principle**\n- LED works on **electroluminescence** \u2014 it emits light when **current flows through it in forward direction**.  \n- Inside, it has a **p-n junction diode**.  \n- When electrons and holes recombine at the junction, **energy is released as light (photons)** instead of heat.\n\n---\n\n### \u2699\ufe0f **Structure**\n- **Semiconductor material:** Usually **Gallium, Arsenic, Phosphorus, Nitrogen** combinations.  \n- **Anode (+)** = longer leg \u2192 connected to positive.  \n- **Cathode (\u2212)** = shorter leg \u2192 connected to negative.\n\n---\n\n### \ud83c\udfa8 **Colors & Materials**\n| Color | Material Used | Approx. Wavelength |\n|--------|----------------|--------------------|\n| Red | Gallium Arsenide (GaAs) | 620\u2013750 nm |\n| Green | Gallium Phosphide (GaP) | 520\u2013570 nm |\n| Blue | Gallium Nitride (GaN) | 450\u2013495 nm |\n| White | Combination of RGB or Blue LED + Phosphor | \u2014 |\n\n---\n\n### \u26a1 **Key Characteristics**\n- Works at **low voltage (\u22482\u20133V)**  \n- **High efficiency**, **low power** consumption  \n- **No filament**, so **long lifespan**  \n- **Instant ON/OFF** response  \n- **Direction-sensitive** (only works in forward bias)\n\n---\n\n### \ud83d\udd0b **Typical Applications**\n- Indicators (TV, chargers, etc.)  \n- Display boards  \n- Street & home lighting  \n- Optical communication  \n- Remote controls, sensors, etc.\n\n---\n\nWould you like a **simple labeled diagram** explanation of LED internal working too (for notes or project)?",
+      "timestamp": 1762453606.031317
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "83ea6fa9-0e0a-46b2-8211-f35e8c1f6fa9",
+  "title": "Reverse SLL in C",
+  "created_at": "2025-11-28T16:37:56.216655",
+  "updated_at": "2025-11-28T16:37:56.216655",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Reverse a sll in c main code fucntiom",
+      "timestamp": 1762578220.411013
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clean, **main + function** version of **reversing a Singly Linked List (SLL)** in **C** \u2014 written in a way you can directly run and understand line by line:\n\n---\n\n### \u2705 **C Program: Reverse a Singly Linked List**\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\n// Structure definition for a singly linked list node\nstruct Node {\n    int data;\n    struct Node* next;\n};\n\n// Function to create a new node\nstruct Node* createNode(int data) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    newNode->data = data;\n    newNode->next = NULL;\n    return newNode;\n}\n\n// Function to insert a node at the end\nstruct Node* insertEnd(struct Node* head, int data) {\n    struct Node* newNode = createNode(data);\n    if (head == NULL)\n        return newNode;\n\n    struct Node* temp = head;\n    while (temp->next != NULL)\n        temp = temp->next;\n\n    temp->next = newNode;\n    return head;\n}\n\n// Function to print the linked list\nvoid display(struct Node* head) {\n    struct Node* temp = head;\n    while (temp != NULL) {\n        printf(\"%d -> \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"NULL\\n\");\n}\n\n// Function to reverse the linked list\nstruct Node* reverseList(struct Node* head) {\n    struct Node* prev = NULL;\n    struct Node* current = head;\n    struct Node* next = NULL;\n\n    while (current != NULL) {\n        next = current->next;     // store next node\n        current->next = prev;     // reverse the link\n        prev = current;           // move prev forward\n        current = next;           // move current forward\n    }\n    return prev; // new head\n}\n\n// Main function\nint main() {\n    struct Node* head = NULL;\n\n    // Create linked list: 10 -> 20 -> 30 -> 40 -> NULL\n    head = insertEnd(head, 10);\n    head = insertEnd(head, 20);\n    head = insertEnd(head, 30);\n    head = insertEnd(head, 40);\n\n    printf(\"Original List:\\n\");\n    display(head);\n\n    // Reverse the list\n    head = reverseList(head);\n\n    printf(\"Reversed List:\\n\");\n    display(head);\n\n    return 0;\n}\n```\n\n---\n\n### \u2699\ufe0f **Explanation**\n\n- **`reverseList()` logic:**\n  - Uses three pointers:  \n    - `prev` \u2192 previous node  \n    - `current` \u2192 current node  \n    - `next` \u2192 store next node temporarily  \n  - Reverses the `next` pointer one by one.\n\n- **Output:**\n  ```\n  Original List:\n  10 -> 20 -> 30 -> 40 -> NULL\n  Reversed List:\n  40 -> 30 -> 20 -> 10 -> NULL\n  ```\n\n---\n\nDo you want me to give the **recursive version** also (reverse using recursion)?",
+      "timestamp": 1762578220.631498
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

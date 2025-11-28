@@ -1,0 +1,19 @@
+{
+  "id": "6e2a0adb-fdd6-46bd-9501-c167179b2079",
+  "title": "Install statsmodels library",
+  "created_at": "2025-11-28T16:37:57.510804",
+  "updated_at": "2025-11-28T16:37:57.510804",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ModuleNotFoundError                       Traceback (most recent call last)\r\nCell In[2], line 11\r\n      9 from sklearn.linear_model import LinearRegression\r\n     10 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\r\n---> 11 import statsmodels.api as sm\r\n     13 # Load dataset\r\n     14 df = pd.read_csv(\"https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv\")\r\n\r\nModuleNotFoundError: No module named 'statsmodels",
+      "timestamp": 1759660309.064
+    },
+    {
+      "role": "assistant",
+      "content": "That error means Python can\u2019t find the **`statsmodels`** library on your system \u2014 it isn\u2019t installed.  \n\nHere\u2019s how to fix it \ud83d\udc47\n\n---\n\n### \u2705 **Fix**\nOpen your terminal or notebook cell and run:\n\n```bash\npip install statsmodels\n```\n\nIf you\u2019re using **Jupyter Notebook**, run this inside a cell:\n```python\n!pip install statsmodels\n```\n\n---\n\n### \ud83e\udde0 Why you need it\n`statsmodels` is used for **statistical modeling** \u2014 things like:\n- Detailed regression summaries (coefficients, p-values, R\u00b2, etc.)\n- Hypothesis testing\n- Time series models (ARIMA, etc.)\n\nIt complements `sklearn`, which focuses more on **machine learning**.\n\n---\n\nOnce installed, rerun:\n```python\nimport statsmodels.api as sm\n```\n\nand it should work fine.  \n\nWould you like me to explain **why we use `sm.add_constant()`** and **how statsmodels\u2019 regression differs from sklearn\u2019s LinearRegression** next? It\u2019ll make your linear regression project analysis much deeper.",
+      "timestamp": 1759660295.998377
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

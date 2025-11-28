@@ -1,0 +1,434 @@
+{
+  "id": "d0a5b5a5-dac8-41e9-a8e8-736ad3ca1b68",
+  "title": "RDMA cluster network role",
+  "created_at": "2025-11-28T16:37:57.063100",
+  "updated_at": "2025-11-28T16:37:57.063100",
+  "messages": [
+    {
+      "role": "user",
+      "content": "2. What does a dedicated RDMA cluster network do during model fine-tuning and inference?\n\nIt leads to higher latency in model inference.\n\nIt enables the deployment of multiple fine-tuned models within a single cluster.\n\nIt limits the number of fine-tuned models deployable on the same GPU cluster.\n\nO It increases GPU memory requirements for model deployment",
+      "timestamp": 1761962449.908813
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**It enables the deployment of multiple fine-tuned models within a single cluster.**\n\n**Explanation:**  \nA **dedicated RDMA (Remote Direct Memory Access) cluster network** improves **communication speed between GPUs and nodes** by allowing data to move directly between GPU memories without involving the CPU.  \n\nThis **low-latency, high-throughput** network is especially useful during **model fine-tuning and inference**, where large model parameters and gradients need to be exchanged rapidly.  \n\nAs a result, it allows **multiple fine-tuned models** to be efficiently deployed and scaled **within a single cluster**, rather than being limited by communication bottlenecks.",
+      "timestamp": 1761962450.925527
+    },
+    {
+      "role": "user",
+      "content": "Which role does a \"model endpoint\" serve in the inference workflow of the OCI Generative Al service?\n\nHosts the training data for fine-tuning custom models.\n\nServes as a designated point for user requests and model responses.\n\nUpdates the weights of the base model during the fine-tuning process.\n\nEvaluates the performance metrics of the custom models.",
+      "timestamp": 1761962480.059969
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**Serves as a designated point for user requests and model responses.**\n\n**Explanation:**  \nIn the **OCI Generative AI service**, a **model endpoint** is the **interface where inference happens** \u2014 it\u2019s the point that receives a user\u2019s input (like a prompt) and returns the model\u2019s output (like generated text or images).  \n\nThink of it as the **API gateway** for interacting with a deployed model \u2014 not for training, updating, or evaluating, but purely for **serving predictions and responses in real time**.",
+      "timestamp": 1761962480.709405
+    },
+    {
+      "role": "user",
+      "content": "A startup is evaluating the cost implications of using the OCI Generative Al service for their application, which involves generating text responses. They anticipate a requests.\n\nWhich pricing model would be most appropriate for them?\n\nDedicated Al clusters, as they offer a fixed monthly rate regardless of usage\n\nOn-demand inferencing, as it allows them to pay per character processed without long-term commitments\n\nDedicated Al clusters, as they are mandatory for any text generation tasks\n\nO On-demand inferencing, as it provides a flat fee for unlimited usage",
+      "timestamp": 1761962521.164586
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**On-demand inferencing, as it allows them to pay per character processed without long-term commitments.**\n\n**Explanation:**  \nFor startups or teams with **variable or unpredictable workloads**, **on-demand inferencing** is the best fit. It follows a **pay-per-use model**, where you\u2019re billed based on the **number of characters processed** (input + output) by the generative AI model.  \n\nThis means no upfront cost, no cluster management, and **no long-term commitment** \u2014 perfect when you\u2019re just starting out or still testing your application\u2019s usage pattern.",
+      "timestamp": 1761962521.776554
+    },
+    {
+      "role": "user",
+      "content": "Which is a cost-related benefit of using vector databases with Large Language Models (LLMs)?\n\nThey increase the cost due to the need for real-time updates.\n\nThey offer real-time updated knowledge bases and are cheaper than fine-tuned LLMs.\n\nThey require frequent manual updates, which increase operational costs.\n\nVector databases are more expensive but provide higher quality data",
+      "timestamp": 1761962575.403649
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**They offer real-time updated knowledge bases and are cheaper than fine-tuned LLMs.**\n\n**Explanation:**  \nUsing **vector databases** with **LLMs** lets you extend a model\u2019s knowledge **without retraining or fine-tuning** it \u2014 you just store and retrieve contextually relevant data through **embeddings**.  \n\nThis setup gives you a **dynamic, real-time knowledge base** while avoiding the **high cost** of fine-tuning and retraining models every time data changes. So it\u2019s both **flexible and cost-efficient**.",
+      "timestamp": 1761962576.004507
+    },
+    {
+      "role": "user",
+      "content": "Which is the main characteristic of greedy decoding in the context of language model word prediction\n\n\u2610 It picks the most likely word to emit at each step of decoding.\n\nIt chooses words randomly from the set of less probable candidates.\n\nIt requires a large temperature setting to ensure diverse word selection.\n\nIt selects words based on a flattened distribution over the vocabulary",
+      "timestamp": 1761962614.991216
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 It picks the most likely word to emit at each step of decoding.**\n\n**Explanation:**  \n**Greedy decoding** is the simplest decoding strategy used in language models. At each step, it just **chooses the single most probable next word** (the one with the highest predicted probability) \u2014 no randomness, no exploration.  \n\nIt\u2019s **fast** and **deterministic**, but can sometimes produce **less diverse or less coherent text** because it doesn\u2019t consider alternative word sequences that might lead to better overall results.",
+      "timestamp": 1761962615.633352
+    },
+    {
+      "role": "user",
+      "content": "software engineer is developing a chatbot using a large language model and must decide on a decoding strategy for generating the chatbot's replie\n\nWhich decoding approach should they use in each of the following scenarios to achieve the desired outcome?\n\nIn a situation requiring creative and varied responses, the engineer selects greedy decoding with an increased temperature.\n\nO To ensure the chatbot's responses are diverse and unpredictable, the engineer sets a high temperature and uses non-deterministic decoding\n\nFor maximum consistency in the chatbot's language, the engineer chooses greedy decoding with a low temperature setting.\n\nO To minimize the risk of nonsensical replies, the engineer opts for non-deterministic decoding with a very low temperature",
+      "timestamp": 1761962648.482964
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 To ensure the chatbot's responses are diverse and unpredictable, the engineer sets a high temperature and uses non-deterministic decoding.**\n\n**Explanation:**  \nWhen you want a chatbot to sound **creative, varied, and less repetitive**, you use **non-deterministic decoding methods** (like **sampling** or **top-k/top-p decoding**) combined with a **high temperature**.  \n\n- **High temperature** \u2192 increases randomness in word selection.  \n- **Non-deterministic decoding** \u2192 lets the model explore multiple plausible continuations instead of always picking the top one.  \n\nThat combo produces **more imaginative, unpredictable replies** \u2014 perfect for a conversational or creative chatbot.",
+      "timestamp": 1761962649.07318
+    },
+    {
+      "role": "user",
+      "content": "T",
+      "timestamp": 1761962691.823152
+    },
+    {
+      "role": "user",
+      "content": ". How are fine-tuned customer models stored to enable strong data privacy and security in OCI Generative Al service?\n\nStored in OCI Object Storage and encrypted by default.\n\nShared among multiple customers for efficiency.\n\nStored in an unencrypted form in OCI Object Storage.\n\nStored in OCI Key Management service.",
+      "timestamp": 1761962695.294999
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Stored in OCI Object Storage and encrypted by default.**\n\n**Explanation:**  \nIn the **OCI Generative AI service**, **fine-tuned custom models** are securely **stored in OCI Object Storage**, where they\u2019re **automatically encrypted at rest by default**.  \n\nThis ensures **strong data privacy and isolation**, meaning your fine-tuned models and their training data are **not shared** with other customers \u2014 everything stays protected within your own tenancy.",
+      "timestamp": 1761962695.965954
+    },
+    {
+      "role": "user",
+      "content": "How does OCI Generative Al Agents ensure that citations link to custom URLs instead of the default Object Storage links?\n\nBy enabling the trace feature during endpoint creation\n\nBy increasing the session timeout for endpoints\n\nBy adding metadata to objects in Object Storage\n\nBy modifying the RAG agent's retrieval mechanism",
+      "timestamp": 1761962732.736842
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 By modifying the RAG agent's retrieval mechanism.**\n\n**Explanation:**  \nIn **OCI Generative AI Agents**, when you want **citations** in model responses to point to your **own custom URLs** (like your website or documentation portal) instead of the default **Object Storage links**, you achieve that by **modifying the Retrieval-Augmented Generation (RAG) agent\u2019s retrieval mechanism**.  \n\nThis customization lets you control **how source documents are indexed and referenced**, ensuring citations in responses use **your preferred URL structure** rather than the raw Object Storage paths.",
+      "timestamp": 1761962733.375236
+    },
+    {
+      "role": "user",
+      "content": "What must be done to activate content moderation in OCI Generative Al Agents?\n\nEnable it when creating an endpoint for an agent.\n\nConfigure it in the Object Storage metadata settings.\n\nEnable it in the session trace settings.\n\nUse a third-party content moderation API",
+      "timestamp": 1761962761.879199
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Enable it when creating an endpoint for an agent.**\n\n**Explanation:**  \nIn **OCI Generative AI Agents**, **content moderation** is a built-in feature that you can **activate during the creation of the agent\u2019s endpoint**.  \n\nWhen you enable it at that stage, all the model\u2019s incoming prompts and outgoing responses are automatically **screened for inappropriate or unsafe content**, helping you maintain compliance and safety without needing external tools or APIs.",
+      "timestamp": 1761962762.545388
+    },
+    {
+      "role": "user",
+      "content": "What problem can occur if there is not enough overlap between consecutive chunks when splitting a document for an LLM?\n\nIt will not have any impact.\n\nO The embeddings of the consecutive chunks may be more similar semantically.\n\nIt will not increase the number of chunks of a given size.\n\nThe continuity of the context may be lost",
+      "timestamp": 1761962792.788311
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 The continuity of the context may be lost.**\n\n**Explanation:**  \nWhen splitting a document into chunks for use with an LLM (like in **RAG pipelines**), if there\u2019s **too little or no overlap** between consecutive chunks, the **model can lose context** \u2014 meaning information that spans across chunk boundaries may get disconnected.  \n\nThat breaks the **semantic flow** of the text, leading to **less accurate retrievals** and **weaker model responses** since the LLM can\u2019t \u201csee\u201d how one part of the text relates to the next.",
+      "timestamp": 1761962793.464757
+    },
+    {
+      "role": "user",
+      "content": "What is the correct order to process a block of text while maintaining a balance between improving embedding specificity and preses\n\nProcess the text continuously until a predefined separator is encountered.\n\nRandomly split the text into equal-sized chunks without considering sentence or paragraph boundaries.\n\nFirst extract individual words, then combine them into sentences, and finally group them into paragraphs.\n\nStart with paragraphs, then break them into sentences, and further split into tokens until the chunk size is reached",
+      "timestamp": 1761962815.535589
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Start with paragraphs, then break them into sentences, and further split into tokens until the chunk size is reached.**\n\n**Explanation:**  \nWhen preparing text for **embedding or retrieval** in LLM workflows, the goal is to **preserve meaning and context** while keeping chunks small enough for efficient processing.  \n\nThat\u2019s best achieved by following a **hierarchical splitting approach**:  \n1. Start with **paragraphs** (to maintain logical context).  \n2. Split into **sentences** (to refine granularity).  \n3. Then split further into **tokens** until each chunk fits the desired size.  \n\nThis method strikes the right balance between **specificity** (fine-grained embeddings) and **preservation of context** (coherent semantic flow).",
+      "timestamp": 1761962816.176472
+    },
+    {
+      "role": "user",
+      "content": "You are trying to implement an Oracle Generative Al Agent (RAG) using Oracle Database 23ai vector search as the data store.\n\nWhat must you ensure about the embedding model used in the database function for vector search?\n\nIt must support only title-based vector embeddings.\n\nIt must match the embedding model used to create the VECTOR field in the table.\n\nO It must be different from the one used to generate the VECTOR in the BODY field.\n\nIt can be any model, regardless of how the VECTOR field was generated.",
+      "timestamp": 1761962851.645072
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 It must match the embedding model used to create the VECTOR field in the table.**\n\n**Explanation:**  \nIn an **Oracle Generative AI Agent (RAG)** setup using **Oracle Database 23ai vector search**, the **embedding model** used for querying must be **the same model** that was used to generate and store the **VECTOR embeddings** in the database.  \n\nIf the embedding models don\u2019t match, the **vector dimensions and semantic space** will differ \u2014 meaning similarity searches (like cosine similarity) won\u2019t work correctly, leading to **poor or irrelevant retrieval results**.",
+      "timestamp": 1761962852.489546
+    },
+    {
+      "role": "user",
+      "content": ". What happens when you delete a knowledge base in OCI Generative Al Agents?\n\nOnly the metadata of the knowledge base is removed.\n\nThe knowledge base is permanently deleted, and the action cannot be undone.\n\nThe knowledge base is marked inactive but remains stored in the system.\n\nThe knowledge base is archived for later recovery.",
+      "timestamp": 1761962876.480277
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 The knowledge base is permanently deleted, and the action cannot be undone.**\n\n**Explanation:**  \nWhen you **delete a knowledge base** in **OCI Generative AI Agents**, it\u2019s **completely and permanently removed** \u2014 including all its associated data, embeddings, and configurations.  \n\nThere\u2019s **no undo or recovery option**, so it\u2019s important to double-check before deletion, especially if the knowledge base contains critical or custom-ingested documents.",
+      "timestamp": 1761962877.116161
+    },
+    {
+      "role": "user",
+      "content": "17. How should you handle a data source in OCI Generative Al Agents if your data is not ready yet?\n\nUse multiple buckets to store the incomplete data.\n\nUpload placeholder files larger than 100 MB as a temporary solution.\n\nCreate an empty folder for the data source and populate it later.\n\nLeave the data source configuration incomplete until the data is ready",
+      "timestamp": 1761962897.887688
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Create an empty folder for the data source and populate it later.**\n\n**Explanation:**  \nIn **OCI Generative AI Agents**, if your **data isn\u2019t ready yet**, the correct approach is to **create an empty folder** in **Object Storage** and **link it as the data source**.  \n\nThis way, the agent setup can proceed, and once your data is ready, you can simply **add the files later** \u2014 no need to redo the configuration. It\u2019s clean, flexible, and fully supported by OCI.",
+      "timestamp": 1761962898.520791
+    },
+    {
+      "role": "user",
+      "content": "18. What is a disadvantage of using Few-Shot Model Prompting?\n\nIt requires a compatible data source for retrieval.\n\nIt requires a labeled dataset, which can be expensive.\n\nIt adds latency to each model request.\n\nIt is complex to set up and implement.",
+      "timestamp": 1761962933.329159
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 It adds latency to each model request.**\n\n**Explanation:**  \n**Few-shot prompting** involves including **example inputs and outputs** directly in the prompt to guide the model\u2019s behavior. While this improves response accuracy and consistency, it also means **larger prompts** are sent to the model each time.  \n\nThat increases **processing time and token usage**, resulting in **higher latency and cost per request** \u2014 the main drawback of few-shot prompting.",
+      "timestamp": 1761962933.906971
+    },
+    {
+      "role": "user",
+      "content": ". What does \"Loss\" measure in the evaluation of OCI Generative Al fine-tuned models?\n\nThe level of incorrectness in the model's predictions, with lower values indicating better performance.\n\nThe improvement in accuracy achieved by the model during training on the user-uploaded data set.\n\nThe difference between the accuracy of the model at the beginning of training and the accuracy of the deployed model.\n\nThe percentage of incorrect predictions made by the model compared with the total number of predictions in the evalu",
+      "timestamp": 1761962966.044961
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 The level of incorrectness in the model's predictions, with lower values indicating better performance.**\n\n**Explanation:**  \nIn **OCI Generative AI fine-tuning**, **loss** is a numerical measure of **how far the model\u2019s predictions are from the correct outputs** during training.  \n\nA **lower loss** means the model\u2019s predictions are **closer to the target outputs**, indicating **better learning and performance**.  \nSo, in simple terms \u2014 **loss measures the model\u2019s \u201cwrongness.\u201d** The smaller it gets, the smarter your model\u2019s becoming.",
+      "timestamp": 1761962966.706032
+    },
+    {
+      "role": "user",
+      "content": ". When should you use the T-Few fine-tuning method for training a model?\n\nFor data sets with hundreds of thousands to millions of samples.\n\nFor data sets with a few thousand samples or less.\n\nFor models that require their own hosting dedicated Al cluster.\n\nFor complicated semantical understanding improvement.",
+      "timestamp": 1761962989.689842
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 For data sets with a few thousand samples or less.**\n\n**Explanation:**  \nThe **T-Few fine-tuning method** (short for *Task-Few*) is designed for **low-data scenarios** \u2014 typically when you only have **a few hundred to a few thousand training samples**.  \n\nIt\u2019s a **parameter-efficient** fine-tuning approach that adapts large models effectively **without retraining all their parameters**, making it ideal for **small, specialized datasets** where full fine-tuning would be overkill or too expensive.",
+      "timestamp": 1761962990.318628
+    },
+    {
+      "role": "user",
+      "content": "Which is a key characteristic of the annotation process used in T-Few fine tuning?\n\nT-Few fine-tuning uses annotated data to adjust a fraction of model weights.\n\nOT-Few fine-tuning involves updating the weights of all layers in the model.\n\nOT-Few fine-tuning relies on unsupervised learning techniques for annotation.\n\nOT-Few fine-tuning requires manual annotation of input-output pairs",
+      "timestamp": 1761963028.058255
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 T-Few fine-tuning uses annotated data to adjust a fraction of model weights.**\n\n**Explanation:**  \nIn **T-Few fine-tuning**, the process uses **annotated (labeled) input\u2013output pairs** but only **adjusts a small subset of the model\u2019s parameters** \u2014 not the entire network.  \n\nThis makes it a **parameter-efficient fine-tuning** method: it learns task-specific behavior using less data and compute while still maintaining high performance.",
+      "timestamp": 1761963028.896048
+    },
+    {
+      "role": "user",
+      "content": "23. What issue might arise from using small data sets with the Vanilla fine-tuning method in the OCI Generative Al service\n\nO Overfitting\n\nUnderfitting\n\nModel Drift\n\nData Leakage",
+      "timestamp": 1761963048.573207
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Overfitting**\n\n**Explanation:**  \nWhen you use **Vanilla fine-tuning** with a **small dataset**, the model can easily **memorize** the limited training examples instead of learning general patterns \u2014 this is known as **overfitting**.  \n\nAs a result, it performs well on the training data but **poorly on new or unseen inputs**, reducing its real-world usefulness.",
+      "timestamp": 1761963049.336111
+    },
+    {
+      "role": "user",
+      "content": "OCI Generative Al Agents, what happens if a session-enabled endpoint remains idle for the specified timeout period?\n\nThe session restarts and retains the previous context.\n\nThe session automatically ends and subsequent conversations do not retain the previous context.\n\nThe agent deletes all data related to the session.\n\nThe session remains active indefinitely until manually ended.",
+      "timestamp": 1761963078.317896
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 The session automatically ends and subsequent conversations do not retain the previous context.**\n\n**Explanation:**  \nIn **OCI Generative AI Agents**, if a **session-enabled endpoint** stays **idle beyond its configured timeout**, the **session expires automatically**.  \n\nOnce that happens, the **context from the previous conversation is lost**, meaning any new interaction starts **fresh** \u2014 with **no memory** of the earlier session\u2019s data or dialogue state.",
+      "timestamp": 1761963078.982426
+    },
+    {
+      "role": "user",
+      "content": "What happens when you enable the session option while creating an endpoint in Generative Al Agents?\n\nAll conversations are saved permanently regardless of session settings.\n\nThe context of the chat session is retained, and the option cannot be changed later.\n\nThe agent stops responding after one hour of inactivity.\n\nThe context of the chat session is retained, but the option can be disabled later.",
+      "timestamp": 1761963100.498478
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 The context of the chat session is retained, but the option can be disabled later.**\n\n**Explanation:**  \nWhen you **enable the session option** while creating an endpoint in **OCI Generative AI Agents**, the agent can **remember the conversation context** across multiple user interactions \u2014 making the chat more coherent and context-aware.  \n\nYou can still **disable this option later** if you no longer need session-based context retention. It\u2019s flexible, not permanent.",
+      "timestamp": 1761963101.188397
+    },
+    {
+      "role": "user",
+      "content": "Which option is available when moving an endpoint resource to a different compartment in Generative Al Agents?\n\nArchive the endpoint before moving it to a new compartment.\n\nSelect a new compartment for the endpoint and move the resource.\n\nCreate a duplicate endpoint in the new compartment manually.\n\nModify the endpoint's data source to match the new compartment",
+      "timestamp": 1761963133.151322
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Select a new compartment for the endpoint and move the resource.**\n\n**Explanation:**  \nIn **OCI Generative AI Agents**, you can **move an endpoint resource** to a different compartment by simply **selecting the target compartment** and executing the move.  \n\nAll the endpoint\u2019s **configuration and metadata** are preserved \u2014 no need to recreate or duplicate it. This helps with **resource organization, access control, and billing management** across OCI environments.",
+      "timestamp": 1761963133.842336
+    },
+    {
+      "role": "user",
+      "content": "long does the OCI Generative Al Agents service retain customer-provided queries and retrieved context?\n\nOnly during the user's session\n\nUntil the customer deletes the data manually\n\nFor up to 30 days after the session ends\n\nIndefinitely, for future analysis",
+      "timestamp": 1761963154.658038
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Only during the user's session.**\n\n**Explanation:**  \nIn **OCI Generative AI Agents**, any **customer-provided queries and retrieved context** are retained **only for the duration of the active session**.  \n\nOnce the session ends or times out, that data is **not stored or reused** \u2014 ensuring **privacy, security, and compliance** by preventing long-term retention of user inputs or contextual data.",
+      "timestamp": 1761963155.339718
+    },
+    {
+      "role": "user",
+      "content": "What does the output of the encoder in an encoder-decoder architecture represent?\n\nIt is a random initialization vector used to start the model's prediction.\n\nIt represents the probabilities of the next word in the sequence.\n\nIt is a sequence of embeddings that encode the semantic meaning of the input text.\n\nIt is the final generated sentence ready for output by the model.",
+      "timestamp": 1761963175.180614
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 It is a sequence of embeddings that encode the semantic meaning of the input text.**\n\n**Explanation:**  \nIn an **encoder-decoder architecture**, the **encoder\u2019s output** is a **sequence of embeddings (vectors)** that capture the **semantic and contextual meaning** of the input text.  \n\nThese embeddings are then passed to the **decoder**, which uses them to **generate** the corresponding **output sequence** \u2014 like a translation, summary, or response \u2014 depending on the task.",
+      "timestamp": 1761963175.821693
+    },
+    {
+      "role": "user",
+      "content": "Consider the following block of code -\n\nvs OracleVS (embedding_function=embed_model, client=conn23c, table_name=\"DEMO_TABLE\", distance_stra retv = vs.as_retriever (search_type=\"similarity\", search_kwargs=['k': 3})\n\nWhich prerequisite steps must be completed before this code can execute successfully?\n\nDocuments must be retrieved from the database before running the retriever.\n\nEmbeddings must be created and stored in the database.\n\nDocuments must be indexed and saved in the specified table.\n\nO A response must be generated before running the retrieval process",
+      "timestamp": 1761963223.116151
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Embeddings must be created and stored in the database.**\n\n**Explanation:**  \nBefore executing that code, you need to ensure that your **documents have already been embedded** (converted into vector representations) and those **embeddings are stored** in the specified **Oracle Database table (`DEMO_TABLE`)**.  \n\nOnly then can the **vector store retriever (`vs.as_retriever`)** perform **similarity searches** \u2014 it relies on comparing the **query embedding** with the **stored embeddings** to find the most relevant results.",
+      "timestamp": 1761963223.87781
+    },
+    {
+      "role": "user",
+      "content": "You are developing a chatbot that processes sensitive data, which must remain secure and not be exposed externally.\n\nWhat is an approach to embedding the data using Oracle Database 23ai?\n\nO Store embeddings in an unencrypted external database.\n\nUse a third party model via a secure API.\n\nImport and use an ONNX model.\n\nO Use open-source models.",
+      "timestamp": 1761963248.7876
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Import and use an ONNX model.**\n\n**Explanation:**  \nIf you\u2019re handling **sensitive data** that must stay **secure and within your controlled environment**, the right move in **Oracle Database 23ai** is to **import and use an ONNX (Open Neural Network Exchange) model** directly inside the database.  \n\nThis approach lets you **generate embeddings locally**, without sending any data outside the Oracle environment \u2014 ensuring **full data privacy, compliance, and security**.",
+      "timestamp": 1761963249.412572
+    },
+    {
+      "role": "user",
+      "content": "How does retrieval-augmented generation (RAG) differ from prompt engineering and fine-tuning in terms of setup complexity?\n\nORAG involves adding LLM optimization to the model's prompt.\n\nO RAG is more complex to set up and requires a compatible data source.\n\nORAG requires fine-tuning on a smaller domain-specific dataset.\n\nRAG is simpler to implement as it does not require training costs",
+      "timestamp": 1761963296.576876
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 RAG is more complex to set up and requires a compatible data source.**\n\n**Explanation:**  \n**Retrieval-Augmented Generation (RAG)** adds an extra layer to the LLM workflow \u2014 it needs a **vector database or knowledge base** to **retrieve relevant context** before generating answers.  \n\nThat makes it **more complex to set up** than **prompt engineering** (which just adjusts inputs) or **fine-tuning** (which trains on labeled data). You have to handle **data ingestion, embedding generation, vector storage, and retrieval logic**, all of which require a **compatible data source** and extra configuration.",
+      "timestamp": 1761963297.25498
+    },
+    {
+      "role": "user",
+      "content": "How can you verify that an LLM-generated response is grounded in factual and relevant information?\n\nCheck the references to the documents provided in the response.\n\nUse model evaluators to assess the accuracy and relevance of responses.\n\nManually review past conversations to ensure consistency in responses.\n\nExamine the document chunks stored in the vector database",
+      "timestamp": 1761963336.446573
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Check the references to the documents provided in the response.**\n\n**Explanation:**  \nTo verify that an **LLM-generated response** is **factually grounded**, you should **check the citations or references** the model includes \u2014 especially in **RAG (Retrieval-Augmented Generation)** setups.  \n\nThose references link the model\u2019s statements back to **specific source documents**, allowing you to confirm the **accuracy, context, and relevance** of the generated content. It\u2019s the most direct way to ensure the model\u2019s answer is **anchored in real data**, not hallucination.",
+      "timestamp": 1761963337.236258
+    },
+    {
+      "role": "user",
+      "content": "You're using a Large Language Model (LLM) to provide responses for a customer service chatbot. However, some users have figured out ways to craft p irrelevant responses.\n\nWhich sentence describes the issue related to this behavior?\n\nThe issue is due to memorization, where the model is recalling specific details from training data, whether filtered or unfiltered, rather than ge\n\nThe issue is due to prompt injection, where users manipulate the model to bypass safety constraints and generate unfiltered content.\n\nThe issue is due to prompt injection, where the model is explicitly designed to retrieve exact responses from its training set.\n\nThe issue is due to memorization, where the model has been trained specifically on past customer interactions and cannot generate",
+      "timestamp": 1761963362.125492
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 The issue is due to prompt injection, where users manipulate the model to bypass safety constraints and generate unfiltered content.**\n\n**Explanation:**  \nThis behavior is a classic case of **prompt injection** \u2014 when users **intentionally craft inputs** that trick the model into **ignoring its safety rules or context** and producing **irrelevant, unsafe, or unfiltered responses**.  \n\nIt\u2019s not about the model \u201cremembering\u201d data (that would be memorization); it\u2019s about the **user manipulating the prompt** to override the system\u2019s intended behavior.",
+      "timestamp": 1761963362.764386
+    },
+    {
+      "role": "user",
+      "content": "Which technique involves prompting the Large Language Model (LLM) to emit intermediate reasoning steps as part of its response?\n\nStep-Back Prompting\n\nO Chain--Thought\n\nLeast-to-most Prompting\n\nIn-context Learning",
+      "timestamp": 1761963393.073026
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Chain-of-Thought**\n\n**Explanation:**  \n**Chain-of-Thought (CoT) prompting** explicitly asks the **LLM to show its reasoning steps** before giving the final answer.  \n\nBy encouraging the model to \u201cthink out loud,\u201d CoT helps it **handle complex reasoning tasks** \u2014 like math, logic, or multi-step problems \u2014 with greater accuracy and transparency.",
+      "timestamp": 1761963393.898831
+    },
+    {
+      "role": "user",
+      "content": "How does the architecture of dedicated Al clusters contribute to minimizing GPU memory overhead for T-Few fine-tuned model inferend\n\nBy sharing base model weights across multiple fine-tuned models on the same group of GPUs.\n\nBy optimizing GPU memory utilization for each model's unique parameters.\n\nBy allocating separate GPUs for each model instance.\n\nBy loading the entire model into GPU memory for efficient processing",
+      "timestamp": 1761963428.541309
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 By sharing base model weights across multiple fine-tuned models on the same group of GPUs.**\n\n**Explanation:**  \nIn **OCI\u2019s dedicated AI clusters**, **T-Few fine-tuned models** are deployed efficiently by **sharing the base model weights** across multiple fine-tuned variants on the same GPU group.  \n\nThis setup drastically **reduces GPU memory overhead**, since only the **small, fine-tuned parameter deltas** need to be loaded separately \u2014 not the entire model for each instance. It\u2019s a **smart, memory-efficient design** for serving many fine-tuned models simultaneously.",
+      "timestamp": 1761963429.306799
+    },
+    {
+      "role": "user",
+      "content": "An enterprise team deploys a hosting cluster to serve multiple versions of their fine-tuned cohere.command model. They require high and 3 replicas for another version.\n\nHow many units will the hosting cluster require in total?\n\nO 13\n\n8\n\n\u039f 11\n\n\u039f 16",
+      "timestamp": 1761963451.16872
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 11**\n\n**Explanation:**  \nHere\u2019s how the calculation works:  \n\n- One model version needs **high availability**, which means **2 replicas** (for redundancy).  \n- Another version needs **3 replicas**.  \n- Each replica occupies **one unit** in the hosting cluster.  \n\nSo total units required = **2 (for high availability)** + **3 (for the other version)** + **6 (for the base deployment overhead of two models, 3 units each)** = **11 units**.  \n\nHence, the cluster must have **11 units in total** to host both versions as specified.",
+      "timestamp": 1761963454.213919
+    },
+    {
+      "role": "user",
+      "content": ". What is one of the benefits of using dedicated Al clusters in OCI Generative Al?\n\nUnpredictable pricing that varies with demand\n\nPredictable pricing that doesn't fluctuate with demand\n\nA pay-per-transaction pricing model\n\nNo minimum commitment required",
+      "timestamp": 1761963479.23755
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Predictable pricing that doesn't fluctuate with demand.**\n\n**Explanation:**  \n**Dedicated AI clusters** in **OCI Generative AI** offer **fixed, predictable pricing** \u2014 you pay a consistent rate for the reserved GPU capacity, regardless of how much demand fluctuates.  \n\nThis setup is ideal for **production workloads** where performance and cost stability matter more than elastic, usage-based pricing.",
+      "timestamp": 1761963479.693046
+    },
+    {
+      "role": "user",
+      "content": "Which of the following statements is NOT true?\n\nEmbeddings are represented as single-dimensional numerical values that capture text meaning.\n\nEmbeddings can be used to compare text based on semantic similarity.\n\nEmbeddings of sentences with similar meanings are positioned close to each other in vector space.\n\nEmbeddings can be created for words, sentences and entire documents",
+      "timestamp": 1761963498.925477
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Embeddings are represented as single-dimensional numerical values that capture text meaning.**\n\n**Explanation:**  \nThat statement is **NOT true** \u2014 embeddings aren\u2019t single numbers.  \n\nThey\u2019re actually **multi-dimensional vectors** (often hundreds or thousands of dimensions) that capture the **semantic meaning** of text.  \nThese vectors allow models to measure **similarity** and **contextual relationships** between words, sentences, or documents in a high-dimensional **vector space**.",
+      "timestamp": 1761963499.520136
+    },
+    {
+      "role": "user",
+      "content": "Test will be auto submitted for grading at 00:00:00\n\n42. An Al development company is working on an advanced Al assistant capable of handling queries in a seamless manner. Their goal is to co and generate descriptive text, as well as take text descriptions and produce accurate visual representations.\n\nConsidering the capabilities, which type of model would the company likely focus on integrating into their Al assistant?\n\nA diffusion model that specializes in producing complex outputs.\n\nA language model that operates on a token-by-token output basis.\n\nOA Large Language Model based agent that focuses on generating textual responses.\n\nO A Retrieval-Augmented Generation (RAG) model that uses text as input and output.",
+      "timestamp": 1761963528.899971
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 A diffusion model that specializes in producing complex outputs.**\n\n**Explanation:**  \nSince the AI assistant needs to **both understand text and generate visual representations from it**, the key capability here is **text-to-image generation** \u2014 something that **diffusion models** excel at.  \n\n**Diffusion models** (like **Stable Diffusion** or **DALL\u00b7E**) are designed to **create complex, high-quality images** from text descriptions.  \nSo, to achieve both **text understanding** and **image generation**, the company would integrate a **diffusion model** alongside a language model for the textual parts.",
+      "timestamp": 1761963529.639762
+    },
+    {
+      "role": "user",
+      "content": "What distinguishes the Cohere Embed v3 model from its predecessor in the OCI Generative Al service?\n\nImproved retrievals for Retrieval-Augmented Generation (RAG) systems\n\nCapacity to translate text in over 20 languages\n\nSupport for tokenizing longer sentences\n\nEmphasis on syntactic clustering of word embeddings",
+      "timestamp": 1761963550.759437
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Improved retrievals for Retrieval-Augmented Generation (RAG) systems.**\n\n**Explanation:**  \nThe **Cohere Embed v3** model in **OCI Generative AI** is designed with **enhanced embedding quality** \u2014 specifically improving **semantic retrieval performance** for **RAG (Retrieval-Augmented Generation)** systems.  \n\nCompared to its predecessor, v3 offers **better multilingual semantic understanding** and **higher accuracy in context matching**, which leads to **more relevant document retrievals** and stronger **grounded responses** in RAG workflows.",
+      "timestamp": 1761963551.474311
+    },
+    {
+      "role": "user",
+      "content": ". A student is using OCI Generative Al Embedding models to summarize long academic papers.\n\nIf a paper exceeds the model's token limit, but the most important insights are at the beginning, what action should the student t\n\nSplit the paper into multiple overlapping parts and embed separately.\n\nSelect to truncate the start.\n\nManually remove words before processing with embeddings.\n\nSelect to truncate the end",
+      "timestamp": 1761963576.47619
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Select to truncate the end.**\n\n**Explanation:**  \nIf the **most important insights are at the beginning** of the paper and the text exceeds the **embedding model\u2019s token limit**, the student should choose to **truncate the end**.  \n\nThis ensures the **critical early content** \u2014 which carries the key information \u2014 is preserved in the embedding process, while only the **less important trailing text** is cut off.",
+      "timestamp": 1761963577.41094
+    },
+    {
+      "role": "user",
+      "content": "45. What is the significance of the given line of code?\n\nchat_detail.serving_mode oci.generative_ai_inference.models.OnDemandServingMode (model_id=\"oc 1.amaaaaaask7dceyaeamxpkvjhthrqorbgbwlspi564yxfud6igdcdhdu2whq\")\n\nIt creates a new generative Al model instead of using an existing one.\n\nIt specifies the serving mode and assigns a specific generative Al model ID to be used for inference.\n\nIt configures a load balancer to distribute Al inference requests efficiently.\n\nIt sets up the storage location where Al-generated responses will be saved.",
+      "timestamp": 1761963604.787272
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 It specifies the serving mode and assigns a specific generative AI model ID to be used for inference.**\n\n**Explanation:**  \nThe code line \u2014  \n```python\nchat_detail.serving_mode = oci.generative_ai_inference.models.OnDemandServingMode(\n    model_id=\"ocid1.amaaaaaask7dceyaeamxpkvjhthrqorbgbwlspi564yxfud6igdcdhdu2whq\"\n)\n```  \n\u2014 tells the OCI Generative AI service to **use a specific deployed model (by its OCID)** in **on-demand serving mode** for inference.  \n\nSo basically, it doesn\u2019t create or save anything new \u2014 it just **points your chat/inference request to the correct model instance** that Oracle should use to generate responses.",
+      "timestamp": 1761963605.464849
+    },
+    {
+      "role": "user",
+      "content": "47. In the given code, what does setting truncate - \"NONE\" do?\n\nembed text_detail oci.generative_ai_inference.models. EmbedTextDetails(y oci.generative_al_inference.models.OnDemandServingMode (mod embed_text_detail.serving_mode embed text_detail.inputs inputs embed_text_detail.truncate \"NONE\"\n\nDe\n\nIt ensures that only a single word from the input is used for embedding.\n\nIt forces the model to limit the output text length.\n\nIt removes all white space from the input text.\n\nO It prevents input text from being truncated before processing",
+      "timestamp": 1761963648.029026
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 It prevents input text from being truncated before processing.**\n\n**Explanation:**  \nWhen you set  \n```python\nembed_text_detail.truncate = \"NONE\"\n```  \nit tells the OCI Generative AI embedding model **not to cut off (truncate)** any part of the input text \u2014 even if it\u2019s long.  \nIf truncation were set to `\"START\"` or `\"END\"`, the model would drop text from those ends to fit the token limit.  \n\nSo `\"NONE\"` = **process the entire text as-is**, no trimming before embedding.",
+      "timestamp": 1761963648.710844
+    },
+    {
+      "role": "user",
+      "content": "Imagine you're using your OCI Generative Al Chat model to generate responses in the tone of a pirate for an exciting sales campaign.\n\nWhich field should you use to provide the context and instructions for the model to respond in a specific conversation style?\n\nO Truncate\n\nO Temperature\n\nPreamble\n\nSeed",
+      "timestamp": 1761963675.382039
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Preamble**\n\n**Explanation:**  \nIn OCI Generative AI, the **preamble** field is used to set the **context, tone, or persona** of the model \u2014 basically telling it *how* to respond.  \nSo if you want your chatbot to \u201ctalk like a pirate,\u201d you\u2019d set the **preamble** to something like:  \n> \u201cYou are a lively pirate who speaks in a cheerful, adventurous tone.\u201d  \n\nThe other options don\u2019t fit here:  \n- **Truncate** \u2013 controls input length handling.  \n- **Temperature** \u2013 adjusts creativity/randomness.  \n- **Seed** \u2013 fixes randomness for reproducibility.",
+      "timestamp": 1761963676.056844
+    },
+    {
+      "role": "user",
+      "content": "Which category of pretrained foundational models is available for on-demand serving mode in the OCI Generative Al service?\n\nSummarization Models\n\nChat Models\n\nTranslation Models\n\nGeneration Models",
+      "timestamp": 1761963698.767554
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 Chat Models**\n\n**Explanation:**  \nIn **OCI Generative AI**, **on-demand serving mode** supports **pretrained foundational Chat Models** \u2014 such as those from Cohere and Meta \u2014 that can generate conversational or free-form text without requiring fine-tuning or dedicated deployment.  \n\nOther categories like **Summarization**, **Translation**, and **Generation Models** are tasks or use cases, not specific *on-demand foundational model* types in OCI.",
+      "timestamp": 1761963698.90574
+    },
+    {
+      "role": "user",
+      "content": ". Consider the following block of code.\n\nva - OracleVS (embedding_function=embed_model, client=conn23c, table_name=\"DEMO_TABLE\", distance_stratec retvvs.as_retriever (search_type=\"similarity\", search_kwargs=('k': 3))\n\nWhat is the primary advantage of using this code?\n\nO It provides an efficient method for generating embeddings.\n\nO It helps with debugging the application.\n\nIt allows new documents to be indexed automatically when the server restarts.\n\nO It enables the creation of a vector store from a database table of embeddings",
+      "timestamp": 1761963722.109489
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Correct answer:**  \n**\u2611 It enables the creation of a vector store from a database table of embeddings**\n\n**Explanation:**  \nThat code snippet is using **OracleVS** (Oracle Vector Store) to **connect to a database table** (here `\"DEMO_TABLE\"`) that already contains embeddings. This setup allows you to perform **similarity-based retrieval** (using `as_retriever(search_type=\"similarity\", search_kwargs={'k': 3})`) \u2014 meaning it can efficiently fetch the top-K most relevant vectors from your stored embeddings.  \n\nSo, in short:  \n\ud83d\udc49 It\u2019s not *generating* embeddings, it\u2019s *using* already stored embeddings.  \n\ud83d\udc49 It creates a **vector store retriever** that makes semantic search possible directly from your Oracle DB.",
+      "timestamp": 1761963722.984525
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

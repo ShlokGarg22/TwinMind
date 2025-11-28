@@ -1,0 +1,19 @@
+{
+  "id": "564993e9-8d7f-4f60-bd9c-c7e7d96d2e7c",
+  "title": "Graph program in C",
+  "created_at": "2025-11-28T16:37:56.838457",
+  "updated_at": "2025-11-28T16:37:56.838457",
+  "messages": [
+    {
+      "role": "user",
+      "content": "grpah code in c menu bases",
+      "timestamp": 1762192977.745
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a **menu-driven Graph program in C** using an **Adjacency Matrix** \u2014 it lets you **add edges, display the graph**, and check **connections**. Simple and clear for learning basics.  \n\n---\n\n### \ud83d\udcd8 C Code \u2014 Menu-Based Graph Program\n```c\n#include <stdio.h>\n#define MAX 10\n\nint adj[MAX][MAX];\nint n; // number of vertices\n\nvoid createGraph() {\n    int i, j, edges, src, dest;\n    printf(\"Enter number of vertices: \");\n    scanf(\"%d\", &n);\n\n    // Initialize adjacency matrix\n    for (i = 0; i < n; i++)\n        for (j = 0; j < n; j++)\n            adj[i][j] = 0;\n\n    printf(\"Enter number of edges: \");\n    scanf(\"%d\", &edges);\n\n    for (i = 0; i < edges; i++) {\n        printf(\"Enter edge (source destination): \");\n        scanf(\"%d%d\", &src, &dest);\n        if (src >= n || dest >= n || src < 0 || dest < 0)\n            printf(\"Invalid edge!\\n\");\n        else {\n            adj[src][dest] = 1;\n            adj[dest][src] = 1; // remove this line if directed graph\n        }\n    }\n}\n\nvoid displayGraph() {\n    int i, j;\n    printf(\"\\nAdjacency Matrix:\\n\");\n    for (i = 0; i < n; i++) {\n        for (j = 0; j < n; j++)\n            printf(\"%d \", adj[i][j]);\n        printf(\"\\n\");\n    }\n}\n\nvoid addEdge() {\n    int src, dest;\n    printf(\"Enter edge to add (source destination): \");\n    scanf(\"%d%d\", &src, &dest);\n    if (src >= n || dest >= n || src < 0 || dest < 0)\n        printf(\"Invalid edge!\\n\");\n    else {\n        adj[src][dest] = 1;\n        adj[dest][src] = 1;\n        printf(\"Edge added successfully.\\n\");\n    }\n}\n\nvoid checkConnection() {\n    int src, dest;\n    printf(\"Enter two vertices to check connection: \");\n    scanf(\"%d%d\", &src, &dest);\n    if (adj[src][dest] == 1)\n        printf(\"Vertices %d and %d are connected.\\n\", src, dest);\n    else\n        printf(\"No connection between %d and %d.\\n\", src, dest);\n}\n\nint main() {\n    int choice;\n    do {\n        printf(\"\\n--- Graph Menu ---\\n\");\n        printf(\"1. Create Graph\\n\");\n        printf(\"2. Display Graph\\n\");\n        printf(\"3. Add Edge\\n\");\n        printf(\"4. Check Connection\\n\");\n        printf(\"5. Exit\\n\");\n        printf(\"Enter your choice: \");\n        scanf(\"%d\", &choice);\n\n        switch (choice) {\n            case 1: createGraph(); break;\n            case 2: displayGraph(); break;\n            case 3: addEdge(); break;\n            case 4: checkConnection(); break;\n            case 5: printf(\"Exiting...\\n\"); break;\n            default: printf(\"Invalid choice!\\n\");\n        }\n    } while (choice != 5);\n\n    return 0;\n}\n```\n\n---\n\n### \ud83d\udca1 Features\n\u2705 Create graph using adjacency matrix  \n\u2705 Add new edges anytime  \n\u2705 Display graph neatly  \n\u2705 Check if two vertices are connected  \n\u2705 Works for up to 10 vertices (can increase MAX)\n\n---\n\nWould you like me to extend it with **BFS and DFS traversal options** in the menu too? That\u2019s the next logical step.",
+      "timestamp": 1762192991.413223
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

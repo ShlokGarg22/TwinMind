@@ -1,0 +1,19 @@
+{
+  "id": "5bb7ebcc-9102-4bd2-a913-56ed972b43eb",
+  "title": "Biot-Savart Law Explained",
+  "created_at": "2025-11-28T16:38:00.919737",
+  "updated_at": "2025-11-28T16:38:00.919737",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Bio savart law in easy words",
+      "timestamp": 1745240211.405775
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, here's **Biot\u2013Savart Law** in **easy words**:\n\n---\n\n**Biot\u2013Savart Law** tells us **how a moving electric charge (current)** creates a **magnetic field** around it.\n\nThink of it like this:\n\n- When **current flows** through a wire, it creates a **magnetic field** around the wire.\n- Biot\u2013Savart Law helps us **calculate the strength and direction** of that magnetic field **at any point in space**.\n\n---\n\n### Simple Version of the Formula:\n\\[\nd\\vec{B} = \\frac{\\mu_0}{4\\pi} \\cdot \\frac{I \\, d\\vec{l} \\times \\hat{r}}{r^2}\n\\]\n\n**Where:**\n- \\( d\\vec{B} \\) = tiny bit of magnetic field at a point\n- \\( \\mu_0 \\) = magnetic constant\n- \\( I \\) = current in the wire\n- \\( d\\vec{l} \\) = tiny piece of the wire\n- \\( \\hat{r} \\) = direction from wire to the point\n- \\( r \\) = distance from the wire to the point\n\n---\n\n### In Short:\n- It\u2019s like **Coulomb\u2019s law** but for **magnetic fields**, not electric.\n- It\u2019s used to find the **magnetic field** due to **small current elements**.\n\nWant an example or diagram with this?",
+      "timestamp": 1745240211.431587
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

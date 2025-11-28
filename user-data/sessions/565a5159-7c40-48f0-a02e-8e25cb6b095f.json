@@ -1,0 +1,29 @@
+{
+  "id": "565a5159-7c40-48f0-a02e-8e25cb6b095f",
+  "title": "Ghibli Style Request",
+  "created_at": "2025-11-28T16:38:01.261885",
+  "updated_at": "2025-11-28T16:38:01.261885",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Make Ghibli style of it",
+      "timestamp": 1743601326.122082
+    },
+    {
+      "role": "assistant",
+      "content": "{\"prompt\":\"A Ghibli-style digital painting of two young men sitting outside a modern apartment building with open windows. They have slightly messy hair, warm expressions, and are wearing casual t-shirts. The lighting is soft and natural, with a dreamy, slightly hazy atmosphere typical of Studio Ghibli\u2019s art style.\",\"referenced_image_ids\":[\"file-Kj4FYpfESu4qw4CHYLSKBS\"]}",
+      "timestamp": 1743601326.196987
+    },
+    {
+      "role": "user",
+      "content": "Make the person in the left  a little happy",
+      "timestamp": 1743601937.644626
+    },
+    {
+      "role": "assistant",
+      "content": "{\"prompt\":\"This anime-style illustration shows two young men taking a selfie in front of a beige, multi-floor building on a sunny day. The man on the left has messy dark brown hair, a slight smile, and wears an olive shirt, while the one on the right has neat, styled hair, a friendly smile, and a navy shirt with a logo, both standing against a softly detailed, warm-toned residential backdrop.\",\"size\":\"1024x1024\"}",
+      "timestamp": 1743601937.738372
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

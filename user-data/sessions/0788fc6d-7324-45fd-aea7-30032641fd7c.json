@@ -1,0 +1,29 @@
+{
+  "id": "0788fc6d-7324-45fd-aea7-30032641fd7c",
+  "title": "Piles and Deceitful Meaning",
+  "created_at": "2025-11-28T16:38:00.813558",
+  "updated_at": "2025-11-28T16:38:00.813558",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Simple meaning of piles , decientful",
+      "timestamp": 1745983916.40563
+    },
+    {
+      "role": "assistant",
+      "content": "Here are the simple meanings:\n\n- **Piles**: This can mean two things:\n  1. **A stack or heap** \u2014 like \"a pile of books\".\n  2. **A medical condition** \u2014 swollen blood vessels around the anus, also called **hemorrhoids**.\n\n- **Deceitful**: Someone who is **not honest**, who **lies or cheats** to trick others.\n\nWould you like these used in simple sentences?",
+      "timestamp": 1745983916.483256
+    },
+    {
+      "role": "user",
+      "content": "Plied",
+      "timestamp": 1745983925.396288
+    },
+    {
+      "role": "assistant",
+      "content": "**Plied** is the past tense of the verb **ply**, and it has a few meanings depending on the context. Here are the simplest ones:\n\n1. **To repeatedly offer or give something** \u2013  \n   *Example: She plied the guests with food and drinks.*\n\n2. **To travel regularly on a route (especially ships, buses, etc.)** \u2013  \n   *Example: The ferry plied between the two islands.*\n\n3. **To work steadily at something** \u2013  \n   *Example: He plied his trade as a carpenter.*\n\nWant examples or meanings in Hindi too?",
+      "timestamp": 1745983925.510995
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

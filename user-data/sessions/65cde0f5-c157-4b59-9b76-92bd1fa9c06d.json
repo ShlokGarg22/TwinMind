@@ -1,0 +1,29 @@
+{
+  "id": "65cde0f5-c157-4b59-9b76-92bd1fa9c06d",
+  "title": "Spotify Hindi playlists",
+  "created_at": "2025-11-28T16:37:55.774848",
+  "updated_at": "2025-11-28T16:37:55.774848",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I WANT HEASE NICE SONFS LIKE ANAYLSE INTO MY SPOTFY HISTORY AND PAY THE BETW PLAYLIST IN HINDI",
+      "timestamp": 1763194791.337
+    },
+    {
+      "role": "assistant",
+      "content": "{\"only_tools\": true}",
+      "timestamp": 1763194796.766162
+    },
+    {
+      "role": "assistant",
+      "content": "{\"path\":\"/Spotify/link_69172581fe308191ae2524a65ae8c4c2/search\",\"args\":\"{\\\"prompt\\\":\\\"create a playlist of Hindi songs similar to my listening history for me\\\"}\"}",
+      "timestamp": 1763194799.178098
+    },
+    {
+      "role": "assistant",
+      "content": "Spotify pulled together a bunch of Hindi-focused playlists that match the vibe of what you usually listen to. You can open any of them from the cards above and play them right away.\n\nIf you want something more specific \u2014 like **romantic Hindi**, **lofi Hindi**, **old Bollywood**, **trap Hindi**, or **dance Hindi** \u2014 tell me the exact mood or energy you want and I\u2019ll generate a tighter playlist for you.",
+      "timestamp": 1763194804.225891
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

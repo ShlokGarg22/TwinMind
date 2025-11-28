@@ -1,0 +1,19 @@
+{
+  "id": "e643eecb-5ee6-4b20-af3d-1d85fb51d45a",
+  "title": "O(log n) Time Complexity",
+  "created_at": "2025-11-28T16:37:59.468669",
+  "updated_at": "2025-11-28T16:37:59.468669",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ologn time Complexity ",
+      "timestamp": 1751874411.557879
+    },
+    {
+      "role": "assistant",
+      "content": "The **O(log n)** time complexity (read as \u201corder log n\u201d) is a very efficient time complexity, commonly seen in algorithms that **reduce the problem size by a constant factor each time**\u2014usually by half.\n\n---\n\n### \ud83d\udd0d What Does O(log n) Mean?\n\nIt means the algorithm's **runtime increases logarithmically** with the input size. If `n` doubles, the number of operations only increases **slightly**.\n\nFor example:\n\n- `n = 8` \u2192 log\u2082(8) = 3 steps\n- `n = 16` \u2192 log\u2082(16) = 4 steps\n- `n = 1,000,000` \u2192 log\u2082(1,000,000) \u2248 20 steps\n\n---\n\n### \u2699\ufe0f Common Examples of O(log n) Algorithms\n\n| Algorithm Type          | Description |\n|-------------------------|-------------|\n| **Binary Search**       | Each step cuts the input in half. |\n| **Efficient Exponentiation** | Like `power(x, n)` using divide and conquer. |\n| **Balanced Tree Operations** | Insert, delete, and search in AVL trees or Red-Black Trees. |\n| **Heap Operations**     | `insert()` or `extractMin()` in a binary heap. |\n| **Binary Search on Answer** | Used in problems involving monotonic functions (e.g. search space narrowing). |\n\n---\n\n### \ud83d\udd01 Visualization of O(log n)\n\nImagine you\u2019re guessing a number between 1 and 100:\n\n- You ask: Is it 50?\n- Then: 25? 75? 62?...\n\nYou eliminate **half** the numbers with each question. That\u2019s binary search. And that\u2019s `O(log n)`.\n\n---\n\n### \u23f1 Comparison With Other Complexities\n\n| Time Complexity | Operations (n = 1,000,000) |\n|----------------|-----------------------------|\n| O(1)           | 1                           |\n| O(log n)       | ~20                         |\n| O(n)           | 1,000,000                   |\n| O(n log n)     | ~20,000,000                 |\n| O(n\u00b2)          | 1 trillion                  |\n\n---\n\n### \u2705 When You See O(log n):\n\nIt usually means:\n- You're **dividing** the input each time (e.g., binary search).\n- You\u2019re working with a **tree** or **heap**.\n- The algorithm **scales extremely well** for large input sizes.\n\n---\n\nLet me know if you want visual examples or code snippets for these.",
+      "timestamp": 1751874411.709268
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

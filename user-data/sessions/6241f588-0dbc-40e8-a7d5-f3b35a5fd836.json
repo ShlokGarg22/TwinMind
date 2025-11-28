@@ -1,0 +1,39 @@
+{
+  "id": "6241f588-0dbc-40e8-a7d5-f3b35a5fd836",
+  "title": "Recursive Binary Search Time Complexity",
+  "created_at": "2025-11-28T16:37:59.378020",
+  "updated_at": "2025-11-28T16:37:59.378020",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hwlow to calculate time Complexity of recursive binary search ",
+      "timestamp": 1752118462.026453
+    },
+    {
+      "role": "assistant",
+      "content": "To **calculate the time complexity** of **recursive binary search**, let\u2019s break it down step by step, **no fluff, just logic**.\n\n---\n\n## \ud83d\udd0d Problem Summary:\n\nBinary search works by repeatedly dividing the array in half and discarding the half that doesn\u2019t contain the target.\n\n### Recursive Code (Basic Form):\n```cpp\nint binarySearch(int arr[], int low, int high, int key) {\n    if (low > high)\n        return -1;\n    int mid = (low + high) / 2;\n    if (arr[mid] == key)\n        return mid;\n    else if (arr[mid] > key)\n        return binarySearch(arr, low, mid - 1, key);\n    else\n        return binarySearch(arr, mid + 1, high, key);\n}\n```\n\n---\n\n## \u23f1\ufe0f Step-by-Step Time Complexity Analysis:\n\n### Step 1: Understand the recurrence\n\nEvery time the function is called, the array size is halved.\n\nSo the recurrence relation is:\n\n```\nT(n) = T(n/2) + O(1)\n```\n\n- `T(n/2)` \u2192 recursive call on half of the array\n- `O(1)` \u2192 one comparison and mid calculation\n\n---\n\n### Step 2: Solve the recurrence\n\nLet\u2019s expand it step by step:\n\n```\nT(n) = T(n/2) + 1\n     = T(n/4) + 1 + 1\n     = T(n/8) + 1 + 1 + 1\n     ...\n     = T(n/2^k) + k\n```\n\nWe stop when `n/2^k = 1` \u21d2 `k = log\u2082(n)`\n\nSo,\n\n```\nT(n) = T(1) + log\u2082(n)\n     = O(log n)\n```\n\n---\n\n## \u2705 Final Answer:\n\n**Time Complexity of Recursive Binary Search**:  \n\\[\n\\boxed{O(\\log n)}\n\\]\n\n---\n\nLet me know if you want **space complexity** or an analysis of **iterative binary search** too.",
+      "timestamp": 1752118462.195024
+    },
+    {
+      "role": "user",
+      "content": "In c++ \nTell ",
+      "timestamp": 1752119112.056455
+    },
+    {
+      "role": "assistant",
+      "content": "In C++, the code shown in the image is:\n\n```cpp\nint arr[5] = {0};\n\nfor (int i = 0; i < 5; i++) {\n    printf(\"%d \", arr[i]);\n}\n```\n\n---\n\n### \u2705 Explanation:\n\n- `int arr[5] = {0};` initializes the **first element** to `0`, and the **rest are automatically initialized to 0** (as per C++ standard for static initialization of arrays with fewer initializers).\n- The loop runs from `i = 0` to `i < 5` and prints each element.\n\n---\n\n### \ud83d\udda8\ufe0f Output:\n\n```\n0 0 0 0 0\n```\n\n---\n\n### \ud83d\udca1 Summary:\n\nWhen you write `int arr[5] = {0};`:\n- It's equivalent to: `int arr[5] = {0, 0, 0, 0, 0};`\n- All values are zero-initialized.\n\nLet me know if you want to see what happens with `int arr[5];` (without initialization).",
+      "timestamp": 1752119112.110355
+    },
+    {
+      "role": "user",
+      "content": "Yes",
+      "timestamp": 1752119127.691508
+    },
+    {
+      "role": "assistant",
+      "content": "Great \u2014 let's now look at this version:\n\n```cpp\nint arr[5]; // No initialization\n\nfor (int i = 0; i < 5; i++) {\n    printf(\"%d \", arr[i]);\n}\n```\n\n---\n\n### \u2757 What Happens Here?\n\n- `arr[5]` is declared **without initialization**.\n- In **C++**, if an array is defined inside a function (like `main()`), it's stored on the **stack** and its elements are **not initialized automatically**.\n- This means the values in `arr[i]` are **garbage values** \u2014 whatever junk was already in that memory.\n\n---\n\n### \ud83e\udde0 Example Output (will vary):\n\n```\n4206720 0 -1 32765 16\n```\n\n(This is just an example \u2014 actual output will be random garbage numbers every time you run it.)\n\n---\n\n### \u2705 Rule of Thumb:\n\n| Code                        | What it does                            |\n|-----------------------------|------------------------------------------|\n| `int arr[5] = {0};`         | Initializes all elements to `0`          |\n| `int arr[5];`               | Leaves all elements **uninitialized** (garbage values) |\n| `static int arr[5];`        | Also initializes all elements to `0` (stored in data segment) |\n\n---\n\nLet me know if you want to test this live or go deeper into how memory works for arrays.",
+      "timestamp": 1752119127.774747
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

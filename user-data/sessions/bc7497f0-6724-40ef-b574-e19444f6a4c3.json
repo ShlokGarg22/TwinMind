@@ -1,0 +1,19 @@
+{
+  "id": "bc7497f0-6724-40ef-b574-e19444f6a4c3",
+  "title": "Insertion and Merge Sort",
+  "created_at": "2025-11-28T16:37:56.805115",
+  "updated_at": "2025-11-28T16:37:56.805115",
+  "messages": [
+    {
+      "role": "user",
+      "content": "code fo quick  and merge sort easiest in c",
+      "timestamp": 1762237413.582
+    },
+    {
+      "role": "assistant",
+      "content": "Here you go \u2014 clean, easy-to-follow **Quick Sort** and **Merge Sort** programs in C.  \nBoth are simple enough to grasp but still show the logic clearly.  \n\n---\n\n### \ud83c\udf00 **Quick Sort in C**\n```c\n#include <stdio.h>\n\n// Function to swap two numbers\nvoid swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}\n\n// Partition function\nint partition(int arr[], int low, int high) {\n    int pivot = arr[high]; // choose last element as pivot\n    int i = (low - 1);\n\n    for (int j = low; j < high; j++) {\n        if (arr[j] < pivot) { // elements smaller than pivot\n            i++;\n            swap(&arr[i], &arr[j]);\n        }\n    }\n    swap(&arr[i + 1], &arr[high]);\n    return (i + 1);\n}\n\n// QuickSort function\nvoid quickSort(int arr[], int low, int high) {\n    if (low < high) {\n        int pi = partition(arr, low, high); // pivot index\n        quickSort(arr, low, pi - 1);  // left side\n        quickSort(arr, pi + 1, high); // right side\n    }\n}\n\n// Display array\nvoid printArray(int arr[], int size) {\n    for (int i = 0; i < size; i++)\n        printf(\"%d \", arr[i]);\n    printf(\"\\n\");\n}\n\nint main() {\n    int arr[] = {34, 7, 23, 32, 5, 62};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    printf(\"Original array: \");\n    printArray(arr, n);\n\n    quickSort(arr, 0, n - 1);\n\n    printf(\"Sorted array (Quick Sort): \");\n    printArray(arr, n);\n\n    return 0;\n}\n```\n\n---\n\n### \ud83e\udde9 **Merge Sort in C**\n```c\n#include <stdio.h>\n\nvoid merge(int arr[], int left, int mid, int right) {\n    int i = left, j = mid + 1, k = 0;\n    int temp[right - left + 1];\n\n    // Merge two halves into temp[]\n    while (i <= mid && j <= right) {\n        if (arr[i] <= arr[j])\n            temp[k++] = arr[i++];\n        else\n            temp[k++] = arr[j++];\n    }\n\n    // Copy remaining elements\n    while (i <= mid)\n        temp[k++] = arr[i++];\n    while (j <= right)\n        temp[k++] = arr[j++];\n\n    // Copy back to original array\n    for (i = left, k = 0; i <= right; i++, k++)\n        arr[i] = temp[k];\n}\n\nvoid mergeSort(int arr[], int left, int right) {\n    if (left < right) {\n        int mid = (left + right) / 2;\n        mergeSort(arr, left, mid);\n        mergeSort(arr, mid + 1, right);\n        merge(arr, left, mid, right);\n    }\n}\n\nvoid printArray(int arr[], int size) {\n    for (int i = 0; i < size; i++)\n        printf(\"%d \", arr[i]);\n    printf(\"\\n\");\n}\n\nint main() {\n    int arr[] = {12, 11, 13, 5, 6, 7};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    printf(\"Original array: \");\n    printArray(arr, n);\n\n    mergeSort(arr, 0, n - 1);\n\n    printf(\"Sorted array (Merge Sort): \");\n    printArray(arr, n);\n\n    return 0;\n}\n```\n\n---\n\nWant me to combine both in one program with a menu (so you can pick which sort to run)?",
+      "timestamp": 1762237427.620523
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

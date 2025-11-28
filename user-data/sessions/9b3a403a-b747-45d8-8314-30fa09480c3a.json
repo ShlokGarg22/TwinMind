@@ -1,0 +1,19 @@
+{
+  "id": "9b3a403a-b747-45d8-8314-30fa09480c3a",
+  "title": "Epic Font Identification",
+  "created_at": "2025-11-28T16:38:01.916720",
+  "updated_at": "2025-11-28T16:38:01.916720",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the font used in Epic",
+      "timestamp": 1737613506.37313
+    },
+    {
+      "role": "assistant",
+      "content": "The font used in the word \"Epic\" on the banner appears to be a serif font with a handwritten or script-like style. It resembles fonts like *Lora Italic* or *Dancing Script*. However, to identify the exact font, tools like WhatTheFont or Adobe Capture could be used to match it more precisely.\n\nWould you like guidance on using such tools?",
+      "timestamp": 1737613510.160768
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

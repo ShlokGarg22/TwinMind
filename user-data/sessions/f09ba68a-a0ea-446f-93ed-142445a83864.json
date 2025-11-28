@@ -1,0 +1,29 @@
+{
+  "id": "f09ba68a-a0ea-446f-93ed-142445a83864",
+  "title": "Article Writing Summary",
+  "created_at": "2025-11-28T16:38:01.157658",
+  "updated_at": "2025-11-28T16:38:01.157658",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarize the ppt in points",
+      "timestamp": 1744170447.408156
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a straight-to-the-point summary of your PPT, in bullet points:\n\n---\n\n### What is an Article?\n- Shares ideas, thoughts, facts, suggestions, and recommendations.\n\n### Objectives of Article Writing\n- Highlight topics of interest.\n- Provide information and advice.\n- Influence readers to think.\n- Discuss stories, people, places, issues, and technology.\n- Impact readers, cover diverse topics.\n\n### Types of Articles\n- **Expository:** Informative, neutral tone.\n- **Argumentative:** Presents issues, solutions, and justifications.\n- **Narrative:** Tells a story.\n- **Descriptive:** Creates vivid imagery.\n- **Persuasive:** Convince readers of a viewpoint.\n\n- Also includes:  \n  Newspaper articles, Magazine articles, SEO writing, Online writing, Freelance writing.\n\n### Format of Article Writing\n- Title\n- Writer\u2019s name\n- Body (2\u20133 paragraphs)\n- Conclusion (opinion, recommendation, appeal)\n\n### Steps for Writing\n- Define target audience and purpose.\n- Collect and select important info.\n- Organize logically.\n\n### Error-free Writing Essentials\n- Check grammar, spelling, punctuation, vocabulary.\n- Keep introduction short and catchy.\n- Make the article interesting.\n\n### Common Mistakes to Avoid\n- Lack of facts or examples.\n- Overly formal or complicated language.\n- Boring or unclear titles.\n- Overuse of personal perspective (avoid \u201cI\u201d/\u201cMe\u201d focus).\n\n### Key Points to Note\n- Topics should be unique, relevant, and engaging.\n- Write clearly and concisely.\n- Avoid repetition and overly complex reasoning.\n- Think about the general audience, not just personal interest.\n- End with a logical conclusion.\n\n### Tips and Techniques\n- Understand your topic and audience.\n- Write original and creative content.\n- Ensure coherence between paragraphs.\n- Double-check data.\n- Keep titles and descriptions catchy.\n- Edit and proofread thoroughly.\n\n### Handy Inputs\n- Keep a list of ideas.\n- Work in a distraction-free space.\n- Do thorough research.\n- Use simple and relatable content.\n- Use keywords and optimize content for value.\n\n### Resources for Writers\n- Grammar and readability tools: Hemingway App, Grammarly.\n- Headline analyzers: Advanced Marketing Institute.\n- Word alternatives: WordHippo.\n\n### Topic Ideas for Writing\n- Personal experiences (vacations, sports, cooking, funny stories, etc.)\n- Book recommendations.\n- Trending topics (follow social media trends).\n- Lifestyle, food, travel, entertainment.\n- Health, technology (automation, expert interviews).\n- Sports, year-in-review.\n- Advice pieces (personal expertise, experiences).\n- Fun prompts like: *If I Ran the World*, *5 Books You Need to Read*.\n\n---\n\nIf you want, I can also give you an even shorter version for quick revision. Want me to?",
+      "timestamp": 1744170447.528819
+    },
+    {
+      "role": "user",
+      "content": "How many words of article according the the pdf",
+      "timestamp": 1744170468.906353
+    },
+    {
+      "role": "assistant",
+      "content": "The PDF does **not** specify an exact word count for an article.\n\nIt gives the structure (Title, Writer's name, Body: 2\u20133 paragraphs, Conclusion), but there\u2019s no mention of a fixed word limit or range.\n\nSo:  \n> **No specific word count is mentioned in the PDF.**\n\nHowever, based on the structure (standard practice), a typical article as per this format would be around **300\u2013500 words** \u2014 but that's an educated guess, not from the PDF itself.\n\nIf you want, I can also suggest word counts for different types of articles mentioned in the PDF. Want me to?",
+      "timestamp": 1744170468.940088
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "46378fce-7e96-42ae-8566-3ff8e1eb30ec",
+  "title": "Recursive binary in C",
+  "created_at": "2025-11-28T16:37:56.753031",
+  "updated_at": "2025-11-28T16:37:56.753031",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Binary in recuresice format in c",
+      "timestamp": 1762265153.607207
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the simplest **recursive C program** to print the **binary representation** of a number \u2014 clean, short, and to the point \ud83d\udc47  \n\n```c\n#include <stdio.h>\n\nvoid printBinary(int n) {\n    if (n > 1)\n        printBinary(n / 2);   // Recursive call\n\n    printf(\"%d\", n % 2);      // Print the last bit\n}\n\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n\n    printf(\"Binary of %d is: \", num);\n    printBinary(num);\n    printf(\"\\n\");\n\n    return 0;\n}\n```\n\n### \ud83d\udd0d Example:\n**Input:** `13`  \n**Output:** `Binary of 13 is: 1101`\n\n---\n\nIf you want it to handle **0** or **negative numbers** too, I can tweak it slightly. Want me to include that version?",
+      "timestamp": 1762265153.818256
+    },
+    {
+      "role": "user",
+      "content": "Binary search",
+      "timestamp": 1762265167.67504
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a **clean and simple recursive binary search** program in C \ud83d\udc47  \n\n```c\n#include <stdio.h>\n\n// Recursive binary search function\nint binarySearch(int arr[], int left, int right, int target) {\n    if (left > right)\n        return -1; // not found\n\n    int mid = (left + right) / 2;\n\n    if (arr[mid] == target)\n        return mid; // found\n    else if (arr[mid] > target)\n        return binarySearch(arr, left, mid - 1, target); // search left side\n    else\n        return binarySearch(arr, mid + 1, right, target); // search right side\n}\n\nint main() {\n    int arr[100], n, target;\n\n    printf(\"Enter number of elements: \");\n    scanf(\"%d\", &n);\n\n    printf(\"Enter %d sorted elements: \", n);\n    for (int i = 0; i < n; i++)\n        scanf(\"%d\", &arr[i]);\n\n    printf(\"Enter element to search: \");\n    scanf(\"%d\", &target);\n\n    int result = binarySearch(arr, 0, n - 1, target);\n\n    if (result == -1)\n        printf(\"Element not found\\n\");\n    else\n        printf(\"Element found at index %d\\n\", result);\n\n    return 0;\n}\n```\n\n---\n\n### \ud83e\udde0 Example:\n**Input**\n```\n5\n10 20 30 40 50\n30\n```\n**Output**\n```\nElement found at index 2\n```\n\nWould you like me to give the **iterative version** too (non-recursive, using loops)?",
+      "timestamp": 1762265168.307959
+    },
+    {
+      "role": "user",
+      "content": "Yes",
+      "timestamp": 1762268864.724284
+    },
+    {
+      "role": "assistant",
+      "content": "Alright \u2014 here\u2019s the **iterative version** of Binary Search in C \u2014 simple, efficient, and no recursion involved \ud83d\udc47  \n\n```c\n#include <stdio.h>\n\nint binarySearch(int arr[], int n, int target) {\n    int left = 0, right = n - 1;\n\n    while (left <= right) {\n        int mid = (left + right) / 2;\n\n        if (arr[mid] == target)\n            return mid; // found\n        else if (arr[mid] < target)\n            left = mid + 1; // go right\n        else\n            right = mid - 1; // go left\n    }\n\n    return -1; // not found\n}\n\nint main() {\n    int arr[100], n, target;\n\n    printf(\"Enter number of elements: \");\n    scanf(\"%d\", &n);\n\n    printf(\"Enter %d sorted elements: \", n);\n    for (int i = 0; i < n; i++)\n        scanf(\"%d\", &arr[i]);\n\n    printf(\"Enter element to search: \");\n    scanf(\"%d\", &target);\n\n    int result = binarySearch(arr, n, target);\n\n    if (result == -1)\n        printf(\"Element not found\\n\");\n    else\n        printf(\"Element found at index %d\\n\", result);\n\n    return 0;\n}\n```\n\n---\n\n### \ud83e\udde0 Example:\n**Input**\n```\n6\n5 10 15 20 25 30\n20\n```\n**Output**\n```\nElement found at index 3\n```\n\n---\n\nYou want me to combine **both recursive and iterative versions** in one file (so you can easily compare them)?",
+      "timestamp": 1762268865.105924
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

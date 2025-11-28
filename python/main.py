@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 from pydantic import BaseModel
@@ -11,6 +11,7 @@ from services.memory import MemoryService
 from services.local_model import LocalModelService
 from services.cloud_model import CloudModelService
 from services.long_term_memory import LongTermMemoryService
+from services.importer import ImportService
 
 load_dotenv()
 
@@ -31,6 +32,7 @@ memory_service = MemoryService()
 local_model_service = LocalModelService()
 cloud_model_service = CloudModelService()
 long_term_memory = LongTermMemoryService()
+import_service = ImportService()
 
 
 class ChatRequest(BaseModel):
@@ -349,6 +351,15 @@ async def get_templates():
         }
     ]
     return templates
+
+
+@app.post("/api/import/chatgpt")
+async def import_chatgpt(file: UploadFile = File(...)):
+    content = await file.read()
+    result = await import_service.import_chatgpt_data(content)
+    if result["status"] == "error":
+        raise HTTPException(status_code=400, detail=result["message"])
+    return result
 
 
 if __name__ == "__main__":

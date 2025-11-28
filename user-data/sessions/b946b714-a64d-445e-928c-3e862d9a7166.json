@@ -1,0 +1,19 @@
+{
+  "id": "b946b714-a64d-445e-928c-3e862d9a7166",
+  "title": "C Programming Solutions",
+  "created_at": "2025-11-28T16:38:00.377857",
+  "updated_at": "2025-11-28T16:38:00.377857",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give solution for each ",
+      "timestamp": 1748143887.304231
+    },
+    {
+      "role": "assistant",
+      "content": "The image contains four C programming questions. Here's a detailed solution for each:\n\n---\n\n### **Q1: Write a program to read and display student details using structure.**\n\n```c\n#include <stdio.h>\n\nstruct Student {\n    int rollNo;\n    char name[50];\n    float marks;\n};\n\nint main() {\n    struct Student s;\n\n    printf(\"Enter Roll Number: \");\n    scanf(\"%d\", &s.rollNo);\n\n    printf(\"Enter Name: \");\n    scanf(\" %[^\\n]\", s.name); // To read string with spaces\n\n    printf(\"Enter Marks: \");\n    scanf(\"%f\", &s.marks);\n\n    printf(\"\\nStudent Details:\\n\");\n    printf(\"Roll No: %d\\n\", s.rollNo);\n    printf(\"Name: %s\\n\", s.name);\n    printf(\"Marks: %.2f\\n\", s.marks);\n\n    return 0;\n}\n```\n\n---\n\n### **Q2: Write a program to read two distances in feet and inches and add them using structure.**\n\n```c\n#include <stdio.h>\n\nstruct Distance {\n    int feet;\n    int inches;\n};\n\nint main() {\n    struct Distance d1, d2, sum;\n\n    printf(\"Enter first distance (feet and inches): \");\n    scanf(\"%d %d\", &d1.feet, &d1.inches);\n\n    printf(\"Enter second distance (feet and inches): \");\n    scanf(\"%d %d\", &d2.feet, &d2.inches);\n\n    sum.inches = d1.inches + d2.inches;\n    sum.feet = d1.feet + d2.feet + (sum.inches / 12);\n    sum.inches = sum.inches % 12;\n\n    printf(\"\\nTotal Distance: %d feet %d inches\\n\", sum.feet, sum.inches);\n\n    return 0;\n}\n```\n\n---\n\n### **Q3: Write a program to create an enum for months of a year and print April.**\n\n```c\n#include <stdio.h>\n\nenum Month {\n    JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE,\n    JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER\n};\n\nint main() {\n    enum Month m = APRIL;\n\n    printf(\"The selected month is: %d\\n\", m); // Output will be 3\n\n    return 0;\n}\n```\n\n> **Note:** Enums start from 0 by default. So `APRIL` has value `3`.\n\n---\n\n### **Q4: Write a program to demonstrate typedef.**\n\n```c\n#include <stdio.h>\n\ntypedef unsigned int uint;\n\nint main() {\n    uint a = 10, b = 20;\n\n    printf(\"a = %u, b = %u\\n\", a, b);\n\n    return 0;\n}\n```\n\n> `typedef` is used here to create a new name `uint` for `unsigned int`.\n\n---\n\nLet me know if you want an explanation or modification for any of these.",
+      "timestamp": 1748143887.390318
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

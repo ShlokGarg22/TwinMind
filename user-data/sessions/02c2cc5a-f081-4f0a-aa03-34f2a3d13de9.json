@@ -1,0 +1,19 @@
+{
+  "id": "02c2cc5a-f081-4f0a-aa03-34f2a3d13de9",
+  "title": "Stimulated vs Spontaneous Emission",
+  "created_at": "2025-11-28T16:38:00.757503",
+  "updated_at": "2025-11-28T16:38:00.757503",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Yel doffemrce between stimulated emission and spontaneous emmision ",
+      "timestamp": 1746242783.568469
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a clear and concise difference between **spontaneous emission** and **stimulated emission** based on the table in your image:\n\n| **Aspect**                        | **Spontaneous Emission**                                                                 | **Stimulated Emission**                                                                 |\n|----------------------------------|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|\n| Nature                           | Random and probabilistic process                                                         | Not random; triggered by an incoming photon                                             |\n| Control                          | Cannot be controlled externally                                                          | Can be controlled externally                                                            |\n| Emission Characteristics         | Emitted photons are random in direction, time, phase, and polarization                  | Emitted photons mimic the incoming photon (same direction, phase, frequency)            |\n| Directionality                   | Non-directional light                                                                    | Directional light                                                                       |\n| Frequency Spread                 | Photons have slightly different frequencies (non-monochromatic)                         | Frequencies are nearly the same (nearly monochromatic)                                  |\n| Coherence                        | Incoherent (random phase)                                                                | Coherent (same phase)                                                                   |\n| Amplification                    | No amplification of light                                                                | Leads to light amplification (used in lasers)                                           |\n| Intensity                        | \\( I_T = N \\cdot I \\) (directly proportional to number of atoms)                        | \\( I_T = N^2 \\cdot I \\) (intensity is amplified due to coherence)                       |\n| Polarization                     | Unpolarized (random polarization)                                                       | Polarized (identical polarization for all photons)                                      |\n\nLet me know if you want a simplified version or a mnemonic to remember the differences.",
+      "timestamp": 1746242783.659239
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

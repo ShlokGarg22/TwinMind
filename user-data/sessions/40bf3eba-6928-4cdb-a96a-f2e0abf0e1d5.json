@@ -1,0 +1,19 @@
+{
+  "id": "40bf3eba-6928-4cdb-a96a-f2e0abf0e1d5",
+  "title": "C Code for Books",
+  "created_at": "2025-11-28T16:38:01.267105",
+  "updated_at": "2025-11-28T16:38:01.267105",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Get me the code",
+      "timestamp": 1743583151.932032
+    },
+    {
+      "role": "assistant",
+      "content": "Here is the extracted code from the image:\n\n```c\n#include <stdio.h>\n#include <string.h>\n\nstruct book {\n    char name[20];\n    int price;\n    int pages;\n};\n\nint main() {\n    struct book b[10];\n    struct book *ptr = b;\n    int i, n;\n\n    printf(\"How many records to enter: \");\n    scanf(\"%d\", &n);\n\n    for (i = 0; i < n; i++) {\n        printf(\"\\nEnter name, price, and pages: \");\n        scanf(\"%s %d %d\", ptr->name, &ptr->price, &ptr->pages);\n        ptr++;\n    }\n\n    printf(\"\\nname     price     pages\\n\");\n    for (i = 0; i < n; i++) {\n        printf(\"%s   %d   %d\\n\", b[i].name, b[i].price, b[i].pages);\n    }\n\n    return 0;\n}\n```\n\nThis code takes user input for book details (name, price, and pages) using a pointer to a structure and then prints the stored details. Let me know if you need any modifications or explanations!",
+      "timestamp": 1743583152.009694
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

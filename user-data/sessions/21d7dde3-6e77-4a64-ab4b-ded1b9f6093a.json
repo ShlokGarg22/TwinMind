@@ -1,0 +1,19 @@
+{
+  "id": "21d7dde3-6e77-4a64-ab4b-ded1b9f6093a",
+  "title": "IR motion sensor summary",
+  "created_at": "2025-11-28T16:37:57.183356",
+  "updated_at": "2025-11-28T16:37:57.183356",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarise it",
+      "timestamp": 1761726725.391573
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clear and compact summary of what\u2019s shown in the images:  \n\n---\n\n### **IR Motion Sensor with NodeMCU \u2014 Summary**\n\n**1. Working Principle:**  \nThe IR motion sensor module works using **two main parts** \u2014 an **IR transmitter** (IR LED) and an **IR receiver** (photodiode).  \n- The **transmitter emits infrared light**.  \n- When an object comes near, the light **reflects back** to the receiver.  \n- The receiver detects this reflection, processes it through a **comparator circuit (Op-Amp)**, and sends a **digital output** signal.  \n\nIf the object is close, the reflected signal is strong \u2192 output goes **HIGH** (sensor triggered).  \nIf far away \u2192 reflected light is weak \u2192 output **LOW** (no detection).  \n\n---\n\n**2. Module Parts & Features:**  \n- **IR Emitter and Receiver**  \n- **Comparator (LM358 Op-Amp)**  \n- **Power LED** (shows module is on)  \n- **Signal LED** (lights when object detected)  \n- **Trimpot/Adjust knob** to set **sensitivity** or **detection distance**\n\nThis module is **low power**, **rugged**, and **cost-effective**, ideal for NodeMCU-based proximity detection or obstacle avoidance.\n\n---\n\n**3. Circuit Diagram Explanation:**  \n- The IR LED emits infrared rays; the photodiode receives reflected rays.  \n- The Op-Amp compares voltage from the photodiode and outputs HIGH/LOW depending on object presence.  \n- The trimpot adjusts the detection range (how sensitive it is).  \n\n---\n\n**4. NodeMCU Connection Setup:**  \n- **VCC \u2192 3.3V (NodeMCU)**  \n- **GND \u2192 GND**  \n- **OUT \u2192 Digital Pin (e.g., D6 or D7)**  \n\nWhen an object is detected, the sensor sends a **HIGH signal** to the NodeMCU\u2019s digital input pin.  \nThe NodeMCU can then trigger actions \u2014 like lighting an LED, sounding a buzzer, or sending data.\n\n---\n\n**In short:**  \nThe IR motion sensor detects objects based on reflected infrared light. It\u2019s easy to use with NodeMCU, outputs digital signals, and sensitivity can be tuned with a potentiometer \u2014 perfect for DIY proximity or obstacle detection projects.\n\n---\n\nWould you like me to make a labeled block diagram summary (like a one-page cheat sheet) for revision?",
+      "timestamp": 1761726725.465074
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

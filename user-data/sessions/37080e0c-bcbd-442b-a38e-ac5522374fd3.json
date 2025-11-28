@@ -1,0 +1,19 @@
+{
+  "id": "37080e0c-bcbd-442b-a38e-ac5522374fd3",
+  "title": "Bubble sort recursion",
+  "created_at": "2025-11-28T16:37:58.636741",
+  "updated_at": "2025-11-28T16:37:58.636741",
+  "messages": [
+    {
+      "role": "user",
+      "content": "bubble sort using recursion",
+      "timestamp": 1755535373.8
+    },
+    {
+      "role": "assistant",
+      "content": "Alright Boss, let\u2019s break this down step by step.  \nYou want **Bubble Sort using recursion**.  \n\n---\n\n### \ud83d\udd39 Bubble Sort Refresher\n- Bubble sort works by repeatedly swapping adjacent elements if they\u2019re in the wrong order.  \n- In each pass, the **largest element \"bubbles\" to the end**.  \n- Normally, this is done with two loops. But we can simulate the loops using recursion.  \n\n---\n\n### \ud83d\udd39 Recursive Idea\nWe\u2019ll use recursion in **two ways**:\n1. **Outer recursion** \u2192 Works like the outer loop, reduces problem size after each pass.  \n2. **Inner recursion** \u2192 Works like the inner loop, compares and swaps elements within one pass.  \n\n---\n\n### \ud83d\udd39 Recursive Bubble Sort Code in C++\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nvoid bubbleRecursive(int arr[], int n) {\n    // Base case: if array size is 1, return\n    if (n == 1) return;\n\n    // One pass of bubble sort\n    for (int i = 0; i < n - 1; i++) {\n        if (arr[i] > arr[i + 1]) {\n            // swap adjacent elements\n            int temp = arr[i];\n            arr[i] = arr[i + 1];\n            arr[i + 1] = temp;\n        }\n    }\n\n    // Largest element is at the end, recurse for remaining array\n    bubbleRecursive(arr, n - 1);\n}\n\nint main() {\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    bubbleRecursive(arr, n);\n\n    cout << \"Sorted array: \";\n    for (int i = 0; i < n; i++)\n        cout << arr[i] << \" \";\n    cout << endl;\n\n    return 0;\n}\n```\n\n---\n\n### \ud83d\udd39 Dry Run (Example)\nArray: `{4, 3, 2, 1}`  \n- Pass 1 \u2192 `{3, 2, 1, 4}` (largest 4 at end)  \n- Pass 2 \u2192 `{2, 1, 3, 4}`  \n- Pass 3 \u2192 `{1, 2, 3, 4}`  \n- Recursion stops (n=1).  \n\n---\n\n### \ud83d\udd39 More Recursive (Inner Recursion)\nWe can even make the inner loop recursive:\n\n```cpp\nvoid bubbleRecursiveInner(int arr[], int n, int j = 0) {\n    // Base case: if size is 1, done\n    if (n == 1) return;\n\n    // if inner pass finished, recurse for remaining array\n    if (j == n - 1) {\n        bubbleRecursiveInner(arr, n - 1, 0);\n        return;\n    }\n\n    // Swap if needed\n    if (arr[j] > arr[j + 1]) {\n        int temp = arr[j];\n        arr[j] = arr[j + 1];\n        arr[j + 1] = temp;\n    }\n\n    // Recurse for next element in this pass\n    bubbleRecursiveInner(arr, n, j + 1);\n}\n```\n\n---\n\n\ud83d\udc49 So there are **two approaches**:\n1. **Outer recursion only** (simpler).  \n2. **Outer + Inner recursion** (fully recursive).  \n\n---\n\nDo you want me to **rewrite both versions in C** (instead of C++) since you\u2019ve been practicing C, or keep them in C++?",
+      "timestamp": 1755535367.269476
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

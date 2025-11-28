@@ -1,0 +1,19 @@
+{
+  "id": "992e2a46-0c6c-42ef-bbf1-85336bbc46ac",
+  "title": "Exponential Distribution Solutions",
+  "created_at": "2025-11-28T16:38:00.240275",
+  "updated_at": "2025-11-28T16:38:00.240275",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give detailed solution of the problem",
+      "timestamp": 1748362739.046957
+    },
+    {
+      "role": "assistant",
+      "content": "Let's break down the given exponential distribution problem step by step with detailed solutions:\n\n---\n\n### **Problem Overview:**\n\nThe interval, **X seconds**, between cars passing a point on a motorway follows an **exponential distribution** with the **probability density function (PDF)**:\n\n\\[\nf(x) = \\begin{cases}\n2e^{-2x}, & x \\geq 0 \\\\\n0, & \\text{otherwise}\n\\end{cases}\n\\]\n\nThis is an exponential distribution with **parameter** \\( \\lambda = 2 \\).\n\n---\n\n### **(i) Mean and Variance of X**\n\nFor an exponential distribution:\n\n- Mean \\( E(X) = \\frac{1}{\\lambda} \\)\n- Variance \\( \\text{Var}(X) = \\frac{1}{\\lambda^2} \\)\n\nGiven \\( \\lambda = 2 \\):\n\n\\[\nE(X) = \\frac{1}{2} = 0.5 \\quad \\text{seconds}\n\\]\n\\[\n\\text{Var}(X) = \\frac{1}{2^2} = \\frac{1}{4} = 0.25 \\quad \\text{seconds}^2\n\\]\n\n---\n\n### **(ii) Cumulative Distribution Function (CDF)**\n\nThe CDF of an exponential distribution is given by:\n\n\\[\nF(x) = \\begin{cases}\n0, & x < 0 \\\\\n1 - e^{-\\lambda x}, & x \\geq 0\n\\end{cases}\n\\]\n\nSo with \\( \\lambda = 2 \\):\n\n\\[\nF(x) = \\begin{cases}\n0, & x < 0 \\\\\n1 - e^{-2x}, & x \\geq 0\n\\end{cases}\n\\]\n\n---\n\n### **(iii) Probability Calculations**\n\n#### **(a) Probability that 1 \u2264 X \u2264 2:**\n\nUse the CDF:\n\n\\[\nP(1 \\leq X \\leq 2) = F(2) - F(1)\n\\]\n\nCalculate:\n\n\\[\nF(2) = 1 - e^{-4} \\approx 1 - 0.0183 = 0.9817\n\\]\n\\[\nF(1) = 1 - e^{-2} \\approx 1 - 0.1353 = 0.8647\n\\]\n\\[\nP(1 \\leq X \\leq 2) = 0.9817 - 0.8647 = 0.117\n\\]\n\n---\n\n#### **(b) Probability that X > 3:**\n\n\\[\nP(X > 3) = 1 - F(3)\n\\]\n\\[\nF(3) = 1 - e^{-6} \\approx 1 - 0.00248 = 0.99752\n\\]\n\\[\nP(X > 3) = 1 - 0.99752 = 0.00248\n\\]\n\n---\n\n#### **(c) Probability that X < 1.5:**\n\n\\[\nP(X < 1.5) = F(1.5) = 1 - e^{-2 \\cdot 1.5} = 1 - e^{-3}\n\\]\n\\[\ne^{-3} \\approx 0.0498\n\\]\n\\[\nP(X < 1.5) = 1 - 0.0498 = 0.950\n\\]\n\n---\n\n### **Final Answers (to 3 significant figures):**\n\n- (a) \\( P(1 \\leq X \\leq 2) = 0.117 \\)\n- (b) \\( P(X > 3) = 0.00248 \\)\n- (c) \\( P(X < 1.5) = 0.950 \\)\n\nLet me know if you'd like plots or further explanation of exponential distributions.",
+      "timestamp": 1748362739.12057
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "53d0a9bb-b29f-4fb6-957e-21033c9c2dd7",
+  "title": "Digital vs Analog Signals",
+  "created_at": "2025-11-28T16:37:56.575193",
+  "updated_at": "2025-11-28T16:37:56.575193",
+  "messages": [
+    {
+      "role": "user",
+      "content": "0,1 is like when we talk about digital or analog",
+      "timestamp": 1762436430.646542
+    },
+    {
+      "role": "assistant",
+      "content": "Good question \u2014 **0 and 1** are **digital**, not analog.  \n\nHere\u2019s the breakdown:\n\n- **Digital signals** only have **two states**:  \n  - **0** \u2192 LOW (or OFF, 0 V)  \n  - **1** \u2192 HIGH (or ON, usually 5 V or 3.3 V depending on the board)\n\n- **Analog signals**, on the other hand, can have **a continuous range of values**, like anything between **0 V and 5 V** \u2014 not just 0 or 5.  \n  Example: a temperature sensor output that reads **2.3 V**, **3.8 V**, etc.\n\nSo:\n- **Digital = discrete (0 or 1)**  \n- **Analog = continuous (any value in a range)**\n\nIf you\u2019re talking about Arduino:\n- **Digital pins** read/write only 0 or 1 (`HIGH` or `LOW`)  \n- **Analog pins** can read a range (0\u20131023) using the ADC (analog-to-digital converter).  \n\nWould you like me to show a quick diagram or code example showing the difference between analog and digital reading on Arduino?",
+      "timestamp": 1762436430.744117
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

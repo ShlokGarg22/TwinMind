@@ -1,0 +1,24 @@
+{
+  "id": "737984ff-05aa-4563-84a8-a0cb3f48e659",
+  "title": "Switch Case Implementation",
+  "created_at": "2025-11-28T16:38:01.699446",
+  "updated_at": "2025-11-28T16:38:01.699446",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Name - Shlok Garg\n//PRN - 24070122187\n#include <stdio.h>\n\nvoid checkNumber(int q) {\n\n    if (q < 2) {\n        printf(\"invalid number.\\n\");\n        return;\n    }\n    \n    int isPrime = 1;\n    for (int w = 2; w * w <= q; w++) { \n        if (q % w == 0) {\n            isPrime = 0; \n            break;\n        }\n    }\n    \n    if (isPrime) {\n        printf(\"prime number.\\n\");\n    } else {\n        printf(\"composite number.\\n\");\n    }\n\n\n    if (q % 2 == 0) {\n        printf(\"Even number.\\n\");\n    } else {\n        printf(\"Odd number.\\n\");\n    }\n}\n\nint main() {\n    int i, j;\n    do {\n        printf(\"Enter the number: \");\n        scanf(\"%d\", &i);\n        \n        checkNumber(i);\n\n        printf(\"play again, press 1; if not, press 0: \");\n        scanf(\"%d\", &j);\n    } while (j == 1);\n    \n    printf(\"code end \\n\");\n    \n    return 0;\n}",
+      "timestamp": 1738729885.795343
+    },
+    {
+      "role": "assistant",
+      "content": "Your C program checks whether a given number is prime or composite and whether it is even or odd. It also allows the user to repeat the process using a loop. Here\u2019s a quick breakdown of your code:\n\n### **Code Analysis:**\n1. **Function `checkNumber(int q)`**  \n   - If `q < 2`, prints \"invalid number.\"\n   - Checks if `q` is a prime number.\n   - Determines if `q` is even or odd.\n\n2. **`main()` Function**  \n   - Takes user input for a number.\n   - Calls `checkNumber(i)`.\n   - Asks the user if they want to continue.\n\n### **Code Output Example:**\n```\nEnter the",
+      "timestamp": 1738729894.265392
+    },
+    {
+      "role": "assistant",
+      "content": "You can modify your program to use a `switch` case for checking whether the number is even or odd and for controlling the loop. However, since checking for prime numbers involves loops and conditions, a `switch` case isn't ideal for that part. Here\u2019s an improved version using `switch` where possible:  \n\n### **Modified Code with `switch` Case:**\n```c\n#include <stdio.h>\n\nvoid checkNumber(int q) {\n    if (q < 2) {\n        printf(\"Invalid number.\\n\");\n        return;\n    }\n\n    // Check for prime number\n    int isPrime = 1;\n    for (int w = 2; w * w <= q; w++) {\n        if (q % w == 0) {\n            isPrime = 0;\n            break;\n        }\n    }\n\n    // Use switch for prime/composite output\n    switch (isPrime) {\n        case 1:\n            printf(\"Prime number.\\n\");\n            break;\n        case 0:\n            printf(\"Composite number.\\n\");\n            break;\n    }\n\n    // Use switch for even/odd check\n    switch (q % 2) {\n        case 0:\n            printf(\"Even number.\\n\");\n            break;\n        case 1:\n            printf(\"Odd number.\\n\");\n            break;\n    }\n}\n\nint main() {\n    int i, j;\n    do {\n        printf(\"Enter the number: \");\n        scanf(\"%d\", &i);\n\n        checkNumber(i);\n\n        printf(\"Play again? Press 1 for Yes, 0 for No: \");\n        scanf(\"%d\", &j);\n\n        // Use switch for user choice\n        switch (j) {\n            case 0:\n                printf(\"Code end\\n\");\n                break;\n            case 1:\n                break;\n            default:\n                printf(\"Invalid choice. Exiting...\\n\");\n                j = 0;\n        }\n\n    } while (j == 1);\n\n    return 0;\n}\n```\n\n### **Changes & Improvements:**\n1. **Used `switch` for Even/Odd check.**  \n2. **Used `switch` for Prime/Composite output.**  \n3. **Used `switch` for user decision (`play again?`).**  \n4. **Handled invalid inputs for the replay option.**\n\n### **Example Output:**\n```\nEnter the number: 5\nPrime number.\nOdd number.\nPlay again? Press 1 for Yes, 0 for No: 1\nEnter the number: 8\nComposite number.\nEven number.\nPlay again? Press 1 for Yes, 0 for No: 0\nCode end\n```\n\nThis keeps the logic structured while still using `switch` cases where appropriate. Let me know if you need further modifications!",
+      "timestamp": 1738729925.004509
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "b283ef1f-8369-4e90-8d65-4b084b9daf6b",
+  "title": "Flex Wrap Explained",
+  "created_at": "2025-11-28T16:38:01.242101",
+  "updated_at": "2025-11-28T16:38:01.242101",
+  "messages": [
+    {
+      "role": "user",
+      "content": "explain me flex wrap",
+      "timestamp": 1743672971.311
+    },
+    {
+      "role": "assistant",
+      "content": "### `flex-wrap` in CSS  \n\nThe `flex-wrap` property in CSS controls whether the flex container should allow its items to wrap onto multiple lines or stay in a single line. By default, flex items try to fit in one row, but you can change this behavior using `flex-wrap`.\n\n### **Possible Values**  \n\n1. **`nowrap` (default)**  \n   - All items are forced into a single line, even if they overflow the container.  \n   - Example:  \n     ```css\n     .container {\n       display: flex;\n       flex-wrap: nowrap;\n     }\n     ```\n\n2. **`wrap`**  \n   - Items move to the next row if there\u2019s not enough space.  \n   - Example:  \n     ```css\n     .container {\n       display: flex;\n       flex-wrap: wrap;\n     }\n     ```\n\n3. **`wrap-reverse`**  \n   - Similar to `wrap`, but items wrap in the reverse direction.  \n   - Example:  \n     ```css\n     .container {\n       display: flex;\n       flex-wrap: wrap-reverse;\n     }\n     ```\n\n### **Example in Action**  \n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <style>\n        .container {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 10px;\n            width: 200px;\n            background-color: lightgray;\n        }\n\n        .item {\n            width: 80px;\n            height: 50px;\n            background-color: steelblue;\n            color: white;\n            text-align: center;\n            line-height: 50px;\n            font-weight: bold;\n        }\n    </style>\n</head>\n<body>\n\n    <div class=\"container\">\n        <div class=\"item\">1</div>\n        <div class=\"item\">2</div>\n        <div class=\"item\">3</div>\n        <div class=\"item\">4</div>\n    </div>\n\n</body>\n</html>\n```\n\n### **How It Works**\n- The container has `flex-wrap: wrap;`, so when the items exceed `200px` in width, they move to a new line.\n- Try changing `wrap` to `nowrap` and see how the items stay on a single line.\n\nLet me know if you need more details! \ud83d\ude80",
+      "timestamp": 1743672970.209296
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

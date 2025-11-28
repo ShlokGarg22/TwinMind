@@ -1,0 +1,19 @@
+{
+  "id": "87b0cae2-34fc-4009-ac83-10f0490ce75d",
+  "title": "Effective prompt components",
+  "created_at": "2025-11-28T16:37:58.554991",
+  "updated_at": "2025-11-28T16:37:58.554991",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What are the 3 basic components of an effective prompt? ",
+      "timestamp": 1755894389.614
+    },
+    {
+      "role": "assistant",
+      "content": "An **effective prompt** (especially when working with AI like me) usually has **three basic components**:  \n\n1. **Context** \u2013  \n   - Background information or setup that frames the situation.  \n   - Helps the model understand *what domain or perspective* to use.  \n   - Example: *\u201cYou are a senior software engineer explaining linked lists to a beginner.\u201d*  \n\n2. **Instruction (or Task)** \u2013  \n   - The clear action you want the model to perform.  \n   - Example: *\u201cExplain how insertion at the beginning works with step-by-step C code.\u201d*  \n\n3. **Constraints/Format** \u2013  \n   - Specifies how you want the answer structured, styled, or limited.  \n   - Example: *\u201cKeep it under 200 words, use bullet points, and add a small code snippet.\u201d*  \n\n\ud83d\udc49 Together: **Context + Instruction + Constraints** = an effective prompt.  \n\nDo you want me to show you how the same prompt changes quality by adding/removing these 3 components?",
+      "timestamp": 1755894378.75821
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "b5063056-c2f3-4656-9cc1-a039ea491543",
+  "title": "Poisson distribution probability",
+  "created_at": "2025-11-28T16:38:00.587563",
+  "updated_at": "2025-11-28T16:38:00.587563",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ans it ",
+      "timestamp": 1746770284.355694
+    },
+    {
+      "role": "assistant",
+      "content": "We are given a Poisson distribution problem:\n\n**Problem:**\n> The mortality rate for a certain disease is 7 per 1000. What is the probability for just 5 deaths from this disease in a group of 400?\n\n---\n\n### **Step-by-step Solution:**\n\n#### Step 1: Understand Poisson Formula\nThe Poisson probability formula is:\n\n\\[\nP(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}\n\\]\n\nWhere:  \n- \\( \\lambda \\) = average number of occurrences in the given interval (or group)  \n- \\( k \\) = number of occurrences (here, deaths)  \n- \\( e \\approx 2.718 \\)\n\n---\n\n#### Step 2: Find \\( \\lambda \\)\nGiven:\n- Rate = 7 per 1000\n- For group of 400 people:\n\n\\[\n\\lambda = \\frac{7}{1000} \\times 400 = 2.8\n\\]\n\n---\n\n#### Step 3: Plug values into Poisson formula\nWe want \\( P(X = 5) \\), i.e., probability of exactly 5 deaths:\n\n\\[\nP(X = 5) = \\frac{e^{-2.8} \\cdot 2.8^5}{5!}\n\\]\n\nFirst, compute:\n\n- \\( e^{-2.8} \\approx 0.0608 \\)\n- \\( 2.8^5 = 2.8 \\times 2.8 \\times 2.8 \\times 2.8 \\times 2.8 =  2.8^2 = 7.84, 7.84 \\times 2.8 = 21.95, 21.95 \\times 2.8 \\approx 61.46, 61.46 \\times 2.8 \\approx 172.1 \\)\n- \\( 5! = 120 \\)\n\nSo:\n\n\\[\nP(X = 5) \\approx \\frac{0.0608 \\cdot 172.1}{120} \\approx \\frac{10.46}{120} \\approx 0.0872\n\\]\n\n---\n\n### **Final Answer: Option D) 0.0872** \n\nWant more Poisson or probability problems to practice?",
+      "timestamp": 1746770284.411216
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

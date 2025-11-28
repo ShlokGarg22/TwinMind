@@ -1,0 +1,19 @@
+{
+  "id": "1b32d2d0-8144-4baa-b3cb-ba15fe17a33b",
+  "title": "How to Get Heavy Core",
+  "created_at": "2025-11-28T16:38:00.827497",
+  "updated_at": "2025-11-28T16:38:00.827497",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How to find heavy core in minecraft java",
+      "timestamp": 1745942765.282144
+    },
+    {
+      "role": "assistant",
+      "content": "\ue203To obtain a Heavy Core in Minecraft Java Edition (version 1.21 and later), you'll need to engage in the game's challenging Tricky Trials system.\ue204 Here's a straightforward guide:\ue206\n\n---\n\n### \ud83d\udd0d Step 1: Locate a Trial Chamber\n\n\ue203Trial Chambers are underground structures found in the Overworld, typically at depths similar to iron ore.\ue204 \ue203To find one, you can use an Explorer Map acquired by trading with a Cartographer Villager.\ue204 \ue200cite\ue202turn0search6\ue201\ue206\n\n---\n\n### \u2694\ufe0f Step 2: Prepare for an Ominous Trial\n\n\ue203To initiate an Ominous Trial, you need the Trial Omen effect, which is obtained by drinking an Ominous Bottle.\ue204 \ue203These bottles can be dropped by Raid Captains at Pillager Outposts or found in Trial Vaults.\ue204 \ue200cite\ue202turn0search6\ue201\ue206\n\n---\n\n### \ud83d\udddd\ufe0f Step 3: Complete the Ominous Trial and Obtain an Ominous Trial Key\n\n\ue203With the Trial Omen effect active, approach a Trial Spawner in the chamber to start the Ominous Trial.\ue204 \ue203Defeat the waves of stronger mobs that spawn.\ue204 \ue203Upon successful completion, there's a chance an Ominous Trial Key will appear atop the spawner.\ue204 \ue200cite\ue202turn0search6\ue201\ue206\n\n---\n\n### \ud83e\uddf0 Step 4: Find and Unlock an Ominous Vault\n\n\ue203Use the Ominous Trial Key to open an Ominous Vault within the Trial Chamber.\ue204 \ue203These vaults are distinguishable by their unique appearance, often featuring red-glazed terracotta and red candles.\ue204 \ue203Each vault has approximately a 7.5% chance to contain a Heavy Core.\ue204 \ue200cite\ue202turn0search3\ue201\ue206\n\n---\n\n### \ud83d\udee0\ufe0f Step 5: Craft a Mace Using the Heavy Core\n\n\ue203Once you've obtained a Heavy Core, combine it with a Breeze Rod on a crafting table to create a Mace.\ue204 \ue203Place the Heavy Core in the top slot and the Breeze Rod directly below it.\ue204 \ue203The Mace is a powerful melee weapon that deals increased damage based on the distance fallen before the attack and can knock back enemies upon impact.\ue204 \ue200cite\ue202turn0search3\ue201\ue206\n\n---\n\n### \ud83c\udfae Additional Tips\n\n- **Team Up**: \ue203Since each player can open an Ominous Vault once per Trial Chamber, playing in multiplayer can increase your chances of obtaining a Heavy Core.\ue204 \ue200cite\ue202turn0search10\ue201\ue206\n\n- **Persistence Pays Off**: \ue203Due to the low drop rate, you may need to complete multiple Ominous Trials to acquire a Heavy Core.\ue204\ue206\n\n- **Creative Mode**: \ue203If you're in Creative Mode, you can find the Heavy Core under the Ingredients tab in your inventory or by searching for it directly.\ue204 \ue200cite\ue202turn0search11\ue201\ue206\n\n---\n\nFor a visual walkthrough, you might find this tutorial helpful:\n\n\ue200video\ue202How to Get and Use a Heavy Core! (1.21+) | Easy Minecraft Tutorial\ue202turn0search0\ue201\n\n--- ",
+      "timestamp": 1745942765.4054163
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "88a2ad3d-5cbc-4675-b6c2-5f07ea22123d",
+  "title": "Malloc Memory Allocation",
+  "created_at": "2025-11-28T16:38:00.282892",
+  "updated_at": "2025-11-28T16:38:00.282892",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give it solution ",
+      "timestamp": 1748229936.973334
+    },
+    {
+      "role": "assistant",
+      "content": "Here's the C program that solves the given problem using `malloc` to dynamically allocate memory for an integer:\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    int *ptr;\n\n    // Dynamically allocate memory for one integer\n    ptr = (int *)malloc(sizeof(int));\n\n    // Check if allocation was successful\n    if (ptr == NULL) {\n        printf(\"Memory allocation failed.\\n\");\n        return 1; // Exit with error\n    }\n\n    // If successful, prompt user to enter an integer\n    printf(\"Enter an integer: \");\n    scanf(\"%d\", ptr);  // Store value in allocated memory\n\n    // Display the stored value\n    printf(\"You entered: %d\\n\", *ptr);\n\n    // Free the allocated memory\n    free(ptr);\n\n    return 0;\n}\n```\n\n### Explanation:\n- `malloc(sizeof(int))` allocates memory equal to the size of an integer.\n- If allocation fails, `malloc` returns `NULL`.\n- If successful, the user's input is stored in the allocated memory.\n- The value is then displayed, and the memory is freed using `free()` to prevent memory leaks.\n\nLet me know if you want a version with user input validation or comment explanations.",
+      "timestamp": 1748229937.039955
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

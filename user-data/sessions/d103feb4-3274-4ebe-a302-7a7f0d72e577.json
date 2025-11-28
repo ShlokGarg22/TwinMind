@@ -1,0 +1,54 @@
+{
+  "id": "d103feb4-3274-4ebe-a302-7a7f0d72e577",
+  "title": "Menu using do-while",
+  "created_at": "2025-11-28T16:38:01.593551",
+  "updated_at": "2025-11-28T16:38:01.593551",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a C program using functions to accept two strings from the console and perform the following operations (without using built-in functions): (a) Compare the strings: equal/not equal (b) Find the longer string. (c) Concatenate the two strings. (d) Find occurrence of substring in the main string dont use define \n\r\n\r",
+      "timestamp": 1739988263.346897
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a C program that performs all the required operations without using built-in string functions. It uses custom functions for comparison, finding the longer string, concatenation, and substring search.",
+      "timestamp": 1739988437.82992
+    },
+    {
+      "role": "assistant",
+      "content": "{\"name\": \"string_operations\", \"type\": \"code/c\", \"content\": \"#include <stdio.h>\\n\\n// Function to compare two strings\\nint compareStrings(char str1[], char str2[]) {\\n    int i = 0;\\n    while (str1[i] != '\\\\0' && str2[i] != '\\\\0') {\\n        if (str1[i] != str2[i]) {\\n            return 0; // Strings are not equal\\n        }\\n        i++;\\n    }\\n    return (str1[i] == '\\\\0' && str2[i] == '\\\\0'); // Check if both ended\\n}\\n\\n// Function to find length of string\\nint stringLength(char str[]) {\\n    int length = 0;\\n    while (str[length] != '\\\\0') {\\n        length++;\\n    }\\n    return length;\\n}\\n\\n// Function to find the longer string\\nvoid findLongerString(char str1[], char str2[]) {\\n    int len1 = stringLength(str1);\\n    int len2 = stringLength(str2);\\n    if (len1 > len2) {\\n        printf(\\\"Longer string: %s\\\\n\\\", str1);\\n    } else if (len2 > len1) {\\n        printf(\\\"Longer string: %s\\\\n\\\", str2);\\n    } else {\\n        printf(\\\"Both strings are of equal length.\\\\n\\\");\\n    }\\n}\\n\\n// Function to concatenate two strings\\nvoid concatenateStrings(char str1[], char str2[], char result[]) {\\n    int i = 0, j = 0;\\n    while (str1[i] != '\\\\0') {\\n        result[i] = str1[i];\\n        i++;\\n    }\\n    while (str2[j] != '\\\\0') {\\n        result[i] = str2[j];\\n        i++;\\n        j++;\\n    }\\n    result[i] = '\\\\0';\\n}\\n\\n// Function to check if str2 is a substring of str1\\nint isSubstring(char str1[], char str2[]) {\\n    int i, j;\\n    for (i = 0; str1[i] != '\\\\0'; i++) {\\n        for (j = 0; str2[j] != '\\\\0'; j++) {\\n            if (str1[i + j] != str2[j]) {\\n                break;\\n            }\\n        }\\n        if (str2[j] == '\\\\0') {\\n            return 1; // Found\\n        }\\n    }\\n    return 0; // Not found\\n}\\n\\nint main() {\\n    char str1[100], str2[100], concatenated[200];\\n    \\n    printf(\\\"Enter first string: \\\");\\n    gets(str1);\\n    printf(\\\"Enter second string: \\\");\\n    gets(str2);\\n    \\n    // Compare strings\\n    if (compareStrings(str1, str2)) {\\n        printf(\\\"Strings are equal.\\\\n\\\");\\n    } else {\\n        printf(\\\"Strings are not equal.\\\\n\\\");\\n    }\\n    \\n    // Find longer string\\n    findLongerString(str1, str2);\\n    \\n    // Concatenate strings\\n    concatenateStrings(str1, str2, concatenated);\\n    printf(\\\"Concatenated string: %s\\\\n\\\", concatenated);\\n    \\n    // Check substring occurrence\\n    if (isSubstring(str1, str2)) {\\n        printf(\\\"'%s' is a substring of '%s'.\\\\n\\\", str2, str1);\\n    } else {\\n        printf(\\\"'%s' is not a substring of '%s'.\\\\n\\\", str2, str1);\\n    }\\n    \\n    return 0;\\n}\"}",
+      "timestamp": 1739988437.830002
+    },
+    {
+      "role": "assistant",
+      "content": "### Explanation:\n1. **Comparison**: The function `compareStrings()` iterates character by character to check if the strings are identical.\n2. **Finding Length**: `stringLength()` computes the length manually.\n3. **Finding the Longer String**: `findLongerString()` compares lengths.\n4. **Concatenation**: `concatenateStrings()` merges two strings into `result`.\n5. **Substring Check**: `isSubstring()` checks if `str2` appears in `str1` using a nested loop.\n\nThis program avoids built-in functions and follows",
+      "timestamp": 1739988406.505432
+    },
+    {
+      "role": "user",
+      "content": "make a menu using do-while in it",
+      "timestamp": 1739988442.625962
+    },
+    {
+      "role": "assistant",
+      "content": "{\"updates\": [{\"pattern\": \".*\", \"replacement\": \"#include <stdio.h>\\n\\n// Function to compare two strings\\nint compareStrings(char str1[], char str2[]) {\\n    int i = 0;\\n    while (str1[i] != '\\\\0' && str2[i] != '\\\\0') {\\n        if (str1[i] != str2[i]) {\\n            return 0; // Strings are not equal\\n        }\\n        i++;\\n    }\\n    return (str1[i] == '\\\\0' && str2[i] == '\\\\0'); // Check if both ended\\n}\\n\\n// Function to find length of string\\nint stringLength(char str[]) {\\n    int length = 0;\\n    while (str[length] != '\\\\0') {\\n        length++;\\n    }\\n    return length;\\n}\\n\\n// Function to find the longer string\\nvoid findLongerString(char str1[], char str2[]) {\\n    int len1 = stringLength(str1);\\n    int len2 = stringLength(str2);\\n    if (len1 > len2) {\\n        printf(\\\"Longer string: %s\\\\n\\\", str1);\\n    } else if (len2 > len1) {\\n        printf(\\\"Longer string: %s\\\\n\\\", str2);\\n    } else {\\n        printf(\\\"Both strings are of equal length.\\\\n\\\");\\n    }\\n}\\n\\n// Function to concatenate two strings\\nvoid concatenateStrings(char str1[], char str2[], char result[]) {\\n    int i = 0, j = 0;\\n    while (str1[i] != '\\\\0') {\\n        result[i] = str1[i];\\n        i++;\\n    }\\n    while (str2[j] != '\\\\0') {\\n        result[i] = str2[j];\\n        i++;\\n        j++;\\n    }\\n    result[i] = '\\\\0';\\n}\\n\\n// Function to check if str2 is a substring of str1\\nint isSubstring(char str1[], char str2[]) {\\n    int i, j;\\n    for (i = 0; str1[i] != '\\\\0'; i++) {\\n        for (j = 0; str2[j] != '\\\\0'; j++) {\\n            if (str1[i + j] != str2[j]) {\\n                break;\\n            }\\n        }\\n        if (str2[j] == '\\\\0') {\\n            return 1; // Found\\n        }\\n    }\\n    return 0; // Not found\\n}\\n\\nint main() {\\n    char str1[100], str2[100], concatenated[200];\\n    int choice;\\n    \\n    printf(\\\"Enter first string: \\\");\\n    gets(str1);\\n    printf(\\\"Enter second string: \\\");\\n    gets(str2);\\n    \\n    do {\\n        printf(\\\"\\\\nMenu:\\\\n\\\");\\n        printf(\\\"1. Compare Strings\\\\n\\\");\\n        printf(\\\"2. Find Longer String\\\\n\\\");\\n        printf(\\\"3. Concatenate Strings\\\\n\\\");\\n        printf(\\\"4. Check Substring\\\\n\\\");\\n        printf(\\\"5. Exit\\\\n\\\");\\n        printf(\\\"Enter your choice: \\\");\\n        scanf(\\\"%d\\\", &choice);\\n        getchar(); // Consume newline character\\n\\n        switch (choice) {\\n            case 1:\\n                if (compareStrings(str1, str2)) {\\n                    printf(\\\"Strings are equal.\\\\n\\\");\\n                } else {\\n                    printf(\\\"Strings are not equal.\\\\n\\\");\\n                }\\n                break;\\n            case 2:\\n                findLongerString(str1, str2);\\n                break;\\n            case 3:\\n                concatenateStrings(str1, str2, concatenated);\\n                printf(\\\"Concatenated string: %s\\\\n\\\", concatenated);\\n                break;\\n            case 4:\\n                if (isSubstring(str1, str2)) {\\n                    printf(\\\"'%s' is a substring of '%s'.\\\\n\\\", str2, str1);\\n                } else {\\n                    printf(\\\"'%s' is not a substring of '%s'.\\\\n\\\", str2, str1);\\n                }\\n                break;\\n            case 5:\\n                printf(\\\"Exiting program.\\\\n\\\");\\n                break;\\n            default:\\n                printf(\\\"Invalid choice. Please try again.\\\\n\\\");\\n        }\\n    } while (choice != 5);\\n    \\n    return 0;\\n}\"}]}",
+      "timestamp": 1739988588.367877
+    },
+    {
+      "role": "assistant",
+      "content": "I've added a menu using a `do-while` loop in your program. Now, the user can choose different operations until they decide to exit. Let me know if you need any modifications!",
+      "timestamp": 1739988588.461528
+    },
+    {
+      "role": "user",
+      "content": "dont use string functions",
+      "timestamp": 1739989008.887865
+    },
+    {
+      "role": "user",
+      "content": "now code without using string functions",
+      "timestamp": 1739989050.565242
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

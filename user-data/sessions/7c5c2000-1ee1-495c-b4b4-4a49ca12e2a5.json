@@ -1,0 +1,19 @@
+{
+  "id": "7c5c2000-1ee1-495c-b4b4-4a49ca12e2a5",
+  "title": "Use Jupyter in VSCode",
+  "created_at": "2025-11-28T16:37:59.568043",
+  "updated_at": "2025-11-28T16:37:59.568043",
+  "messages": [
+    {
+      "role": "user",
+      "content": "how to use jupyter notebook in vs code \nfor python\n",
+      "timestamp": 1751612488.539
+    },
+    {
+      "role": "assistant",
+      "content": "To use **Jupyter Notebook** in **Visual Studio Code (VS Code)** for Python, follow these steps:\n\n---\n\n### \u2705 **1. Install VS Code**\nDownload and install VS Code from:  \n\ud83d\udc49 https://code.visualstudio.com/\n\n---\n\n### \u2705 **2. Install Python**\nInstall the latest version of Python from:  \n\ud83d\udc49 https://www.python.org/downloads/  \nMake sure to **check the box**: \u2714\ufe0f *\u201cAdd Python to PATH\u201d* during installation.\n\n---\n\n### \u2705 **3. Install Python & Jupyter Extensions in VS Code**\nOpen VS Code, then:\n\n- Press `Ctrl+Shift+X` to open the **Extensions** tab.\n- Search and install:\n  - \ud83d\udd39 **Python** (by Microsoft)\n  - \ud83d\udd39 **Jupyter** (by Microsoft)\n\n---\n\n### \u2705 **4. Open or Create a `.ipynb` File**\nYou can either:\n- Open an existing `.ipynb` Jupyter notebook file.\n- OR create a new one:\n  - Press `Ctrl+Shift+P` \u2192 type and select: `Jupyter: Create New Blank Notebook`\n\n---\n\n### \u2705 **5. Select a Python Interpreter**\nIf prompted, or in the top-right kernel picker:\n\n- Click **\u201cSelect Kernel\u201d** or **\u201cPython Interpreter\u201d**\n- Choose the Python version installed on your system (e.g., `Python 3.x.x`)\n\n> \u26a0\ufe0f If you don\u2019t see any interpreter, install one by running:\n```bash\npip install notebook\n```\n\n---\n\n### \u2705 **6. Install Jupyter in Python Environment (if needed)**\n\nIn the terminal (`Ctrl + ~`), run:\n```bash\npip install jupyter\n```\n\nOr if you're using a virtual environment:\n```bash\npython -m pip install jupyter\n```\n\n---\n\n### \u2705 **7. Start Using**\n- Write code in notebook cells.\n- Press `Shift + Enter` or click the **\u25b6 Run** button to execute a cell.\n- Outputs, plots, and dataframes will appear directly under the cell.\n\n---\n\n### \u26a1 Bonus Tips\n\n- You can also **export notebooks** as `.py`, `.html`, or `.pdf` using the **command palette**.\n- Markdown cells are supported for notes, formulas, and headings.\n- Use `%matplotlib inline` for plotting inline with `matplotlib`.\n\n---\n\nIf you hit any error, share the message and I\u2019ll guide you through fixing it.",
+      "timestamp": 1751612469.28523
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

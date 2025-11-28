@@ -1,0 +1,29 @@
+{
+  "id": "8c6610a0-4245-4d11-b4be-6f614c06111e",
+  "title": "Ghibli Style Request",
+  "created_at": "2025-11-28T16:38:01.303380",
+  "updated_at": "2025-11-28T16:38:01.303380",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Make Ghibli style of this ",
+      "timestamp": 1743247174.60021
+    },
+    {
+      "role": "assistant",
+      "content": "{\"prompt\":\"A Studio Ghibli-style illustration of a young man standing against a dark urban backdrop. The scene should have a soft, hand-painted look with warm lighting and subtle details. The character should wear a dark green shirt, blue jeans, and sneakers, with expressive, anime-like facial features.\",\"size\":\"1024x1024\"}",
+      "timestamp": 1743247174.640325
+    },
+    {
+      "role": "user",
+      "content": "Make me fitter and slimmer ",
+      "timestamp": 1743248185.102431
+    },
+    {
+      "role": "assistant",
+      "content": "{\"prompt\":\"A hand-drawn anime-style illustration of a fit and slim young man standing casually against a charcoal gray wall at nighttime. He wears a stylish olive-green rolled-up shirt, fitted blue jeans, and sleek gray sneakers. His confident posture, friendly expression, and soft shading enhance the warm, approachable atmosphere. The background lighting and painterly textures create a gentle, peaceful setting.\",\"size\":\"1024x1536\"}",
+      "timestamp": 1743248185.1394
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

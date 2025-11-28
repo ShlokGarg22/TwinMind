@@ -1,0 +1,39 @@
+{
+  "id": "704a2303-c78b-4c29-833d-170ff6bc46ad",
+  "title": "Heavy Core Chest Probability",
+  "created_at": "2025-11-28T16:38:00.819200",
+  "updated_at": "2025-11-28T16:38:00.819200",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Probabilit of getting two cores in the same chest in trail chambera",
+      "timestamp": 1745945215.989883
+    },
+    {
+      "role": "assistant",
+      "content": "\ue203In Minecraft's Trial Chambers, the probability of obtaining two Heavy Cores in a single chest is extremely low.\ue204 \ue203Heavy Cores are rare items used to craft the Mace weapon, and their drop rates are intentionally kept minimal to maintain game balance.\ue204\ue206\n\n\ue203Loot in Trial Chambers is distributed across various containers, including supply chests, reward chests, barrels, dispensers, and decorated pots.\ue204 \ue203Each of these has its own loot table with specific items and associated drop chances.\ue204 \ue203For instance, supply chests might contain items like arrows, glow berries, or baked potatoes, each with varying probabilities.\ue204 \ue200cite\ue202turn0search4\ue201\ue206\n\n\ue203The randomness inherent in loot generation means that while it's not impossible to find two Heavy Cores in the same chest, the odds are exceedingly slim.\ue204 \ue203Players seeking multiple Heavy Cores are advised to explore multiple Trial Chambers and open various chests to increase their chances.\ue204\ue206\n\n\ue203For those interested in maximizing their loot, focusing on defeating mobs from trial spawners can be beneficial, as they drop valuable items and keys required to access vaults containing higher-tier loot.\ue204 \ue200cite\ue202turn0search11\ue201\ue206\n\n\ue203In summary, while the game doesn't provide explicit probabilities for obtaining multiple Heavy Cores in a single chest, the combination of their rarity and the vast loot pool makes such an occurrence highly unlikely.\ue204\ue206 ",
+      "timestamp": 1745945216.5544953
+    },
+    {
+      "role": "user",
+      "content": "How much?",
+      "timestamp": 1745945238.803572
+    },
+    {
+      "role": "assistant",
+      "content": "\ue203The probability of obtaining two Heavy Cores in a single chest within Minecraft's Trial Chambers is exceedingly low.\ue204 \ue203Heavy Cores are exclusive to Ominous Vaults, which themselves are rare and can only be opened once per player per vault.\ue204 \ue203Each Ominous Vault has a 7.5% chance of containing a Heavy Core \ue200cite\ue202turn0search9\ue201.\ue204\ue206\n\n\ue203Given that each vault can be looted only once per player, and considering the 7.5% drop rate, the chance of finding two Heavy Cores in a single chest is virtually nonexistent.\ue204 \ue203Players seeking multiple Heavy Cores will need to locate and open multiple Ominous Vaults across different Trial Chambers.\ue204\ue206\n\n\ue203To maximize your chances, consider exploring with friends in multiplayer mode, as each player can open the same vault once, increasing the group's overall opportunities to obtain Heavy Cores.\ue204\ue206 ",
+      "timestamp": 1745945239.408048
+    },
+    {
+      "role": "user",
+      "content": "How much %",
+      "timestamp": 1745945256.984454
+    },
+    {
+      "role": "assistant",
+      "content": "The probability of getting **two Heavy Cores in the same chest** in Minecraft's Trial Chambers is **extremely close to 0%**.\n\nHere\u2019s why:\n\n- Each **Ominous Vault** chest has about a **7.5% chance** to contain **one Heavy Core**.\n- Loot tables in Minecraft **do not typically allow the same rare item to appear twice in one roll** unless explicitly defined (which is not the case for Heavy Cores).\n- Therefore, the probability of getting **two Heavy Cores in a single vault chest is essentially 0%**, unless Mojang updates the loot table to allow multiple instances.\n\nSo, the **chance \u2248 0% (effectively impossible)** in current versions.\n\nWant help finding optimal strategies to farm multiple Heavy Cores?",
+      "timestamp": 1745945257.014307
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

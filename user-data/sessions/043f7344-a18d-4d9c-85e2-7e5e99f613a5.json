@@ -1,0 +1,19 @@
+{
+  "id": "043f7344-a18d-4d9c-85e2-7e5e99f613a5",
+  "title": "CSS IntelliSense Fixes VS Code",
+  "created_at": "2025-11-28T16:38:01.450484",
+  "updated_at": "2025-11-28T16:38:01.450484",
+  "messages": [
+    {
+      "role": "user",
+      "content": "my css intilisesnse in not working in vs code how to solve that",
+      "timestamp": 1741091318.83
+    },
+    {
+      "role": "assistant",
+      "content": "If your CSS IntelliSense is not working in VS Code, try these solutions:  \n\n### **1. Check Your File Type**  \n- Make sure your file is saved as `.css` (not `.txt` or another format).  \n- If you're writing CSS inside an HTML file, VS Code should still recognize it.  \n\n### **2. Restart VS Code**  \n- Sometimes, a simple restart fixes IntelliSense issues.  \n\n### **3. Install or Update Extensions**  \n- Ensure you have **\"CSS Language Features (built-in)\"** enabled.  \n- Install **\"IntelliSense for CSS class names in HTML\"** from the VS Code marketplace.  \n\n### **4. Enable CSS IntelliSense in Settings**  \n- Go to **File > Preferences > Settings** (or `Ctrl + ,`)  \n- Search for **\"CSS Language Features\"** and ensure they are enabled.  \n\n### **5. Disable Conflicting Extensions**  \n- Some extensions may interfere with CSS IntelliSense. Try disabling extensions and see if it starts working.  \n\n### **6. Clear VS Code Cache**  \n- Press `Ctrl + Shift + P` \u2192 type **\"Reload Window\"** \u2192 hit Enter.  \n- If the issue persists, delete the `.vscode` folder in your project and restart.  \n\n### **7. Check HTML & CSS Connection**  \n- Ensure your HTML correctly links to the CSS file:  \n  ```html\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  ```  \n  - If the path is wrong, VS Code might not recognize the CSS properly.  \n\nTry these steps, and let me know if it's still not working! \ud83d\ude80",
+      "timestamp": 1741091317.420176
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

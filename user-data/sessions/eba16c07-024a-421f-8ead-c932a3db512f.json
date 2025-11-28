@@ -1,0 +1,39 @@
+{
+  "id": "eba16c07-024a-421f-8ead-c932a3db512f",
+  "title": "Stack and queue code",
+  "created_at": "2025-11-28T16:37:58.060460",
+  "updated_at": "2025-11-28T16:37:58.060460",
+  "messages": [
+    {
+      "role": "user",
+      "content": "stack and queue code in linked list simple code easy to learn comment the lines",
+      "timestamp": 1757526662.574
+    },
+    {
+      "role": "assistant",
+      "content": "Got it, Boss \ud83d\udc4d  \nI\u2019ll give you **simple C programs** to implement **Stack** and **Queue** using **Linked List**, with **easy-to-understand comments** for each important line.  \n\n---\n\n## \ud83d\udccc Stack using Linked List (LIFO \u2013 Last In First Out)\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\n// Node structure\nstruct Node {\n    int data;            // store the value\n    struct Node* next;   // pointer to the next node\n};\n\n// Pointer to top of stack\nstruct Node* top = NULL;\n\n// Function to push (insert at beginning)\nvoid push(int value) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    newNode->data = value;        // assign value\n    newNode->next = top;          // new node points to old top\n    top = newNode;                // update top\n    printf(\"%d pushed to stack\\n\", value);\n}\n\n// Function to pop (remove from beginning)\nvoid pop() {\n    if (top == NULL) {\n        printf(\"Stack Underflow! Empty stack\\n\");\n        return;\n    }\n    struct Node* temp = top;      // store current top\n    printf(\"%d popped from stack\\n\", temp->data);\n    top = top->next;              // move top to next\n    free(temp);                   // free old top\n}\n\n// Function to display stack\nvoid display() {\n    if (top == NULL) {\n        printf(\"Stack is empty\\n\");\n        return;\n    }\n    struct Node* temp = top;\n    printf(\"Stack: \");\n    while (temp != NULL) {\n        printf(\"%d \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"\\n\");\n}\n\n// Main function\nint main() {\n    push(10);\n    push(20);\n    push(30);\n    display();     // 30 20 10\n    pop();         // removes 30\n    display();     // 20 10\n    return 0;\n}\n```\n\n---\n\n## \ud83d\udccc Queue using Linked List (FIFO \u2013 First In First Out)\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\n// Node structure\nstruct Node {\n    int data;            // store value\n    struct Node* next;   // pointer to next node\n};\n\n// Pointers to front and rear of queue\nstruct Node* front = NULL;\nstruct Node* rear = NULL;\n\n// Function to enqueue (insert at rear)\nvoid enqueue(int value) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    newNode->data = value;   // assign value\n    newNode->next = NULL;    // last node \u2192 next = NULL\n\n    if (rear == NULL) {      // if queue is empty\n        front = rear = newNode;\n    } else {\n        rear->next = newNode;  // link new node at end\n        rear = newNode;        // update rear\n    }\n    printf(\"%d enqueued to queue\\n\", value);\n}\n\n// Function to dequeue (remove from front)\nvoid dequeue() {\n    if (front == NULL) {\n        printf(\"Queue Underflow! Empty queue\\n\");\n        return;\n    }\n    struct Node* temp = front;   // store front\n    printf(\"%d dequeued from queue\\n\", temp->data);\n    front = front->next;         // move front\n    if (front == NULL) rear = NULL; // if queue becomes empty\n    free(temp);                  // free old front\n}\n\n// Function to display queue\nvoid display() {\n    if (front == NULL) {\n        printf(\"Queue is empty\\n\");\n        return;\n    }\n    struct Node* temp = front;\n    printf(\"Queue: \");\n    while (temp != NULL) {\n        printf(\"%d \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"\\n\");\n}\n\n// Main function\nint main() {\n    enqueue(10);\n    enqueue(20);\n    enqueue(30);\n    display();    // 10 20 30\n    dequeue();    // removes 10\n    display();    // 20 30\n    return 0;\n}\n```\n\n---\n\n\ud83d\udc49 In short:  \n- **Stack:** Insert/delete at **top** (like a plate stack).  \n- **Queue:** Insert at **rear**, delete from **front** (like a line of people).  \n\n---\n\nDo you want me to also make a **combined program** where you can **choose stack or queue operations from a menu** (so you can practice both together)?",
+      "timestamp": 1757526662.973812
+    },
+    {
+      "role": "user",
+      "content": "queue code simple code main part of code only i dont wan all the things",
+      "timestamp": 1757527729.322
+    },
+    {
+      "role": "assistant",
+      "content": "Got it Boss \ud83d\udc4d  \nHere\u2019s just the **main part** of the **Queue using Linked List** in the simplest way:\n\n```c\nint main() {\n    enqueue(10);   // insert 10\n    enqueue(20);   // insert 20\n    enqueue(30);   // insert 30\n\n    display();     // Queue: 10 20 30\n\n    dequeue();     // remove 10\n    display();     // Queue: 20 30\n\n    dequeue();     // remove 20\n    display();     // Queue: 30\n\n    return 0;\n}\n```\n\nThis is the **only code inside `main()`**.  \n\ud83d\udc49 The rest (`enqueue`, `dequeue`, `display`) stay as earlier.  \n\nDo you want me to also shrink the **functions** (enqueue, dequeue, display) into a super-minimal version without extra prints, so it looks even cleaner?",
+      "timestamp": 1757527729.835516
+    },
+    {
+      "role": "user",
+      "content": "expl of dequer . enque display part",
+      "timestamp": 1757527777.533
+    },
+    {
+      "role": "assistant",
+      "content": "Perfect, Boss \ud83d\udc4c  \nLet me break down **enqueue, dequeue, and display** in the **queue (linked list)** with **simple explanation**.  \n\n---\n\n## \ud83d\udccc `enqueue(int value)` \u2192 Insert at **rear**\n```c\nvoid enqueue(int value) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    newNode->data = value;     // store the value\n    newNode->next = NULL;      // new node will be last, so next = NULL\n\n    if (rear == NULL) {        // if queue is empty\n        front = rear = newNode; // both front & rear point to newNode\n    } else {\n        rear->next = newNode;   // link newNode after current rear\n        rear = newNode;         // update rear to newNode\n    }\n}\n```\n\ud83d\udc49 **Think:** People join the line from the back.  \n\n---\n\n## \ud83d\udccc `dequeue()` \u2192 Remove from **front**\n```c\nvoid dequeue() {\n    if (front == NULL) {       // if queue is empty\n        printf(\"Queue is empty\\n\");\n        return;\n    }\n    struct Node* temp = front; // take the front node\n    front = front->next;       // move front to next node\n    if (front == NULL) rear = NULL; // if queue became empty, rear also NULL\n    free(temp);                // delete old front\n}\n```\n\ud83d\udc49 **Think:** People leave the line from the front.  \n\n---\n\n## \ud83d\udccc `display()` \u2192 Print all elements\n```c\nvoid display() {\n    struct Node* temp = front;\n    if (temp == NULL) {\n        printf(\"Queue is empty\\n\");\n        return;\n    }\n    printf(\"Queue: \");\n    while (temp != NULL) {   // move from front to rear\n        printf(\"%d \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"\\n\");\n}\n```\n\ud83d\udc49 **Think:** Just walk through the line and read everyone\u2019s ticket number.  \n\n---\n\nBoss, do you want me to now make a **super short full program** (with only enqueue, dequeue, display + main) so you can just compile and run without extra fluff?",
+      "timestamp": 1757527777.991536
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "416f8b9e-ef84-41eb-90b7-9286ff0aefd5",
+  "title": "File Compression Explained",
+  "created_at": "2025-11-28T16:38:01.284718",
+  "updated_at": "2025-11-28T16:38:01.284718",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hows does compression of a file happened how does the size actually decrease in simple words",
+      "timestamp": 1743562496.251128
+    },
+    {
+      "role": "assistant",
+      "content": "File compression reduces size by removing unnecessary or repeated data. There are two main types:  \n\n1. **Lossless Compression** (No Data Loss)  \n   - Finds repeated patterns and stores them in a shorter way.  \n   - Example: Instead of storing \"AAAAAA\", it stores \"6A\".  \n   - Used for text, software, and some image formats like PNG.  \n\n2. **Lossy Compression** (Some Data is Lost)  \n   - Removes less important details that humans won\u2019t notice.  \n   - Example: In images, similar colors are merged to save space.  \n   - Used for photos (JPEG), videos (MP4), and audio (MP3).  \n\nThis makes files smaller without losing much quality or meaning!",
+      "timestamp": 1743562496.301519
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

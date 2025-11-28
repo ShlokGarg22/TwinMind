@@ -1,0 +1,19 @@
+{
+  "id": "54a40447-c332-423b-babe-d0f5b3c975f5",
+  "title": "Jugaad Innovation Summary",
+  "created_at": "2025-11-28T16:38:00.991029",
+  "updated_at": "2025-11-28T16:38:00.991029",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarize the pdf ",
+      "timestamp": 1744949026.700733
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clear and concise summary of the document **\"Jugaad Innovations\"**:\n\n---\n\n### **What is Jugaad?**\n**Jugaad** is a Hindi term meaning an innovative, flexible, and frugal solution using limited resources. It\u2019s about solving real-world problems with creativity, especially under constraints. Widely seen in emerging economies, it's now gaining global attention.\n\n---\n\n### **The Six Core Principles of Jugaad Innovation:**\n\n1. **Seek Opportunity in Adversity**  \n   Use tough situations as a springboard for innovation. Example: Low-cost face shields during COVID-19.\n\n2. **Do More with Less**  \n   Maximize output with minimal input. Example: Mitticool clay refrigerator that works without electricity.\n\n3. **Think and Act Flexibly**  \n   Adapt quickly, accept failure, and revise approaches. Example: GE\u2019s low-cost, portable ECG machine.\n\n4. **Keep It Simple**  \n   Simplicity enables accessibility and scalability. Example: Tata Nano\u2014affordable car with minimalist design.\n\n5. **Include the Margin**  \n   Innovate for and with marginalized communities. Example: SELCO's solar energy solutions for rural families.\n\n6. **Follow Your Heart**  \n   Let empathy, passion, and purpose drive innovation. Example: Aravind Eye Care\u2019s low-cost cataract surgeries.\n\n---\n\n### **Jugaad & Creative Thinking**\n- Encourages **resourcefulness**, **flexibility**, **empathy**, and **purpose-driven innovation**.\n- Applies to diverse fields like **business, education, healthcare**, and **sustainability**.\n\n---\n\n### **Why Jugaad Matters Today**\nIn a world of limited resources and growing crises, Jugaad is a vital approach for:\n- **Sustainability**\n- **Inclusivity**\n- **Resilience**\nIt shifts focus from high-end solutions to **practical, human-centered innovation**.\n\n---\n\nLet me know if you want a visual mind map or a one-page handout version.",
+      "timestamp": 1744949026.86796
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

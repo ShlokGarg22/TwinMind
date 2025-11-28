@@ -1,0 +1,19 @@
+{
+  "id": "ffc9c6df-9df7-4cc7-9775-6d9c89ac68ae",
+  "title": "Meeting Minutes Summary",
+  "created_at": "2025-11-28T16:38:00.412641",
+  "updated_at": "2025-11-28T16:38:00.412641",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gives its answer",
+      "timestamp": 1747948718.419345
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a summarized version of the **Minutes of the Meeting** based on the given topics:\n\n---\n\n**The Rotary Club of Pune \u2013 Minutes of the Annual Meeting**  \n**Date:** Last Saturday  \n**Venue:** [Specify location if known]  \n**Chairperson:** [Name, if provided]  \n**Attendees:** All active members of the Rotary Club of Pune  \n\n**Agenda:**\n\n1. **Next Year\u2019s Budget Plan:**  \n   The proposed budget for the upcoming year was discussed. Members reviewed past expenditures and suggested adjustments to allocate more funds towards community service projects and youth programs.\n\n2. **Events to be Organized:**  \n   Plans for organizing various events throughout the year were presented. These include health camps, tree plantation drives, and cultural festivals. Suggestions from members were invited for additional activities.\n\n3. **Redistribution of Duties Among the Members:**  \n   Roles and responsibilities of members were reassigned to ensure efficient functioning of the club. The redistribution aimed to balance workload and include new members in leadership tasks.\n\n4. **Welcoming the New Members:**  \n   Newly inducted members were formally welcomed into the club. Senior members introduced them and offered guidance to help them integrate smoothly into club activities.\n\n**Conclusion:**  \nThe meeting concluded with a note of thanks to all participants. Members expressed enthusiasm and commitment to achieving the goals outlined in the meeting.\n\n**Minutes Prepared By:**  \n[Secretary\u2019s Name]  \n[Designation]  \n[Date]\n\n---\n\nLet me know if you'd like it in a formal letter or document format.",
+      "timestamp": 1747948718.486561
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "6b42502a-9042-405d-97b3-8b55857a4f31",
+  "title": "Capacitive Reactance Formula",
+  "created_at": "2025-11-28T16:38:02.069063",
+  "updated_at": "2025-11-28T16:38:02.069063",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Capacitance reactinace = v/i where c is?",
+      "timestamp": 1734095389.873282
+    },
+    {
+      "role": "assistant",
+      "content": "The formula you mentioned, \\( X_c = \\frac{V}{I} \\), refers to capacitive reactance (\\( X_c \\)) in an AC circuit, where:\n\n- \\( X_c \\) is the capacitive reactance (in ohms, \\( \\Omega \\)).\n- \\( V \\) is the voltage across the capacitor (in volts).\n- \\( I \\) is the current through the capacitor (in amperes).\n\n**Capacitive reactance** is inversely proportional to both the capacitance (\\( C \\)) and the frequency (\\( f \\)) of the AC signal:\n\n\\[\nX_c = \\frac{1}{2 \\pi f C}\n\\]\n\nWhere:\n- \\( C \\) is the capacitance (in farads, F),\n- \\( f \\) is the frequency of the AC signal (in hertz, Hz).\n\nIf you know \\( V \\) and \\( I \\), you can use \\( X_c = \\frac{V}{I} \\) to find the reactance. Then, use \\( X_c = \\frac{1}{2 \\pi f C} \\) to find the capacitance \\( C \\), if \\( f \\) is known.",
+      "timestamp": 1734095402.737515
+    },
+    {
+      "role": "user",
+      "content": "V is the terminal voltage?",
+      "timestamp": 1734095412.13458
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, in the context of an AC circuit with a capacitor, \\( V \\) represents the **voltage across the capacitor terminals**, also called the terminal voltage. It is the potential difference measured across the capacitor during operation. \n\nThis terminal voltage \\( V \\) is related to the current \\( I \\) flowing through the capacitor and the capacitive reactance \\( X_c \\) by the formula:\n\n\\[\nX_c = \\frac{V}{I}\n\\]\n\nIf you're considering a larger circuit, \\( V \\) might also include contributions from other circuit elements, but for a capacitor alone, it specifically refers to the voltage across its terminals.",
+      "timestamp": 1734095420.068054
+    },
+    {
+      "role": "user",
+      "content": "In equation v= Vmsinwt Vm will be taken?",
+      "timestamp": 1734095448.778494
+    },
+    {
+      "role": "assistant",
+      "content": "In the equation \\( v = V_m \\sin(\\omega t) \\), where:\n\n- \\( v \\) is the instantaneous voltage at any time \\( t \\),\n- \\( V_m \\) is the **peak voltage** (maximum amplitude of the sinusoidal voltage wave),\n- \\( \\omega \\) is the angular frequency (\\( \\omega = 2\\pi f \\)),\n- \\( t \\) is time.\n\n### Which \\( V \\) to take in \\( X_c = \\frac{V}{I} \\)?\nFor capacitive reactance (\\( X_c \\)), we usually use the **root mean square (RMS)** value of voltage (\\( V_{\\text{rms}} \\)) instead of the peak voltage \\( V_m \\).\n\nThe relationship between the peak voltage and the RMS voltage is:\n\n\\[\nV_{\\text{rms}} = \\frac{V_m}{\\sqrt{2}}\n\\]\n\nThus, when calculating \\( X_c = \\frac{V}{I} \\), the voltage \\( V \\) should be the **RMS voltage**, unless otherwise specified.\n\nIf you are given \\( V_m \\), convert it to \\( V_{\\text{rms}} \\) before calculating.",
+      "timestamp": 1734095460.653899
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

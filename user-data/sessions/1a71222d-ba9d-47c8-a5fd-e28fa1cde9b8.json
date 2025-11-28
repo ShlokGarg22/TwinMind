@@ -1,0 +1,49 @@
+{
+  "id": "1a71222d-ba9d-47c8-a5fd-e28fa1cde9b8",
+  "title": "Reverse Brainstorming Technique",
+  "created_at": "2025-11-28T16:38:01.933744",
+  "updated_at": "2025-11-28T16:38:01.933744",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Define reverse brainstorming techniques in 2 lines ",
+      "timestamp": 1737521882.564175
+    },
+    {
+      "role": "assistant",
+      "content": "Reverse brainstorming is a technique where participants identify potential problems or negative outcomes by focusing on how to achieve the opposite of a desired goal. This approach helps uncover hidden issues and generates innovative solutions by reversing traditional thinking.",
+      "timestamp": 1737521883.900682
+    },
+    {
+      "role": "user",
+      "content": "Simple definition ",
+      "timestamp": 1737521954.288037
+    },
+    {
+      "role": "assistant",
+      "content": "Reverse brainstorming is a technique where you think of ways a problem could get worse instead of better. This helps in identifying potential issues and finding creative solutions.",
+      "timestamp": 1737521955.531066
+    },
+    {
+      "role": "user",
+      "content": "Alternate ans",
+      "timestamp": 1737521962.574227
+    },
+    {
+      "role": "assistant",
+      "content": "Reverse brainstorming is a method where you focus on what could go wrong instead of how to solve a problem. This helps in uncovering hidden issues and finding effective solutions.",
+      "timestamp": 1737521963.466357
+    },
+    {
+      "role": "user",
+      "content": "In more simple words",
+      "timestamp": 1737521974.471543
+    },
+    {
+      "role": "assistant",
+      "content": "Reverse brainstorming is when you think about how to make a problem worse. This helps you find possible issues and come up with better solutions.",
+      "timestamp": 1737521975.177719
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

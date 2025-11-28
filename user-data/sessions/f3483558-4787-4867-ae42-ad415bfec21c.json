@@ -1,0 +1,29 @@
+{
+  "id": "f3483558-4787-4867-ae42-ad415bfec21c",
+  "title": "Psychological Thriller Recommendations",
+  "created_at": "2025-11-28T16:37:59.643654",
+  "updated_at": "2025-11-28T16:37:59.643654",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Best physiological thriller movies I like movies like fracture the davince code angle and demons prisoners source code ",
+      "timestamp": 1751391839.295925
+    },
+    {
+      "role": "assistant",
+      "content": "Great taste \u2014 if you like *Fracture*, *The Da Vinci Code*, *Angels & Demons*, *Prisoners*, and *Source Code*, you're clearly into **smart, tightly plotted thrillers** with a mix of psychology, suspense, and mystery. Here's a list of **top psychological and cerebral thrillers** that align with those preferences \u2014 all **mind-bending, investigative, or morally complex**:\n\n---\n\n### \ud83d\udd25 **Must-Watch Psychological/Investigation Thrillers**\nThese are in the same league as *Prisoners* and *Fracture* \u2014 dark, intense, and mentally gripping:\n\n1. **Gone Girl (2014)** \u2013 Twisted, dark, and full of manipulation.\n2. **Zodiac (2007)** \u2013 Same director as *Prisoners* (Fincher), real-life investigation, slow-burn but brilliant.\n3. **Se7en (1995)** \u2013 Grisly but genius, with one of the most shocking endings.\n4. **The Girl with the Dragon Tattoo (2011)** \u2013 Serial killer + hacker + dark secrets.\n5. **Mystic River (2003)** \u2013 Childhood trauma, murder, and raw emotions.\n6. **The Secret in Their Eyes (2009)** \u2013 Argentine original; absolutely top-tier.\n7. **Wind River (2017)** \u2013 Cold, intense crime mystery on a Native American reservation.\n\n---\n\n### \ud83e\udde0 **Mind-Bending Thrillers**\nThese lean more into *Source Code* territory \u2014 intelligent and twist-filled:\n\n1. **Shutter Island (2010)** \u2013 Identity, insanity, and an unforgettable ending.\n2. **Primal Fear (1996)** \u2013 Legal + psychological thriller. Edward Norton = \ud83d\udd25.\n3. **The Prestige (2006)** \u2013 Obsession, magic, and sacrifice. Nolan\u2019s underrated gem.\n4. **Memento (2000)** \u2013 Told backward. Requires full attention. Worth it.\n5. **Enemy (2013)** \u2013 Psychological and metaphorical. Watch only if you're okay with ambiguity.\n\n---\n\n### \ud83d\udd75\ufe0f\u200d\u2642\ufe0f **Intelligent Investigation/Mystery Thrillers**\nPerfect if you liked *Da Vinci Code* and *Angels & Demons*:\n\n1. **The Game (1997)** \u2013 What if your whole life became a mystery?\n2. **The Lives of Others (2006)** \u2013 East Germany, surveillance, and humanity.\n3. **The Machinist (2004)** \u2013 Christian Bale at his thinnest and most disturbed.\n4. **Tinker Tailor Soldier Spy (2011)** \u2013 Slow but incredibly smart espionage.\n5. **Insomnia (2002)** \u2013 Christopher Nolan again, with Al Pacino and Robin Williams.\n\n---\n\n### \ud83c\udfad **Underrated / Hidden Gems**\nLesser-known but gripping:\n\n1. **The Gift (2015)** \u2013 What starts as a normal reunion turns sinister.\n2. **Coherence (2013)** \u2013 Sci-fi + psychological chaos at a dinner party.\n3. **Timecrimes (2007)** \u2013 Spanish time loop thriller. Simple but brilliant.\n4. **The Invitation (2015)** \u2013 Slow-burn dinner party paranoia.\n\n---\n\nWould you like me to filter these by **IMDb rating**, **where to watch (like Netflix or Prime)**, or based on whether they're **fast-paced vs slow-burn**?",
+      "timestamp": 1751391839.471172
+    },
+    {
+      "role": "user",
+      "content": "With ratings and then tell top 5",
+      "timestamp": 1751391864.418021
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a filtered list of your **Top 5 psychological thrillers**, **ranked by impact + relevance to your taste** (smart plots, dark mystery, psychological tension), and including **IMDb ratings**.\n\n---\n\n### \u2705 **Top 5 Psychological Thrillers for You**\n\n| Rank | Movie | IMDb Rating | Why You'll Love It |\n|------|-----------------------------|--------------|----------------------|\n| 1\ufe0f\u20e3 | **Prisoners (2013)** | \u2b50 8.1 | You've already seen it, but it\u2019s the gold standard. Intense, emotional, masterclass. |\n| 2\ufe0f\u20e3 | **Se7en (1995)** | \u2b50 8.6 | Serial killer, moral rot, iconic twist. If you haven\u2019t seen it, it\u2019s a *must*. |\n| 3\ufe0f\u20e3 | **Gone Girl (2014)** | \u2b50 8.1 | Psychological manipulation + murder mystery. Twists that destroy your assumptions. |\n| 4\ufe0f\u20e3 | **The Girl with the Dragon Tattoo (2011)** | \u2b50 7.8 | Dark, gritty, investigative thriller with strong characters and mystery. |\n| 5\ufe0f\u20e3 | **Zodiac (2007)** | \u2b50 7.7 | Same director as *Prisoners*. Slow-burn but meticulous and haunting. |\n\n---\n\n### \ud83e\udde0 **Honorable Mentions**\nIf you\u2019ve seen those or want more:\n\n| Movie | IMDb | Notes |\n|-------|------|-------|\n| **Shutter Island (2010)** | \u2b50 8.2 | Twisted identity + mystery; massive ending. |\n| **The Prestige (2006)** | \u2b50 8.5 | Obsession and trickery at its best. |\n| **Memento (2000)** | \u2b50 8.4 | Told backward. Mind-bending format. |\n| **Mystic River (2003)** | \u2b50 7.9 | Deep emotional trauma + crime mystery. |\n| **The Secret in Their Eyes (2009)** | \u2b50 8.2 | Argentine original is top-notch. Don't confuse with the 2015 remake. |\n\n---\n\nWant me to sort these by **streaming platforms available in India** or suggest some **series** in the same vibe (*like Mindhunter, True Detective, etc*)?",
+      "timestamp": 1751391864.507485
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

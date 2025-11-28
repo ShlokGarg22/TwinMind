@@ -1,0 +1,19 @@
+{
+  "id": "838aff20-ca4b-4e8c-806c-684502e09382",
+  "title": "Simple gyroscope explanation",
+  "created_at": "2025-11-28T16:37:55.758502",
+  "updated_at": "2025-11-28T16:37:55.758502",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Explain in simple words \ud83d\ude02",
+      "timestamp": 1763199693.332109
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the SAME slide explained in **super\u2013simple words**, no fluff:\n\n---\n\n### **Gyroscope Sensor \u2013 Simple Explanation**\n\nA **gyroscope** tells you **which direction something is turning**.\n\n**How it works (easy version):**\n\n1. **Inside it, there is a spinning wheel/rotor.**  \n   When something spins fast, it wants to keep facing the **same direction**.  \n   (Like when you spin a toy top \u2014 it stays upright.)\n\n2. That spinning wheel is mounted on **gimbals** (small rings that let it rotate freely).  \n   These rings let the wheel move in **3 directions** (3 degrees of freedom).\n\n3. So, **when your phone or device tilts/rotates**, the gyroscope can feel that change.  \n   Because the spinning wheel **doesn\u2019t want to change its direction**, but your device moves \u2014 the sensor detects that difference.\n\n4. Simply:  \n   - **Rotor keeps its direction**  \n   - **Device moves**  \n   - Gyroscope senses the change  \n   - It tells the device: \u201cHey, we just turned!\u201d\n\n---\n\n### **One-line summary:**  \nA gyroscope works because a spinning object resists changes in direction, and sensors use that to detect rotation.\n\n---\n\nIf you want, I can also explain it using a real-life example like bikes or smartphones.",
+      "timestamp": 1763199707.04449
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

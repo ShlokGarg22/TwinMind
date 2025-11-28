@@ -1,0 +1,24 @@
+{
+  "id": "3b65e9b6-4112-4bf4-90ee-130c342535ea",
+  "title": "Viva preparation code",
+  "created_at": "2025-11-28T16:37:57.003364",
+  "updated_at": "2025-11-28T16:37:57.003364",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prepare me for viva lane code ",
+      "timestamp": 1762050292.221463
+    },
+    {
+      "role": "assistant",
+      "content": "{\"queries\": [\"operator overloading viva questions and answers\", \"explain the concepts and code in the file Operator Overloading_24070122187_b4ac2007a99819cb4b0bd28647b871d1.pdf\", \"key points and functions implemented in the operator overloading code\", \"explain operator overloading program logic\", \"prepare viva questions based on the operator overloading file content\"]}",
+      "timestamp": 1762050292.675993
+    },
+    {
+      "role": "assistant",
+      "content": "Looks like the PDF you uploaded (\u201cOperator Overloading_24070122187_b4ac2007a99819cb4b0bd28647b871d1.pdf\u201d) didn\u2019t contain any text I could extract \u2014 it\u2019s probably scanned or image-based.  \n\nCan you do one of these so I can prep your viva questions properly?  \n- \ud83d\udcce **Option 1:** Re-upload the file as a text-based version (exported directly from Word or code editor).  \n- \ud83d\udcf8 **Option 2:** Upload **screenshots** or **paste** the operator overloading code and description here \u2014 I\u2019ll use that to create your viva questions and answers.\n\nOnce I can read the actual code/content, I\u2019ll give you:\n- Key viva questions with clear answers  \n- Code explanation line-by-line  \n- Important conceptual points to remember for the exam  \n\nWanna upload or paste the code now?",
+      "timestamp": 1762050295.713966
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

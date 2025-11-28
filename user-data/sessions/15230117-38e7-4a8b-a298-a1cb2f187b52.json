@@ -1,0 +1,19 @@
+{
+  "id": "15230117-38e7-4a8b-a298-a1cb2f187b52",
+  "title": "Use of stack and queue",
+  "created_at": "2025-11-28T16:37:56.162719",
+  "updated_at": "2025-11-28T16:37:56.162719",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Use of stack and ques",
+      "timestamp": 1762590959.856394
+    },
+    {
+      "role": "assistant",
+      "content": "Let\u2019s keep it simple and sharp \u2014 here\u2019s exactly what you need to know:  \n\n---\n\n## \ud83d\udd39 **USE OF STACK**\n\nA **stack** is a **LIFO (Last In, First Out)** data structure \u2014 the last element inserted is the first one removed.\n\n### \u2699\ufe0f **Main Uses:**\n\n1. **Function Call Management (Recursion):**  \n   Stores function calls, local variables, and return addresses during program execution.  \n   \u2192 Example: Recursive functions like factorial or Fibonacci.\n\n2. **Expression Evaluation:**  \n   Used to convert or evaluate infix, postfix, and prefix expressions.  \n   \u2192 Example: Evaluating `(A + B) * C`.\n\n3. **Undo/Redo Operations:**  \n   Text editors and software like Photoshop use stacks to store previous states.\n\n4. **Backtracking:**  \n   Used in maze solving, DFS (Depth First Search), and solving puzzles like Sudoku.\n\n5. **Syntax Checking:**  \n   Used to check balanced parentheses `({[]})`.\n\n6. **Memory Management:**  \n   Stack memory stores function calls and automatic variables.\n\n---\n\n## \ud83d\udd39 **USE OF QUEUE**\n\nA **queue** is a **FIFO (First In, First Out)** data structure \u2014 the first element inserted is the first one removed.\n\n### \u2699\ufe0f **Main Uses:**\n\n1. **CPU Scheduling / Process Management:**  \n   Ready queue in operating systems stores processes waiting for CPU time.\n\n2. **Data Buffers (I/O Buffers, Network Queues):**  \n   Used for managing data transfer like keyboard input, print spooling, and packet queues in networks.\n\n3. **Breadth First Search (BFS):**  \n   Graph algorithms use queues to explore nodes level by level.\n\n4. **Order Processing Systems:**  \n   Banking, ticket booking, and customer service lines follow FIFO logic.\n\n5. **Message Queues in Distributed Systems:**  \n   Used for asynchronous communication between processes (e.g., RabbitMQ, Kafka).\n\n6. **Simulation Systems:**  \n   Used to model real-world queue-like scenarios (e.g., traffic, supermarket lines).\n\n---\n\n## \ud83e\udde0 Quick Difference:\n| Feature | Stack | Queue |\n|----------|--------|-------|\n| Principle | LIFO | FIFO |\n| Example | Browser back button | Print queue |\n| Insertion | Push | Enqueue |\n| Deletion | Pop | Dequeue |\n| Used in | Recursion, parsing | Scheduling, buffering |\n\n---\n\nWant me to add **real C examples** (like push/pop and enqueue/dequeue code) for both?",
+      "timestamp": 1762590959.967277
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

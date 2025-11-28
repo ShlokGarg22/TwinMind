@@ -1,0 +1,19 @@
+{
+  "id": "38c74256-c4e6-4503-bc84-07c41b970796",
+  "title": "Computer organization teaching",
+  "created_at": "2025-11-28T16:37:57.863900",
+  "updated_at": "2025-11-28T16:37:57.863900",
+  "messages": [
+    {
+      "role": "user",
+      "content": "As a expericned teacher of computer organisation i want you to teach me every slide as if i am very new to this subject explain using versu simple language make me feel like i am in a classrom good tipe some tricky problem on tat concept with details solution . give detail solution of each slide so that i can rember it very easily",
+      "timestamp": 1757962443.752
+    },
+    {
+      "role": "assistant",
+      "content": "Perfect! Let\u2019s do this the way a real classroom would run\u2014step by step, slide by slide, making sure **you understand deeply**, not just memorize. Since you want me to teach \u201cComputer Organization,\u201d we\u2019ll start from the very basics and go all the way to complex topics. I\u2019ll break every slide down into:  \n\n1. **Concept Explanation in",
+      "timestamp": 1757962437.859929
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

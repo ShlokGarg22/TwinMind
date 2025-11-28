@@ -1,0 +1,19 @@
+{
+  "id": "b87c6143-83f7-45cc-ba66-a33187120af3",
+  "title": "127 in binary",
+  "created_at": "2025-11-28T16:37:59.623971",
+  "updated_at": "2025-11-28T16:37:59.623971",
+  "messages": [
+    {
+      "role": "user",
+      "content": "127 in binary ",
+      "timestamp": 1751532678.206432
+    },
+    {
+      "role": "assistant",
+      "content": "The decimal number **127** in binary is:\n\n```\n1111111\n```\n\n### Explanation:\nTo convert 127 to binary:\n- 64 + 32 + 16 + 8 + 4 + 2 + 1 = 127  \n- So, all 7 bits are `1` \u2192 **`1111111`** (7 bits)\n\nLet me know if you want the conversion steps too.",
+      "timestamp": 1751532678.380666
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

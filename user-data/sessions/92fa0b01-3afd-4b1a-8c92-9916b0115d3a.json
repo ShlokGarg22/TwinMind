@@ -1,0 +1,49 @@
+{
+  "id": "92fa0b01-3afd-4b1a-8c92-9916b0115d3a",
+  "title": "Clarify question content",
+  "created_at": "2025-11-28T16:37:55.162758",
+  "updated_at": "2025-11-28T16:37:55.162758",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tell ans",
+      "timestamp": 1764173168.90009
+    },
+    {
+      "role": "assistant",
+      "content": "I need a bit more context from you.\n\nYou said **\u201cTell ans\u201d** but you didn\u2019t include the actual question or the image content here. I can\u2019t see the screenshot you referenced \u2014 please either:\n\n1. **Upload the image again**, or  \n2. **Type the exact question** you want the answer for.\n\nJust send it, I\u2019ll solve it directly.",
+      "timestamp": 1764173170.605002
+    },
+    {
+      "role": "user",
+      "content": "In the image",
+      "timestamp": 1764173363.057774
+    },
+    {
+      "role": "assistant",
+      "content": "I can\u2019t view the image unless you upload it again in **this chat**.  \nRight now, I only see a filename mentioned \u2014 no visible screenshot.\n\nPlease do one of the following:\n\n\u2714 Upload the image again  \nor  \n\u2714 Type the exact question from the image\n\nAs soon as I have that, I\u2019ll give you the direct answer immediately.",
+      "timestamp": 1764173368.715665
+    },
+    {
+      "role": "user",
+      "content": "This is",
+      "timestamp": 1764173380.154239
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. Here are clean, exam-ready answers:\n\n---\n\n### **Q1 (a)**  \n**What is a function and mention how it is useful in C programming?**\n\nA **function** in C is a block of code that performs a specific task and can be called whenever needed in a program.\n\n**Usefulness in C:**\n1. Increases **modularity** (program is divided into smaller parts)\n2. **Reduces code repetition** (write once, use many times)\n3. Makes program **easy to read and maintain**\n4. Supports **code reusability**\n5. Helps in **testing and debugging** each part separately\n\n---\n\n### **Q1 (b)**  \n**State the different types of function calls. Explain with example.**\n\nThere are **two** main types of function calls in C:\n\n#### **1\ufe0f\u20e3 Call by Value**\nA copy of the actual argument is passed to the function \u2192 original value does **not** change.\n\n**Example:**\n```c\n#include <stdio.h>\n\nvoid change(int a) {\n    a = 20;\n}\n\nint main() {\n    int x = 10;\n    change(x);\n    printf(\"%d\", x); // Output: 10 (no change)\n    return 0;\n}\n```\n\n#### **2\ufe0f\u20e3 Call by Reference**\nAddress of variable is passed using pointers \u2192 original value **changes**.\n\n**Example:**\n```c\n#include <stdio.h>\n\nvoid change(int *a) {\n    *a = 20;\n}\n\nint main() {\n    int x = 10;\n    change(&x);\n    printf(\"%d\", x); // Output: 20 (value changed)\n    return 0;\n}\n```\n\n---\n\nIf you want, I can format it exactly how your exam paper needs \u2014 short points or a paragraph style.",
+      "timestamp": 1764173380.908223
+    },
+    {
+      "role": "user",
+      "content": "Write graph representation in computer memory ",
+      "timestamp": 1764174964.923752
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clear, exam-ready answer:\n\n---\n\n### **Graph Representation in Computer Memory**\n\nA graph can be stored in memory using two common methods:\n\n---\n\n#### **1\ufe0f\u20e3 Adjacency Matrix**\n- A 2D array of size **V \u00d7 V** (V = number of vertices)\n- If an edge exists between vertex **i** and **j**, matrix entry becomes **1** (or weight for weighted graph), else **0**\n- Easy to check if an edge exists\n\n**Example:**\nFor graph with 3 vertices and edges (1-2), (2-3):\n\n```\n   1 2 3\n1  0 1 0\n2  1 0 1\n3  0 1 0\n```\n\n**Advantages**\n- Simple representation\n- Fast edge lookup \u2192 O(1)\n\n**Disadvantages**\n- Uses more memory \u2192 O(V\u00b2)\n\n---\n\n#### **2\ufe0f\u20e3 Adjacency List**\n- Graph stored as a **list of linked lists** (or dynamic lists)\n- For each vertex, store a list of all connected vertices\n- Saves memory for sparse graphs\n\n**Example:**\nSame graph:\n\n```\n1 \u2192 2\n2 \u2192 1 \u2192 3\n3 \u2192 2\n```\n\n**Advantages**\n- Memory efficient \u2192 O(V + E)\n- Easier to traverse neighbors\n\n**Disadvantages**\n- Checking specific edges is slower\n\n---\n\n### **Conclusion**\n- **Adjacency Matrix** \u2192 better for dense graphs  \n- **Adjacency List** \u2192 better for sparse graphs  \n\n---\n\nIf you want, I can include a neat diagram and short C code example also.",
+      "timestamp": 1764174965.27946
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

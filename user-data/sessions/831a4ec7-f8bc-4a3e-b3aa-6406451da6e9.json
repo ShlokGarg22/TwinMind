@@ -1,0 +1,19 @@
+{
+  "id": "831a4ec7-f8bc-4a3e-b3aa-6406451da6e9",
+  "title": "Constructor and Destructor C++",
+  "created_at": "2025-11-28T16:37:56.857422",
+  "updated_at": "2025-11-28T16:37:56.857422",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Simple cod with voh constroc and deconstie in cpp ",
+      "timestamp": 1762134676.368691
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a **super simple C++ code** that shows how **constructor** and **destructor** work \u2014 plain and clean \ud83d\udc47  \n\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass Demo {\npublic:\n    // Constructor\n    Demo() {\n        cout << \"Constructor called!\" << endl;\n    }\n\n    // Destructor\n    ~Demo() {\n        cout << \"Destructor called!\" << endl;\n    }\n\n    void show() {\n        cout << \"Hello from Demo class!\" << endl;\n    }\n};\n\nint main() {\n    Demo obj;   // Object created \u2192 constructor runs\n    obj.show(); // Call member function\n    // When main ends \u2192 destructor runs automatically\n    return 0;\n}\n```\n\n### \ud83e\udde0 Output:\n```\nConstructor called!\nHello from Demo class!\nDestructor called!\n```\n\nWould you like me to show how **parameterized constructors** work too (like passing values into it)?",
+      "timestamp": 1762134676.438653
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

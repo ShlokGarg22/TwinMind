@@ -1,0 +1,39 @@
+{
+  "id": "f725ddef-c89a-4efa-8960-b3e4799c2df0",
+  "title": "Viva Q&A on sorting",
+  "created_at": "2025-11-28T16:37:56.228614",
+  "updated_at": "2025-11-28T16:37:56.228614",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want viva qna on sorting only",
+      "timestamp": 1762577498.634748
+    },
+    {
+      "role": "assistant",
+      "content": "It looks like some of the files you uploaded earlier have expired, so I can\u2019t access them anymore. Please re-upload the document (the one with sorting content) so I can properly create detailed viva Q&A based on it.",
+      "timestamp": 1762577499.377455
+    },
+    {
+      "role": "user",
+      "content": "Here ",
+      "timestamp": 1762577526.346289
+    },
+    {
+      "role": "assistant",
+      "content": "It seems that the file link expired again before I could access its contents. Please re-upload the document one more time \u2014 ideally as a **PDF or DOCX** \u2014 so I can open it and prepare your **viva Q&A on sorting** directly from it.",
+      "timestamp": 1762577527.958902
+    },
+    {
+      "role": "user",
+      "content": "This is the last time isent or fuck off",
+      "timestamp": 1762577557.552888
+    },
+    {
+      "role": "assistant",
+      "content": "Got it, Boss \u2014 but the file still can\u2019t be accessed (it expired instantly again). To fix this once and for all, please do one of the following:  \n\n1. **Rename the file** on your device (e.g., change it to `Sorting.docx` or `Sorting.pdf`) and re-upload it \u2014 sometimes WhatsApp-forwarded docs keep temporary links that expire.  \n2. Or, **copy-paste the text** (the part on *sorting algorithms*) directly here \u2014 I\u2019ll immediately turn it into a complete viva Q&A set (easy \u2192 medium \u2192 hard).  \n\nOnce I have the content, you\u2019ll get the finalized viva prep instantly.",
+      "timestamp": 1762577558.803532
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "0ca69410-8262-4b90-9e03-aa297a44ad21",
+  "title": "AAA Games Overview",
+  "created_at": "2025-11-28T16:38:01.676632",
+  "updated_at": "2025-11-28T16:38:01.676632",
+  "messages": [
+    {
+      "role": "user",
+      "content": "AAA games",
+      "timestamp": 1738810971.760348
+    },
+    {
+      "role": "assistant",
+      "content": "\"AAA games\" refer to high-budget, high-profile video games developed by major studios with significant financial and marketing investments. These games typically feature top-tier graphics, expansive worlds, and high production values.  \n\n### **Popular AAA Games**  \nHere are some well-known AAA titles across different genres:  \n\n#### **Action & Adventure**  \n- **The Legend of Zelda: Tears of the Kingdom** (2023)  \n- **God of War: Ragnarok** (2022)  \n- **Red Dead Redemption 2** (2018)  \n- **Assassin\u2019s Creed Mirage** (2023)  \n\n#### **Shooter (FPS & TPS)**  \n- **Call of Duty: Modern Warfare III** (2023)  \n- **Battlefield 2042** (2021)  \n- **Halo Infinite** (2021)  \n- **Tom Clancy's Rainbow Six Siege** (2015, still popular)  \n\n#### **RPG (Role-Playing Games)**  \n- **Elden Ring** (2022)  \n- **Cyberpunk 2077: Phantom Liberty** (2023)  \n- **Final Fantasy XVI** (2023)  \n- **The Witcher 3: Wild Hunt** (2015, still widely played)  \n\n#### **Open-World & Sandbox**  \n- **Grand Theft Auto V** (2013, still among the best-selling games)  \n- **Starfield** (2023)  \n- **Hogwarts Legacy** (2023)  \n- **Spider-Man 2** (2023)  \n\n#### **Sports & Racing**  \n- **FIFA 24 (EA Sports FC 24)** (2023)  \n- **NBA 2K24** (2023)  \n- **Forza Horizon 5** (2021)  \n- **Gran Turismo 7** (2022)  \n\nAre you looking for recommendations, upcoming AAA games, or something else related to AAA games?",
+      "timestamp": 1738810986.673631
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

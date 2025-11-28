@@ -1,0 +1,19 @@
+{
+  "id": "94e48bc4-d1a1-4c02-99cf-a62a3139535a",
+  "title": "API Endpoints Explained",
+  "created_at": "2025-11-28T16:38:01.430660",
+  "updated_at": "2025-11-28T16:38:01.430660",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what are api endpoint",
+      "timestamp": 1741181025.761
+    },
+    {
+      "role": "assistant",
+      "content": "An **API endpoint** is a specific URL where an API (Application Programming Interface) receives requests and sends responses. It is essentially the \"address\" of a specific function or resource within an API.\n\n### **Key Points About API Endpoints:**\n1. **URL Structure:** Endpoints are usually structured as URLs (e.g., `https://api.example.com/users`).\n2. **HTTP Methods:** APIs use different HTTP methods like:\n   - `GET` (Retrieve data)\n   - `POST` (Send data)\n   - `PUT` (Update data)\n   - `DELETE` (Remove data)\n3. **Response Format:** Typically, API responses are in JSON or XML.\n4. **Authentication:** Many APIs require authentication (e.g., API keys, OAuth).\n\n### **Example API Endpoints**\n1. **Fetching User Data:**  \n   `GET https://api.example.com/users/123`\n2. **Creating a New User:**  \n   `POST https://api.example.com/users`\n3. **Updating User Info:**  \n   `PUT https://api.example.com/users/123`\n4. **Deleting a User:**  \n   `DELETE https://api.example.com/users/123`\n\nWant to go deeper into RESTful APIs or GraphQL endpoints?",
+      "timestamp": 1741181025.477207
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

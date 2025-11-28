@@ -1,0 +1,49 @@
+{
+  "id": "7ea125d2-5158-4950-b2ae-40f6d282ac87",
+  "title": "Reopen Autofill in Edge",
+  "created_at": "2025-11-28T16:37:59.385583",
+  "updated_at": "2025-11-28T16:37:59.385583",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How to reopen autofill in edge ",
+      "timestamp": 1752080906.676009
+    },
+    {
+      "role": "assistant",
+      "content": "To reopen or re-enable **Autofill** in Microsoft Edge (in case it's disabled), follow these steps:\n\n---\n\n### \ud83d\udd27 **Steps to Reopen Autofill in Microsoft Edge:**\n\n1. **Open Microsoft Edge.**\n\n2. Click on the **three dots (`\u22ef`)** in the **top-right corner** (or press `Alt + F`).\n\n3. Go to **Settings**.\n\n4. In the left sidebar, click **\u201cProfiles.\u201d**\n\n5. Under \"Profiles\", click on **\u201cPersonal info\u201d** (for names, addresses) or **\u201cPasswords\u201d** or **\u201cPayment info\u201d** depending on what you want to autofill.\n\n---\n\n### \u2705 **Enable Autofill Options:**\n\n- **For Names/Addresses:**\n   - Turn on the toggle for **\u201cSave and fill personal info.\u201d**\n\n- **For Passwords:**\n   - Turn on **\u201cOffer to save passwords\u201d** and **\u201cAuto sign-in.\u201d**\n\n- **For Payment Info:**\n   - Turn on **\u201cSave and fill payment info.\u201d**\n\n---\n\n### \ud83e\uddfc (Optional) Clear Saved Autofill Data:\nIf it\u2019s glitchy, you can clear the old data and start fresh:\n1. Go to **Settings > Privacy, search, and services**.\n2. Under \u201cClear browsing data\u201d, click **Choose what to clear**.\n3. Select **Autofill form data** and **Passwords** (optional), then **Clear now**.\n\n---\n\nLet me know if you want to manage this via mobile Edge, too.",
+      "timestamp": 1752080907.013378
+    },
+    {
+      "role": "user",
+      "content": "a twitter post that i recently used gemni and claude cli and what is do also the github link for using them",
+      "timestamp": 1752088881.753
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a clean and engaging X (Twitter) post you can use to share your recent usage of **Gemini CLI** and **Claude CLI**, including what they do and your GitHub link:\n\n---\n\n\ud83d\ude80 Just explored **Gemini CLI** & **Claude CLI** \u2014 bringing LLMs right into the terminal!  \nType, hit enter, get magic \u2728\n\n\ud83d\udd27 Use them to:\n- Ask questions\n- Write code\n- Summarize files\n- Generate content\n- Automate workflows\n\n\ud83d\udcbb Perfect for devs who live in the terminal.\n\n\ud83d\udd17 GitHub setup & usage guide:  \n\ud83d\udc49 [your GitHub link here]\n\n#AI #CLI #Gemini #Claude #DevTools #LLM #opensource\n\n---\n\nReplace `[your GitHub link here]` with the actual repo URL where you\u2019ve documented how to set them up. If you haven't published that yet and want help writing a clean README for it, I can help you draft that too.",
+      "timestamp": 1752088871.857208
+    },
+    {
+      "role": "user",
+      "content": "by curious learner mind",
+      "timestamp": 1752088913.5
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a revised version of the tweet with your preferred tone (\"by curious learner mind\"):\n\n---\n\n\ud83e\udde0 Exploring the power of LLMs from the terminal  \nJust tried **Gemini CLI** & **Claude CLI** \u2014 pure magic in a few keystrokes! \u26a1\n\n\u2728 Do cool stuff like:\n- Ask anything\n- Generate code\n- Summarize files\n- Automate tasks  \nAll from your terminal.\n\n\ud83d\udd17 GitHub setup guide: [your GitHub link here]\n\nby a curious learner mind \ud83e\udde9  \n#AI #CLI #Gemini #Claude #LLM #DevTools #OpenSource\n\n---\n\nWant a GitHub repo README template to go with it? I can help draft one.",
+      "timestamp": 1752088903.58344
+    },
+    {
+      "role": "user",
+      "content": "better",
+      "timestamp": 1752088926.319
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a cleaner, more engaging, and punchier version of the tweet with your \u201ccurious learner\u201d vibe:\n\n---\n\n\ud83d\ude80 Just tried out **Gemini CLI** & **Claude CLI** \u2014 LLMs right from the terminal.  \nNo browser. Just type & get answers, code, summaries, whatever. \ud83e\udde0\u26a1\n\n\ud83d\udee0\ufe0f Perfect for:\n- Devs who live in terminal  \n- Quick code gen & fixes  \n- Summarizing files & docs  \n- Brainstorming on the fly\n\n\ud83d\udd17 Setup & usage guide: [your GitHub link here]\n\n\u2014 by a curious learner mind \ud83e\udde9  \n#AI #CLI #LLM #Gemini #Claude #DevTools #opensource\n\n---\n\nLet me know if you want an image or ASCII banner to post with it. That boosts engagement.",
+      "timestamp": 1752088916.634888
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "997c2d4e-cef7-452e-8294-3f47d49aebcf",
+  "title": "List Style Explanation",
+  "created_at": "2025-11-28T16:38:01.714493",
+  "updated_at": "2025-11-28T16:38:01.714493",
+  "messages": [
+    {
+      "role": "user",
+      "content": "list style se kya hota hai in simple words",
+      "timestamp": 1738667115.998534
+    },
+    {
+      "role": "assistant",
+      "content": "**List style** CSS property ka use web pages me lists (unordered ya ordered) ki appearance control karne ke liye hota hai. Yeh property mainly teen cheezon ko define karti hai:  \n\n1. **list-style-type** \u2192 Bullet ya number ka style set karta hai (jaise disc, circle, square, decimal, roman numbers, etc.).  \n2. **list-style-position** \u2192 Bullet/number ka position set karta hai (inside ya outside).  \n3. **list-style-image** \u2192 Custom image ko bullet points ki jagah use karne ke liye hota hai.  \n\nAgar in teeno properties ko ek saath ek shorthand property me likhna ho, toh **list-style** property use hoti hai.  \n\n### Example:\n```css\nul {\n  list-style: square inside; \n}\n```\nIska matlab hai ki list ke bullets **square shape** ke honge aur **list item ke andar** dikhai denge.  \n\nSamajh aaya? \ud83d\ude03",
+      "timestamp": 1738667128.451758
+    },
+    {
+      "role": "user",
+      "content": "list style none se kya hota hia",
+      "timestamp": 1738667152.850805
+    },
+    {
+      "role": "assistant",
+      "content": "Agar **`list-style: none;`** use karte hain, toh list ke **bullets (\u2022) ya numbering (1, 2, 3, etc.)** hat jaate hain. Yeh mostly navigation menus aur custom-styled lists me use hota hai.  \n\n### Example:\n```css\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n```\n\ud83d\udc49 Yeh CSS unordered (`<ul>`) list ke **default bullets hata dega**.  \n\ud83d\udc49 Saath me `padding` aur `margin` hataane se list left se properly align ho jaayegi.  \n\nAgar custom icons ya styling chahiye, toh hum **`list-style-image`** ya **CSS icons** use kar sakte hain. \ud83d\ude0a",
+      "timestamp": 1738667163.703518
+    },
+    {
+      "role": "user",
+      "content": "i was not able to understand that",
+      "timestamp": 1738667194.988582
+    },
+    {
+      "role": "assistant",
+      "content": "Koi baat nahi! Main aur simple tarike se samjhata hoon. \ud83d\ude0a  \n\nJab aap ek **unordered list (`<ul>`)** ya **ordered list (`<ol>`)** banate ho, toh usme by default **bullets (\u2022) ya numbers (1, 2, 3, etc.)** aate hain.  \n\nAgar aap **`list-style: none;`** likh doge, toh yeh bullets ya numbers **gayab ho jayenge**! \ud83c\udfa9\u2728  \n\n### \ud83d\udd39 Example (Without `list-style: none;`)\n```html\n<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n  <li>Cherry</li>\n</ul>\n```\n\ud83d\udd39 Output:\n- Apple  \n- Banana  \n- Cherry  \n\n### \ud83d\udd39 Example (With `list-style: none;`)\n```html\n<style>\n  ul {\n    list-style: none;\n  }\n</style>\n\n<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n  <li>Cherry</li>\n</ul>\n```\n\ud83d\udd39 Output:\nApple  \nBanana  \nCherry  \n\n\ud83c\udfaf **Result:** Bullets **gayab ho gaye!**  \n\n\ud83d\udc49 Yeh **mostly navigation menus** ya **custom-styled lists** me use hota hai jaha aap apni marzi se icons ya styling add karna chahte ho.  \n\nAb samajh aaya? \ud83d\ude03",
+      "timestamp": 1738667214.44242
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "a4dcee29-e0b4-4993-ac07-90819d0ace05",
+  "title": "HTML JS Request Code",
+  "created_at": "2025-11-28T16:38:00.173567",
+  "updated_at": "2025-11-28T16:38:00.173567",
+  "messages": [
+    {
+      "role": "user",
+      "content": "get the code\n",
+      "timestamp": 1748891307.496
+    },
+    {
+      "role": "assistant",
+      "content": "Here's the HTML and JavaScript code shown in the image:\n\n```html\n<!DOCTYPE html>\n<html>\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js\"></script>\n    <script>\n      function sendRequest() {\n        axios.post(\"https://localhost:3000/sum\", {\n          a: document.getElementById(\"a\").value,\n          b: document.getElementById(\"b\").value\n        });\n      }\n    </script>\n  </head>\n  <body>\n    <input id=\"a\" type=\"text\" placeholder=\"First value\" />\n    <input id=\"b\" type=\"text\" placeholder=\"Second value\" />\n    <button onclick=\"sendRequest()\">Find sum</button>\n  </body>\n</html>\n```\n\nLet me know if you want:\n- the backend code to handle the `/sum` endpoint,\n- to display the result on the page,\n- error handling,\n- or to switch from `text` to `number` inputs.",
+      "timestamp": 1748891305.200757
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

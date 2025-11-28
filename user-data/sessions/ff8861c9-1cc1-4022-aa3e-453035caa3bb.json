@@ -1,0 +1,14 @@
+{
+  "id": "ff8861c9-1cc1-4022-aa3e-453035caa3bb",
+  "title": "Summarize conversation title",
+  "created_at": "2025-11-28T16:38:00.774493",
+  "updated_at": "2025-11-28T16:38:00.774493",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tell",
+      "timestamp": 1745771801.105288
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

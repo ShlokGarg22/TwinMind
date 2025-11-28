@@ -1,0 +1,29 @@
+{
+  "id": "dfaf0a70-b55b-48f4-ae0d-ae20e1da6d7c",
+  "title": "BFS DFS C++ code",
+  "created_at": "2025-11-28T16:37:55.461207",
+  "updated_at": "2025-11-28T16:37:55.461207",
+  "messages": [
+    {
+      "role": "user",
+      "content": "bfs dfs code in c++ simple one",
+      "timestamp": 1763827868.693
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the cleanest, no-nonsense BFS and DFS code in C++ \u2014 minimal, readable, exactly what you need for exams and understanding.\n\n---\n\n# \u2705 **DFS (Depth First Search) \u2013 Simple C++ Code**\n\nDFS uses a **stack** (or recursion).  \nWe\u2019ll use recursion because it\u2019s simplest.\n\n```cpp\n#include <iostream>\n#include <vector>\nusing namespace std;\n\nvector<int> adj[100];   // adjacency list\nbool visited[100];\n\nvoid dfs(int node) {\n    visited[node] = true;\n    cout << node << \" \";\n\n    for(int next : adj[node]) {\n        if(!visited[next]) {\n            dfs(next);\n        }\n    }\n}\n\nint main() {\n    int n, e;\n    cin >> n >> e;   // n = number of nodes, e = number of edges\n\n    for(int i = 0; i < e; i++) {\n        int u, v;\n        cin >> u >> v;\n        adj[u].push_back(v);\n        adj[v].push_back(u);   // remove if directed graph\n    }\n\n    dfs(0);   // start DFS from node 0\n}\n```\n\n---\n\n# \u2705 **BFS (Breadth First Search) \u2013 Simple C++ Code**\n\nBFS uses a **queue**.\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <queue>\nusing namespace std;\n\nvector<int> adj[100];\nbool visited[100];\n\nvoid bfs(int start) {\n    queue<int> q;\n    visited[start] = true;\n    q.push(start);\n\n    while(!q.empty()) {\n        int node = q.front();\n        q.pop();\n        cout << node << \" \";\n\n        for(int next : adj[node]) {\n            if(!visited[next]) {\n                visited[next] = true;\n                q.push(next);\n            }\n        }\n    }\n}\n\nint main() {\n    int n, e;\n    cin >> n >> e;\n\n    for(int i = 0; i < e; i++) {\n        int u, v;\n        cin >> u >> v;\n        adj[u].push_back(v);\n        adj[v].push_back(u);  // remove if directed\n    }\n\n    bfs(0);   // start BFS from node 0\n}\n```\n\n---\n\n# \ud83d\ude80 Want even simpler versions?\nI can also give:\n\n- BFS/DFS for **matrix graph**\n- BFS/DFS without adjacency list (using matrix)\n- Code with comments line-by-line\n- Code from your PDF style (like your class notes)\n\nJust tell me.",
+      "timestamp": 1763827869.299286
+    },
+    {
+      "role": "user",
+      "content": "dont use vectors",
+      "timestamp": 1763827881.078
+    },
+    {
+      "role": "assistant",
+      "content": "Got it.  \nHere are the **simplest BFS and DFS codes in C++ WITHOUT vectors** \u2014 only arrays.\n\n---\n\n# \u2705 **DFS in C++ (No vectors, only adjacency matrix)**\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint adj[100][100];   // adjacency matrix\nint visited[100];\n\nvoid dfs(int node, int n) {\n    visited[node] = 1;\n    cout << node << \" \";\n\n    for(int i = 0; i < n; i++) {\n        if(adj[node][i] == 1 && visited[i] == 0) {\n            dfs(i, n);\n        }\n    }\n}\n\nint main() {\n    int n, e;\n    cin >> n >> e;\n\n    // read edges\n    for(int i = 0; i < e; i++) {\n        int u, v;\n        cin >> u >> v;\n        adj[u][v] = 1;\n        adj[v][u] = 1;   // remove if directed\n    }\n\n    dfs(0, n);  // start from node 0\n}\n```\n\n---\n\n# \u2705 **BFS in C++ (No vectors, only adjacency matrix + simple queue array)**\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint adj[100][100];\nint visited[100];\nint q[100], front = 0, rear = 0;\n\nvoid bfs(int start, int n) {\n    visited[start] = 1;\n    q[rear++] = start;\n\n    while(front < rear) {\n        int node = q[front++];\n        cout << node << \" \";\n\n        for(int i = 0; i < n; i++) {\n            if(adj[node][i] == 1 && visited[i] == 0) {\n                visited[i] = 1;\n                q[rear++] = i;\n            }\n        }\n    }\n}\n\nint main() {\n    int n, e;\n    cin >> n >> e;\n\n    for(int i = 0; i < e; i++) {\n        int u, v;\n        cin >> u >> v;\n        adj[u][v] = 1;\n        adj[v][u] = 1;   // remove if directed graph\n    }\n\n    bfs(0, n);  // start from 0\n}\n```\n\n---\n\n# \u26a1 Both codes are:\n\n- No vectors  \n- No STL  \n- Use only arrays  \n- Perfect for exams  \n- Very simple logic  \n\nIf you want, I can also give:\n\n\u2714 Commented version  \n\u2714 Using stack array for DFS (non-recursive)  \n\u2714 Weighted graph versions  \n\nJust say the word.",
+      "timestamp": 1763827883.64369
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

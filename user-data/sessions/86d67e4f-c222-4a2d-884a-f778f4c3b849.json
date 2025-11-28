@@ -1,0 +1,79 @@
+{
+  "id": "86d67e4f-c222-4a2d-884a-f778f4c3b849",
+  "title": "Direct answer provided",
+  "created_at": "2025-11-28T16:37:57.084060",
+  "updated_at": "2025-11-28T16:37:57.084060",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give direct ans ",
+      "timestamp": 1761927432.519431
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Answer:** The first token is selected solely based on the input prompt, while subsequent tokens are chosen based on previous tokens and the input prompt.",
+      "timestamp": 1761927433.246133
+    },
+    {
+      "role": "user",
+      "content": "software engineer is developing a chatbot using a large language model and must decide on a decoding strategy for generating the ch\n\nWhich decoding approach should they use in each of the following scenarios to achieve the desired outcome?\n\nIn a situation requiring creative and varied responses, the engineer selects greedy decoding with an increased temperature.\n\nO To minimize the risk of nonsensical replies, the engineer opts for non-deterministic decoding with a very low temperature.\n\nO To ensure the chatbot's responses are diverse and unpredictable, the engineer sets a high temperature and uses non-determinis\n\nFor maximum consistency in the chatbot's language, the engineer chooses greedy",
+      "timestamp": 1761927496.0524
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Answer:** To ensure the chatbot's responses are diverse and unpredictable, the engineer sets a **high temperature and uses non-deterministic decoding**.",
+      "timestamp": 1761927496.834551
+    },
+    {
+      "role": "user",
+      "content": "Are you sure",
+      "timestamp": 1761927526.439192
+    },
+    {
+      "role": "assistant",
+      "content": "Yes \u2014 100% sure. \u2705  \n\nHere\u2019s the breakdown so you see why:  \n\n- **High temperature + non-deterministic decoding (like sampling or top-k/top-p)** \u2192 produces **creative, varied, and unpredictable** responses.  \n- **Low temperature or greedy decoding** \u2192 produces **safe, consistent, predictable** responses.  \n\nSo for a scenario that **\u201crequires creative and varied responses\u201d**, the correct choice is:  \n> **Use non-deterministic decoding with a high temperature.**",
+      "timestamp": 1761927527.235155
+    },
+    {
+      "role": "user",
+      "content": "Recheck option ",
+      "timestamp": 1761927553.353107
+    },
+    {
+      "role": "assistant",
+      "content": "Let\u2019s recheck carefully against the options shown \ud83d\udc47  \n\n1\ufe0f\u20e3 **\u201cIn a situation requiring creative and varied responses, the engineer selects greedy decoding with an increased temperature.\u201d**  \n\u274c Wrong \u2014 greedy decoding ignores temperature and always picks the top token \u2192 not creative.  \n\n2\ufe0f\u20e3 **\u201cTo minimize the risk of nonsensical replies, the engineer opts for non-deterministic decoding with a very low temperature.\u201d**  \n\u26a0\ufe0f Partially correct for low temperature = fewer nonsense replies, but non-deterministic decoding still adds randomness \u2192 not ideal for minimizing risk.  \n\n3\ufe0f\u20e3 **\u201cTo ensure the chatbot's responses are diverse and unpredictable, the engineer sets a high temperature and uses non-deterministic decoding.\u201d**  \n\u2705 Correct \u2014 high temp + non-deterministic = diverse, creative, unpredictable outputs.  \n\n4\ufe0f\u20e3 **\u201cFor maximum consistency in the chatbot's language, the engineer chooses greedy decoding.\u201d**  \n\u2705 Correct \u2014 greedy decoding = deterministic and consistent.  \n\nSo the correct pairings are:  \n- **Creative & varied \u2192 High temperature + non-deterministic decoding**  \n- **Maximum consistency \u2192 Greedy decoding**",
+      "timestamp": 1761927553.482391
+    },
+    {
+      "role": "user",
+      "content": ". You are using a LangChain Prompt and need to capture and use user's name and address at runtime. Which of the following is a must to imp\n\nUse a prompt template with placeholders for name and address and bind variables to the placeholders.\n\nUse database to store name and address.\n\nUse a prompt template with placeholders.\n\nUse a prompt template",
+      "timestamp": 1761927613.936504
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Answer:** Use a **prompt template with placeholders for name and address and bind variables to the placeholders.**",
+      "timestamp": 1761927614.778652
+    },
+    {
+      "role": "user",
+      "content": ". You are working with a Large Language Model (LLM) to create conversational Al for customer support. For a specific feature, you need the model to prioritize cer vocabulary (e.g., specific product names or phrases) while generating responses. However, you also have a broader requirement to refine the model's understand of industry-specific terminology across multiple tasks.\n\nWhen should you use Prompting versus Training to achieve your goals?\n\nO Use Prompting to emphasize product names in responses and Training to refine the model's understanding of industry-specific terminology\n\nUse Prompting for both product names and industry-specific terminology as Training is unnecessary for such tasks.\n\nUse Prompting to improve the model's knowledge of industry-specific terminology and Training to prioritize product names.\n\nO Use Training for both product names and industry-specific terminology as Prompting only works for short-term goals",
+      "timestamp": 1761927692.385095
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Answer:** **Use Prompting to emphasize product names in responses and Training to refine the model's understanding of industry-specific terminology.**",
+      "timestamp": 1761927693.279285
+    },
+    {
+      "role": "user",
+      "content": "Calculate the total number of wheels nodded for 3 cars. Cars have 4 wheels each. Then, use the total num wheels to determine how many sets of wheels we can buy with $200 if one set (4 wheels) costs $50.\n\n2. solve a complex math problem by first identifying the formula needed, and then solve a simpler veraton of the proble before tackling the full question.\n\n3. To understand the impact of greenhouse gases on climate change, let's start by defining what greenhouse gases are. Next, we'll explore how they trap heat in the Earth's atmosphere.\n\n1: Chain-of-Thought, 2: Least-to-most, 3: Step-Back\n\n1: Step-Back, 2: Chain-of-Thought, 3: Least-to-most\n\n1: Least-to-most, 2: Chain-of-Thought, 3: Step-Back\n\n1: Chain-of-Thought, 2: Step-Back, 3: Least-to-most",
+      "timestamp": 1761927763.299859
+    },
+    {
+      "role": "assistant",
+      "content": "\u2705 **Answer:** **1: Chain-of-Thought, 2: Least-to-most, 3: Step-Back**",
+      "timestamp": 1761927765.409188
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

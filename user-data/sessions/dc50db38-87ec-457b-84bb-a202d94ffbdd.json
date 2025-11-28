@@ -1,0 +1,44 @@
+{
+  "id": "dc50db38-87ec-457b-84bb-a202d94ffbdd",
+  "title": "C Program Requests",
+  "created_at": "2025-11-28T16:38:01.942281",
+  "updated_at": "2025-11-28T16:38:01.942281",
+  "messages": [
+    {
+      "role": "user",
+      "content": "program all the questions",
+      "timestamp": 1737180829.339206
+    },
+    {
+      "role": "assistant",
+      "content": "To provide the C programs for all the listed questions in the image, I can start by creating a document that contains each of these programs. Let's begin with the first few programs. I'll provide the code for each question as per the list. If you would like all the programs in one go or a specific few, please let me know.",
+      "timestamp": 1737180832.133104
+    },
+    {
+      "role": "user",
+      "content": "in one go",
+      "timestamp": 1737180843.225866
+    },
+    {
+      "role": "assistant",
+      "content": "{\"name\":\"c_programs_basic\",\"type\":\"code/c\",\"content\":\"// 1. C Hello World Program\\n#include <stdio.h>\\nint main() {\\n    printf(\\\"Hello, World!\\\\n\\\");\\n    return 0;\\n}\\n\\n// 2. C Program to Print Your Own Name\\n#include <stdio.h>\\nint main() {\\n    printf(\\\"Your Name\\\\n\\\");\\n    return 0;\\n}\\n\\n// 3. C Program to Print an Integer Entered By the User\\n#include <stdio.h>\\nint main() {\\n    int number;\\n    printf(\\\"Enter an integer: \\\");\\n    scanf(\\\"%d\\\", &number);\\n    printf(\\\"You entered: %d\\\\n\\\", number);\\n    return 0;\\n}\\n\\n// 4. C Program to Add Two Numbers\\n#include <stdio.h>\\nint main() {\\n    int num1, num2, sum;\\n    printf(\\\"Enter two numbers: \\\");\\n    scanf(\\\"%d %d\\\", &num1, &num2);\\n    sum = num1 + num2;\\n    printf(\\\"Sum: %d\\\\n\\\", sum);\\n    return 0;\\n}\\n\\n// 5. C Program to Check Whether a Number is Prime or Not\\n#include <stdio.h>\\nint main() {\\n    int num, i, isPrime = 1;\\n    printf(\\\"Enter a number: \\\");\\n    scanf(\\\"%d\\\", &num);\\n    for(i = 2; i <= num / 2; i++) {\\n        if(num % i == 0) {\\n            isPrime = 0;\\n            break;\\n        }\\n    }\\n    if (isPrime && num > 1)\\n        printf(\\\"%d is a prime number.\\\\n\\\", num);\\n    else\\n        printf(\\\"%d is not a prime number.\\\\n\\\", num);\\n    return 0;\\n}\\n\\n// 6. C Program to Multiply Two Floating-Point Numbers\\n#include <stdio.h>\\nint main() {\\n    float num1, num2, product;\\n    printf(\\\"Enter two numbers: \\\");\\n    scanf(\\\"%f %f\\\", &num1, &num2);\\n    product = num1 * num2;\\n    printf(\\\"Product: %.2f\\\\n\\\", product);\\n    return 0;\\n}\\n\\n// 7. C Program to Print the ASCII Value of a Character\\n#include <stdio.h>\\nint main() {\\n    char ch;\\n    printf(\\\"Enter a character: \\\");\\n    scanf(\\\" %c\\\", &ch);\\n    printf(\\\"ASCII value of %c: %d\\\\n\\\", ch, ch);\\n    return 0;\\n}\\n\\n// 8. C Program to Swap Two Numbers\\n#include <stdio.h>\\nint main() {\\n    int a, b, temp;\\n    printf(\\\"Enter two numbers: \\\");\\n    scanf(\\\"%d %d\\\", &a, &b);\\n    temp = a;\\n    a = b;\\n    b = temp;\\n    printf(\\\"After swapping: a = %d, b = %d\\\\n\\\", a, b);\\n    return 0;\\n}\\n\\n// 9. C Program to Calculate Fahrenheit to Celsius\\n#include <stdio.h>\\nint main() {\\n    float fahrenheit, celsius;\\n    printf(\\\"Enter temperature in Fahrenheit: \\\");\\n    scanf(\\\"%f\\\", &fahrenheit);\\n    celsius = (fahrenheit - 32) * 5 / 9;\\n    printf(\\\"Temperature in Celsius: %.2f\\\\n\\\", celsius);\\n    return 0;\\n}\\n\\n// 10. C Program to Find the Size of int, float, double, and char\\n#include <stdio.h>\\nint main() {\\n    printf(\\\"Size of int: %zu bytes\\\\n\\\", sizeof(int));\\n    printf(\\\"Size of float: %zu bytes\\\\n\\\", sizeof(float));\\n    printf(\\\"Size of double: %zu bytes\\\\n\\\", sizeof(double));\\n    printf(\\\"Size of char: %zu bytes\\\\n\\\", sizeof(char));\\n    return 0;\\n}\\n\\n// 11. C Program to Add Two Complex Numbers\\n#include <stdio.h>\\ntypedef struct {\\n    float real;\\n    float imag;\\n} Complex;\\nint main() {\\n    Complex num1, num2, sum;\\n    printf(\\\"Enter real and imaginary parts of first complex number: \\\");\\n    scanf(\\\"%f %f\\\", &num1.real, &num1.imag);\\n    printf(\\\"Enter real and imaginary parts of second complex number: \\\");\\n    scanf(\\\"%f %f\\\", &num2.real, &num2.imag);\\n    sum.real = num1.real + num2.real;\\n    sum.imag = num1.imag + num2.imag;\\n    printf(\\\"Sum: %.2f + %.2fi\\\\n\\\", sum.real, sum.imag);\\n    return 0;\\n}\\n\\n// 12. C Program to Print Prime Numbers From 1 to N\\n#include <stdio.h>\\nint main() {\\n    int n, i, j, isPrime;\\n    printf(\\\"Enter a number: \\\");\\n    scanf(\\\"%d\\\", &n);\\n    printf(\\\"Prime numbers from 1 to %d are: \\\", n);\\n    for(i = 2; i <= n; i++) {\\n        isPrime = 1;\\n        for(j = 2; j <= i / 2; j++) {\\n            if(i % j == 0) {\\n                isPrime = 0;\\n                break;\\n            }\\n        }\\n        if (isPrime)\\n            printf(\\\"%d \\\", i);\\n    }\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}\\n\\n// 13. C Program to Find Simple Interest\\n#include <stdio.h>\\nint main() {\\n    float principal, rate, time, simpleInterest;\\n    printf(\\\"Enter principal amount, rate of interest and time: \\\");\\n    scanf(\\\"%f %f %f\\\", &principal, &rate, &time);\\n    simpleInterest = (principal * rate * time) / 100;\\n    printf(\\\"Simple Interest: %.2f\\\\n\\\", simpleInterest);\\n    return 0;\\n}\\n\\n// 14. C Program to Find Compound Interest\\n#include <stdio.h>\\n#include <math.h>\\nint main() {\\n    float principal, rate, time, compoundInterest;\\n    printf(\\\"Enter principal amount, rate of interest and time: \\\");\\n    scanf(\\\"%f %f %f\\\", &principal, &rate, &time);\\n    compoundInterest = principal * pow((1 + rate / 100), time) - principal;\\n    printf(\\\"Compound Interest: %.2f\\\\n\\\", compoundInterest);\\n    return 0;\\n}\\n\\n// 15. C Program for Area and Perimeter of Rectangle\\n#include <stdio.h>\\nint main() {\\n    float length, width, area, perimeter;\\n    printf(\\\"Enter length and width of the rectangle: \\\");\\n    scanf(\\\"%f %f\\\", &length, &width);\\n    area = length * width;\\n    perimeter = 2 * (length + width);\\n    printf(\\\"Area: %.2f\\\\n\\\", area);\\n    printf(\\\"Perimeter: %.2f\\\\n\\\", perimeter);\\n    return 0;\\n}\"}",
+      "timestamp": 1737180867.642415
+    },
+    {
+      "role": "assistant",
+      "content": "I have provided the C programs for all the questions listed in the image. If you have any specific questions or need further assistance with these programs, feel free to ask!",
+      "timestamp": 1737180867.6428
+    },
+    {
+      "role": "user",
+      "content": "#include <stdio.h>\nint main() {\n    int a, b, temp;\n    printf(\"Enter two numbers: \");\n    scanf(\"%d , %d\", &a, &b);\n    temp = a;\n    a = b;\n    b = temp;\n    printf(\"After swapping: a = %d, b = %d\\n\", a, b);\n    \n    return 0;}",
+      "timestamp": 1737303899.354807
+    },
+    {
+      "role": "assistant",
+      "content": "The code you provided swaps two numbers, but there is a small issue in the `scanf` statement. The comma (`,`) inside the format string will require the user to input a comma between the two numbers, which might not be intended. Here's the corrected version of your code:\n\n```c\n#include <stdio.h>\n\nint main() {\n    int a, b, temp;\n    printf(\"Enter two numbers: \");\n    scanf(\"%d %d\", &a, &b);  // Removed the comma from the format string\n    temp = a;\n    a = b;\n    b = temp;\n    printf(\"After swapping: a = %d, b = %d\\n\", a, b);\n    \n    return 0;\n}\n```\n\nThis correction allows the user to input two numbers separated by a space, which is a more common and expected input format.",
+      "timestamp": 1737303905.677545
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

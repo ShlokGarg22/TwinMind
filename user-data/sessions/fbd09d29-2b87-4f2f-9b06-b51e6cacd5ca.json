@@ -1,0 +1,19 @@
+{
+  "id": "fbd09d29-2b87-4f2f-9b06-b51e6cacd5ca",
+  "title": "Cooper Pair Explained",
+  "created_at": "2025-11-28T16:38:01.847780",
+  "updated_at": "2025-11-28T16:38:01.847780",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Cooper pair in simple terms",
+      "timestamp": 1737947479.034769
+    },
+    {
+      "role": "assistant",
+      "content": "A Cooper pair is a pair of electrons that stick together and move through a superconductor without resistance. \n\nNormally, electrons repel each other because they have the same charge. But in a superconductor, when the material is cooled down to very low temperatures, vibrations in the material (called lattice vibrations or phonons) create an attractive force between two electrons. This allows them to pair up and move in a coordinated way, avoiding the usual collisions that cause resistance. \n\nSo, a Cooper pair is like two electrons teaming up to \"slide\" through the material effortlessly.",
+      "timestamp": 1737947486.942987
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

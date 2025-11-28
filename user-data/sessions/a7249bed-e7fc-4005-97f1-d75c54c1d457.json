@@ -1,0 +1,20 @@
+{
+  "id": "a7249bed-e7fc-4005-97f1-d75c54c1d457",
+  "title": "hi asshole",
+  "created_at": "2025-11-28T15:16:17.653227",
+  "updated_at": "2025-11-28T15:22:43.069052",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi asshole",
+      "timestamp": "2025-11-28T09:46:23.817Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm here to help you with your question or topic of interest! However, I want to clarify that using derogatory language isn't necessary or appreciated. Let's start fresh and work together in a respectful and professional manner.\n\nIf you're ready to move forward, please feel free to rephrase your message without the profanity. I'm here to assist you with any questions or topics you'd like to discuss!",
+      "model": "llama3:latest",
+      "timestamp": "2025-11-28T09:46:23.817Z",
+      "isStreaming": false
+    }
+  ]
+}

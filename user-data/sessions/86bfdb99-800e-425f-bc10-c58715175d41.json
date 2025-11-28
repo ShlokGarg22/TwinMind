@@ -1,0 +1,19 @@
+{
+  "id": "86bfdb99-800e-425f-bc10-c58715175d41",
+  "title": "Functor vs Predicate",
+  "created_at": "2025-11-28T16:37:56.914538",
+  "updated_at": "2025-11-28T16:37:56.914538",
+  "messages": [
+    {
+      "role": "user",
+      "content": "differnce between functor and predicate in prolog",
+      "timestamp": 1762089631.674
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, here\u2019s the straight breakdown \u2014 nice and clear \ud83d\udc47  \n\n### \ud83e\udde9 **1. Functor**\n- A **functor** is basically the **name of a structure** or **function symbol** that identifies a relation or a compound term.  \n- Think of it as the **\"label\"** or **\"operator\"** that ties together arguments.  \n- Every **predicate** and every **compound term** has a functor.  \n\n**Example:**\n```prolog\nfather(john, mary).\n```\nHere:\n- `father` \u2192 **functor**\n- `(john, mary)` \u2192 **arguments**\n\nAnother example:\n```prolog\nlikes(john, pizza)\n```\n- `likes` is the functor \u2014 it shows what relationship or concept is being described.\n\n---\n\n### \ud83d\udd0d **2. Predicate**\n- A **predicate** is the **combination of a functor and its arity** (number of arguments).  \n- It actually represents the **fact or rule** \u2014 the logical statement that can be true or false.  \n- Syntax-wise, it\u2019s written as `Functor/Arity`.  \n\n**Example:**\n```prolog\nlikes/2    % means predicate 'likes' with 2 arguments\nfather/2   % means predicate 'father' with 2 arguments\n```\n\n---\n\n### \ud83e\udde0 **In short:**\n| Concept | What it means | Example | Description |\n|----------|----------------|----------|--------------|\n| **Functor** | Name of the relation or structure | `likes` | Labels the relation |\n| **Predicate** | Functor + number of arguments | `likes/2` | Represents a fact or rule in logic |\n\n---\n\n**Quick analogy:**\n> If Prolog facts were functions in programming,  \n> - the **functor** would be the **function name**,  \n> - and the **predicate** would be the **function signature** (name + number of parameters).\n\nWant me to show a short code snippet showing both in use (like how Prolog matches predicates by functor/arity)?",
+      "timestamp": 1762089643.671678
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

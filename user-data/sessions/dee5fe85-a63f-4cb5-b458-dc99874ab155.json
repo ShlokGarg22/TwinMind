@@ -1,0 +1,19 @@
+{
+  "id": "dee5fe85-a63f-4cb5-b458-dc99874ab155",
+  "title": "Reverse SLL code",
+  "created_at": "2025-11-28T16:37:55.075478",
+  "updated_at": "2025-11-28T16:37:55.075478",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Reverse in sll easy code",
+      "timestamp": 1764260102.48675
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the **simplest** and **cleanest** code for **reverse a Singly Linked List** \ud83d\udc47  \n(Just logic, no fancy stuff)\n\n---\n\n### \u2705 C Code \u2014 Reverse SLL (Iterative easiest)\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int data;\n    struct Node* next;\n};\n\nstruct Node* reverse(struct Node* head) {\n    struct Node *prev = NULL, *curr = head, *next = NULL;\n\n    while (curr != NULL) {\n        next = curr->next;  // save next\n        curr->next = prev;  // reverse link\n        prev = curr;        // move prev\n        curr = next;        // move curr\n    }\n    return prev; // new head\n}\n\n// just for checking output\nvoid printList(struct Node* head) {\n    while (head != NULL) {\n        printf(\"%d -> \", head->data);\n        head = head->next;\n    }\n    printf(\"NULL\\n\");\n}\n\n// create node for testing\nstruct Node* newNode(int value) {\n    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));\n    temp->data = value;\n    temp->next = NULL;\n    return temp;\n}\n\nint main() {\n    struct Node* head = newNode(1);\n    head->next = newNode(2);\n    head->next->next = newNode(3);\n    head->next->next->next = newNode(4);\n\n    printf(\"Before Reverse: \");\n    printList(head);\n\n    head = reverse(head);\n\n    printf(\"After Reverse: \");\n    printList(head);\n\n    return 0;\n}\n```\n\n---\n\n### \ud83e\udde0 Logic (super short)\n```\nTake 3 pointers: prev, curr, next\nBreak current link \u2192 point it backward \u2192 move forward\n```\n\n---\n\nIf you want, I can also give:\n\n\u2714 Recursive reverse code  \n\u2714 Diagram step-by-step  \n\u2714 Include with insert & full working list  \n\nWant that too?",
+      "timestamp": 1764260103.460601
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

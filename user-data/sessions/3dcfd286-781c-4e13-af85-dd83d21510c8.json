@@ -1,0 +1,29 @@
+{
+  "id": "3dcfd286-781c-4e13-af85-dd83d21510c8",
+  "title": "Armstrong Number Code C",
+  "created_at": "2025-11-28T16:38:00.386526",
+  "updated_at": "2025-11-28T16:38:00.386526",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Armstrong number code for c",
+      "timestamp": 1748087253.298613
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a simple C program to check whether a number is an **Armstrong number**:\n\n### **Definition:**\nAn **Armstrong number** (for 3-digit numbers) is a number such that the sum of the cubes of its digits is equal to the number itself.  \nExample: `153 = 1\u00b3 + 5\u00b3 + 3\u00b3`\n\n---\n\n### **C Code:**\n```c\n#include <stdio.h>\n#include <math.h>\n\nint main() {\n    int num, originalNum, remainder, result = 0, n = 0;\n\n    printf(\"Enter an integer: \");\n    scanf(\"%d\", &num);\n\n    originalNum = num;\n\n    // Count the number of digits\n    while (originalNum != 0) {\n        originalNum /= 10;\n        ++n;\n    }\n\n    originalNum = num;\n\n    // Calculate the sum of the nth powers of its digits\n    while (originalNum != 0) {\n        remainder = originalNum % 10;\n        result += pow(remainder, n);\n        originalNum /= 10;\n    }\n\n    if (result == num)\n        printf(\"%d is an Armstrong number.\\n\", num);\n    else\n        printf(\"%d is not an Armstrong number.\\n\", num);\n\n    return 0;\n}\n```\n\n---\n\n### **How It Works:**\n- It works for **any number of digits**, not just 3.\n- Uses `pow()` from `<math.h>` to raise each digit to the power of total digits.\n- Compares the sum to the original number.\n\nLet me know if you want a version without `math.h` (pure integer logic).",
+      "timestamp": 1748087253.360765
+    },
+    {
+      "role": "user",
+      "content": "More simplified code",
+      "timestamp": 1748087359.411112
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a **simplified C code** to check for an Armstrong number (assuming it's a 3-digit number):\n\n```c\n#include <stdio.h>\n\nint main() {\n    int num, originalNum, remainder, result = 0;\n\n    printf(\"Enter a 3-digit number: \");\n    scanf(\"%d\", &num);\n\n    originalNum = num;\n\n    while (originalNum != 0) {\n        remainder = originalNum % 10;\n        result += remainder * remainder * remainder;\n        originalNum /= 10;\n    }\n\n    if (result == num)\n        printf(\"%d is an Armstrong number.\\n\", num);\n    else\n        printf(\"%d is not an Armstrong number.\\n\", num);\n\n    return 0;\n}\n```\n\n### Key Points:\n- No `math.h` needed.\n- Only works correctly for **3-digit numbers**.\n- Cubes each digit directly using `remainder * remainder * remainder`.\n\nLet me know if you want a version that works for any number of digits without using `pow()`.",
+      "timestamp": 1748087359.472501
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

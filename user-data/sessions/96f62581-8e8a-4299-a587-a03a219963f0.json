@@ -1,0 +1,19 @@
+{
+  "id": "96f62581-8e8a-4299-a587-a03a219963f0",
+  "title": "Pointer Usage in C",
+  "created_at": "2025-11-28T16:38:01.111004",
+  "updated_at": "2025-11-28T16:38:01.111004",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write the code taking his as reference \n#include<stdio.h>\n\nint main(){\n    char str[] = \"Shlok\";\n    char *q = str;\n    \n    while(*q != '\\0'){\n        printf(\"%c\",*q);\n        q++;\n    }\n    return 0;\n}",
+      "timestamp": 1744343703.385289
+    },
+    {
+      "role": "assistant",
+      "content": "Good \u2014 you\u2019re on the right track.\n\nLooking at your reference (the photo), they want:\n- String `\"Hello\"` stored in a pointer variable `strPtr`.\n- Use **another pointer** (say `t`) to print the characters of the string.\n\nSo you have to use **two pointers**.\nHere\u2019s the correct code based on your example and the diagram:\n\n```c\n#include <stdio.h>\n\nint main() {\n    char *strPtr = \"Hello\"; // String saved in pointer variable\n    char *t = strPtr;      // Another character pointer to traverse\n\n    while (*t != '\\0') {\n        printf(\"%c\", *t);\n        t++;\n    }\n\n    return 0;\n}\n```\n\n### Explanation:\n- `strPtr` points to `\"Hello\"` (like in the diagram, starting address 5000).\n- `t` is another pointer, initialized to `strPtr`, and it walks through the string.\n- We print each character until the null terminator `\\0`.\n\n### Output:\n```\nHello\n```\n\n### Forward-thinking advice:\n- If you want to modify this to input any string from the user dynamically (instead of hardcoding \"Hello\"), let me know.\n- Also, the way it's written, the string literal `\"Hello\"` is stored in read-only memory. If you want to make it editable, you should declare it as an array.\n\n---\n\nIf you want, I can also show you how to visualize this in memory (like the diagram). It'll make it much clearer for exams. Want me to?",
+      "timestamp": 1744343703.421557
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

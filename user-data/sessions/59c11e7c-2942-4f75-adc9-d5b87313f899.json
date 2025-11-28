@@ -1,0 +1,19 @@
+{
+  "id": "59c11e7c-2942-4f75-adc9-d5b87313f899",
+  "title": "Code correction request",
+  "created_at": "2025-11-28T16:38:01.117432",
+  "updated_at": "2025-11-28T16:38:01.117432",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tell the code and correct the errors don't add anything extra",
+      "timestamp": 1744342716.454723
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the code from the image, with errors corrected.  \nI'll only give you the code, nothing extra.\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\nint main()\n{\n    int *arr = (int *)malloc(5 * sizeof(int));\n    for (int i = 0; i < 5; i++)\n    {\n        arr[i] = i + 1;\n    }\n\n    printf(\"Original array:\\n\");\n    for (int i = 0; i < 5; i++)\n    {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n    int newSize = 8; // Resize the array to hold 8 integers\n    arr = (int *)realloc(arr, newSize * sizeof(int));\n    for (int i = 5; i < newSize; i++)\n    {\n        arr[i] = i + 1;\n    }\n\n    printf(\"Resized array:\\n\");\n    for (int i = 0; i < newSize; i++)\n    {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n    free(arr);\n    return 0;\n}\n```\n\nDone. Let me know if you want explanation or output \u2014 if not, we\u2019re good.",
+      "timestamp": 1744342716.489021
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

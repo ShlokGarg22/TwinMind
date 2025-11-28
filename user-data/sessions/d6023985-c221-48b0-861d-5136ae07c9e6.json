@@ -1,0 +1,19 @@
+{
+  "id": "d6023985-c221-48b0-861d-5136ae07c9e6",
+  "title": "Infrared vs PIR sensors",
+  "created_at": "2025-11-28T16:37:56.565490",
+  "updated_at": "2025-11-28T16:37:56.565490",
+  "messages": [
+    {
+      "role": "user",
+      "content": "infreared vs piur snesor tebula form",
+      "timestamp": 1762455215.154
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a clear **tabular comparison between Infrared (IR) Sensor and PIR Sensor** \ud83d\udc47  \n\n| **Parameter** | **Infrared (IR) Sensor** | **PIR (Passive Infrared) Sensor** |\n|----------------|---------------------------|-----------------------------------|\n| **Full Form** | Infrared Sensor | Passive Infrared Sensor |\n| **Working Principle** | Uses IR light (emitted and reflected) to detect objects or measure distance | Detects changes in infrared radiation (heat) emitted by living beings or warm objects |\n| **Type of Infrared Used** | Active (emits and detects IR) | Passive (does not emit, only detects) |\n| **Main Components** | IR LED (Transmitter) and Photodiode (Receiver) | Pyroelectric Sensor and Fresnel Lens |\n| **Detects** | Object presence, distance, color, or motion (based on reflection) | Motion of warm objects (like humans or animals) |\n| **Range** | Typically 2\u201330 cm (short range) | Typically 3\u20137 meters (medium range) |\n| **Accuracy** | Affected by color, surface, and ambient light | More stable; detects motion based on heat difference |\n| **Output Type** | Analog or Digital | Usually Digital (HIGH/LOW) |\n| **Applications** | Line-following robots, obstacle avoidance, distance measurement | Motion detection, security systems, automatic lights |\n| **Cost** | Generally cheaper | Slightly more expensive |\n| **Power Consumption** | Low to moderate | Very low |\n| **Detection Through Objects** | Cannot detect through obstacles | Cannot detect through obstacles but detects heat through transparent covers (like plastic lens) |\n\n**In short:**  \n- **IR Sensor** \u2192 Detects *objects* using reflected infrared light.  \n- **PIR Sensor** \u2192 Detects *motion of warm bodies* using emitted infrared radiation.  \n\nWould you like me to add **a simple circuit diagram comparison** (Tinkercad-style) for both?",
+      "timestamp": 1762455216.879488
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "4496d099-a647-43fb-9ab4-5d9fc96954e6",
+  "title": "Stack code example",
+  "created_at": "2025-11-28T16:37:55.142137",
+  "updated_at": "2025-11-28T16:37:55.142137",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Stack code array  push pop isenpry is full ",
+      "timestamp": 1764217611.450595
+    },
+    {
+      "role": "assistant",
+      "content": "Here you go \u2014 clean, simple, exam-ready stack code using **array** in C:\n\n---\n\n### \u2705 Stack using Array (Push, Pop, isEmpty, isFull)\n\n```c\n#include <stdio.h>\n#define MAX 5\n\nint stack[MAX];\nint top = -1;\n\n// Check if stack is full\nint isFull() {\n    return top == MAX - 1;\n}\n\n// Check if stack is empty\nint isEmpty() {\n    return top == -1;\n}\n\n// Push element into stack\nvoid push(int x) {\n    if (isFull()) {\n        printf(\"Stack Overflow! Cannot push %d\\n\", x);\n    } else {\n        stack[++top] = x;\n        printf(\"%d pushed into stack\\n\", x);\n    }\n}\n\n// Pop element from stack\nint pop() {\n    if (isEmpty()) {\n        printf(\"Stack Underflow! Nothing to pop\\n\");\n        return -1;\n    } else {\n        return stack[top--];\n    }\n}\n\n// Display stack\nvoid display() {\n    if (isEmpty()) {\n        printf(\"Stack is empty\\n\");\n    } else {\n        printf(\"Stack elements: \");\n        for (int i = top; i >= 0; i--) {\n            printf(\"%d \", stack[i]);\n        }\n        printf(\"\\n\");\n    }\n}\n\nint main() {\n    push(10);\n    push(20);\n    push(30);\n    display();\n\n    printf(\"Popped: %d\\n\", pop());\n    display();\n\n    return 0;\n}\n```\n\n---\n\n### \ud83d\udccc Key Notes for Exam\n- `top = -1` means **stack empty**\n- When `top == MAX-1` \u2192 **stack full**\n- **Push:** `++top` then store element  \n- **Pop:** return `stack[top--]`\n\n---\n\nIf you want, I can give:\n\u2714 Menu-driven version  \n\u2714 With peek()  \n\u2714 With dynamic size  \n\nDo you need linked list implementation also?",
+      "timestamp": 1764217611.566634
+    },
+    {
+      "role": "user",
+      "content": "Yes",
+      "timestamp": 1764218022.512907
+    },
+    {
+      "role": "assistant",
+      "content": "Alright \u2014 here\u2019s the **linked list implementation** of a stack. Cleaner than the array version and perfect for exams.\n\n---\n\n## \u2705 Stack Using Singly Linked List in C  \n( push, pop, peek, isEmpty )\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int data;\n    struct Node* next;\n};\n\nstruct Node* top = NULL;\n\n// Check if stack is empty\nint isEmpty() {\n    return top == NULL;\n}\n\n// Push element\nvoid push(int x) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    if (!newNode) {\n        printf(\"Memory allocation failed!\\n\");\n        return;\n    }\n\n    newNode->data = x;\n    newNode->next = top;\n    top = newNode;\n\n    printf(\"%d pushed to stack\\n\", x);\n}\n\n// Pop element\nint pop() {\n    if (isEmpty()) {\n        printf(\"Stack Underflow! Nothing to pop\\n\");\n        return -1;\n    }\n\n    struct Node* temp = top;\n    int popped = temp->data;\n\n    top = top->next;\n    free(temp);\n\n    return popped;\n}\n\n// Peek element\nint peek() {\n    if (isEmpty()) {\n        printf(\"Stack is empty\\n\");\n        return -1;\n    }\n    return top->data;\n}\n\n// Display stack\nvoid display() {\n    if (isEmpty()) {\n        printf(\"Stack is empty\\n\");\n        return;\n    }\n\n    struct Node* temp = top;\n    printf(\"Stack elements: \");\n    while (temp != NULL) {\n        printf(\"%d \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"\\n\");\n}\n\nint main() {\n    push(10);\n    push(20);\n    push(30);\n    display();\n\n    printf(\"Top element: %d\\n\", peek());\n\n    printf(\"Popped: %d\\n\", pop());\n    display();\n\n    return 0;\n}\n```\n\n---\n\n### \ud83d\udcdd Short Theory for Viva\n- **Linked list stack grows dynamically** \u2014 no limit like array\n- Operations work on **head** of list\n- **Push:** insert at beginning  \n- **Pop:** delete from beginning  \n- **Time complexity:** `O(1)` for push & pop\n\n---\n\nIf you want, I\u2019ll give:\n\u2714 Menu-driven version  \n\u2714 Comments line-by-line  \n\u2714 PDF cheat-sheet for stack using both array + LL\n\nDo you want queue next? Arrays or linked list?",
+      "timestamp": 1764218022.763997
+    },
+    {
+      "role": "user",
+      "content": "Both",
+      "timestamp": 1764218131.398354
+    },
+    {
+      "role": "assistant",
+      "content": "Perfect. Let\u2019s knock it out completely \u2014 **Queue with Array** + **Queue with Linked List**.  \nShort, clean, exam-scoring code.\n\n---\n\n# \ud83d\ude80 Queue Using Array (Linear)\n\n```c\n#include <stdio.h>\n#define MAX 5\n\nint queue[MAX];\nint front = -1, rear = -1;\n\nint isFull() {\n    return rear == MAX - 1;\n}\n\nint isEmpty() {\n    return front == -1 || front > rear;\n}\n\nvoid enqueue(int x) {\n    if (isFull()) {\n        printf(\"Queue Overflow!\\n\");\n        return;\n    }\n    if (front == -1) front = 0;\n    queue[++rear] = x;\n    printf(\"%d enqueued\\n\", x);\n}\n\nint dequeue() {\n    if (isEmpty()) {\n        printf(\"Queue Underflow!\\n\");\n        return -1;\n    }\n    return queue[front++];\n}\n\nvoid display() {\n    if (isEmpty()) {\n        printf(\"Queue is empty\\n\");\n        return;\n    }\n    printf(\"Queue: \");\n    for (int i = front; i <= rear; i++)\n        printf(\"%d \", queue[i]);\n    printf(\"\\n\");\n}\n\nint main() {\n    enqueue(10);\n    enqueue(20);\n    enqueue(30);\n    display();\n\n    printf(\"Dequeued: %d\\n\", dequeue());\n    display();\n\n    return 0;\n}\n```\n\n---\n\n### \ud83e\udde0 Quick Theory (Array Queue)\n- Insertion at **rear**\n- Deletion from **front**\n- Wastes space \u2192 **not circular**\n- isEmpty \u2192 `front > rear`\n- isFull \u2192 `rear == MAX-1`\n\n---\n\n# \u2714 Queue Using Linked List\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int data;\n    struct Node* next;\n};\n\nstruct Node* front = NULL;\nstruct Node* rear = NULL;\n\nint isEmpty() {\n    return front == NULL;\n}\n\nvoid enqueue(int x) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    newNode->data = x;\n    newNode->next = NULL;\n\n    if (rear == NULL) {\n        front = rear = newNode;\n    } else {\n        rear->next = newNode;\n        rear = newNode;\n    }\n    printf(\"%d enqueued\\n\", x);\n}\n\nint dequeue() {\n    if (isEmpty()) {\n        printf(\"Queue Underflow!\\n\");\n        return -1;\n    }\n\n    struct Node* temp = front;\n    int val = temp->data;\n\n    front = front->next;\n    if (front == NULL) rear = NULL;\n\n    free(temp);\n    return val;\n}\n\nvoid display() {\n    if (isEmpty()) {\n        printf(\"Queue is empty\\n\");\n        return;\n    }\n\n    struct Node* temp = front;\n    printf(\"Queue: \");\n    while (temp != NULL) {\n        printf(\"%d \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"\\n\");\n}\n\nint main() {\n    enqueue(10);\n    enqueue(20);\n    enqueue(30);\n    display();\n\n    printf(\"Dequeued: %d\\n\", dequeue());\n    display();\n\n    return 0;\n}\n```\n\n---\n\n### \ud83e\udde0 Quick Theory (LL Queue)\n- Front \u2192 delete  \n- Rear \u2192 insert  \n- No overflow (dynamic memory)  \n- Underflow \u2192 front is NULL  \n- Time complexity: O(1) for enqueue + dequeue\n\n---\n\n### If you want, I can also give:\n\u2714 Circular queue using array  \n\u2714 Menu-driven version for both  \n\u2714 Short viva questions  \n\u2714 PPT-style notes for exam\n\nDo you want **circular queue** next?",
+      "timestamp": 1764218131.884531
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

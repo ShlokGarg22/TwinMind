@@ -1,0 +1,39 @@
+{
+  "id": "6de7b204-30ae-4b5e-b1e5-f9e306251ab8",
+  "title": "Ghibli Style Request",
+  "created_at": "2025-11-28T16:38:01.303380",
+  "updated_at": "2025-11-28T16:38:01.303380",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Make Ghibli style of this",
+      "timestamp": 1743248961.180339
+    },
+    {
+      "role": "assistant",
+      "content": "{\"prompt\":\"A Studio Ghibli-style illustration of a young man with short black hair, wearing a blue and white patterned shirt, sitting at a table in a cozy ice cream parlor. He is holding an ice cream cone in one hand and giving a thumbs-up with the other. The scene has warm lighting, soft shading, and detailed textures typical of Ghibli\u2019s animation style.\",\"referenced_image_ids\":[\"file-9KsUq6WFi1GWSbkR2rtT8X\"]}",
+      "timestamp": 1743248961.228014
+    },
+    {
+      "role": "assistant",
+      "content": "I was unable to generate the Ghibli-style image due to an error. Let me know if you'd like me to try again or modify the request in any way.",
+      "timestamp": 1743248973.918573
+    },
+    {
+      "role": "user",
+      "content": "Try again",
+      "timestamp": 1743248988.142788
+    },
+    {
+      "role": "assistant",
+      "content": "{\"prompt\":\"A Studio Ghibli-style illustration of a young man with short black hair, wearing a blue and white patterned shirt, sitting at a table in a cozy ice cream parlor. He is holding an ice cream cone in one hand and giving a thumbs-up with the other. The scene has warm lighting, soft shading, and detailed textures typical of Ghibli\u2019s animation style.\",\"referenced_image_ids\":[\"file-9KsUq6WFi1GWSbkR2rtT8X\"]}",
+      "timestamp": 1743248988.202365
+    },
+    {
+      "role": "assistant",
+      "content": "I wasn't able to generate the Ghibli-style image because of rate limits. You can try again in a minute, or let me know if you\u2019d like any modifications to the request.",
+      "timestamp": 1743248994.185257
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

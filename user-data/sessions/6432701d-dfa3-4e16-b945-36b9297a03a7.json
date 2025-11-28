@@ -1,0 +1,49 @@
+{
+  "id": "6432701d-dfa3-4e16-b945-36b9297a03a7",
+  "title": "Greeting Intent Examples",
+  "created_at": "2025-11-28T16:37:59.853547",
+  "updated_at": "2025-11-28T16:37:59.853547",
+  "messages": [
+    {
+      "role": "user",
+      "content": "give sme some intents for #greetinf one at a time",
+      "timestamp": 1750489263.082
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s your first intent for the `#greeting` category:\n\n**Intent 1:**\n```json\n{\n  \"intent\": \"greet_user\",\n  \"examples\": [\n    \"Hello!\",\n    \"Hi there!\",\n    \"Hey!\",\n    \"Good to see you!\",\n    \"Hi, how are you?\"\n  ]\n}\n```\n\nLet me know when you're ready for the next one.",
+      "timestamp": 1750489259.444133
+    },
+    {
+      "role": "user",
+      "content": "give 10 more",
+      "timestamp": 1750489270.859
+    },
+    {
+      "role": "assistant",
+      "content": "Here are **10 more intents** under the `#greeting` category, each unique and realistic for chatbot training:\n\n---\n\n**Intent 2:**\n```json\n{\n  \"intent\": \"greet_formal\",\n  \"examples\": [\n    \"Good morning\",\n    \"Good afternoon\",\n    \"Good evening\",\n    \"Pleasure to meet you\",\n    \"Greetings\"\n  ]\n}\n```\n\n---\n\n**Intent 3:**\n```json\n{\n  \"intent\": \"greet_informal\",\n  \"examples\": [\n    \"Yo!\",\n    \"What's up?\",\n    \"Sup?\",\n    \"Hey hey!\",\n    \"How's it going?\"\n  ]\n}\n```\n\n---\n\n**Intent 4:**\n```json\n{\n  \"intent\": \"greet_with_name\",\n  \"examples\": [\n    \"Hi John!\",\n    \"Hello Sarah!\",\n    \"Hey Alex!\",\n    \"Good to see you, Priya!\",\n    \"Yo Mike!\"\n  ]\n}\n```\n\n---\n\n**Intent 5:**\n```json\n{\n  \"intent\": \"greet_bot\",\n  \"examples\": [\n    \"Hi bot!\",\n    \"Hello assistant!\",\n    \"Hey chatbot!\",\n    \"Good morning, bot\",\n    \"Hey AI!\"\n  ]\n}\n```\n\n---\n\n**Intent 6:**\n```json\n{\n  \"intent\": \"greet_and_ask\",\n  \"examples\": [\n    \"Hey, how are you?\",\n    \"Hello! How's your day?\",\n    \"Hi, what's new?\",\n    \"Good morning! All good?\",\n    \"Hey there, how\u2019s it going?\"\n  ]\n}\n```\n\n---\n\n**Intent 7:**\n```json\n{\n  \"intent\": \"greet_after_long_time\",\n  \"examples\": [\n    \"Long time no see!\",\n    \"It's been a while!\",\n    \"Hey, it\u2019s been ages!\",\n    \"Nice to see you again!\",\n    \"Been a long time!\"\n  ]\n}\n```\n\n---\n\n**Intent 8:**\n```json\n{\n  \"intent\": \"greet_with_emotion\",\n  \"examples\": [\n    \"Hey! So excited to talk!\",\n    \"Hi! Feeling great today!\",\n    \"Hello! I'm super pumped!\",\n    \"Hey there! Missed this!\",\n    \"Hiya! Happy to be back!\"\n  ]\n}\n```\n\n---\n\n**Intent 9:**\n```json\n{\n  \"intent\": \"greet_and_introduce_self\",\n  \"examples\": [\n    \"Hi, I'm Rahul!\",\n    \"Hello, my name is Jenny.\",\n    \"Hey, this is Mike.\",\n    \"Good day, I'm Anjali.\",\n    \"Hi there, it's Sam.\"\n  ]\n}\n```\n\n---\n\n**Intent 10:**\n```json\n{\n  \"intent\": \"greet_and_offer_help\",\n  \"examples\": [\n    \"Hi, can I help you?\",\n    \"Hello, need assistance?\",\n    \"Hey, anything I can do?\",\n    \"Good day, how can I assist?\",\n    \"Hi, let me know if you need something.\"\n  ]\n}\n```\n\n---\n\n**Intent 11:**\n```json\n{\n  \"intent\": \"greet_in_other_languages\",\n  \"examples\": [\n    \"Hola!\",\n    \"Bonjour!\",\n    \"Namaste!\",\n    \"Ciao!\",\n    \"Salam!\"\n  ]\n}\n```\n\nWant me to generate YAML or CSV for training files too?",
+      "timestamp": 1750489267.065279
+    },
+    {
+      "role": "user",
+      "content": "now for #goodbyes but not in code but a list with counting",
+      "timestamp": 1750489391.128
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, here are **11 varied goodbye intents** under the `#goodbyes` category, listed one by one:\n\n---\n\n1. **Casual Goodbye**  \n   Examples:  \n   - Bye  \n   - See ya  \n   - Later  \n   - Catch you later  \n   - Peace out  \n\n---\n\n2. **Formal Goodbye**  \n   Examples:  \n   - Goodbye  \n   - Farewell  \n   - It was a pleasure speaking with you  \n   - Wishing you a good day  \n   - Until we meet again  \n\n---\n\n3. **Goodbye with Gratitude**  \n   Examples:  \n   - Thanks, bye  \n   - Appreciate your help, goodbye  \n   - Thank you, see you  \n   - Cheers, I\u2019m off  \n   - Bye, thanks again  \n\n---\n\n4. **Goodnight Farewell**  \n   Examples:  \n   - Goodnight  \n   - Sleep well  \n   - Sweet dreams  \n   - Nighty night  \n   - Talk to you tomorrow  \n\n---\n\n5. **Goodbye with Time Reference**  \n   Examples:  \n   - See you tomorrow  \n   - Talk to you later  \n   - Catch up next week  \n   - Until next time  \n   - See you soon  \n\n---\n\n6. **Emotional Goodbye**  \n   Examples:  \n   - I\u2019ll miss this  \n   - Sad to leave  \n   - Hard to say goodbye  \n   - Hope to be back soon  \n   - Missing you already  \n\n---\n\n7. **Hurry or Abrupt Goodbye**  \n   Examples:  \n   - Gotta run  \n   - Leaving now  \n   - Running late, bye!  \n   - Catch you later, in a rush  \n   - Talk soon, bye  \n\n---\n\n8. **Playful Goodbye**  \n   Examples:  \n   - Toodle-oo!  \n   - Bye-bye  \n   - Smell ya later  \n   - TTFN (Ta-ta for now)  \n   - See ya, space cowboy  \n\n---\n\n9. **Goodbye After Conversation**  \n   Examples:  \n   - That\u2019s all from me, bye  \n   - I think we're done here, goodbye  \n   - Thanks for the chat, see you  \n   - Great talking to you, bye  \n   - We\u2019ll talk later  \n\n---\n\n10. **Goodbye in Other Languages**  \n   Examples:  \n   - Adios  \n   - Au revoir  \n   - Ciao  \n   - Sayonara  \n   - Alvida  \n\n---\n\n11. **Goodbye for Now (Soft Close)**  \n   Examples:  \n   - See you around  \n   - Until next time  \n   - Be right back  \n   - I\u2019ll be back later  \n   - Just stepping out  \n\n---\n\nWant me to break these down further or create intents based on these for a chatbot training file?",
+      "timestamp": 1750489387.945097
+    },
+    {
+      "role": "user",
+      "content": "not for #thank_you",
+      "timestamp": 1750489514.101
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. Here are **11 diverse intents** for the `#thank_you` category, each with multiple expression examples:\n\n---\n\n1. **Simple Thank You**  \n   Examples:  \n   - Thanks  \n   - Thank you  \n   - Thx  \n   - TY  \n   - Much appreciated  \n\n---\n\n2. **Formal Gratitude**  \n   Examples:  \n   - I sincerely thank you  \n   - I truly appreciate your assistance  \n   - Thank you very much  \n   - I am grateful  \n   - I appreciate your help  \n\n---\n\n3. **Thank You with Name/Reference**  \n   Examples:  \n   - Thanks, John  \n   - Appreciate it, assistant  \n   - Thank you, ChatGPT  \n   - Thanks for your support, team  \n   - Thank you, friend  \n\n---\n\n4. **Thank You After Help**  \n   Examples:  \n   - Thanks for helping me  \n   - Really appreciate the support  \n   - Thank you for the quick response  \n   - Grateful for your help  \n   - Thanks a ton for that  \n\n---\n\n5. **Thank You with Emotion**  \n   Examples:  \n   - Thanks a lot, that meant a lot  \n   - I'm so grateful  \n   - You're a lifesaver, thank you!  \n   - Thank you so much!  \n   - Can't thank you enough  \n\n---\n\n6. **Thank You with Closure**  \n   Examples:  \n   - Thanks, that\u2019s all I needed  \n   - Appreciate it, take care  \n   - Thank you, have a great day  \n   - Thanks, that\u2019ll be all  \n   - Thanks, I\u2019m done now  \n\n---\n\n7. **Thank You and Goodbye**  \n   Examples:  \n   - Thanks, bye!  \n   - Thank you, talk soon  \n   - Appreciate your help, signing off  \n   - Thanks and goodbye  \n   - That\u2019s it, thanks  \n\n---\n\n8. **Sarcastic or Playful Thank You**  \n   Examples:  \n   - Thanks a bunch (sarcastic tone)  \n   - Oh wow, thanks (playful)  \n   - Great, thanks I guess  \n   - Thanks... I think  \n   - Appreciate it\u2026 maybe  \n\n---\n\n9. **Thank You in Other Languages**  \n   Examples:  \n   - Gracias  \n   - Merci  \n   - Dhanyavaad  \n   - Arigato  \n   - Shukran  \n\n---\n\n10. **Thank You After Waiting or Delay**  \n   Examples:  \n   - Thanks for waiting  \n   - Appreciate your patience  \n   - Thank you for bearing with me  \n   - Sorry for the wait, and thanks  \n   - Thanks for hanging in there  \n\n---\n\n11. **Thank You for Understanding**  \n   Examples:  \n   - Thanks for understanding  \n   - Appreciate your flexibility  \n   - Thanks for being so considerate  \n   - Thank you for your understanding  \n   - Grateful for your patience  \n\n---\n\nNeed similar lists for `#apologies`, `#affirmation`, or something else next?",
+      "timestamp": 1750489510.389888
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

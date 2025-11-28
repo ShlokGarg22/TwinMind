@@ -1,0 +1,19 @@
+{
+  "id": "3158faf4-1290-4b92-90c1-f77b8d98f5a1",
+  "title": "Multiple inheritance example",
+  "created_at": "2025-11-28T16:37:57.233307",
+  "updated_at": "2025-11-28T16:37:57.233307",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Create a base class item that stores the title and price of item. Create another base class sale that holds sales figure of three months. Use the concept of multiple inheritance to derive two classes hwitem and switem from both item and sales. Each class has its own getdata() and displaydata() functions to input and output data respectively.\n\nSIMPLE CODE NO COMMENT",
+      "timestamp": 1761196623.279
+    },
+    {
+      "role": "assistant",
+      "content": "```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nclass item {\nprotected:\n    string title;\n    float price;\npublic:\n    void getdata() {\n        cout << \"Enter title: \";\n        cin >> title;\n        cout << \"Enter price: \";\n        cin >> price;\n    }\n    void displaydata() {\n        cout << \"Title: \" << title << endl;\n        cout << \"Price: \" << price << endl;\n    }\n};\n\nclass sale {\nprotected:\n    float s1, s2, s3;\npublic:\n    void getdata() {\n        cout << \"Enter sales for 3 months: \";\n        cin >> s1 >> s2 >> s3;\n    }\n    void displaydata() {\n        cout << \"Sales (3 months): \" << s1 << \" \" << s2 << \" \" << s3 << endl;\n    }\n};\n\nclass hwitem : public item, public sale {\npublic:\n    void getdata() {\n        item::getdata();\n        sale::getdata();\n    }\n    void displaydata() {\n        item::displaydata();\n        sale::displaydata();\n    }\n};\n\nclass switem : public item, public sale {\npublic:\n    void getdata() {\n        item::getdata();\n        sale::getdata();\n    }\n    void displaydata() {\n        item::displaydata();\n        sale::displaydata();\n    }\n};\n\nint main() {\n    hwitem h;\n    switem s;\n    cout << \"Enter hardware item details:\\n\";\n    h.getdata();\n    cout << \"Enter software item details:\\n\";\n    s.getdata();\n    cout << \"\\nHardware item details:\\n\";\n    h.displaydata();\n    cout << \"\\nSoftware item details:\\n\";\n    s.displaydata();\n    return 0;\n}\n```",
+      "timestamp": 1761196627.125182
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

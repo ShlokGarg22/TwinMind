@@ -1,0 +1,19 @@
+{
+  "id": "f1652785-dda4-4fdd-9f45-e0ff4e58e740",
+  "title": "Print leaf nodes C",
+  "created_at": "2025-11-28T16:37:57.197815",
+  "updated_at": "2025-11-28T16:37:57.197815",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Print leaf node of trees in c simple code",
+      "timestamp": 1761708247.997093
+    },
+    {
+      "role": "assistant",
+      "content": "Alright boss \u2014 here\u2019s a **simple C program** that prints all the **leaf nodes** of a binary tree. I\u2019ll keep it clean, commented, and straight to the point \ud83d\udc47  \n\n---\n\n### \ud83c\udf33 Code: Print Leaf Nodes in C\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\n// Structure for a node\nstruct Node {\n    int data;\n    struct Node *left, *right;\n};\n\n// Function to create a new node\nstruct Node* createNode(int value) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    newNode->data = value;\n    newNode->left = newNode->right = NULL;\n    return newNode;\n}\n\n// Function to print all leaf nodes\nvoid printLeafNodes(struct Node* root) {\n    if (root == NULL)\n        return;\n\n    // If node is a leaf (no children)\n    if (root->left == NULL && root->right == NULL) {\n        printf(\"%d \", root->data);\n        return;\n    }\n\n    // Otherwise, go deeper in left and right subtrees\n    if (root->left)\n        printLeafNodes(root->left);\n    if (root->right)\n        printLeafNodes(root->right);\n}\n\nint main() {\n    // Create a sample tree\n    /*\n            10\n           /  \\\n          5    15\n         / \\     \\\n        2   7     20\n    */\n    struct Node* root = createNode(10);\n    root->left = createNode(5);\n    root->right = createNode(15);\n    root->left->left = createNode(2);\n    root->left->right = createNode(7);\n    root->right->right = createNode(20);\n\n    printf(\"Leaf nodes of the tree are: \");\n    printLeafNodes(root);\n    printf(\"\\n\");\n\n    return 0;\n}\n```\n\n---\n\n### \ud83e\udde0 Output:\n```\nLeaf nodes of the tree are: 2 7 20\n```\n\n---\n\nWould you like me to extend this into a **menu-based program** (e.g., create tree, insert, display, print leaves, etc.) \u2014 like a full learning version with explanations of each step?",
+      "timestamp": 1761708248.14553
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

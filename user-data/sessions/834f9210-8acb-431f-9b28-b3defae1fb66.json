@@ -1,0 +1,19 @@
+{
+  "id": "834f9210-8acb-431f-9b28-b3defae1fb66",
+  "title": "React Index.html Recovery",
+  "created_at": "2025-11-28T16:37:59.915314",
+  "updated_at": "2025-11-28T16:37:59.915314",
+  "messages": [
+    {
+      "role": "user",
+      "content": "code for index.html in react i accidently deleted it'\n",
+      "timestamp": 1750308503.311
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a standard `index.html` used in a React project (typically found in the `public` folder of a React app created with Create React App):\n\n```html\n<!-- public/index.html -->\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"%PUBLIC_URL%/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"Web site created using create-react-app\" />\n    <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo192.png\" />\n    <!--\n      Manifest.json provides metadata used when your web app is installed on a\n      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/\n    -->\n    <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\n    <title>React App</title>\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <!--\n      This HTML file is a template.\n      If you open it directly in the browser, you will see an empty page.\n      You can add webfonts, meta tags, or analytics to this file.\n      The build step will place the bundled scripts into the <body> tag.\n    -->\n  </body>\n</html>\n```\n\n### What to do:\n1. Create a file called `index.html` inside the `public/` folder.\n2. Paste the above code into it.\n3. Make sure your `src/index.js` or `src/index.tsx` file has something like this to render into `#root`:\n\n```js\nimport React from 'react';\nimport ReactDOM from 'react-dom';\nimport App from './App';\n\nReactDOM.render(<App />, document.getElementById('root'));\n```\n\nLet me know if you were using Vite or a custom setup \u2013 the HTML structure will be a little different.",
+      "timestamp": 1750308485.52868
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "8773a5e8-b5be-45ae-a9f2-9815f383bc10",
+  "title": "New chat",
+  "created_at": "2025-11-28T16:37:57.345212",
+  "updated_at": "2025-11-28T16:37:57.345212",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hot to make a compressor like pdf comporessor , image i want to know these how they work these compressot and how can i make it",
+      "timestamp": 1760389574.314
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

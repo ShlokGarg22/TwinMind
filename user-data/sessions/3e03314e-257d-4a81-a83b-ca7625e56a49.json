@@ -1,0 +1,19 @@
+{
+  "id": "3e03314e-257d-4a81-a83b-ca7625e56a49",
+  "title": "Button Hover Effect",
+  "created_at": "2025-11-28T16:38:01.488749",
+  "updated_at": "2025-11-28T16:38:01.488749",
+  "messages": [
+    {
+      "role": "user",
+      "content": "\r\n.btn {\r\n  /* transform: scale(1.5); */\r\n  padding: 20px 20px 20px 20px;\r\n  cursor: pointer;\r\n  border: none;\r\n  color: #fff;\r\n  border: 2px solid white;\r\n  width: 120px;\r\n  height: 100px;\r\n  margin: 20px;\r\n  text-transform: capitalize;\r\n}\nadd hover funcito0n in this\\",
+      "timestamp": 1740770025.043
+    },
+    {
+      "role": "assistant",
+      "content": "You can add a hover effect to your `.btn` class by using the `:hover` pseudo-class. Here's the updated CSS with a hover function:  \n\n```css\n.btn {\n  padding: 20px;\n  cursor: pointer;\n  border: none;\n  color: #fff;\n  border: 2px solid white;\n  width: 120px;\n  height: 100px;\n  margin: 20px;\n  text-transform: capitalize;\n  transition: all 0.3s ease-in-out; /* Smooth transition effect */\n}\n\n.btn:hover {\n  background-color: white;\n  color: black;\n  transform: scale(1.1); /* Slightly enlarges the button on hover */\n}\n```\n\nThis will make the button slightly larger, change the background color to white, and the text color to black when hovered. Let me know if you need further tweaks! \ud83d\ude80",
+      "timestamp": 1740770025.154114
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

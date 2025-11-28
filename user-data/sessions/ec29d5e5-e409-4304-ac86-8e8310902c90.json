@@ -1,0 +1,19 @@
+{
+  "id": "ec29d5e5-e409-4304-ac86-8e8310902c90",
+  "title": "let vs var window",
+  "created_at": "2025-11-28T16:37:59.551509",
+  "updated_at": "2025-11-28T16:37:59.551509",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what do you mean by let and const make windoe obejct me add karte hai?\n",
+      "timestamp": 1751660350.268
+    },
+    {
+      "role": "assistant",
+      "content": "Good question \u2014 and there\u2019s some confusion around this topic, so let\u2019s clear it **without sugar-coating**.\n\n---\n\n## \ud83d\udd0d `let` and `const` **do NOT** add variables to the `window` object.\n\n### \u26a0\ufe0f Only `var` does that.\n\n### Example:\n```js\nvar a = 10;\nlet b = 20;\nconst c = 30;\n\nconsole.log(window.a); // \u2705 10\nconsole.log(window.b); // \u274c undefined\nconsole.log(window.c); // \u274c undefined\n```\n\n---\n\n## \ud83d\udccc Why?\n\n### `var` is **function-scoped** and behaves like a global variable when declared in the global scope. So it becomes a property of the `window` object in browsers.\n\nBut:\n\n### `let` and `const` are **block-scoped** (introduced in ES6), and are part of the **\"Lexical Environment\"** \u2014 not automatically attached to the `window` object.\n\n---\n\n## \ud83d\udca1 Summary Table:\n\n| Keyword | Scope         | Added to `window`? |\n|---------|---------------|--------------------|\n| `var`   | Function scope| \u2705 Yes             |\n| `let`   | Block scope   | \u274c No              |\n| `const` | Block scope   | \u274c No              |\n\n---\n\n## \ud83d\udd10 Why this matters?\n\nIf you write:\n```js\nlet username = \"Boss\";\n```\n\nYou **cannot** access it via:\n```js\nwindow.username; // undefined \u274c\n```\n\nBut if you write:\n```js\nvar username = \"Boss\";\n```\n\nYou **can**:\n```js\nwindow.username; // \"Boss\" \u2705\n```\n\n---\n\nIf someone told you \"`let` or `const` adds to the window object\" \u2014 **they're wrong**.\n\nLet me know if you want a demo or practical use case.",
+      "timestamp": 1751660330.972894
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

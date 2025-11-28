@@ -1,0 +1,19 @@
+{
+  "id": "949cf2fa-d005-457a-be3f-8c28c92ee3f4",
+  "title": "Mario Game Replica",
+  "created_at": "2025-11-28T16:38:01.649310",
+  "updated_at": "2025-11-28T16:38:01.649310",
+  "messages": [
+    {
+      "role": "user",
+      "content": "i want to make the original marion game replica with use of basic shapes instead of charaters and obstacles . make it till world 2 the background should be normal .create the coin and power system just like it was in the oroignal game.\n\nmake a better prompt of it",
+      "timestamp": 1738960881.341321
+    },
+    {
+      "role": "assistant",
+      "content": "Create a replica of the original Mario game up to World 2, using only basic geometric shapes instead of detailed characters and obstacles. The background should remain simple and neutral. Implement the coin and power-up system just like in the original game, ensuring smooth mechanics for collecting coins, gaining power-ups, and interacting with the environment. The physics and level design should closely follow the classic gameplay, maintaining the nostalgic feel while using minimalist visuals.",
+      "timestamp": 1738960884.227472
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

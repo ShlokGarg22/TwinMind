@@ -1,0 +1,19 @@
+{
+  "id": "78c44189-55dc-4d2c-9f0d-a245f119f03d",
+  "title": "GitHub private repo visibility",
+  "created_at": "2025-11-28T16:37:59.047000",
+  "updated_at": "2025-11-28T16:37:59.047000",
+  "messages": [
+    {
+      "role": "user",
+      "content": "i cannot see my private repo in github",
+      "timestamp": 1753708733.686
+    },
+    {
+      "role": "assistant",
+      "content": "If you're unable to see your **private repository** on GitHub, here are the **step-by-step checks** you should perform to identify and fix the issue:\n\n---\n\n### \u2705 1. **Are you logged into the correct account?**\n- Make sure you're logged into the GitHub account that **owns** or has **access** to the private repo.\n- Go to [GitHub Profile](https://github.com/) \u2192 Top-right avatar \u2192 Click \u201cYour repositories\u201d.\n\n---\n\n### \u2705 2. **Filter settings**\n- When viewing your repositories on GitHub, ensure:\n  - You\u2019re on the **\u201cRepositories\u201d tab**.\n  - No filters like \"Public\" or search keywords are hiding the private ones.\n  - Click **\u201cAll\u201d** or **\u201cPrivate\u201d** from the type filter dropdown.\n\n---\n\n### \u2705 3. **Are you a collaborator?**\nIf someone else owns the private repo:\n- You must be **added as a collaborator** or have **organization/team access**.\n- Check your email for an invitation \u2192 Accept it.\n- Visit [https://github.com/notifications](https://github.com/notifications) or [https://github.com/invitations](https://github.com/invitations).\n\n---\n\n### \u2705 4. **Organization permissions**\nIf the repo belongs to an **organization**, ensure:\n- You haven\u2019t been **removed** from the org.\n- You have the right **role/team membership**.\n- You didn\u2019t accidentally **leave** the org (check [Your Organizations](https://github.com/settings/organizations)).\n\n---\n\n### \u2705 5. **Repo still exists?**\n- Maybe the repo was **deleted**, renamed, or made public/private.\n- Ask the owner if it\u2019s still there.\n\n---\n\n### \u2705 6. **Using GitHub Desktop or CLI?**\nIf you're using the command line or GitHub Desktop and can't push or pull:\n- Make sure your **remote URL is correct**:\n  ```bash\n  git remote -v\n  ```\n- Make sure you're **authenticated properly**, especially after GitHub switched to **token-based authentication**:\n  - Use `gh auth login` for CLI.\n  - Use **personal access tokens** (PAT) for HTTPS access.\n\n---\n\n### \u2705 7. **Check GitHub Status (rare)**\nSometimes GitHub may have a temporary visibility issue. Check: [https://www.githubstatus.com/](https://www.githubstatus.com/)\n\n---\n\n### \ud83d\udd27 Still stuck?\nTell me:\n1. Are you the owner or collaborator of the repo?\n2. Are you using the web UI or Git/GitHub CLI?\n3. Do you see it in your profile under **\u201cYour repositories\u201d**?\n4. Do you have the repo link?\n\nGive me these and I\u2019ll tell you the exact fix.",
+      "timestamp": 1753708721.751584
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

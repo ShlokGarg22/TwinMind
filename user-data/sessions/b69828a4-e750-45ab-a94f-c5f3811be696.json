@@ -1,0 +1,19 @@
+{
+  "id": "b69828a4-e750-45ab-a94f-c5f3811be696",
+  "title": "Difference Calculation Algorithm",
+  "created_at": "2025-11-28T16:38:02.333160",
+  "updated_at": "2025-11-28T16:38:02.333160",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find difference in between given two numbers without using third variable.Tell it's algorithm and flowchart ",
+      "timestamp": 1729686311.410461
+    },
+    {
+      "role": "assistant",
+      "content": "### Algorithm to Find the Difference Between Two Numbers Without Using a Third Variable\n\n1. **Start**\n2. **Input** two numbers: `a` and `b`\n3. Subtract the second number from the first: `a = a - b`\n4. **Output** the result, which is stored in `a`\n5. **End**\n\n### Explanation:\n\n- Initially, the value of `a` is the first number and `b` is the second number.\n- When you perform `a = a - b`, `a` now holds the difference between the two numbers.\n- The original value of `b` remains unchanged, but we now have the difference stored in `a`.\n\n### Flowchart:\n\n```\n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n        \u2502   Start     \u2502\n        \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n               \u2502\n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n        \u2502 Input a, b  \u2502\n        \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n               \u2502\n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n        \u2502 a = a - b     \u2502\n        \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n               \u2502\n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n        \u2502 Output a    \u2502\n        \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n               \u2502\n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n        \u2502   End       \u2502\n        \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\nHere, `a` holds the result, which is the difference between `a` and `b`. No third variable is used.",
+      "timestamp": 1729686328.402931
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

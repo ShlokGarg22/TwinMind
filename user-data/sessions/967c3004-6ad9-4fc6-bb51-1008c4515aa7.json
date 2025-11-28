@@ -1,0 +1,19 @@
+{
+  "id": "967c3004-6ad9-4fc6-bb51-1008c4515aa7",
+  "title": "Dynamic Memory Allocation in C",
+  "created_at": "2025-11-28T16:38:00.322361",
+  "updated_at": "2025-11-28T16:38:00.322361",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give its detailed solution \n",
+      "timestamp": 1748156839.322433
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s the detailed solution for the given question on dynamic memory allocation using `malloc` in C:\n\n---\n\n### **Question Recap:**\nWrite a program to dynamically allocate memory for an integer using `malloc`. Check if the allocation was successful. If it fails, print an error message; if successful, prompt the user to enter an integer, store it in the allocated memory, and then display the value.\n\n---\n\n### **Complete Program (with Explanation):**\n\n```c\n#include <stdio.h>\n#include <stdlib.h>  // Required for malloc and free\n\nint main() {\n    int *ptr;  // Pointer to store the address of allocated memory\n\n    // Dynamically allocate memory for one integer\n    ptr = (int *)malloc(sizeof(int));\n\n    // Check if malloc returned NULL (i.e., allocation failed)\n    if (ptr == NULL) {\n        printf(\"Memory allocation failed!\\n\");\n        return 1;  // Exit the program with a non-zero status\n    }\n\n    // If allocation is successful\n    printf(\"Enter an integer: \");\n    scanf(\"%d\", ptr);  // Directly store input into allocated memory\n\n    // Display the value stored\n    printf(\"You entered: %d\\n\", *ptr);\n\n    // Free the allocated memory to prevent memory leak\n    free(ptr);\n\n    return 0;\n}\n```\n\n---\n\n### **Explanation (Line-by-Line):**\n\n1. `#include <stdio.h>` \u2013 Required for input/output functions.\n2. `#include <stdlib.h>` \u2013 Needed for `malloc()` and `free()`.\n3. `int *ptr;` \u2013 Declares a pointer to an integer.\n4. `ptr = (int *)malloc(sizeof(int));` \u2013 Allocates memory of size equal to an integer and stores its address in `ptr`.\n5. `if (ptr == NULL)` \u2013 Checks if memory allocation failed.\n6. `scanf(\"%d\", ptr);` \u2013 Takes user input and stores it directly in the memory pointed to by `ptr`.\n7. `printf(\"You entered: %d\\n\", *ptr);` \u2013 Prints the value stored in dynamically allocated memory.\n8. `free(ptr);` \u2013 Deallocates memory to avoid memory leaks.\n\n---\n\n### **Output Example:**\n```\nEnter an integer: 42\nYou entered: 42\n```\n\nLet me know if you want the same logic extended for arrays or different data types.",
+      "timestamp": 1748156839.415556
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

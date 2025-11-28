@@ -1,0 +1,39 @@
+{
+  "id": "9d78f6ca-2beb-45bd-910e-7cd8b31236cd",
+  "title": "C Language Mini Projects",
+  "created_at": "2025-11-28T16:38:01.194208",
+  "updated_at": "2025-11-28T16:38:01.194208",
+  "messages": [
+    {
+      "role": "user",
+      "content": "List of mini project in c language ",
+      "timestamp": 1743784007.242198
+    },
+    {
+      "role": "assistant",
+      "content": "Here are some mini-project ideas in C, categorized based on difficulty:  \n\n### **Beginner Level**  \n1. **Simple Calculator** \u2013 Perform basic arithmetic operations.  \n2. **Student Record System** \u2013 Store, update, delete, and display student records.  \n3. **Library Management System** \u2013 Basic book issue/return system.  \n4. **Quiz Game** \u2013 A simple quiz with multiple-choice questions.  \n5. **Tic-Tac-Toe Game** \u2013 Playable on the console.  \n6. **Number Guessing Game** \u2013 Random number generation with user input.  \n7. **Bank Management System** \u2013 Manage deposits and withdrawals.  \n8. **To-Do List** \u2013 Add, delete, and mark tasks as completed.  \n\n### **Intermediate Level**  \n9. **Hospital Management System** \u2013 Manage patients, doctors, and appointments.  \n10. **Railway Reservation System** \u2013 Booking and cancellation system.  \n11. **File Encryption & Decryption** \u2013 Encode and decode text files.  \n12. **Snake Game** \u2013 Classic snake movement using keyboard input.  \n13. **Hangman Game** \u2013 Word guessing game with limited attempts.  \n14. **Inventory Management System** \u2013 Track stock levels and sales.  \n15. **Maze Solver** \u2013 Implement BFS or DFS to find the shortest path in a maze.  \n\n### **Advanced Level**  \n16. **Compiler for a Simple Language** \u2013 Tokenization and parsing of a custom language.  \n17. **Chat Application** \u2013 Client-server communication using sockets.  \n18. **File Compression Tool** \u2013 Implement Huffman coding.  \n19. **Music Player** \u2013 Play and organize audio files using C.  \n20. **Shell (Command Interpreter)** \u2013 Create a mini Linux shell.  \n21. **Mini Database System** \u2013 A simple database with CRUD operations.  \n22. **Sudoku Solver** \u2013 Solve Sudoku puzzles using backtracking.  \n23. **Online Banking System** \u2013 Secure login, transactions, and account management.  \n\nDo you want help with any specific project?",
+      "timestamp": 1743784007.303574
+    },
+    {
+      "role": "user",
+      "content": "Get me the code for File Encryption and Description.",
+      "timestamp": 1743784140.393084
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a simple C program for **File Encryption and Decryption** using a basic XOR cipher. It reads a file, encrypts or decrypts it, and writes the output to another file.  \n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\n#define KEY 0xAA // Simple XOR key\n\nvoid encryptDecrypt(const char *inputFile, const char *outputFile) {\n    FILE *inFile = fopen(inputFile, \"rb\");\n    FILE *outFile = fopen(outputFile, \"wb\");\n\n    if (inFile == NULL || outFile == NULL) {\n        printf(\"Error opening files.\\n\");\n        exit(1);\n    }\n\n    int ch;\n    while ((ch = fgetc(inFile)) != EOF) {\n        fputc(ch ^ KEY, outFile); // XOR operation for encryption/decryption\n    }\n\n    fclose(inFile);\n    fclose(outFile);\n}\n\nint main() {\n    char inputFile[100], outputFile[100];\n    int choice;\n\n    printf(\"File Encryption & Decryption\\n\");\n    printf(\"1. Encrypt a file\\n\");\n    printf(\"2. Decrypt a file\\n\");\n    printf(\"Choose an option (1 or 2): \");\n    scanf(\"%d\", &choice);\n\n    printf(\"Enter input file name: \");\n    scanf(\"%s\", inputFile);\n    printf(\"Enter output file name: \");\n    scanf(\"%s\", outputFile);\n\n    encryptDecrypt(inputFile, outputFile);\n\n    if (choice == 1)\n        printf(\"File successfully encrypted as %s\\n\", outputFile);\n    else\n        printf(\"File successfully decrypted as %s\\n\", outputFile);\n\n    return 0;\n}\n```\n\n### **How It Works:**\n- Uses **XOR encryption** (`ch ^ KEY`), where `KEY = 0xAA`.\n- Reads the **input file** in binary mode.\n- Encrypts or decrypts each character and writes it to the **output file**.\n- To **decrypt**, run the same program with an encrypted file as input (since XORing twice returns the original data).  \n\n#### **Usage Example:**\n1. To encrypt:  \n   ```sh\n   ./a.out\n   1\n   input.txt\n   encrypted.txt\n   ```\n2. To decrypt:  \n   ```sh\n   ./a.out\n   2\n   encrypted.txt\n   decrypted.txt\n   ```\n\nLet me know if you need improvements or a different approach!",
+      "timestamp": 1743784140.684524
+    },
+    {
+      "role": "user",
+      "content": "Get me the list of all the intermediate level of C mini projects",
+      "timestamp": 1743784188.165922
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a detailed list of **Intermediate-Level Mini Projects in C** with brief descriptions:  \n\n### **1. Hospital Management System**  \n   - Stores patient details, doctor appointments, and billing records.  \n   - Uses file handling for data storage.  \n\n### **2. Railway Reservation System**  \n   - Allows users to book, cancel, and check train ticket availability.  \n   - Uses structures and file handling.  \n\n### **3. File Encryption & Decryption**  \n   - Encrypts and decrypts text files using simple algorithms (XOR, Caesar cipher, etc.).  \n   - Uses file handling for input/output.  \n\n### **4. Snake Game**  \n   - Classic snake game where the snake grows by eating food.  \n   - Uses graphics libraries (e.g., SDL, ncurses).  \n\n### **5. Hangman Game**  \n   - Word-guessing game where players guess letters within a limited number of attempts.  \n   - Uses arrays and file handling for storing words.  \n\n### **6. Inventory Management System**  \n   - Keeps track of stock, product details, and sales.  \n   - Uses file handling and structures.  \n\n### **7. Maze Solver**  \n   - Implements BFS/DFS algorithms to find a path through a maze.  \n   - Uses recursion and graph traversal techniques.  \n\n### **8. Bank Management System**  \n   - Allows deposits, withdrawals, and balance checks.  \n   - Uses file handling to store account details.  \n\n### **9. Online Quiz System**  \n   - Displays multiple-choice questions and calculates scores.  \n   - Uses file handling for storing questions and answers.  \n\n### **10. Address Book System**  \n   - Allows users to store, search, update, and delete contact details.  \n   - Uses file handling for persistent storage.  \n\n### **11. Student Grade Management System**  \n   - Stores and calculates student grades.  \n   - Uses structures and file handling.  \n\n### **12. ATM Simulation**  \n   - Simulates an ATM system with PIN authentication and transactions.  \n   - Uses functions and file handling for data storage.  \n\n### **13. Expense Tracker**  \n   - Tracks daily expenses and generates reports.  \n   - Uses file handling to store transactions.  \n\n### **14. Tic-Tac-Toe Game (with AI)**  \n   - Classic tic-tac-toe game with an AI opponent.  \n   - Uses Minimax algorithm for AI decision-making.  \n\n### **15. Car Rental System**  \n   - Manages vehicle rentals, availability, and payments.  \n   - Uses file handling and structures.  \n\nDo you need the code for any of these projects?",
+      "timestamp": 1743784188.263369
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

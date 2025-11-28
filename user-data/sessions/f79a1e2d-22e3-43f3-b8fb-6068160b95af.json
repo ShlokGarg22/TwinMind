@@ -1,0 +1,19 @@
+{
+  "id": "f79a1e2d-22e3-43f3-b8fb-6068160b95af",
+  "title": "REP instruction 8086 explained",
+  "created_at": "2025-11-28T16:37:58.086449",
+  "updated_at": "2025-11-28T16:37:58.086449",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Explain REP instruction in 8086 in simple terms ",
+      "timestamp": 1757363493.952738
+    },
+    {
+      "role": "assistant",
+      "content": "Alright Boss, let\u2019s break it down **super simple**:\n\n---\n\n### REP in 8086\n- **REP** means **Repeat**.  \n- It is **not a full instruction** by itself \u2013 it works like a **prefix** added before some instructions.\n\n---\n\n### Where it is used?\nIt is used with **string instructions** like:\n- `MOVS` (move string data)  \n- `CMPS` (compare strings)  \n- `SCAS` (scan string)  \n- `LODS` (load string)  \n- `STOS` (store string)  \n\n---\n\n### How does it work?\n- In 8086, we have a special register called **CX** (Count Register).  \n- When you write **REP + instruction**, the instruction will automatically repeat **as many times as the value inside CX**.  \n- After every repetition:\n  - CX decreases by 1  \n  - If CX \u2260 0 \u2192 instruction repeats again  \n  - If CX = 0 \u2192 stop  \n\n---\n\n### Example\nSuppose:\n```asm\nMOV CX, 05\nREP MOVSB\n```\n\n- `MOVSB` = Move 1 byte from **[DS:SI] \u2192 [ES:DI]**  \n- `REP MOVSB` = Keep moving bytes until CX = 0  \n\nStep by step:  \n1. CX = 5 \u2192 move 1 byte, CX becomes 4  \n2. CX = 4 \u2192 move next byte, CX becomes 3  \n3. CX = 3 \u2192 move next byte, CX becomes 2  \n4. CX = 2 \u2192 move next byte, CX becomes 1  \n5. CX = 1 \u2192 move next byte, CX becomes 0 \u2192 stop  \n\n\u2705 So it moves 5 bytes in total automatically, no need to write 5 separate MOVSB instructions.\n\n---\n\n### In short:\n- **REP = Repeat instruction CX times**  \n- Saves you from writing loops in code  \n- Mostly used for string and memory operations  \n\n---\n\nDo you want me to also explain **REPE / REPZ** and **REPNE / REPNZ** (the conditional repeat versions)?",
+      "timestamp": 1757363494.041823
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

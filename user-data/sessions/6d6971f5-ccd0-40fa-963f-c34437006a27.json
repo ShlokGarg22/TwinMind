@@ -1,0 +1,19 @@
+{
+  "id": "6d6971f5-ccd0-40fa-963f-c34437006a27",
+  "title": "Gemini CLI Overview",
+  "created_at": "2025-11-28T16:37:59.393730",
+  "updated_at": "2025-11-28T16:37:59.393730",
+  "messages": [
+    {
+      "role": "user",
+      "content": "\ud83d\ude80 Just tried out Gemini CLI & Claude CLI \u2014 LLMs right from the terminal.\nNo browser. Just type & get answers, code, summaries, whatever. \ud83e\udde0\u26a1\n\n\ud83d\udee0\ufe0f Perfect for:\n\nDevs who live in terminal\n\nQuick code gen & fixes\n\nSummarizing files & docs\n\nBrainstorming on the fly\n\n\ud83d\udd17 Setup & usage guide: [your GitHub link here]\n\n\u2014 by a curious learner mind \ud83e\udde9\n#AI #CLI #LLM #Gemini #Claude #DevTools #opensource",
+      "timestamp": 1752088959.312
+    },
+    {
+      "role": "assistant",
+      "content": "???? Just tested out Gemini CLI & Claude CLI \u2014 LLMs directly in the terminal.  \nNo browser. Just type and get answers, code, summaries, anything. ????\u26a1\n\n????\ufe0f Ideal for\n\nDevelopers living in terminal settings\n\nQuick code gen & fixes\n\nSummarizing files & docs\n\nBrainstorming in the moment\n\n???? Setup and usage guide: [your GitHub link here]\n\n\u2014 by a curious learning mind ???? #AI #CLI #LLM #Gemini #Claude #",
+      "timestamp": 1752088990.496124
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

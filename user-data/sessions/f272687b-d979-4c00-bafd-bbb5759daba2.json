@@ -1,0 +1,39 @@
+{
+  "id": "f272687b-d979-4c00-bafd-bbb5759daba2",
+  "title": "Growth stage explanation",
+  "created_at": "2025-11-28T16:37:57.229133",
+  "updated_at": "2025-11-28T16:37:57.229133",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Question 1 of 4 (required)\r\nIn the Lead Forward webinar, you learned about the different stages of growth we experience when learning new skills. Imagine you have been working as a data analyst for a few years and consider yourself an expert in using excel. Recently, you attended a workshop on advanced data analytics where you heard about many new techniques to analyze data that you are not familiar with. You feel motivated to invest time in learning the new techniques. Which stage of growth best describes your state that situation?\r\n\r\n\r\nA. Unconsciously Unskilled\r\n\r\n\r\nB. Consciously Unskilled\r\n\r\n\r\nC. Consciously Skilled\r\n\r\n\r\nD. Unconsciously Skilled",
+      "timestamp": 1761315113.399
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\n\u2705 **B. Consciously Unskilled**  \n\n**Explanation:**  \nYou\u2019re already aware that new, advanced data analytics techniques exist \u2014 and that you *don\u2019t yet know them*. That self-awareness of your skill gap puts you in the **\u201cConsciously Unskilled\u201d** stage.  \n\nHere\u2019s how the stages go, for context:  \n1. **Unconsciously Unskilled** \u2013 You don\u2019t know what you don\u2019t know.  \n2. **Consciously Unskilled** \u2013 You now realize your lack of skill and want to improve.  \n3. **Consciously Skilled** \u2013 You can perform the skill but still need to focus and think about it.  \n4. **Unconsciously Skilled** \u2013 You\u2019ve mastered the skill so well it\u2019s automatic.  \n\nIn your case, realizing there\u2019s more to learn in data analytics (and feeling motivated to do so) is the hallmark of being **consciously unskilled**.",
+      "timestamp": 1761315118.382012
+    },
+    {
+      "role": "user",
+      "content": "Please apply your understanding of the APR framework covered in the Lead Forward Webinar to the following scenario. Your colleague is about to enter a meeting with several colleagues and they have a difficult message to share with others. Your colleague is aware that typically when they have to deliver difficult news, they get very nervous and sweat a lot. Based on the APR technique, which of the following would be the best advice for them?\r\n\r\n\r\nA. Make an intention to recognize the signs of the trigger when they happen and prepare a few pausing techniques and reframing thoughts before entering the meeting\r\n\r\n\r\nB. Start the meeting by quickly mentioning the message and getting it over with as quickly as possible\r\n\r\n\r\nC. Disengage during the meeting and focus on other tasks to make the time pass quickly\r\n\r\n\r\nD. Avoid the meeting altogether to prevent the situation and send the news in an email instead",
+      "timestamp": 1761315131.705
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\n\u2705 **A. Make an intention to recognize the signs of the trigger when they happen and prepare a few pausing techniques and reframing thoughts before entering the meeting.**\n\n**Explanation:**  \nThe **APR framework** stands for **Awareness, Pause, and Reframe** \u2014 it\u2019s a practical emotional regulation tool used to manage challenging moments.  \n\nHere\u2019s how it applies:  \n- **Awareness:** Recognize your emotional and physical triggers \u2014 in this case, noticing nervousness and sweating when delivering bad news.  \n- **Pause:** Use a brief pause (deep breathing, grounding, or a mindful moment) to interrupt the stress reaction before it escalates.  \n- **Reframe:** Shift your mindset \u2014 instead of thinking \u201cI hate this situation,\u201d think \u201cThis is a chance to communicate clearly and calmly.\u201d  \n\nOption **A** directly reflects this process \u2014 it encourages awareness of the trigger, preparation of pausing techniques, and reframing thoughts ahead of time.  \n\nThe other options \u2014 rushing, disengaging, or avoiding \u2014 all bypass self-regulation and growth, which goes against the APR principle.",
+      "timestamp": 1761315137.437846
+    },
+    {
+      "role": "user",
+      "content": "Question 3 of 4 (required)\r\nPlease apply your understanding of the APR framework covered in the Lead Forward Webinar to the following scenario. A team member receives unexpected negative feedback during a meeting that makes them feel defensive on the spot. They want to apply the 'R' part of the APR framework - Reframe. Which of the below questions is NOT a good example of what they could ask themselves to shift towards a growth mindset after receiving the feedback?\r\n\r\n\r\nA. \"What can I learn from this situation?\"\r\n\r\n\r\nB. \"What could be true about this feedback that could be an opportunity to grow?\"\r\n\r\n\r\nC. \"What could be the underlying reason why this person is giving me such feedback?\"\r\n\r\n\r\nD. \"Why is this person always targeting me with negative feedback and not anybody else?\"",
+      "timestamp": 1761315143.475
+    },
+    {
+      "role": "assistant",
+      "content": "The correct answer is:  \n\n\u2705 **D. \"Why is this person always targeting me with negative feedback and not anybody else?\"**  \n\n**Explanation:**  \nIn the **APR framework (Awareness \u2013 Pause \u2013 Reframe)**, the **\u201cReframe\u201d** step is all about **shifting from a defensive or fixed mindset to a growth-oriented, curious one.**  \n\nLet\u2019s break it down:  \n- **A**, **B**, and **C** all encourage reflection, curiosity, and learning \u2014 they help the person see feedback as useful information rather than a personal attack.  \n- **D**, however, focuses on blame and reinforces a **victim or defensive mindset**, which blocks growth. It\u2019s emotional reasoning, not constructive reframing.  \n\nSo, **D** is *not* a good example of reframing \u2014 it keeps you stuck in the negative loop instead of helping you move toward self-improvement or understanding.",
+      "timestamp": 1761315149.328917
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

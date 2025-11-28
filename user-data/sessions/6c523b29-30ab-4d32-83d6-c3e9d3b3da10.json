@@ -1,0 +1,19 @@
+{
+  "id": "6c523b29-30ab-4d32-83d6-c3e9d3b3da10",
+  "title": "Fixing inorder traversal",
+  "created_at": "2025-11-28T16:37:56.781189",
+  "updated_at": "2025-11-28T16:37:56.781189",
+  "messages": [
+    {
+      "role": "user",
+      "content": "#include<stdio.h>\r\n#include<stdlib.h>\r\n\r\nstruct Node{\r\n    int key;\r\n    struct Node* left;\r\n    struct Node* right;\r\n};\r\n\r\nstruct Node* create(int key){\r\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\r\n    newNode->key = key;\r\n    newNode->left = newNode->right = NULL;\r\n\r\n    return newNode;\r\n}\r\n\r\nstruct Node* insert(struct Node* root , int key){\r\n    if(root == NULL){\r\n        return create(key);\r\n    }\r\n\r\n    if(key < root->key){\r\n        root->left = insert(root->left,key);\r\n    }else{\r\n        root->right = insert(root->right,key);\r\n    }\r\n\r\n    return root;\r\n\r\n}\r\n\r\nvoid inorder(struct Node* root){\r\n    while(root != NULL){\r\n        inorder(root->left);\r\n        printf(\"%d\",root->key);\r\n        inorder(root->right);\r\n    }\r\n}\r\n\r\n\r\n\r\nint main(){\r\n\r\n    struct Node* root = NULL;\r\n\r\n    root = insert(root, 50);\r\n    root = insert(root, 30);\r\n    root = insert(root, 20);\r\n    root = insert(root, 40);\r\n    root = insert(root, 70);\r\n    root = insert(root, 60);\r\n    root = insert(root, 80);\r\n\r\n    inorder(root);\r\n\r\n\r\n    return 0;\r\n}",
+      "timestamp": 1762250640.738
+    },
+    {
+      "role": "assistant",
+      "content": "You\u2019re *super* close \u2014 just one small logical error is messing up the output.  \n\nHere\u2019s the issue \ud83d\udc47  \nIn your `inorder()` function, you\u2019re using a **`while (root != NULL)`** loop.  \nThat\u2019s wrong for recursive traversal \u2014 it causes **infinite recursion** because `root` doesn\u2019t change inside the loop.  \n\nYou should use a **base case** with an `if` check instead.\n\nHere\u2019s the **fixed and clean version** of your code:\n\n```c\n#include<stdio.h>\n#include<stdlib.h>\n\nstruct Node {\n    int key;\n    struct Node* left;\n    struct Node* right;\n};\n\nstruct Node* create(int key) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    newNode->key = key;\n    newNode->left = newNode->right = NULL;\n    return newNode;\n}\n\nstruct Node* insert(struct Node* root, int key) {\n    if (root == NULL) {\n        return create(key);\n    }\n\n    if (key < root->key)\n        root->left = insert(root->left, key);\n    else\n        root->right = insert(root->right, key);\n\n    return root;\n}\n\nvoid inorder(struct Node* root) {\n    if (root == NULL)\n        return;\n\n    inorder(root->left);\n    printf(\"%d \", root->key);\n    inorder(root->right);\n}\n\nint main() {\n    struct Node* root = NULL;\n\n    root = insert(root, 50);\n    root = insert(root, 30);\n    root = insert(root, 20);\n    root = insert(root, 40);\n    root = insert(root, 70);\n    root = insert(root, 60);\n    root = insert(root, 80);\n\n    printf(\"Inorder Traversal: \");\n    inorder(root);\n    printf(\"\\n\");\n\n    return 0;\n}\n```\n\n\u2705 **Output:**\n```\nInorder Traversal: 20 30 40 50 60 70 80\n```\n\nThat\u2019s your BST working perfectly \u2014 inserts in order and prints in sorted sequence.  \nWant me to add `search()` and `delete()` functions next?",
+      "timestamp": 1762250654.755424
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

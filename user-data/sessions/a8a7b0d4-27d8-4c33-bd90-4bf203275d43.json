@@ -1,0 +1,19 @@
+{
+  "id": "a8a7b0d4-27d8-4c33-bd90-4bf203275d43",
+  "title": "== vs === in JS",
+  "created_at": "2025-11-28T16:38:01.621864",
+  "updated_at": "2025-11-28T16:38:01.621864",
+  "messages": [
+    {
+      "role": "user",
+      "content": "use of == and === in js ?",
+      "timestamp": 1739378451.992937
+    },
+    {
+      "role": "assistant",
+      "content": "In JavaScript, `==` and `===` are used for comparisons, but they behave differently:\n\n### **1. `==` (Loose Equality)**\n- Compares values **after type conversion**.\n- If the operands are of different types, JavaScript tries to convert one to match the other before comparison.\n\n#### **Examples:**\n```js\nconsole.log(5 == \"5\");    // true (string \"5\" is converted to number 5)\nconsole.log(0 == false);  // true (false is converted to 0)\nconsole.log(null == undefined); // true (special case)\nconsole.log([] == \"\");    // true (empty array is converted to an empty string)\n```\n\n### **2. `===` (Strict Equality)**\n- Compares **both value and type** without any type conversion.\n- If types are different, it immediately returns `false`.\n\n#### **Examples:**\n```js\nconsole.log(5 === \"5\");   // false (different types: number vs string)\nconsole.log(0 === false); // false (different types: number vs boolean)\nconsole.log(null === undefined); // false (different types)\nconsole.log([] === \"\");   // false (array and string are different types)\n```\n\n### **Which one should you use?**\n- **Use `===`** when you want a strict, predictable comparison.\n- **Use `==`** only if you understand JavaScript's type coercion and need it intentionally.\n\nFor better code quality and fewer bugs, **`===` is recommended** in most cases. \ud83d\ude80",
+      "timestamp": 1739378476.23243
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

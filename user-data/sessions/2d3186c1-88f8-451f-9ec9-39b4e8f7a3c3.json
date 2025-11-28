@@ -1,0 +1,19 @@
+{
+  "id": "2d3186c1-88f8-451f-9ec9-39b4e8f7a3c3",
+  "title": "Selection Sort Fix",
+  "created_at": "2025-11-28T16:37:59.504531",
+  "updated_at": "2025-11-28T16:37:59.504531",
+  "messages": [
+    {
+      "role": "user",
+      "content": "/******************************************************************************\n\nWelcome to GDB Online.\n  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,\n  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS\n  Code, Compile, Run and Debug online from anywhere in world.\n\n*******************************************************************************/\n#include <stdio.h>\nusing namespace std;\nvoid selectionSort(int arr[], int n) {\n\tfor(int i = 0; i < n-1; i++) {\n\t\tint smallestIndex = i;\n\t\tfor(int j = i+ 1; j<n; j++) {\n\t\t\tif(arr[j] < arr[smallestIndex]) {\n\t\t\t\tsmallestIndex = j;\n\t\t\t}\n\t\t}\n\t\tswap(arr[i],arr[smallestIndex]);\n\t}\n}\nint main()\n{\n\tint n = 5;\n\tint arr[] = {4,1,5,2,3};\n\n\tselectionSort(arr, n);\n\n\n\treturn 0;\n}\n",
+      "timestamp": 1751781889.549
+    },
+    {
+      "role": "assistant",
+      "content": "Your code has a **few issues**:\n\n### \u2705 Problems:\n1. **Incorrect header inclusion:**\n   You are using C++ (`swap`, `using namespace std`) but your file is `.c` and `#include <stdio.h>` is for C.\n2. **Missing output:**\n   There's no code to **print the sorted array**.\n3. **`swap` is undefined** because you're using C++-specific syntax, but haven't included `<algorithm>`, and you're trying to run it in a C environment.\n\n---\n\n### \u2705 Fixed & Complete Version (C++):\nHere\u2019s the correct, working version:\n\n```cpp\n#include <iostream>     // Use this for C++ I/O\n#include <algorithm>    // For swap function\nusing namespace std;\n\nvoid selectionSort(int arr[], int n) {\n    for(int i = 0; i < n - 1; i++) {\n        int smallestIndex = i;\n        for(int j = i + 1; j < n; j++) {\n            if(arr[j] < arr[smallestIndex]) {\n                smallestIndex = j;\n            }\n        }\n        swap(arr[i], arr[smallestIndex]); // C++ std::swap\n    }\n}\n\nint main() {\n    int arr[] = {4, 1, 5, 2, 3};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    selectionSort(arr, n);\n\n    // Print sorted array\n    for(int i = 0; i < n; i++) {\n        cout << arr[i] << \" \";\n    }\n    cout << endl;\n\n    return 0;\n}\n```\n\n---\n\n### \ud83d\udd04 If you want to run this in **pure C**:\nReplace `swap` and `iostream` with C alternatives:\n\n```c\n#include <stdio.h>\n\nvoid selectionSort(int arr[], int n) {\n    for(int i = 0; i < n - 1; i++) {\n        int smallestIndex = i;\n        for(int j = i + 1; j < n; j++) {\n            if(arr[j] < arr[smallestIndex]) {\n                smallestIndex = j;\n            }\n        }\n        // Manual swap\n        int temp = arr[i];\n        arr[i] = arr[smallestIndex];\n        arr[smallestIndex] = temp;\n    }\n}\n\nint main() {\n    int arr[] = {4, 1, 5, 2, 3};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    selectionSort(arr, n);\n\n    // Print sorted array\n    for(int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n    return 0;\n}\n```\n\nLet me know if you want this algorithm explained step by step.",
+      "timestamp": 1751781889.020537
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

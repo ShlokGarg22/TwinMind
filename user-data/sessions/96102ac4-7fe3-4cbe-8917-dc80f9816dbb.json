@@ -1,0 +1,19 @@
+{
+  "id": "96102ac4-7fe3-4cbe-8917-dc80f9816dbb",
+  "title": "SQL Table Correction",
+  "created_at": "2025-11-28T16:37:59.773807",
+  "updated_at": "2025-11-28T16:37:59.773807",
+  "messages": [
+    {
+      "role": "user",
+      "content": "juST CORRECT ONLY\nCREATE TABLE users{\n  id SERIAL primary_key,\n  username varchar(50) unique not null,\n  email varchar(255) unique not null,\n  password varchar(265) not null,\n  creates_at timestamp WITH TIME ZONE default current_timestamp\n};\n",
+      "timestamp": 1750831865.377
+    },
+    {
+      "role": "assistant",
+      "content": "Here is the corrected SQL `CREATE TABLE` statement:\n\n```sql\nCREATE TABLE users (\n  id SERIAL PRIMARY KEY,\n  username VARCHAR(50) UNIQUE NOT NULL,\n  email VARCHAR(255) UNIQUE NOT NULL,\n  password VARCHAR(265) NOT NULL,\n  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP\n);\n```\n\n### Fixes made:\n- Changed `{}` to `()` \u2014 SQL uses parentheses for column definitions.\n- Fixed `primary_key` \u2192 `PRIMARY KEY`.\n- Fixed typo `creates_at` \u2192 `created_at`.",
+      "timestamp": 1750831864.823389
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

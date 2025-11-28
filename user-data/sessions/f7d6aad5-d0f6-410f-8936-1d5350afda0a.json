@@ -1,0 +1,19 @@
+{
+  "id": "f7d6aad5-d0f6-410f-8936-1d5350afda0a",
+  "title": "What is Web Scraping",
+  "created_at": "2025-11-28T16:38:01.761372",
+  "updated_at": "2025-11-28T16:38:01.761372",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what is web scraping explain like you are teaching a 10 year old",
+      "timestamp": 1738348520.976915
+    },
+    {
+      "role": "assistant",
+      "content": "Alright! Imagine you have a big book full of interesting facts, but instead of reading it yourself, you have a little robot that goes through the book, finds the information you want, and writes it down for you.  \n\nWeb scraping is like that, but on the internet! Websites have a lot of information, like news, prices of things, or sports scores. A computer program (like our little robot) visits these websites, looks for the right information, and collects it for us.  \n\nFor example, if you wanted to know the price of your favorite toy from 10 different online stores, instead of checking each website one by one, a web scraper could do it quickly and show you all the prices in one place.  \n\nIt's super useful, but we have to be careful because not all websites allow scraping. It's always good to check the rules! \ud83d\ude0a",
+      "timestamp": 1738348527.608853
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

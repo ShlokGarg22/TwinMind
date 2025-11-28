@@ -1,0 +1,19 @@
+{
+  "id": "20bc77ff-2f72-45cb-a26e-57bfec890cd7",
+  "title": "Active Passive Rules",
+  "created_at": "2025-11-28T16:38:00.403663",
+  "updated_at": "2025-11-28T16:38:00.403663",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Basic rules of active passive to solve any question",
+      "timestamp": 1747971846.847482
+    },
+    {
+      "role": "assistant",
+      "content": "Here are the **basic rules** to convert sentences between **Active Voice** and **Passive Voice**, which will help you solve any active/passive voice questions quickly:\n\n---\n\n### **1. Identify the basic structure:**\n\n- **Active Voice**: Subject + Verb + Object  \n  _(e.g., She writes a letter.)_\n\n- **Passive Voice**: Object + Form of \"be\" + Past Participle + by + Subject  \n  _(e.g., A letter is written by her.)_\n\n---\n\n### **2. Use the correct form of \u201cto be\u201d + past participle:**\n\nMatch the **tense** of the verb in active voice:\n\n| Tense | Active Voice Example | Passive Voice Example |\n|-------|-----------------------|------------------------|\n| Present Simple | He eats an apple. | An apple is eaten by him. |\n| Present Continuous | She is reading a book. | A book is being read by her. |\n| Present Perfect | They have completed the task. | The task has been completed by them. |\n| Past Simple | He wrote a letter. | A letter was written by him. |\n| Past Continuous | She was cooking food. | Food was being cooked by her. |\n| Past Perfect | They had watched the movie. | The movie had been watched by them. |\n| Future Simple | He will clean the room. | The room will be cleaned by him. |\n| Future Perfect | She will have finished work. | Work will have been finished by her. |\n| Modal Verbs | You can solve this. | This can be solved by you. |\n\n---\n\n### **3. Change the Pronouns:**\n\n| Active Subject | Passive \"by\" Form |\n|----------------|-------------------|\n| I | by me |\n| You | by you |\n| He | by him |\n| She | by her |\n| They | by them |\n| We | by us |\n| It | by it |\n\n---\n\n### **4. Omit \"by + subject\" when it's obvious or unimportant:**\n\n- Active: People speak English worldwide.  \n- Passive: English is spoken worldwide.  \n  *(\u201cby people\u201d is unnecessary)*\n\n---\n\n### **5. Only transitive verbs can be made passive:**\n\n- Transitive = needs an object. (e.g., **kick**, **make**, **send**)  \n- Intransitive = no object = cannot be passive (e.g., **go**, **sleep**, **die**)\n\n---\n\nWant practice exercises or a cheat sheet? Let me know.",
+      "timestamp": 1747971846.92782
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}

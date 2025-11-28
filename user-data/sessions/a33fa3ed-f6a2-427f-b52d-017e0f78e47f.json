@@ -1,0 +1,19 @@
+{
+  "id": "a33fa3ed-f6a2-427f-b52d-017e0f78e47f",
+  "title": "He-Ne Laser Theory Summary",
+  "created_at": "2025-11-28T16:38:01.166262",
+  "updated_at": "2025-11-28T16:38:01.166262",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Shorten the theory",
+      "timestamp": 1744109616.278995
+    },
+    {
+      "role": "assistant",
+      "content": "Here\u2019s a shortened version of the theory from your notes:\n\n---\n\n**He-Ne Laser (4-level gas laser):**  \n- He is the base gas, excited by electric discharge to states F\u2082 and F\u2083.\n- Excited helium atoms transfer energy to neon atoms since He (F\u2082, F\u2083) levels match Ne (E\u2086, E\u2084).\n- Neon atoms absorb this energy and get excited.\n- Helium returns to ground state, transferring energy to Ne (main pumping mechanism).\n- E\u2086 and E\u2084 are metastable states of neon, allowing accumulation of atoms, while E\u2085 and E\u2083 are less populated.\n- Population inversion is achieved between E\u2086 \u2192 E\u2085 and E\u2084 \u2192 E\u2083.\n- Laser transitions occur at:  \n  **E\u2086 \u2192 E\u2085**, **E\u2086 \u2192 E\u2083**, **E\u2084 \u2192 E\u2083**.\n\n---\n\nIf you want, I can make it even more compact, like for revision notes.",
+      "timestamp": 1744109616.319496
+    }
+  ],
+  "model": "gpt-3.5-turbo"
+}
