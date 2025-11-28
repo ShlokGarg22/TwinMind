@@ -11,7 +11,8 @@ import {
   DescriptionOutlined,
   SchoolOutlined,
   EmailOutlined,
-  AnalyticsOutlined
+  AnalyticsOutlined,
+  StopRounded
 } from '@mui/icons-material'
 import { AnimatePresence, motion } from 'framer-motion'
 import './App.css'
@@ -43,6 +44,7 @@ function App() {
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const [isStreaming, setIsStreaming] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [chatHistory, setChatHistory] = useState([])
   const [sessions, setSessions] = useState([])
@@ -53,6 +55,7 @@ function App() {
   const [templateAnchorEl, setTemplateAnchorEl] = useState(null)
   const [templates, setTemplates] = useState([])
   const [currentSessionId, setCurrentSessionId] = useState(null)
+  const [abortController, setAbortController] = useState(null)
   const messagesEndRef = useRef(null)
 
   const menuOpen = Boolean(anchorEl)
@@ -185,44 +188,140 @@ function App() {
     setMessages((prev) => [...prev, userMessage])
     setInput('')
     setLoading(true)
+    setIsStreaming(true)
+
+    // Create abort controller for stop functionality
+    const controller = new AbortController()
+    setAbortController(controller)
+
+    // Add placeholder for assistant message
+    const assistantPlaceholder = {
+      role: 'assistant',
+      content: '',
+      model: selectedModel,
+      timestamp: new Date().toISOString(),
+      isStreaming: true,
+    }
+    setMessages((prev) => [...prev, assistantPlaceholder])
 
     try {
-      const res = await fetch(`${API_URL}/chat`, {
+      const response = await fetch(`${API_URL}/chat/stream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: userMessage.content,
           model: selectedModel,
           modelType,
+          useMemory: true,
         }),
+        signal: controller.signal,
       })
 
-      const data = await res.json()
+      if (!response.ok) {
+        throw new Error('Failed to connect to streaming endpoint')
+      }
 
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: 'assistant',
-          content: data.response,
-          model: data.model,
-          timestamp: new Date().toISOString(),
-        },
-      ])
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let fullContent = ''
+
+      while (true) {
+        const { value, done } = await reader.read()
+        if (done) break
+
+        const chunk = decoder.decode(value)
+        const lines = chunk.split('\n')
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const data = JSON.parse(line.slice(6))
+              
+              if (data.error) {
+                throw new Error(data.error)
+              }
+
+              if (data.chunk) {
+                fullContent += data.chunk
+                // Update the last message with accumulated content
+                setMessages((prev) => {
+                  const newMessages = [...prev]
+                  const lastIndex = newMessages.length - 1
+                  if (lastIndex >= 0 && newMessages[lastIndex].role === 'assistant') {
+                    newMessages[lastIndex] = {
+                      ...newMessages[lastIndex],
+                      content: fullContent,
+                    }
+                  }
+                  return newMessages
+                })
+              }
+
+              if (data.done) {
+                // Mark streaming as complete
+                setMessages((prev) => {
+                  const newMessages = [...prev]
+                  const lastIndex = newMessages.length - 1
+                  if (lastIndex >= 0 && newMessages[lastIndex].role === 'assistant') {
+                    newMessages[lastIndex] = {
+                      ...newMessages[lastIndex],
+                      isStreaming: false,
+                    }
+                  }
+                  return newMessages
+                })
+              }
+            } catch (parseError) {
+              // Ignore parse errors for incomplete chunks
+              console.debug('Parse error (might be incomplete chunk):', parseError)
+            }
+          }
+        }
+      }
       
       // Auto-save session after each exchange
       setTimeout(saveCurrentSession, 500)
     } catch (error) {
-      console.error('Chat error:', error)
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: 'assistant',
-          content: `Error: ${error.message}`,
-          timestamp: new Date().toISOString(),
-        },
-      ])
+      if (error.name === 'AbortError') {
+        // User stopped generation
+        setMessages((prev) => {
+          const newMessages = [...prev]
+          const lastIndex = newMessages.length - 1
+          if (lastIndex >= 0 && newMessages[lastIndex].role === 'assistant') {
+            newMessages[lastIndex] = {
+              ...newMessages[lastIndex],
+              content: newMessages[lastIndex].content + '\n\n[Generation stopped by user]',
+              isStreaming: false,
+            }
+          }
+          return newMessages
+        })
+      } else {
+        console.error('Chat error:', error)
+        const errorMessage = error.message || 'Failed to get response'
+        setMessages((prev) => {
+          const newMessages = [...prev]
+          const lastIndex = newMessages.length - 1
+          if (lastIndex >= 0 && newMessages[lastIndex].role === 'assistant') {
+            newMessages[lastIndex] = {
+              ...newMessages[lastIndex],
+              content: `⚠️ Error: ${errorMessage}\n\nIf using local models, make sure Ollama is running (run 'ollama serve' in terminal).`,
+              isStreaming: false,
+            }
+          }
+          return newMessages
+        })
+      }
     } finally {
       setLoading(false)
+      setIsStreaming(false)
+      setAbortController(null)
+    }
+  }
+
+  const stopGeneration = () => {
+    if (abortController) {
+      abortController.abort()
     }
   }
 
@@ -303,18 +402,21 @@ function App() {
             sx={{
               width: '100%',
               justifyContent: 'flex-start',
-              border: '1px solid rgba(255,255,255,0.2)',
-              borderRadius: '8px',
+              border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '12px',
               color: '#fff',
+              bgcolor: 'rgba(255,255,255,0.05)',
               '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' },
+              transition: 'all 0.2s ease'
             }}
           >
             <AddRounded sx={{ mr: 1 }} />
-            <Typography variant="body2">New chat</Typography>
+            <Typography variant="body2" fontWeight={500}>New chat</Typography>
           </IconButton>
-        </Stack>        <Stack spacing={0.5} sx={{ px: 2, pb: 2, overflowY: 'auto', flex: 1 }}>
-          <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)', px: 1, py: 0.5 }}>
-            Recent Sessions
+        </Stack>        
+        <Stack spacing={0.5} sx={{ px: 2, pb: 2, overflowY: 'auto', flex: 1 }}>
+          <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.4)', px: 1, py: 1, fontWeight: 600, letterSpacing: '0.5px' }}>
+            RECENT
           </Typography>
           {sessions.length > 0 ? (
             sessions.map((session) => (
@@ -323,27 +425,30 @@ function App() {
                 onClick={() => loadSession(session.id)}
                 sx={{
                   p: 1.5,
-                  borderRadius: '8px',
+                  borderRadius: '12px',
                   cursor: 'pointer',
-                  bgcolor: currentSessionId === session.id ? 'rgba(255,255,255,0.15)' : 'transparent',
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' },
+                  bgcolor: currentSessionId === session.id ? 'rgba(255,255,255,0.1)' : 'transparent',
+                  border: currentSessionId === session.id ? '1px solid rgba(255,255,255,0.1)' : '1px solid transparent',
+                  '&:hover': { bgcolor: 'rgba(255,255,255,0.05)' },
+                  transition: 'all 0.2s ease'
                 }}
               >
-                <Stack direction="row" spacing={1} alignItems="center">
-                  <ChatBubbleOutlineRounded sx={{ fontSize: 16, color: 'rgba(255,255,255,0.7)' }} />
+                <Stack direction="row" spacing={1.5} alignItems="center">
+                  <ChatBubbleOutlineRounded sx={{ fontSize: 18, color: 'rgba(255,255,255,0.6)' }} />
                   <Box sx={{ flex: 1, minWidth: 0 }}>
                     <Typography
                       variant="body2"
                       sx={{
-                        color: '#fff',
+                        color: '#e2e8f0',
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
                         whiteSpace: 'nowrap',
+                        fontWeight: 500
                       }}
                     >
                       {session.title}
                     </Typography>
-                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)' }}>
+                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.4)' }}>
                       {session.message_count} messages
                     </Typography>
                   </Box>
@@ -353,7 +458,7 @@ function App() {
           ) : (
             chatHistory.map(([date, chats], idx) => (
               <Box key={idx}>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)', px: 1, py: 0.5 }}>
+                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.4)', px: 1, py: 1, mt: 1, display: 'block' }}>
                   {date}
                 </Typography>
                 {chats.slice(0, 5).map((chat, i) => (
@@ -361,17 +466,18 @@ function App() {
                     key={i}
                     sx={{
                       p: 1.5,
-                      borderRadius: '8px',
+                      borderRadius: '12px',
                       cursor: 'pointer',
-                      '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' },
+                      '&:hover': { bgcolor: 'rgba(255,255,255,0.05)' },
+                      transition: 'all 0.2s ease'
                     }}
                   >
-                    <Stack direction="row" spacing={1} alignItems="center">
-                      <ChatBubbleOutlineRounded sx={{ fontSize: 16, color: 'rgba(255,255,255,0.7)' }} />
+                    <Stack direction="row" spacing={1.5} alignItems="center">
+                      <ChatBubbleOutlineRounded sx={{ fontSize: 18, color: 'rgba(255,255,255,0.6)' }} />
                       <Typography
                         variant="body2"
                         sx={{
-                          color: '#fff',
+                          color: '#e2e8f0',
                           overflow: 'hidden',
                           textOverflow: 'ellipsis',
                           whiteSpace: 'nowrap',
@@ -391,12 +497,12 @@ function App() {
       {/* Main Chat Area */}
       <Box className="main-area">
         <Box className="top-bar">
-          <IconButton onClick={() => setSidebarOpen(!sidebarOpen)} sx={{ color: '#666' }}>
+          <IconButton onClick={() => setSidebarOpen(!sidebarOpen)} sx={{ color: 'rgba(255,255,255,0.7)' }}>
             <MenuRounded />
           </IconButton>
           <Stack direction="row" spacing={1.5} alignItems="center">
-            <Typography variant="h6" sx={{ fontWeight: 600, color: '#202124' }}>
-              ChatGPT 5.1
+            <Typography variant="h6" sx={{ fontWeight: 600, color: '#fff', letterSpacing: '-0.5px' }}>
+              TwinMind AI
             </Typography>
             <Chip
               label={`${selectedModel} (${modelType})`}
@@ -404,13 +510,18 @@ function App() {
               onDelete={handleModelMenuOpen}
               deleteIcon={<KeyboardArrowDownRounded />}
               sx={{
-                bgcolor: modelType === 'local' ? '#e3f2fd' : '#f3e5f5',
-                color: modelType === 'local' ? '#1565c0' : '#6a1b9a',
+                bgcolor: 'rgba(255,255,255,0.1)',
+                color: '#fff',
                 fontWeight: 500,
                 cursor: 'pointer',
+                border: '1px solid rgba(255,255,255,0.1)',
+                backdropFilter: 'blur(10px)',
                 '& .MuiChip-deleteIcon': {
-                  color: modelType === 'local' ? '#1565c0' : '#6a1b9a',
+                  color: 'rgba(255,255,255,0.7)',
                 },
+                '&:hover': {
+                  bgcolor: 'rgba(255,255,255,0.15)',
+                }
               }}
             />
           </Stack>
@@ -426,12 +537,16 @@ function App() {
               mt: 1,
               minWidth: 240,
               maxHeight: 400,
-              borderRadius: '12px',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+              borderRadius: '16px',
+              bgcolor: 'rgba(20, 20, 25, 0.9)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              color: '#fff',
+              boxShadow: '0 10px 40px rgba(0,0,0,0.5)',
             },
           }}
         >
-          <Typography variant="caption" sx={{ px: 2, py: 1, color: '#666', fontWeight: 600, display: 'block' }}>
+          <Typography variant="caption" sx={{ px: 2, py: 1, color: 'rgba(255,255,255,0.5)', fontWeight: 600, display: 'block' }}>
             LOCAL MODELS
           </Typography>
           {availableModels.local && availableModels.local.length > 0 ? (
@@ -440,18 +555,23 @@ function App() {
                 key={model}
                 onClick={() => handleModelSelect('local', model)}
                 selected={modelType === 'local' && selectedModel === model}
-                sx={{ px: 2, py: 1.5 }}
+                sx={{ 
+                  px: 2, py: 1.5,
+                  '&.Mui-selected': { bgcolor: 'rgba(59, 130, 246, 0.2)' },
+                  '&:hover': { bgcolor: 'rgba(255,255,255,0.05)' }
+                }}
               >
-                <Stack direction="row" spacing={1} alignItems="center" sx={{ width: '100%' }}>
+                <Stack direction="row" spacing={1.5} alignItems="center" sx={{ width: '100%' }}>
                   <Box
                     sx={{
                       width: 8,
                       height: 8,
                       borderRadius: '50%',
                       bgcolor: '#4caf50',
+                      boxShadow: '0 0 10px rgba(76, 175, 80, 0.5)'
                     }}
                   />
-                  <Typography variant="body2" sx={{ flex: 1 }}>{model}</Typography>
+                  <Typography variant="body2" sx={{ flex: 1, color: '#fff' }}>{model}</Typography>
                   {modelType === 'local' && selectedModel === model && (
                     <Typography variant="caption" sx={{ color: '#4caf50', fontWeight: 600 }}>
                       ✓
@@ -462,19 +582,19 @@ function App() {
             ))
           ) : (
             <MenuItem disabled sx={{ px: 2, py: 1 }}>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="rgba(255,255,255,0.5)">
                 No local models available
               </Typography>
             </MenuItem>
           )}
           
-          <Typography variant="caption" sx={{ px: 2, py: 1, mt: 1, color: '#666', fontWeight: 600, display: 'block' }}>
+          <Typography variant="caption" sx={{ px: 2, py: 1, mt: 1, color: 'rgba(255,255,255,0.5)', fontWeight: 600, display: 'block' }}>
             CLOUD MODELS
           </Typography>
           {availableModels.cloud && Object.keys(availableModels.cloud).length > 0 ? (
             Object.entries(availableModels.cloud).map(([provider, modelList]) => (
               <Box key={provider}>
-                <Typography variant="caption" sx={{ px: 3, py: 0.5, color: '#999', fontWeight: 500, display: 'block' }}>
+                <Typography variant="caption" sx={{ px: 3, py: 0.5, color: 'rgba(255,255,255,0.3)', fontWeight: 500, display: 'block' }}>
                   {provider.toUpperCase()}
                 </Typography>
                 {Array.isArray(modelList) && modelList.length > 0 ? (
@@ -483,20 +603,25 @@ function App() {
                       key={`${provider}-${model}`}
                       onClick={() => handleModelSelect('cloud', model)}
                       selected={modelType === 'cloud' && selectedModel === model}
-                      sx={{ px: 2, py: 1.5, pl: 4 }}
+                      sx={{ 
+                        px: 2, py: 1.5, pl: 4,
+                        '&.Mui-selected': { bgcolor: 'rgba(59, 130, 246, 0.2)' },
+                        '&:hover': { bgcolor: 'rgba(255,255,255,0.05)' }
+                      }}
                     >
-                      <Stack direction="row" spacing={1} alignItems="center" sx={{ width: '100%' }}>
+                      <Stack direction="row" spacing={1.5} alignItems="center" sx={{ width: '100%' }}>
                         <Box
                           sx={{
                             width: 8,
                             height: 8,
                             borderRadius: '50%',
-                            bgcolor: '#2196f3',
+                            bgcolor: '#3b82f6',
+                            boxShadow: '0 0 10px rgba(59, 130, 246, 0.5)'
                           }}
                         />
-                        <Typography variant="body2" sx={{ flex: 1 }}>{model}</Typography>
+                        <Typography variant="body2" sx={{ flex: 1, color: '#fff' }}>{model}</Typography>
                         {modelType === 'cloud' && selectedModel === model && (
-                          <Typography variant="caption" sx={{ color: '#2196f3', fontWeight: 600 }}>
+                          <Typography variant="caption" sx={{ color: '#3b82f6', fontWeight: 600 }}>
                             ✓
                           </Typography>
                         )}
@@ -508,7 +633,7 @@ function App() {
             ))
           ) : (
             <MenuItem disabled sx={{ px: 2, py: 1 }}>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="rgba(255,255,255,0.5)">
                 No cloud models configured
               </Typography>
             </MenuItem>
@@ -518,12 +643,15 @@ function App() {
         <Box className="chat-content">
           {messages.length === 0 ? (
             <Box className="welcome-screen">
-              <Typography variant="h3" sx={{ fontWeight: 600, mb: 6, color: '#202124' }}>
-                What can I help with?
+              <Typography variant="h2" sx={{ fontWeight: 700, mb: 2, background: 'linear-gradient(135deg, #fff 0%, #94a3b8 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                TwinMind AI
+              </Typography>
+              <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.6)', maxWidth: 500, lineHeight: 1.6 }}>
+                Your advanced AI assistant with long-term memory and streaming capabilities.
               </Typography>
             </Box>
           ) : (
-            <Stack spacing={4} sx={{ maxWidth: 800, mx: 'auto', width: '100%' }}>
+            <Stack spacing={3} sx={{ maxWidth: 850, mx: 'auto', width: '100%', px: 2 }}>
               <AnimatePresence initial={false}>
                 {messages.map((msg, idx) => {
                   const isUser = msg.role === 'user'
@@ -531,65 +659,31 @@ function App() {
                   return (
                     <motion.div
                       key={`${msg.timestamp || idx}`}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3 }}
+                      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      className={`message-bubble ${isUser ? 'user' : 'assistant'}`}
                     >
-                      <Stack direction="row" spacing={2} alignItems="flex-start">
-                        <Box
-                          sx={{
-                            width: 32,
-                            height: 32,
-                            borderRadius: '50%',
-                            bgcolor: isUser ? '#19c37d' : '#ab68ff',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            color: '#fff',
-                            fontWeight: 600,
-                            fontSize: 14,
-                            flexShrink: 0,
-                          }}
-                        >
-                          {isUser ? 'Y' : 'C'}
-                        </Box>
-                        <Box sx={{ flex: 1 }}>
-                          <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 0.5, color: '#202124' }}>
-                            {isUser ? 'You' : 'ChatGPT'}
-                          </Typography>
-                          <Typography variant="body1" sx={{ color: '#202124', whiteSpace: 'pre-wrap', lineHeight: 1.7 }}>
-                            {content}
-                          </Typography>
-                        </Box>
-                      </Stack>
+                      <Typography variant="body1" sx={{ whiteSpace: 'pre-wrap', lineHeight: 1.7, fontSize: '1rem' }}>
+                        {content}
+                      </Typography>
                     </motion.div>
                   )
                 })}
               </AnimatePresence>
               {loading && (
-                <Stack direction="row" spacing={2} alignItems="flex-start">
-                  <Box
-                    sx={{
-                      width: 32,
-                      height: 32,
-                      borderRadius: '50%',
-                      bgcolor: '#ab68ff',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#fff',
-                      fontWeight: 600,
-                      fontSize: 14,
-                    }}
-                  >
-                    C
-                  </Box>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="message-bubble assistant"
+                  style={{ width: 'fit-content' }}
+                >
                   <Box className="typing-dots">
                     <span />
                     <span />
                     <span />
                   </Box>
-                </Stack>
+                </motion.div>
               )}
               <span ref={messagesEndRef} />
             </Stack>
@@ -598,15 +692,16 @@ function App() {
 
         <Box className="input-area">
           <Box className="input-wrapper">
-            <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
+            <Stack direction="row" spacing={1} sx={{ mb: 1, px: 1, pt: 1 }}>
               <Chip
-                label="📝 Use Template"
+                label="✨ Templates"
                 onClick={handleTemplateMenuOpen}
                 variant="outlined"
                 size="small"
                 sx={{
-                  borderColor: 'rgba(0,0,0,0.15)',
-                  '&:hover': { bgcolor: 'rgba(0,0,0,0.05)' },
+                  borderColor: 'rgba(255,255,255,0.1)',
+                  color: 'rgba(255,255,255,0.7)',
+                  '&:hover': { bgcolor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.3)' },
                 }}
               />
             </Stack>
@@ -620,15 +715,19 @@ function App() {
                   mt: 1,
                   minWidth: 320,
                   maxHeight: 500,
-                  borderRadius: '12px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+                  borderRadius: '16px',
+                  bgcolor: 'rgba(20, 20, 25, 0.9)',
+                  backdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  color: '#fff',
+                  boxShadow: '0 10px 40px rgba(0,0,0,0.5)',
                 },
               }}
             >
-              <Typography variant="subtitle2" sx={{ px: 2, py: 1.5, fontWeight: 600, color: '#202124' }}>
+              <Typography variant="subtitle2" sx={{ px: 2, py: 1.5, fontWeight: 600, color: '#fff' }}>
                 Prompt Templates
               </Typography>
-              <Divider />
+              <Divider sx={{ borderColor: 'rgba(255,255,255,0.1)' }} />
               {templates.length > 0 ? (
                 (() => {
                   const categories = {}
@@ -643,7 +742,7 @@ function App() {
                     <Box key={category}>
                       <Typography
                         variant="caption"
-                        sx={{ px: 2, py: 1, mt: 1, color: '#666', fontWeight: 600, display: 'block' }}
+                        sx={{ px: 2, py: 1, mt: 1, color: 'rgba(255,255,255,0.5)', fontWeight: 600, display: 'block' }}
                       >
                         {category.toUpperCase()}
                       </Typography>
@@ -651,14 +750,17 @@ function App() {
                         <MenuItem
                           key={template.id}
                           onClick={() => handleTemplateSelect(template)}
-                          sx={{ px: 2, py: 1.5 }}
+                          sx={{ 
+                            px: 2, py: 1.5,
+                            '&:hover': { bgcolor: 'rgba(255,255,255,0.05)' }
+                          }}
                         >
-                          <ListItemIcon sx={{ minWidth: 32 }}>
+                          <ListItemIcon sx={{ minWidth: 32, color: 'rgba(255,255,255,0.7)' }}>
                             {getTemplateIcon(template.category)}
                           </ListItemIcon>
                           <ListItemText
                             primary={template.title}
-                            primaryTypographyProps={{ variant: 'body2', fontWeight: 500 }}
+                            primaryTypographyProps={{ variant: 'body2', fontWeight: 500, color: '#fff' }}
                           />
                         </MenuItem>
                       ))}
@@ -667,7 +769,7 @@ function App() {
                 })()
               ) : (
                 <MenuItem disabled sx={{ px: 2, py: 1 }}>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="rgba(255,255,255,0.5)">
                     No templates available
                   </Typography>
                 </MenuItem>
@@ -678,44 +780,68 @@ function App() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Message ChatGPT"
+              placeholder="Message TwinMind AI..."
               fullWidth
               multiline
               maxRows={6}
               variant="outlined"
               sx={{
                 '& .MuiOutlinedInput-root': {
-                  borderRadius: '26px',
-                  bgcolor: '#f4f4f4',
-                  border: 'none',
+                  borderRadius: '24px',
+                  color: '#fff',
                   '& fieldset': { border: 'none' },
+                },
+                '& .MuiInputBase-input::placeholder': {
+                  color: 'rgba(255,255,255,0.4)',
+                  opacity: 1,
                 },
               }}
               InputProps={{
-                endAdornment: (
-                  <IconButton
-                    onClick={sendMessage}
-                    disabled={loading || !input.trim()}
-                    sx={{
-                      bgcolor: loading || !input.trim() ? '#d1d1d1' : '#202124',
-                      color: '#fff',
-                      width: 32,
-                      height: 32,
-                      '&:hover': {
-                        bgcolor: loading || !input.trim() ? '#d1d1d1' : '#404040',
-                      },
-                      '&.Mui-disabled': {
-                        bgcolor: '#d1d1d1',
-                        color: '#fff',
-                      },
-                    }}
-                  >
-                    <SendRounded sx={{ fontSize: 18 }} />
-                  </IconButton>
-                ),
+                endAdornment: isStreaming ? (
+                    <IconButton
+                      onClick={stopGeneration}
+                      sx={{
+                        bgcolor: 'rgba(220, 53, 69, 0.2)',
+                        color: '#ff6b6b',
+                        width: 36,
+                        height: 36,
+                        border: '1px solid rgba(220, 53, 69, 0.3)',
+                        '&:hover': {
+                          bgcolor: 'rgba(220, 53, 69, 0.3)',
+                        },
+                      }}
+                    >
+                      <StopRounded sx={{ fontSize: 20 }} />
+                    </IconButton>
+                  ) : (
+                    <IconButton
+                      onClick={sendMessage}
+                      disabled={loading || !input.trim()}
+                      sx={{
+                        bgcolor: loading || !input.trim() ? 'rgba(255,255,255,0.05)' : '#3b82f6',
+                        color: loading || !input.trim() ? 'rgba(255,255,255,0.3)' : '#fff',
+                        width: 36,
+                        height: 36,
+                        boxShadow: loading || !input.trim() ? 'none' : '0 0 15px rgba(59, 130, 246, 0.5)',
+                        '&:hover': {
+                          bgcolor: loading || !input.trim() ? 'rgba(255,255,255,0.05)' : '#2563eb',
+                        },
+                        '&.Mui-disabled': {
+                          bgcolor: 'rgba(255,255,255,0.05)',
+                          color: 'rgba(255,255,255,0.3)',
+                        },
+                        transition: 'all 0.2s ease'
+                      }}
+                    >
+                      <SendRounded sx={{ fontSize: 18 }} />
+                    </IconButton>
+                  ),
               }}
             />
           </Box>
+          <Typography variant="caption" sx={{ display: 'block', textAlign: 'center', mt: 2, color: 'rgba(255,255,255,0.3)' }}>
+            TwinMind AI can make mistakes. Consider checking important information.
+          </Typography>
         </Box>
       </Box>
     </Box>

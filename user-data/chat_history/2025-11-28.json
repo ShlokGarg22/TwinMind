@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": "2025-11-28T14:38:15.167938",
+    "user": "hi",
+    "ai": "Hello! It's great to connect with you. I'm here to help answer any questions or provide assistance on the topic we're discussing. What's on your mind?",
+    "model": "llama3:latest",
+    "modelType": "local"
+  },
+  {
+    "timestamp": "2025-11-28T14:57:19.425949",
+    "user": "how are you",
+    "ai": "I'm doing well, thank you for asking! I'm a large language model trained to assist with a wide range of topics and questions. I'm here to help you with any information or guidance you may need. What's on your mind?",
+    "model": "llama3:latest",
+    "modelType": "local"
+  },
+  {
+    "timestamp": "2025-11-28T15:04:00.237977",
+    "user": "hi",
+    "ai": "Hello! It's great to connect with you. I'm here to help answer any questions or provide assistance on a topic of your choice. What's on your mind, and how can I support you today?",
+    "model": "llama3:latest",
+    "modelType": "local"
+  }
+]

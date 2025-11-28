@@ -1,0 +1,17 @@
+{
+  "id": "6996dd01-d50a-4fc5-8b40-664e5a22b4cd",
+  "title": "hi",
+  "created_at": "2025-11-19T01:13:09.446160",
+  "updated_at": "2025-11-28T14:31:43.451890",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2025-11-18T19:43:35.987Z"
+    },
+    {
+      "role": "assistant",
+      "timestamp": "2025-11-18T19:43:38.605Z"
+    }
+  ]
+}
